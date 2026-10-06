@@ -21,11 +21,11 @@
     "CHA": 9
   },
   "skills": {
-    "blade": 58,
+    "blade": 52,
     "brawl": 50,
     "shoot": 42,
     "intimidate": 58,
-    "dodge": 46,
+    "dodge": 42,
     "perception": 42
   },
   "slot_type": "person",
@@ -43,7 +43,7 @@
     }
   ],
   "dialogue": "dialogues/kell.ink",
-  "armor": 3,
+  "armor": 0,
   "inventory": [
     {
       "item": "item_mark",

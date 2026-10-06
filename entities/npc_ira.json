@@ -74,6 +74,10 @@
     {
       "item": "item_ration",
       "quantity": 1
+    },
+    {
+      "item": "item_bandage",
+      "quantity": 1
     }
   ],
   "equipment": {

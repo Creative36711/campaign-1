@@ -29,6 +29,10 @@ VAR r = 0
 Ищи, кто подписал расход на режим тишины. Кто подписал, тот и заказал. # voice: assets/voice/zhuk_2.mp3
     ~ set_flag("kast_alerted")
     -> Начало_hub
++ { get_flag("clue_roster") and not (get_flag("zhuk_cache_hint")) } [Ты и сам знаешь, кто стоял. Что ещё?]
+    Жук кривится, но рук не прячет: тогда слушай другое. Гроссбух он не в конторе держал и не в каморке: он его в штольне спрятал, там, где спал, под плитой. Ищи, где у мастера была постель. # emotion: thoughtful
+    ~ set_flag("zhuk_cache_hint")
+    -> Начало_hub
 * [Где мастер?]
 Ниже восьмого. Там, где жила поёт. Хочешь — спускайся, хочешь — живи. # emotion: calm # voice: assets/voice/zhuk_3.mp3
     ~ fire_rule("rule_reveal_deep")

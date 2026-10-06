@@ -280,7 +280,17 @@ def main():
                 if sub.get("flag"):
                     used.add(sub["flag"])
     never = sorted(f for f in used if f not in known)
-    dead = [n for n, _, _ in groups if n not in fired]
+    def has_block(conds):
+        for c in conds or []:
+            if c.get("type") == "flag_not_set":
+                return True
+            if has_block(c.get("conditions")) or has_block([c.get("condition")]):
+                return True
+        return False
+
+    dead = [n for n, conds, _ in groups
+            if n not in fired and not has_block(conds)]
+    alt = [n for n, conds, _ in groups if n not in fired and has_block(conds)]
 
     print(f"источников эффектов: {len(groups)}, сработало: {len(fired)}")
     print(f"флагов достигнуто: {len(known)} из {len(registry)} в реестре")
@@ -322,6 +332,8 @@ def main():
     print("   " + (", ".join(miss_items) if miss_items else "нет"))
     print("\n--- записи кодекса, которые никто не открывает:")
     print("   " + (", ".join(miss_codex) if miss_codex else "нет"))
+    print("\n--- правила-альтернативы (ждут, что флаг ещё не поднят):")
+    print("   " + (", ".join(alt[:10]) if alt else "нет"))
     print("\n--- правила, которые ни разу не сработали:")
     print("   " + (", ".join(dead[:20]) if dead else "нет"))
     if len(dead) > 20:

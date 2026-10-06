@@ -139,6 +139,127 @@
        "h": 720,
        "fill": {
         "gradient": {
+         "from": "#16262b",
+         "to": "#05090c",
+         "angle": 90
+        }
+       },
+       "stroke_width": 2
+      }
+     },
+     {
+      "shape": {
+       "type": "ellipse",
+       "cx": 200,
+       "cy": 300,
+       "rx": 150,
+       "ry": 220,
+       "fill": "#080f12",
+       "stroke_width": 2
+      }
+     },
+     {
+      "shape": {
+       "type": "ellipse",
+       "cx": 640,
+       "cy": 300,
+       "rx": 150,
+       "ry": 220,
+       "fill": "#080f12",
+       "stroke_width": 2
+      }
+     },
+     {
+      "shape": {
+       "type": "ellipse",
+       "cx": 1080,
+       "cy": 300,
+       "rx": 150,
+       "ry": 220,
+       "fill": "#080f12",
+       "stroke_width": 2
+      }
+     },
+     {
+      "shape": {
+       "type": "rect",
+       "x": 0,
+       "y": 470,
+       "w": 1280,
+       "h": 250,
+       "fill": {
+        "gradient": {
+         "from": "#123039",
+         "to": "#050f14",
+         "angle": 90
+        }
+       },
+       "stroke_width": 2
+      }
+     },
+     {
+      "shape": {
+       "type": "rect",
+       "x": 0,
+       "y": 470,
+       "w": 1280,
+       "h": 8,
+       "fill": "#5fd0c8",
+       "stroke_width": 2
+      },
+      "opacity": 0.35
+     },
+     {
+      "label": "свет",
+      "shape": {
+       "type": "ellipse",
+       "cx": 640,
+       "cy": 180,
+       "rx": 180,
+       "ry": 180,
+       "fill": "#5fd0c8",
+       "stroke_width": 2
+      },
+      "opacity": 0.18
+     },
+     {
+      "label": "свет (ядро)",
+      "shape": {
+       "type": "ellipse",
+       "cx": 640,
+       "cy": 180,
+       "rx": 81.0,
+       "ry": 81.0,
+       "fill": "#5fd0c8",
+       "stroke_width": 2
+      },
+      "opacity": 0.53
+     }
+    ]
+   },
+   "text": "Девятнадцать десять. Помпа встаёт. На последней странице гроссбуха — аккуратная подпись: В. Каст.",
+   "duration": 6,
+   "transition": "fade",
+   "image": "assets/img/cut_rev_3.jpg",
+   "voice": "assets/voice/rev_3.mp3"
+  },
+  {
+   "art": {
+    "canvas": {
+     "w": 1280,
+     "h": 720
+    },
+    "background": "#050a0c",
+    "layers": [
+     {
+      "shape": {
+       "type": "rect",
+       "x": 0,
+       "y": 0,
+       "w": 1280,
+       "h": 720,
+       "fill": {
+        "gradient": {
          "from": "#1a2a30",
          "to": "#070c0e",
          "angle": 90
@@ -239,127 +360,6 @@
    "transition": "cut",
    "image": "assets/img/cut_rev_2.jpg",
    "voice": "assets/voice/rev_2.mp3"
-  },
-  {
-   "art": {
-    "canvas": {
-     "w": 1280,
-     "h": 720
-    },
-    "background": "#050a0c",
-    "layers": [
-     {
-      "shape": {
-       "type": "rect",
-       "x": 0,
-       "y": 0,
-       "w": 1280,
-       "h": 720,
-       "fill": {
-        "gradient": {
-         "from": "#16262b",
-         "to": "#05090c",
-         "angle": 90
-        }
-       },
-       "stroke_width": 2
-      }
-     },
-     {
-      "shape": {
-       "type": "ellipse",
-       "cx": 200,
-       "cy": 300,
-       "rx": 150,
-       "ry": 220,
-       "fill": "#080f12",
-       "stroke_width": 2
-      }
-     },
-     {
-      "shape": {
-       "type": "ellipse",
-       "cx": 640,
-       "cy": 300,
-       "rx": 150,
-       "ry": 220,
-       "fill": "#080f12",
-       "stroke_width": 2
-      }
-     },
-     {
-      "shape": {
-       "type": "ellipse",
-       "cx": 1080,
-       "cy": 300,
-       "rx": 150,
-       "ry": 220,
-       "fill": "#080f12",
-       "stroke_width": 2
-      }
-     },
-     {
-      "shape": {
-       "type": "rect",
-       "x": 0,
-       "y": 470,
-       "w": 1280,
-       "h": 250,
-       "fill": {
-        "gradient": {
-         "from": "#123039",
-         "to": "#050f14",
-         "angle": 90
-        }
-       },
-       "stroke_width": 2
-      }
-     },
-     {
-      "shape": {
-       "type": "rect",
-       "x": 0,
-       "y": 470,
-       "w": 1280,
-       "h": 8,
-       "fill": "#5fd0c8",
-       "stroke_width": 2
-      },
-      "opacity": 0.35
-     },
-     {
-      "label": "свет",
-      "shape": {
-       "type": "ellipse",
-       "cx": 640,
-       "cy": 180,
-       "rx": 180,
-       "ry": 180,
-       "fill": "#5fd0c8",
-       "stroke_width": 2
-      },
-      "opacity": 0.18
-     },
-     {
-      "label": "свет (ядро)",
-      "shape": {
-       "type": "ellipse",
-       "cx": 640,
-       "cy": 180,
-       "rx": 81.0,
-       "ry": 81.0,
-       "fill": "#5fd0c8",
-       "stroke_width": 2
-      },
-      "opacity": 0.53
-     }
-    ]
-   },
-   "text": "Двадцать десять. Помпа встаёт. На последней странице гроссбуха — аккуратная подпись: В. Каст.",
-   "duration": 6,
-   "transition": "fade",
-   "image": "assets/img/cut_rev_3.jpg",
-   "voice": "assets/voice/rev_3.mp3"
   }
  ]
 }

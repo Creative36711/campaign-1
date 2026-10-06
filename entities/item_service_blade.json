@@ -17,6 +17,9 @@
     "range": 1,
     "attacks_per_round": 1,
     "parry_capable": true,
-    "label": "Клинок"
+    "label": "Служебный клинок",
+    "traits": [
+      "impale"
+    ]
   }
 }
