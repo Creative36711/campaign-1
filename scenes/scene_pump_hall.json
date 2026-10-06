@@ -634,7 +634,10 @@
    "y": 240,
    "w": 240,
    "h": 340,
-   "condition": null
+   "condition": {
+    "not_flag": "ira_joined"
+   },
+   "default_entity": "npc_ira"
   },
   {
    "id": "slot_door_resh",

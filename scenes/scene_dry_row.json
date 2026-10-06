@@ -478,7 +478,8 @@
    "y": 290,
    "w": 190,
    "h": 150,
-   "condition": null
+   "condition": null,
+   "default_entity": "npc_zhuk"
   },
   {
    "id": "slot_brazier",

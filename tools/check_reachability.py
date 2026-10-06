@@ -300,6 +300,24 @@ def main():
             if e.get("id"):
                 codex_ids.add(e["id"])
     miss_codex = sorted(i for i in codex_ids if i not in unlocked)
+    placed = set()
+    for f in man.get("scenes", []):
+        d = load("scenes/" + f)
+        for sl in d.get("slots", []):
+            if sl.get("default_entity"):
+                placed.add(sl["default_entity"])
+    homeless = []
+    for f in man.get("entities", []):
+        d = load("entities/" + f)
+        if d.get("type") == "npc" and d["id"] not in placed and not d.get("schedule"):
+            # враги приходят из таблиц встреч и из правил — их раскладка не нужна
+            if d["id"] in ("npc_rotling", "npc_ashhound", "npc_watchman", "npc_thug",
+                           "player_hero"):
+                continue
+            homeless.append(d["id"])
+    print("\n--- персонажи с репликами, которых нет ни в одной сцене:")
+    print("   " + (", ".join(homeless) if homeless else "нет"))
+
     print("\n--- предметы, которые нужны по условиям, но нигде не выдаются:")
     print("   " + (", ".join(miss_items) if miss_items else "нет"))
     print("\n--- записи кодекса, которые никто не открывает:")
