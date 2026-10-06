@@ -66,6 +66,45 @@ LINES = {
               "assets/voice/vein_2.mp3")],
 }
 
+# ход 10: вторая волна озвучки (дополняет LINES)
+WAVE_10 = {
+    "registrar": [
+        ("Дело сто тридцать шесть. Затопление девятого яруса. Исполнено. Подпись: инспектор Каст.",
+         "assets/voice/registrar_2.mp3"),
+        ("Расход мазута, смены мастера Реша Э. Пометка: «режим тишины — см. приложение». Приложение изъято.",
+         "assets/voice/registrar_3.mp3")
+    ],
+    "vex": [
+        ("Мастер твой Реш спустился в шахту в восемнадцать сорок. Я его сам записал. Обратно — не записал.",
+         "assets/voice/vex_3.mp3"),
+        ("Взвод Келла Ястреба. Двенадцать человек, все с клеймом стражи. Шли вниз, а запись делали наверх — так быстрее, сказал старшина.",
+         "assets/voice/vex_4.mp3")
+    ],
+    "resh": [
+        ("Помпы её откачивают, как кровь откачивают из раны. Мы сорок лет делали каркасу больно, чтобы он стоял.",
+         "assets/voice/resh_4.mp3"),
+        ("Нет. Ты её вставишь, и восьмой ярус утонет за ночь. Я сорок лет слушал, как дышит город.",
+         "assets/voice/resh_5.mp3")
+    ],
+    "vein": [
+        ("Я то, что было здесь до города, и то, что будет после. Вы называете это жилой, потому что вам нужно что-то вынимать.",
+         "assets/voice/vein_3.mp3"),
+        ("Бери. И помни: я помню всех, кто брал, — и всех, кто вернул.",
+         "assets/voice/vein_4.mp3")
+    ],
+    "kast": [
+        ("Подписала. И подпишу ещё: порядок дороже правды, потому что правда не держит воду.",
+         "assets/voice/kast_3.mp3")
+    ],
+    "kell": [
+        ("Двенадцать человек, седьмой ярус, с двадцати до шести. Моя подпись стоит второй.",
+         "assets/voice/kell_4.mp3")
+    ]
+}
+
+for _k, _v in WAVE_10.items():
+    LINES.setdefault(_k, []).extend(_v)
+
 # катсцена -> [(индекс слайда, файл озвучки)]
 SLIDES = {
     "cutscene_intro": [(0, "assets/voice/prologue_1.mp3"),
@@ -95,8 +134,13 @@ def patch_dlg(name, pairs):
     doc = load(dpath)
     hit = set()
     for node in doc["nodes"]:
-        for sec in node.get("sections", []) + [s for ch in node.get("choices", [])
-                                                for s in ch.get("sections", [])]:
+        secs = list(node.get("sections", []))
+        for ch in node.get("choices", []):
+            secs += list(ch.get("sections", []))
+            ck = ch.get("check") or {}
+            for br in ("success", "fail"):
+                secs += list((ck.get(br) or {}).get("sections", []))
+        for sec in secs:
             for step in sec.get("steps", []):
                 if step["kind"] != "line":
                     continue
@@ -123,7 +167,10 @@ def patch_ink(name, pairs):
                 continue
             # отсекаем уже существующие теги
             clean = s.split(" # ")[0].strip()
-            if clean == base and "# voice:" not in s:
+            if clean == base:
+                if "# voice:" in s:      # уже озвучено — ничего не делаем
+                    done = True
+                    break
                 lines[i] = s + " # voice: " + vf
                 done = True
                 break

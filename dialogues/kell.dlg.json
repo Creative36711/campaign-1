@@ -243,7 +243,8 @@
        "kind": "line",
        "line": {
         "text": "Двенадцать человек, седьмой ярус, с двадцати до шести. Моя подпись стоит второй.",
-        "emotion": "thoughtful"
+        "emotion": "thoughtful",
+        "voice": "assets/voice/kell_4.mp3"
        }
       },
       {

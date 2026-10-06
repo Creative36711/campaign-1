@@ -52,7 +52,7 @@ EXTERNAL set_flag(a0)
     ~ fire_rule("rule_lockdown")
     -> DONE
 + [Ты подписала расход на режим тишины.]
-    Подписала. И подпишу ещё: порядок дороже правды, потому что правда не держит воду. # emotion: angry
+Подписала. И подпишу ещё: порядок дороже правды, потому что правда не держит воду. # emotion: angry # voice: assets/voice/kast_3.mp3
     ~ change_disposition("npc_kast", -25)
     ~ set_flag("kast_alerted")
     ~ fire_rule("rule_lockdown")

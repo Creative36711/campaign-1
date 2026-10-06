@@ -251,7 +251,8 @@
          "kind": "line",
          "line": {
           "text": "Подписала. И подпишу ещё: порядок дороже правды, потому что правда не держит воду.",
-          "emotion": "angry"
+          "emotion": "angry",
+          "voice": "assets/voice/kast_3.mp3"
          }
         },
         {

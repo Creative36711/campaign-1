@@ -35,7 +35,8 @@
          "kind": "line",
          "line": {
           "text": "Я то, что было здесь до города, и то, что будет после. Вы называете это жилой, потому что вам нужно что-то вынимать.",
-          "emotion": "calm"
+          "emotion": "calm",
+          "voice": "assets/voice/vein_3.mp3"
          }
         }
        ]
@@ -90,7 +91,8 @@
          "kind": "line",
          "line": {
           "text": "Бери. И помни: я помню всех, кто брал, — и всех, кто вернул.",
-          "emotion": "calm"
+          "emotion": "calm",
+          "voice": "assets/voice/vein_4.mp3"
          }
         },
         {

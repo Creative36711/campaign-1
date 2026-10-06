@@ -35,7 +35,8 @@
          "kind": "line",
          "line": {
           "text": "Дело сто тридцать шесть. Затопление девятого яруса. Исполнено. Подпись: инспектор Каст.",
-          "emotion": "calm"
+          "emotion": "calm",
+          "voice": "assets/voice/registrar_2.mp3"
          }
         },
         {
@@ -136,7 +137,8 @@
          "kind": "line",
          "line": {
           "text": "Расход мазута, смены мастера Реша Э. Пометка: «режим тишины — см. приложение». Приложение изъято.",
-          "emotion": "calm"
+          "emotion": "calm",
+          "voice": "assets/voice/registrar_3.mp3"
          }
         }
        ]
