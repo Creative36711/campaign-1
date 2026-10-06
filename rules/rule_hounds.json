@@ -26,6 +26,11 @@
      "text": "Псы уходят в воду. Там их и кормили."
     }
    ]
+  },
+  {
+   "type": "play_sound",
+   "sound": "snd_stone",
+   "volume": 0.7
   }
  ],
  "chapter": "ch_deep"

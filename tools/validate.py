@@ -100,6 +100,17 @@ def walk_effects(effs, where, depth=0):
             need(where, "cutscene", e.get("cutscene"))
         elif t == "set_weather":
             need(where, "weather", e.get("weather"))
+        elif t == "play_sound":
+            need(where, "sound", e.get("sound"))
+            v = e.get("volume")
+            if v is not None and not (0 < float(v) <= 1):
+                problems.append(f"ЗВУК громкость {v} вне диапазона 0..1 ({where})")
+        elif t == "override_music":
+            for tr in e.get("tracks", []):
+                need(where, "music", tr)
+        elif t == "clear_music_override":
+            if e.get("fade") is not None and float(e["fade"]) <= 0:
+                problems.append(f"ЗВУК кроссфейд должен быть больше нуля ({where})")
         elif t == "set_price_event":
             need(where, "price_event", e.get("id"))
         elif t == "meta_currency":
@@ -326,6 +337,9 @@ def main():
             for tc in l.get("travel_connections", []):
                 need(f"локация {l['id']}", "location", tc.get("to"))
                 need(f"локация {l['id']}", "encounter", tc.get("random_encounter_table"))
+                for hook in ("sound", "depart_sound", "arrive_sound"):
+                    if tc.get(hook):
+                        need(f"дорога {l['id']}→{tc.get('to')}", "sound", tc[hook])
             for mr in l.get("music", []) or []:
                 for tr in mr.get("tracks", []):
                     need(f"локация {l['id']}", "music", tr)
@@ -401,6 +415,8 @@ def main():
                 problems.append(f"ССЫЛКА квест {qid}: переход в несуществующую стадию {t}")
 
     for rid, r in recipes.items():
+        if r.get("sound"):
+            need(f"рецепт {rid}", "sound", r["sound"])
         for i in r.get("inputs", []):
             need(f"рецепт {rid}", "item", i.get("item"))
         for t in r.get("tools", []):
@@ -483,7 +499,10 @@ def main():
                     if st["kind"] == "effect":
                         walk_effects([st["effect"]], f"диалог {name}")
                     else:
-                        asset(f"диалог {name}", (st["line"] or {}).get("voice"))
+                        ln = st["line"] or {}
+                        asset(f"диалог {name}", ln.get("voice"))
+                        if ln.get("sfx"):
+                            need(f"диалог {name}", "sound", ln["sfx"])
             tm = n.get("timer") or {}
             if tm.get("node") and tm["node"] not in knots:
                 problems.append(f"ССЫЛКА диалог {name}: таймер → «{tm['node']}»")
@@ -493,6 +512,27 @@ def main():
     for eid, e in ents.items():
         if e.get("type") == "npc" and eid != "player_hero" and not e.get("dialogue"):
             notes.append(f"у {eid} нет диалога")
+
+    # --------------------------------------------------- звук интерфейса -----
+    for hook, snd in (camp.get("ui_sounds") or {}).items():
+        if hook == "menu_music":
+            need("ui_sounds", "music", snd)
+        else:
+            need(f"ui_sounds/{hook}", "sound", snd)
+    for eid, e in ents.items():
+        for hook, snd in (e.get("sounds") or {}).items():
+            need(f"{eid} sounds/{hook}", "sound", snd)
+
+    # ------------------------------------------------- sfx-теги в ink --------
+    import re as _re
+    for f in manifest.get("dialogues", []):
+        ink = os.path.join(ROOT, "dialogues", f)
+        if not os.path.exists(ink):
+            continue
+        for i, line in enumerate(open(ink, encoding="utf-8"), 1):
+            m = _re.search(r"#\s*sfx:\s*([A-Za-z0-9_./\-]+)", line)
+            if m:
+                need(f"{f}:{i}", "sound", m.group(1))
 
     # --------------------------------------------------------- чек-лист -----
     for f in camp.get("flags", []):

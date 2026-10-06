@@ -22,7 +22,7 @@ EXTERNAL unlock_codex(a0)
     ~ set_flag("vein_heard")
     -> Начало_hub
 + { has_item("item_core") } [Вложить сердцевину в стену.]
-    Ты кладёшь ладонь на камень. Он тёплый и отвечает на пульс. # action
+    Ты кладёшь ладонь на камень. Он тёплый и отвечает на пульс. # action # sfx: sfx_hum
 Бери. И помни: я помню всех, кто брал, — и всех, кто вернул. # emotion: calm # voice: assets/voice/vein_4.mp3
     ~ remove_item("item_core", 1)
     ~ apply_status("status_veinsong", 24)
@@ -32,6 +32,6 @@ EXTERNAL unlock_codex(a0)
     -> DONE
 
 === Молчание ===
-Молчание длится, пока не закладывает уши. # action
+Молчание длится, пока не закладывает уши. # action # sfx: sfx_hum
 Ты молчишь. Я слышала этот ответ от всех, кто брал. Он всегда означал «дам». # voice: assets/voice/vein_2.mp3
 -> Начало

@@ -27,6 +27,11 @@
   {
    "type": "show_message",
    "text": "Маска хрипит впустую: банок нет. Теперь каждый час на девятом стоит крови."
+  },
+  {
+   "type": "play_sound",
+   "sound": "sfx_steam",
+   "volume": 0.9
   }
  ],
  "chapter": "ch_deep"

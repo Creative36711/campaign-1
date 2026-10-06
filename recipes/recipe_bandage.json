@@ -20,5 +20,6 @@
   "item": "item_bandage",
   "quantity": 1
  },
- "message": "Бинт вышел кривой, но держит."
+ "message": "Бинт вышел кривой, но держит.",
+ "sound": "snd_cloth"
 }

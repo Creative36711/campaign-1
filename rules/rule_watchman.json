@@ -65,6 +65,11 @@
      ]
     }
    ]
+  },
+  {
+   "type": "play_sound",
+   "sound": "sfx_gear",
+   "volume": 0.7
   }
  ],
  "chapter": "ch_deep"

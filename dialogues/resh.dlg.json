@@ -214,7 +214,8 @@
          "kind": "line",
          "line": {
           "text": "Сердцевина, лом, масло и ровные руки. Если руки дрожат — не берись, это не лекарство.",
-          "emotion": "calm"
+          "emotion": "calm",
+          "voice": "assets/voice/resh_10.mp3"
          }
         },
         {
@@ -257,7 +258,8 @@
          "kind": "line",
          "line": {
           "text": "Он встаёт тяжело, опираясь о стену ладонью.",
-          "action": true
+          "action": true,
+          "sfx": "snd_stone"
          }
         },
         {

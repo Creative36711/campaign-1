@@ -33,6 +33,11 @@
    "amount": 1
   },
   {
+   "type": "play_sound",
+   "sound": "snd_charge",
+   "volume": 1.0
+  },
+  {
    "type": "game_over_victory"
   }
  ],

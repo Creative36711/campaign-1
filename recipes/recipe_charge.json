@@ -37,5 +37,6 @@
    "type": "flag_set",
    "flag": "resh_charge_recipe"
   }
- ]
+ ],
+ "sound": "snd_charge"
 }

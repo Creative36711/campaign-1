@@ -29,6 +29,11 @@
   {
    "type": "show_message",
    "text": "Маска шипит: первая банка ушла на спуск. Вторая — на подъём, если он будет."
+  },
+  {
+   "type": "play_sound",
+   "sound": "snd_vent",
+   "volume": 0.8
   }
  ],
  "chapter": "ch_deep"

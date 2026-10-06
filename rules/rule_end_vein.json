@@ -33,6 +33,11 @@
    "amount": 1
   },
   {
+   "type": "play_sound",
+   "sound": "sfx_hum",
+   "volume": 1.0
+  },
+  {
    "type": "game_over_victory"
   }
  ],

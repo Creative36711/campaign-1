@@ -9,7 +9,7 @@
   "afraid": "assets/img/npc/ira_afraid.jpg",
   "thoughtful": "assets/img/npc/ira_thoughtful.jpg",
   "sad": "assets/img/npc/ira_sad.jpg",
-  "calm": "assets/img/npc/ira_neutral.jpg"
+  "calm": "assets/img/npc/ira_calm.jpg"
  },
  "stats": {
   "STR": 8,

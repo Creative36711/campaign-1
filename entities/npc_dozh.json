@@ -6,9 +6,9 @@
  "portrait": {
   "neutral": "assets/img/npc/dozh_neutral.jpg",
   "angry": "assets/img/npc/dozh_angry.jpg",
-  "afraid": "assets/img/npc/dozh_neutral.jpg",
+  "afraid": "assets/img/npc/dozh_afraid.jpg",
   "thoughtful": "assets/img/npc/dozh_thoughtful.jpg",
-  "sad": "assets/img/npc/dozh_neutral.jpg",
+  "sad": "assets/img/npc/dozh_sad.jpg",
   "calm": "assets/img/npc/dozh_calm.jpg"
  },
  "stats": {

@@ -161,6 +161,61 @@
      ]
     },
     {
+     "text": "Показать Дожу вещь.",
+     "sections": [
+      {
+       "conds": [
+        {
+         "type": "has_item",
+         "item": "item_guard_token"
+        }
+       ],
+       "steps": [
+        {
+         "kind": "line",
+         "line": {
+          "text": "Дож вертит вещь двумя пальцами, прищурившись.",
+          "action": true,
+          "sfx": "snd_latch"
+         }
+        },
+        {
+         "kind": "line",
+         "line": {
+          "text": "Вещь стоящая — для того, кто её ищет. Я таких не знаю, но за полцены возьму.",
+          "emotion": "calm",
+          "voice": "assets/voice/dozh_6.mp3"
+         }
+        },
+        {
+         "kind": "effect",
+         "effect": {
+          "type": "change_disposition",
+          "delta": 2,
+          "target": "npc_dozh"
+         }
+        },
+        {
+         "kind": "line",
+         "line": {
+          "text": "Дож разводит руками: пусто.",
+          "action": true
+         }
+        },
+        {
+         "kind": "line",
+         "line": {
+          "text": "Руки показывай, когда они полные. Пустыми торгуют только нищие.",
+          "emotion": "calm"
+         }
+        }
+       ],
+       "goto": "stay"
+      }
+     ],
+     "goto": "stay"
+    },
+    {
      "text": "Почему у тебя всё дороже, чем наверху?",
      "sections": [
       {
@@ -205,7 +260,8 @@
       {
        "kind": "line",
        "line": {
-        "text": "Молчишь? И правильно. Кто говорит, тот уже купил."
+        "text": "Молчишь? И правильно. Кто говорит, тот уже купил.",
+        "voice": "assets/voice/dozh_7.mp3"
        }
       }
      ]
@@ -224,7 +280,8 @@
        "kind": "line",
        "line": {
         "text": "Дож вертит вещь двумя пальцами, прищурившись.",
-        "action": true
+        "action": true,
+        "sfx": "snd_latch"
        }
       },
       {

@@ -12,7 +12,8 @@
        "kind": "line",
        "line": {
         "text": "Айла промокает бинт и не смотрит на твои руки.",
-        "action": true
+        "action": true,
+        "sfx": "sfx_water"
        }
       },
       {
@@ -75,7 +76,8 @@
          "kind": "line",
          "line": {
           "text": "Отвар горький. Гнилец горше. Глотай, не нюхай.",
-          "emotion": "calm"
+          "emotion": "calm",
+          "voice": "assets/voice/ayla_5.mp3"
          }
         },
         {
@@ -125,7 +127,8 @@
          "kind": "line",
          "line": {
           "text": "Рецепт простой, как всё, что спасает жизнь: трава, вода и терпение.",
-          "emotion": "calm"
+          "emotion": "calm",
+          "voice": "assets/voice/ayla_6.mp3"
          }
         },
         {

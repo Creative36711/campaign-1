@@ -11,7 +11,7 @@ EXTERNAL set_flag(a0)
 EXTERNAL unlock_recipe(a0)
 
 === Начало ===
-Айла промокает бинт и не смотрит на твои руки. # action
+Айла промокает бинт и не смотрит на твои руки. # action # sfx: sfx_water
 Сядь. У тебя ссадина на костяшках и вид человека, который не спал двое суток. # voice: assets/voice/ayla_1.mp3
 -> Начало_hub
 
@@ -22,13 +22,13 @@ EXTERNAL unlock_recipe(a0)
     ~ change_hp(14)
     -> Начало_hub
 + { has_status("status_rot") and item_count("item_mark") >= 30 } [Убери гнилец (30 марок).]
-    Отвар горький. Гнилец горше. Глотай, не нюхай. # emotion: calm
+    Отвар горький. Гнилец горше. Глотай, не нюхай. # emotion: calm # voice: assets/voice/ayla_5.mp3
     ~ remove_item("item_mark", 30)
     ~ remove_status("status_rot")
     ~ change_hp(4)
     -> Начало_hub
 * { not (get_flag("ayla_recipe")) } [Научи готовить настой.]
-    Рецепт простой, как всё, что спасает жизнь: трава, вода и терпение. # emotion: calm
+    Рецепт простой, как всё, что спасает жизнь: трава, вода и терпение. # emotion: calm # voice: assets/voice/ayla_6.mp3
     ~ unlock_recipe("recipe_tonic")
     ~ set_flag("ayla_recipe")
     ~ change_disposition("npc_ayla", 10)

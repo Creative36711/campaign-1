@@ -26,5 +26,6 @@
   "quantity": 1
  },
  "message": "Фитиль ожил: свет стал ровнее и холоднее.",
- "category": "gear"
+ "category": "gear",
+ "sound": "sfx_lamp"
 }

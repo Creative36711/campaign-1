@@ -35,12 +35,12 @@ VAR r = 0
     ~ unlock_codex("codex_heavy_water")
     -> Начало_hub
 * { get_flag("resh_trusts") and not (get_flag("resh_charge_recipe")) } [Научи собирать заряд.]
-    Сердцевина, лом, масло и ровные руки. Если руки дрожат — не берись, это не лекарство. # emotion: calm
+    Сердцевина, лом, масло и ровные руки. Если руки дрожат — не берись, это не лекарство. # emotion: calm # voice: assets/voice/resh_10.mp3
     ~ unlock_recipe("recipe_charge")
     ~ set_flag("resh_charge_recipe")
     -> Начало_hub
 + { get_flag("resh_trusts") } [Пойдём со мной.]
-    Он встаёт тяжело, опираясь о стену ладонью. # action
+    Он встаёт тяжело, опираясь о стену ладонью. # action # sfx: snd_stone
     Хорошо. Но если я увижу, что ты вставишь сердцевину в привод — я лягу на муфту. # voice: assets/voice/resh_8.mp3
     ~ join_party("npc_resh")
     -> Начало_hub

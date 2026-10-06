@@ -6,7 +6,7 @@ EXTERNAL set_flag(a0)
 EXTERNAL unlock_codex(a0)
 
 === Начало ===
-Регистратор щёлкает реле: два стеклянных глаза разгораются бирюзой. # action
+Регистратор щёлкает реле: два стеклянных глаза разгораются бирюзой. # action # sfx: sfx_click
 Назовите номер дела, шифр или дату. Говорите чётко: я пишу, как слышу. # voice: assets/voice/registrar_1.mp3
 -> Начало_hub
 
@@ -16,7 +16,7 @@ EXTERNAL unlock_codex(a0)
     ~ unlock_codex("codex_case136")
     -> Начало_hub
 * { has_item("item_plate") } [Наряд стражи за ночь тринадцатого.]
-    Пломба предъявлена. Выдаю. # emotion: calm # voice: assets/voice/registrar_4.mp3
+    Пломба предъявлена. Выдаю. # emotion: calm # voice: assets/voice/registrar_4.mp3 # sfx: snd_latch
     Взвод старшины Келла Ястреба, двенадцать человек, седьмой ярус, с двадцати до шести. Пометки о смене нет. # voice: assets/voice/registrar_5.mp3
     ~ add_item("item_roster", 1)
     ~ fire_rule("rule_roster_got")

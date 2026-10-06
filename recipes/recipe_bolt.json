@@ -22,5 +22,6 @@
  },
  "message": "Три болта. Один кривой — он и полетит первым.",
  "workbench": true,
- "category": "misc"
+ "category": "misc",
+ "sound": "sfx_anvil"
 }

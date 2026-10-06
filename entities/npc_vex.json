@@ -6,9 +6,9 @@
  "portrait": {
   "neutral": "assets/img/npc/vex_neutral.jpg",
   "angry": "assets/img/npc/vex_angry.jpg",
-  "afraid": "assets/img/npc/vex.jpg",
-  "thoughtful": "assets/img/npc/vex.jpg",
-  "sad": "assets/img/npc/vex.jpg",
+  "afraid": "assets/img/npc/vex_afraid.jpg",
+  "thoughtful": "assets/img/npc/vex_thoughtful.jpg",
+  "sad": "assets/img/npc/vex_sad.jpg",
   "calm": "assets/img/npc/vex_calm.jpg"
  },
  "stats": {

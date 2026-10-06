@@ -85,7 +85,8 @@
          "kind": "line",
          "line": {
           "text": "Ты кладёшь ладонь на камень. Он тёплый и отвечает на пульс.",
-          "action": true
+          "action": true,
+          "sfx": "sfx_hum"
          }
         },
         {
@@ -151,7 +152,8 @@
        "kind": "line",
        "line": {
         "text": "Молчание длится, пока не закладывает уши.",
-        "action": true
+        "action": true,
+        "sfx": "sfx_hum"
        }
       },
       {
