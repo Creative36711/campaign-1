@@ -159,5 +159,6 @@
    "once": true,
    "sound": "sfx_gear"
   }
- ]
+ ],
+ "interact_hint": "Осмотреть привод"
 }

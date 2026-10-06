@@ -213,6 +213,67 @@
    ],
    "choices": [],
    "goto": "Начало"
+  },
+  {
+   "id": "Оценка",
+   "label": "Дож смотрит вещь",
+   "sections": [
+    {
+     "steps": [
+      {
+       "kind": "line",
+       "line": {
+        "text": "Дож вертит вещь двумя пальцами, прищурившись.",
+        "action": true
+       }
+      },
+      {
+       "kind": "line",
+       "line": {
+        "text": "Вещь стоящая — для того, кто её ищет. Я таких не знаю, но за полцены возьму.",
+        "emotion": "calm",
+        "voice": "assets/voice/dozh_6.mp3"
+       }
+      },
+      {
+       "kind": "effect",
+       "effect": {
+        "type": "change_disposition",
+        "delta": 2,
+        "target": "npc_dozh"
+       }
+      }
+     ]
+    }
+   ],
+   "goto": "Начало",
+   "choices": []
+  },
+  {
+   "id": "Оценка_мимо",
+   "label": "Пустые руки",
+   "sections": [
+    {
+     "steps": [
+      {
+       "kind": "line",
+       "line": {
+        "text": "Дож разводит руками: пусто.",
+        "action": true
+       }
+      },
+      {
+       "kind": "line",
+       "line": {
+        "text": "Руки показывай, когда они полные. Пустыми торгуют только нищие.",
+        "emotion": "calm"
+       }
+      }
+     ]
+    }
+   ],
+   "goto": "Начало",
+   "choices": []
   }
  ]
 }

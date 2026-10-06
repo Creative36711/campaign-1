@@ -7,7 +7,7 @@
   "neutral": "assets/img/npc/kast_neutral.jpg",
   "angry": "assets/img/npc/kast_angry.jpg",
   "afraid": "assets/img/npc/kast_neutral.jpg",
-  "thoughtful": "assets/img/npc/kast_neutral.jpg",
+  "thoughtful": "assets/img/npc/kast_thoughtful.jpg",
   "sad": "assets/img/npc/kast_calm.jpg",
   "calm": "assets/img/npc/kast_calm.jpg"
  },

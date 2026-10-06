@@ -6,7 +6,7 @@
  "portrait": {
   "neutral": "assets/img/npc/zhuk_neutral.jpg",
   "angry": "assets/img/npc/zhuk_angry.jpg",
-  "afraid": "assets/img/npc/zhuk_angry.jpg",
+  "afraid": "assets/img/npc/zhuk_afraid.jpg",
   "thoughtful": "assets/img/npc/zhuk_thoughtful.jpg",
   "sad": "assets/img/npc/zhuk_thoughtful.jpg",
   "calm": "assets/img/npc/zhuk_calm.jpg"

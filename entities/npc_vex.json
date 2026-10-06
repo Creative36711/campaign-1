@@ -5,7 +5,7 @@
  "description": "Хозяин седьмого шлюза: крюк вместо левой кисти, вечный мазут на рукавах и привычка считать всех проходящих дважды.",
  "portrait": {
   "neutral": "assets/img/npc/vex_neutral.jpg",
-  "angry": "assets/img/npc/vex.jpg",
+  "angry": "assets/img/npc/vex_angry.jpg",
   "afraid": "assets/img/npc/vex.jpg",
   "thoughtful": "assets/img/npc/vex.jpg",
   "sad": "assets/img/npc/vex.jpg",

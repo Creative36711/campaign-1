@@ -157,7 +157,8 @@
          "kind": "line",
          "line": {
           "text": "Инспектор Каст В. Основание: пункт девятый. Пункт девятый гласит: «в интересах яруса».",
-          "emotion": "calm"
+          "emotion": "calm",
+          "voice": "assets/voice/registrar_6.mp3"
          }
         },
         {

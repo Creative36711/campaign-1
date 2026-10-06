@@ -7,6 +7,7 @@ EXTERNAL set_flag(a0)
 EXTERNAL skill_check(a0, a1)
 EXTERNAL change_disposition(a0, a1)
 EXTERNAL has_item(a0)
+EXTERNAL present_item(a0, a1, a2)
 
 VAR r = 0
 
@@ -36,7 +37,7 @@ VAR r = 0
     ~ set_flag("zhuk_cache_hint")
     -> Начало_hub
 + { has_item("item_ledger") } [Дать Жуку полистать гроссбух.]
-    -> Расход
+    ~ present_item("Расход", "Расход_мимо", "item_ledger")
 * [Где мастер?]
 Ниже восьмого. Там, где жила поёт. Хочешь — спускайся, хочешь — живи. # emotion: calm # voice: assets/voice/zhuk_3.mp3
     ~ fire_rule("rule_reveal_deep")
@@ -67,4 +68,9 @@ VAR r = 0
 ~ set_flag("zhuk_ledger")
 ~ change_disposition("npc_zhuk", 8)
 ~ fire_rule("rule_zhuk_ledger")
+-> Начало_hub
+
+=== Расход_мимо ===
+Жук тянется было, но рука остаётся при нём. # action
+Это я не читаю. Покажи бумагу, где цифры, — тогда поговорим. # emotion: thoughtful # voice: assets/voice/zhuk_7.mp3
 -> Начало_hub

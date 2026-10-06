@@ -6,9 +6,9 @@
  "portrait": {
   "neutral": "assets/img/npc/kell_neutral.jpg",
   "angry": "assets/img/npc/kell_angry.jpg",
-  "afraid": "assets/img/npc/kell_neutral.jpg",
+  "afraid": "assets/img/npc/kell_afraid.jpg",
   "thoughtful": "assets/img/npc/kell_thoughtful.jpg",
-  "sad": "assets/img/npc/kell_thoughtful.jpg",
+  "sad": "assets/img/npc/kell_sad.jpg",
   "calm": "assets/img/npc/kell_calm.jpg"
  },
  "stats": {

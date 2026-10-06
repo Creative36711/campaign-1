@@ -485,7 +485,8 @@
    "id": "slot_brazier",
    "label": "Жаровня",
    "type": [
-    "prop"
+    "prop",
+    "workbench"
    ],
    "shape": "rect",
    "x": 570,
@@ -497,10 +498,11 @@
   },
   {
    "id": "slot_bench_row",
-   "label": "Лавка у стены",
+   "label": "Верстак у стены",
    "type": [
     "person",
-    "prop"
+    "prop",
+    "workbench"
    ],
    "shape": "rect",
    "x": 150,

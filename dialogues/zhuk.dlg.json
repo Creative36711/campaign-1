@@ -277,7 +277,6 @@
   },
   {
    "id": "Расход",
-   "speaker": "zhuk",
    "sections": [
     {
      "steps": [
@@ -329,7 +328,37 @@
       }
      ]
     }
-   ]
+   ],
+   "label": "Расход на режим тишины",
+   "choices": [],
+   "goto": "Начало"
+  },
+  {
+   "id": "Расход_мимо",
+   "label": "Не та бумага",
+   "sections": [
+    {
+     "steps": [
+      {
+       "kind": "line",
+       "line": {
+        "text": "Жук тянется было, но рука остаётся при нём.",
+        "action": true
+       }
+      },
+      {
+       "kind": "line",
+       "line": {
+        "text": "Это я не читаю. Покажи бумагу, где цифры, — тогда поговорим.",
+        "emotion": "thoughtful",
+        "voice": "assets/voice/zhuk_7.mp3"
+       }
+      }
+     ]
+    }
+   ],
+   "goto": "Начало",
+   "choices": []
   }
  ]
 }

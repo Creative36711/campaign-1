@@ -302,7 +302,6 @@
   },
   {
    "id": "Жетон",
-   "speaker": "kell",
    "sections": [
     {
      "steps": [
@@ -318,7 +317,7 @@
        "kind": "line",
        "line": {
         "text": "Яров. Я три дня носил его жетон в кармане и так и не зашёл к сестре.",
-        "emotion": "thoughtful",
+        "emotion": "sad",
         "voice": "assets/voice/kell_5.mp3"
        }
       },
@@ -354,7 +353,37 @@
       }
      ]
     }
-   ]
+   ],
+   "label": "Жетон Ярова",
+   "choices": [],
+   "goto": "Начало"
+  },
+  {
+   "id": "Жетон_мимо",
+   "label": "Не та вещь",
+   "sections": [
+    {
+     "steps": [
+      {
+       "kind": "line",
+       "line": {
+        "text": "Келл смотрит сначала на вещь, потом на тебя — и без всякого интереса.",
+        "action": true
+       }
+      },
+      {
+       "kind": "line",
+       "line": {
+        "text": "Я жетоны не собираю. Положи, где взял.",
+        "emotion": "calm",
+        "voice": "assets/voice/kell_8.mp3"
+       }
+      }
+     ]
+    }
+   ],
+   "goto": "Начало",
+   "choices": []
   }
  ]
 }

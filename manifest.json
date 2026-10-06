@@ -165,7 +165,8 @@
   "recipe_tonic.json",
   "recipe_bolt.json",
   "recipe_repair_lamp.json",
-  "recipe_charge.json"
+  "recipe_charge.json",
+  "recipe_stew.json"
  ],
  "codex": [
   "codex_karkas.json",

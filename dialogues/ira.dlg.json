@@ -19,7 +19,8 @@
        "kind": "line",
        "line": {
         "text": "Ты насчёт помпы? Я уже всё рассказала старшине. Он велел не мешать.",
-        "voice": "assets/voice/ira_1.mp3"
+        "voice": "assets/voice/ira_1.mp3",
+        "emotion": "afraid"
        }
       }
      ]
@@ -311,7 +312,8 @@
          "kind": "line",
          "line": {
           "text": "Значит, он всё-таки закрывал затвор. Его послали туда, где он умел.",
-          "emotion": "sad"
+          "emotion": "sad",
+          "voice": "assets/voice/ira_7.mp3"
          }
         },
         {

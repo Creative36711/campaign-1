@@ -2,6 +2,7 @@ EXTERNAL change_disposition(a0, a1)
 EXTERNAL fire_rule(a0)
 EXTERNAL get_flag(a0)
 EXTERNAL has_item(a0)
+EXTERNAL present_item(a0, a1, a2)
 EXTERNAL remove_item(a0, a1)
 EXTERNAL set_dialogue_timer(a0, a1)
 EXTERNAL set_entity_state(a0, a1)
@@ -15,7 +16,7 @@ EXTERNAL set_flag(a0)
 === Начало_hub ===
 + [Что именно случилось с седьмой помпой?]
     Остановлена. Причина устанавливается. Мастер пропал, вероятно — утонул. # emotion: calm # voice: assets/voice/kast_5.mp3
-    Твоя задача: найти причину и назвать её так, чтобы город спал спокойно.
+    Твоя задача: найти причину и назвать её так, чтобы город спал спокойно. # voice: assets/voice/kast_8.mp3
     ~ set_flag("kast_brief")
     -> Начало_hub
 + { get_flag("clue_roster") } [Кто приказал закрыть ярус?]
@@ -28,7 +29,7 @@ EXTERNAL set_flag(a0)
     Покажи.
     -> Гроссбух
 + { has_item("item_note") } [Протянуть Каст записку мастера.]
-    -> Записка
+    ~ present_item("Записка", "Записка_мимо", "item_note")
 + [Где мастер Реш?]
 Если бы я знала, ты бы здесь не стоял. Найди — и приведи. Живым желательно, но мне хватит и вины. # emotion: calm # voice: assets/voice/kast_2.mp3
     -> Начало_hub
@@ -48,7 +49,7 @@ EXTERNAL set_flag(a0)
     ~ fire_rule("rule_end_closed")
     -> DONE
 + [Я его не отдам.]
-    Тогда ты не дознаватель, а свидетель. Разница в том, кого хоронят первым. # emotion: angry
+    Тогда ты не дознаватель, а свидетель. Разница в том, кого хоронят первым. # emotion: angry # voice: assets/voice/kast_9.mp3
     ~ set_flag("kast_alerted")
     ~ set_entity_state("npc_kast", "angry")
     ~ fire_rule("rule_lockdown")
@@ -75,4 +76,9 @@ EXTERNAL set_flag(a0)
 ~ set_flag("kast_note")
 ~ change_disposition("npc_kast", -12)
 ~ fire_rule("rule_kast_note")
+-> Начало_hub
+
+=== Записка_мимо ===
+Она даже не поднимает глаз. # action
+Убери. Я разговариваю с делом, а не с твоей сумкой. # emotion: calm # voice: assets/voice/kast_10.mp3
 -> Начало_hub

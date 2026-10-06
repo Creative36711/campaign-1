@@ -25,6 +25,7 @@ MODULES = [
     ('cutscenes/*.json', 'CutsceneDef'),
     ('codex/*.json', 'CodexEntryDef'),
     ('arenas/*.json', 'ArenaDef'),
+    ('dialogues/*.dlg.json', 'DlgDoc'),
     ('rules/encounters.json', 'EncounterFileDef'),
 ]
 

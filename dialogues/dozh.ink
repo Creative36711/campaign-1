@@ -1,6 +1,7 @@
 EXTERNAL add_item(a0, a1)
 EXTERNAL change_disposition(a0, a1)
 EXTERNAL has_item(a0)
+EXTERNAL present_item(a0, a1, a2)
 EXTERNAL item_count(a0)
 EXTERNAL open_trade(a0)
 EXTERNAL remove_item(a0, a1)
@@ -33,6 +34,8 @@ EXTERNAL unlock_codex(a0)
     ~ remove_item("item_mark", 34)
     ~ add_item("item_filter", 1)
     -> Начало_hub
++ [Показать Дожу вещь.]
+    ~ present_item("Оценка", "Оценка_мимо", "")
 + [Почему у тебя всё дороже, чем наверху?]
     Потому что сверху вещи возят, а сюда их носят на себе. Спина — тоже цена. # emotion: calm # voice: assets/voice/dozh_5.mp3
     -> Начало_hub
@@ -44,3 +47,14 @@ EXTERNAL unlock_codex(a0)
 Дож спокойно ждёт: он умеет торговать и молча. # action
 Молчишь? И правильно. Кто говорит, тот уже купил.
 -> Начало
+
+=== Оценка ===
+Дож вертит вещь двумя пальцами, прищурившись. # action
+Вещь стоящая — для того, кто её ищет. Я таких не знаю, но за полцены возьму. # emotion: calm # voice: assets/voice/dozh_6.mp3
+~ change_disposition("npc_dozh", 2)
+-> Начало_hub
+
+=== Оценка_мимо ===
+Дож разводит руками: пусто. # action
+Руки показывай, когда они полные. Пустыми торгуют только нищие. # emotion: calm
+-> Начало_hub

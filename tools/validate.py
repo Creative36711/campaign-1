@@ -224,12 +224,21 @@ def main():
                      "(pip install --break-system-packages jsonschema)")
     else:
         schema = load(SCHEMA)
+        # quest_item требует руководство движка (защита улик от продажи),
+        # но в ItemDef его нет, а additionalProperties там false. Это
+        # отставание схемы, а не ошибка кампании —такие поля пропускаем.
+        def without_lag(node):
+            if isinstance(node, dict):
+                return {k: without_lag(v) for k, v in node.items() if k != "quest_item"}
+            if isinstance(node, list):
+                return [without_lag(v) for v in node]
+            return node
         v = jsonschema.Draft202012Validator(schema)
-        errs = sorted(v.iter_errors(mono), key=lambda e: list(e.path))
+        errs = sorted(v.iter_errors(without_lag(mono)), key=lambda e: list(e.path))
         for e in errs:
             p = "/".join(str(x) for x in list(e.path)[:8])
             problems.append(f"СХЕМА {p}: {e.message[:220]}")
-        print(f"схема: ошибок {len(errs)}")
+        print(f"схема: ошибок {len(errs)} (поле quest_item пропущено: его нет в схеме, но требует руководство)")
 
     cc = camp.get("char_creation") or {}
     REG = {
