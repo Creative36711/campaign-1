@@ -9,7 +9,7 @@
   "afraid": "assets/img/npc/vex.jpg",
   "thoughtful": "assets/img/npc/vex.jpg",
   "sad": "assets/img/npc/vex.jpg",
-  "calm": "assets/img/npc/vex.jpg"
+  "calm": "assets/img/npc/vex_calm.jpg"
  },
  "stats": {
   "STR": 12,

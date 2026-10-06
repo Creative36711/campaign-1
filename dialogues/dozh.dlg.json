@@ -169,7 +169,8 @@
          "kind": "line",
          "line": {
           "text": "Потому что сверху вещи возят, а сюда их носят на себе. Спина — тоже цена.",
-          "emotion": "calm"
+          "emotion": "calm",
+          "voice": "assets/voice/dozh_5.mp3"
          }
         }
        ]

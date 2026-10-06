@@ -221,7 +221,8 @@
          "kind": "line",
          "line": {
           "text": "Надзор два года просил Цех отдать девятый ярус. Теперь он ничей — и под водой.",
-          "emotion": "thoughtful"
+          "emotion": "thoughtful",
+          "voice": "assets/voice/ira_5.mp3"
          }
         }
        ]
@@ -335,7 +336,8 @@
          "kind": "line",
          "line": {
           "text": "Не надо «найду». Надо «назову». Назови имя, и я поверю.",
-          "emotion": "angry"
+          "emotion": "angry",
+          "voice": "assets/voice/ira_6.mp3"
          }
         },
         {

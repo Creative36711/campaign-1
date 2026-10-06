@@ -520,7 +520,8 @@
     "w": 110,
     "h": 220
    },
-   "go_to_scene": "scene_flood_gallery"
+   "go_to_scene": "scene_flood_gallery",
+   "cost_ticks": 1
   },
   {
    "label": "На схему ярусов",

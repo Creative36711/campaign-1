@@ -408,7 +408,8 @@
     "w": 170,
     "h": 270
    },
-   "go_to_scene": "scene_sluice"
+   "go_to_scene": "scene_sluice",
+   "cost_ticks": 1
   },
   {
    "label": "В сухой ряд",
@@ -418,7 +419,8 @@
     "w": 170,
     "h": 270
    },
-   "go_to_scene": "scene_dry_row"
+   "go_to_scene": "scene_dry_row",
+   "cost_ticks": 1
   },
   {
    "label": "На схему ярусов",

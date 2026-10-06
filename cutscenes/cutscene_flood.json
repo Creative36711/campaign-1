@@ -232,7 +232,8 @@
    },
    "text": "Помпу так и не запустили. Дело №137 закрыто за невозможностью исполнения.",
    "duration": 6,
-   "transition": "fade"
+   "transition": "fade",
+   "image": "assets/img/cut_flood_2.jpg"
   }
  ]
 }

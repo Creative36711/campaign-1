@@ -301,7 +301,8 @@
        "kind": "line",
        "line": {
         "text": "Кто-то платил, чтобы седьмой ярус в ту ночь стоял пустым. Платил не Келл: у Келла таких денег нет, у него только руки.",
-        "emotion": "thoughtful"
+        "emotion": "thoughtful",
+        "voice": "assets/voice/zhuk_6.mp3"
        }
       },
       {

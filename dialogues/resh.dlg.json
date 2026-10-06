@@ -80,7 +80,8 @@
          "kind": "line",
          "line": {
           "text": "Стража. Я видел пломбу на их рукавицах: тринадцать-К. У нас на ярусе пломбы только у тех, кто закрывает.",
-          "emotion": "angry"
+          "emotion": "angry",
+          "voice": "assets/voice/resh_6.mp3"
          }
         }
        ]
@@ -180,7 +181,8 @@
          "kind": "line",
          "line": {
           "text": "Это не руда и не вода. Это то, что было здесь раньше города и, похоже, останется после.",
-          "emotion": "thoughtful"
+          "emotion": "thoughtful",
+          "voice": "assets/voice/resh_7.mp3"
          }
         },
         {

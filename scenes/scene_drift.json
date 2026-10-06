@@ -435,7 +435,8 @@
     "w": 220,
     "h": 270
    },
-   "go_to_scene": "scene_face"
+   "go_to_scene": "scene_face",
+   "cost_ticks": 1
   },
   {
    "label": "На схему ярусов",

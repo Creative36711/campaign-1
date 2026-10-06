@@ -432,7 +432,8 @@
     "w": 220,
     "h": 150
    },
-   "go_to_scene": "scene_pump_hall"
+   "go_to_scene": "scene_pump_hall",
+   "cost_ticks": 1
   }
  ],
  "music": [

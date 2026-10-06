@@ -126,7 +126,12 @@
   "rule_see_hound.json",
   "rule_kast_note.json",
   "rule_kell_token.json",
-  "rule_zhuk_ledger.json"
+  "rule_zhuk_ledger.json",
+  "rule_filter_bank1.json",
+  "rule_filter_bank2.json",
+  "rule_filter_spent.json",
+  "rule_air_warn.json",
+  "rule_water_rises.json"
  ],
  "arenas": [
   "arena_gate.json",

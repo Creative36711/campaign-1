@@ -25,6 +25,10 @@
    "label": "Взломать крышку",
    "effects": [
     {
+     "type": "advance_time",
+     "ticks": 1
+    },
+    {
      "type": "skill_check_gate",
      "skill": "lockpick",
      "difficulty": 55,

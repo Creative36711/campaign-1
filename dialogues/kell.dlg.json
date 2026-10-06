@@ -326,7 +326,8 @@
        "kind": "line",
        "line": {
         "text": "Отдай ей сам. И скажи: Келл стоял у затвора и не открыл. Это правда, и она хуже любой лжи, которую ты мог бы придумать.",
-        "emotion": "thoughtful"
+        "emotion": "thoughtful",
+        "voice": "assets/voice/kell_7.mp3"
        }
       },
       {
