@@ -39,7 +39,8 @@
           ]
         }
       ],
-      "once": true
+      "once": true,
+      "sound": "snd_tag"
     }
   ]
 }

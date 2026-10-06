@@ -131,7 +131,8 @@
          "kind": "line",
          "line": {
           "text": "Если бы я знала, ты бы здесь не стоял. Найди — и приведи. Живым желательно, но мне хватит и вины.",
-          "emotion": "calm"
+          "emotion": "calm",
+          "voice": "assets/voice/kast_2.mp3"
          }
         }
        ]

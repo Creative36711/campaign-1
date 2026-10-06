@@ -120,7 +120,9 @@
   "rule_end_closed.json",
   "rule_patrol_gate.json",
   "rule_patrol_pump.json",
-  "rule_zhuk_appears.json"
+  "rule_zhuk_appears.json",
+  "rule_see_rot.json",
+  "rule_see_hound.json"
  ],
  "arenas": [
   "arena_gate.json",

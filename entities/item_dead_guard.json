@@ -70,7 +70,8 @@
           "quantity": 1
         }
       ],
-      "once": true
+      "once": true,
+      "sound": "snd_cloth"
     }
   ]
 }

@@ -15,6 +15,10 @@
  ],
  "effects": [
   {
+   "type": "unlock_codex",
+   "entry": "codex_watchman"
+  },
+  {
    "type": "start_combat",
    "enemies": [
     {
