@@ -57,8 +57,14 @@
           ]
         }
       ],
-      "once": true,
-      "sound": "sfx_water"
+      "sound": "sfx_water",
+      "conditions": [
+        {
+          "type": "flag_not_set",
+          "flag": "clue_guard"
+        }
+      ],
+      "hint": "1 ч, расследование: осмотреть тело у затвора"
     },
     {
       "label": "Обыскать карманы",
@@ -104,6 +110,12 @@
               "text": "Список смены исписан карандашом и потёрт: номер Ярова теряется среди чужих фамилий."
             }
           ]
+        }
+      ],
+      "conditions": [
+        {
+          "type": "flag_set",
+          "flag": "clue_guard"
         }
       ]
     }

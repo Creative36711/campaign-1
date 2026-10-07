@@ -60,7 +60,8 @@
          "line": {
           "text": "Она вытирает ладони о штаны. Полотно всё равно чёрное.",
           "action": true,
-          "sfx": "snd_cloth"
+          "sfx": "snd_cloth",
+          "voice": "assets/voice/narr_ira_2.mp3"
          }
         },
         {
@@ -81,7 +82,8 @@
        ]
       }
      ],
-     "goto": "stay"
+     "goto": "stay",
+     "once": true
     },
     {
      "text": "Где ключ от его каморки?",
@@ -146,7 +148,20 @@
        ],
        "goto": "stay"
       }
-     }
+     },
+     "once": true,
+     "conds": [
+      {
+       "type": "has_item",
+       "item": "item_key_resh",
+       "not": true
+      },
+      {
+       "type": "flag",
+       "flag": "resh_room_open",
+       "not": true
+      }
+     ]
     },
     {
      "text": "Твой брат — Стась Яров?",
@@ -157,7 +172,8 @@
          "kind": "line",
          "line": {
           "text": "Она замирает. Ветошь падает на пол.",
-          "action": true
+          "action": true,
+          "voice": "assets/voice/narr_ira_3.mp3"
          }
         },
         {
@@ -181,7 +197,8 @@
        "flag": "body_returned",
        "not": true
       }
-     ]
+     ],
+     "once": true
     },
     {
      "text": "Я нашёл его жетон.",
@@ -193,7 +210,8 @@
          "line": {
           "text": "Она берёт жетон двумя руками, как воду.",
           "action": true,
-          "sfx": "snd_tag"
+          "sfx": "snd_tag",
+          "voice": "assets/voice/narr_ira_4.mp3"
          }
         },
         {
@@ -255,7 +273,8 @@
          "kind": "line",
          "line": {
           "text": "Она кивает раньше, чем ты договорил.",
-          "action": true
+          "action": true,
+          "voice": "assets/voice/narr_ira_5.mp3"
          }
         },
         {
@@ -304,7 +323,8 @@
          "kind": "line",
          "line": {
           "text": "Она берёт рукавицу за манжет двумя пальцами, как чужую вещь.",
-          "action": true
+          "action": true,
+          "voice": "assets/voice/narr_ira_6.mp3"
          }
         },
         {
@@ -334,7 +354,8 @@
        ]
       }
      ],
-     "goto": "stay"
+     "goto": "stay",
+     "once": true
     },
     {
      "text": "Мне пора.",
@@ -353,7 +374,8 @@
        "kind": "line",
        "line": {
         "text": "Она поднимает ветошь, но не вытирает руки.",
-        "action": true
+        "action": true,
+        "voice": "assets/voice/narr_ira_7.mp3"
        }
       },
       {
@@ -398,7 +420,8 @@
        ]
       }
      ],
-     "goto": "stay"
+     "goto": "Начало",
+     "once": true
     },
     {
      "text": "Я найду того, кто это сделал.",
@@ -424,7 +447,8 @@
        ]
       }
      ],
-     "goto": "stay"
+     "goto": "Начало",
+     "once": true
     },
     {
      "text": "Я не знал его. Прости.",
@@ -442,7 +466,8 @@
        ]
       }
      ],
-     "goto": "stay"
+     "goto": "Начало",
+     "once": true
     }
    ],
    "timer": {
@@ -460,7 +485,8 @@
        "kind": "line",
        "line": {
         "text": "Ты молчишь. Она ждёт — и поднимает ветошь с пола.",
-        "action": true
+        "action": true,
+        "voice": "assets/voice/narr_ira_8.mp3"
        }
       },
       {

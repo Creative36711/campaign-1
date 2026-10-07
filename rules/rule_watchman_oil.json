@@ -23,6 +23,10 @@
   ],
   "effects": [
     {
+      "type": "unlock_codex",
+      "entry": "codex_watchman"
+    },
+    {
       "type": "skill_check_gate",
       "skill": "repair",
       "difficulty": 40,
