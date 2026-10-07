@@ -5,7 +5,8 @@
   "description": "Одичавшая дворняга нижних ярусов: серо-пепельная шерсть, красные глаза и привычка гнать того, кто один.",
   "portrait": {
     "neutral": "assets/img/npc/ashhound_neutral.jpg",
-    "angry": "assets/img/npc/ashhound_angry.jpg"
+    "angry": "assets/img/npc/ashhound_angry.jpg",
+    "afraid": "assets/img/npc/ashhound_afraid.jpg"
   },
   "stats": {
     "STR": 10,

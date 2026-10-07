@@ -40,7 +40,7 @@ VAR r = 0
     Тогда слушай другое. Гроссбух Реш не в конторе держал и не в каморке: он его в штольне девятого яруса спрятал, под чугунной плитой у старой крепи. # emotion: thoughtful # voice: assets/voice/zhuk_12.mp3
     ~ set_flag("zhuk_cache_hint")
     -> Начало_hub
-+ { has_item("item_ledger") } [Дать Жуку полистать гроссбух.]
++ { has_item("item_ledger") and not (get_flag("zhuk_ledger")) } [Дать Жуку полистать гроссбух.]
     ~ present_item("Расход", "Расход_мимо", "item_ledger")
     -> DONE
 * { not (get_flag("resh_found")) and not (npc_known("npc_resh")) } [Где мастер?]

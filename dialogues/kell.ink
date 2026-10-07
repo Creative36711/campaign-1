@@ -25,9 +25,9 @@ VAR r = 0
 * { get_flag("clue_guard") } [Ты убил стража Ярова.]
     ~ r = skill_check("intimidate", 55)
     {r: -> Начало_hub_ok2 | -> Начало_hub_no2}
-+ { has_item("item_roster") } [Наряд тринадцатого: твой взвод шёл вниз, а запись делали наверх.]
++ { has_item("item_roster") and not (get_flag("kell_confessed")) } [Наряд тринадцатого: твой взвод шёл вниз, а запись делали наверх.]
     -> Наряд
-+ { has_item("item_guard_token") } [Положить перед Келлом жетон стража.]
++ { has_item("item_guard_token") and not (get_flag("kell_token")) } [Положить перед Келлом жетон стража.]
     ~ present_item("Жетон", "Жетон_мимо", "item_guard_token")
     -> DONE
 + [Пропусти меня к помпе.]

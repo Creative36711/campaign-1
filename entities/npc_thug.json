@@ -5,7 +5,8 @@
   "description": "Нанятый «для охраны порядка»: кирза, дубинка и полное безразличие к тому, чей это порядок.",
   "portrait": {
     "neutral": "assets/img/npc/thug_neutral.jpg",
-    "angry": "assets/img/npc/thug_angry.jpg"
+    "angry": "assets/img/npc/thug_angry.jpg",
+    "afraid": "assets/img/npc/thug_afraid.jpg"
   },
   "stats": {
     "STR": 11,

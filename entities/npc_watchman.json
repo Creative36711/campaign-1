@@ -5,7 +5,8 @@
   "description": "Сторожевой механизм Цеха на гусеничном ходу. Стоял здесь до того, как ярус затопило, и стоит до сих пор.",
   "portrait": {
     "neutral": "assets/img/npc/watchman_neutral.jpg",
-    "angry": "assets/img/npc/watchman_angry.jpg"
+    "angry": "assets/img/npc/watchman_angry.jpg",
+    "afraid": "assets/img/npc/watchman_afraid.jpg"
   },
   "stats": {
     "STR": 16,

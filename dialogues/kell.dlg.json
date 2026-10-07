@@ -204,6 +204,11 @@
       {
        "type": "has_item",
        "item": "item_roster"
+      },
+      {
+       "type": "flag",
+       "flag": "kell_confessed",
+       "not": true
       }
      ],
      "sections": [],
@@ -231,6 +236,11 @@
       {
        "type": "has_item",
        "item": "item_guard_token"
+      },
+      {
+       "type": "flag",
+       "flag": "kell_token",
+       "not": true
       }
      ]
     },

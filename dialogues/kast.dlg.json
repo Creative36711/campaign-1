@@ -150,6 +150,11 @@
       {
        "type": "has_item",
        "item": "item_note"
+      },
+      {
+       "type": "flag",
+       "flag": "kast_note",
+       "not": true
       }
      ]
     },
@@ -219,6 +224,11 @@
       {
        "type": "flag",
        "flag": "case_full"
+      },
+      {
+       "type": "flag",
+       "flag": "kast_case_shown",
+       "not": true
       }
      ]
     },

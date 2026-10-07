@@ -9,14 +9,24 @@
   "chapter": "ch_deep",
   "states": [
     {
-      "id": "state_collared",
-      "label": "Шов стянут бандажом",
+      "id": "state_sealed",
+      "label": "Шов стянут свинцовым бандажом",
       "condition": {
         "flag": "vein_braced"
       },
-      "image": "assets/img/scenes/scene_face_collared.jpg",
+      "image": "assets/img/scenes/scene_face_sealed.jpg",
       "sound": "sfx_brace",
       "sound_volume": 0.8
+    },
+    {
+      "id": "state_collared",
+      "label": "Сердцевина вынута из тайника",
+      "condition": {
+        "flag": "core_taken"
+      },
+      "image": "assets/img/scenes/scene_face_collared.jpg",
+      "sound": "sfx_hum",
+      "sound_volume": 0.7
     },
     {
       "id": "state_main",
@@ -143,12 +153,14 @@
   "particles": "sparks",
   "narrative_intro": [
     {
-      "text": "Забой зовётся слепым, потому что из него нечего брать. Оказалось — есть что.",
-      "sfx": "sfx_hum"
+      "text": "На старых маркшейдерских картах этот тупик помечен как пустой слепой забой. Но здесь, на самом дне шахты, порода разошлась живым швом, и в нише у ручного подъёмника горит тусклый ночник.",
+      "sfx": "sfx_hum",
+      "voice": "assets/voice/intro_face_1.mp3"
     },
     {
-      "text": "Стена светится ровно, как бирюза под водой, и свет этот не от лампы.",
-      "sfx": "snd_chain"
+      "text": "Сквозь трещину в чёрном камне сочится ровный бирюзовый свет, от которого не падают тени. Вся выработка дышит в такт глубокому подземному пульсу, ожидая твоего последнего решения.",
+      "sfx": "snd_chain",
+      "voice": "assets/voice/intro_face_2.mp3"
     }
   ],
   "narrative_intro_once": true,
