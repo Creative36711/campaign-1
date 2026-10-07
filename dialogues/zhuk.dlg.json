@@ -349,7 +349,8 @@
        "kind": "line",
        "line": {
         "text": "Жук ждёт ровно столько, сколько стоит твоё молчание.",
-        "action": true
+        "action": true,
+        "voice": "assets/voice/narr_zhuk_3.mp3"
        }
       },
       {
@@ -375,8 +376,8 @@
        "line": {
         "text": "Жук листает, водя пальцем по столбцам, и считает тихо, одними губами.",
         "action": true,
-        "timer": 5,
-        "sfx": "snd_page"
+        "sfx": "snd_page",
+        "voice": "assets/voice/narr_zhuk_4.mp3"
        }
       },
       {
@@ -434,7 +435,8 @@
        "kind": "line",
        "line": {
         "text": "Жук тянется было, но рука остаётся при нём.",
-        "action": true
+        "action": true,
+        "voice": "assets/voice/narr_zhuk_6.mp3"
        }
       },
       {

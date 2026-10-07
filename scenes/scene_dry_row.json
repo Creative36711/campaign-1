@@ -182,11 +182,13 @@
   "narrative_intro": [
     {
       "text": "Ряд зовётся Сухим, потому что вода сюда не дошла. Пока не дошла.",
-      "sfx": "snd_fire"
+      "sfx": "snd_fire",
+      "voice": "assets/voice/intro_dry_row_1.mp3"
     },
     {
       "text": "У жаровни греются не от холода: здесь греются, чтобы не думать о том, что будет, когда вода дойдёт.",
-      "sfx": "sfx_coins"
+      "sfx": "sfx_coins",
+      "voice": "assets/voice/intro_dry_row_2.mp3"
     }
   ],
   "narrative_intro_once": true,

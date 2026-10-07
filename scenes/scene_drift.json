@@ -9,6 +9,16 @@
   "chapter": "ch_deep",
   "states": [
     {
+      "id": "state_open",
+      "label": "Тайник вскрыт",
+      "condition": {
+        "flag": "cache_open"
+      },
+      "image": "assets/img/scenes/scene_drift_open.jpg",
+      "sound": "sfx_lock",
+      "sound_volume": 0.7
+    },
+    {
       "id": "state_main",
       "label": "Всегда",
       "condition": null,

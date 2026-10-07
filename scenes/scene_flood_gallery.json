@@ -9,6 +9,16 @@
   "chapter": "ch_deep",
   "states": [
     {
+      "id": "state_flooded",
+      "label": "Большая вода",
+      "condition": {
+        "flag": "downpour_flood"
+      },
+      "image": "assets/img/scenes/scene_flood_gallery_flooded.jpg",
+      "sound": "sfx_surge",
+      "sound_volume": 0.85
+    },
+    {
       "id": "state_main",
       "label": "Всегда",
       "condition": null,

@@ -9,6 +9,16 @@
   "chapter": "ch_price",
   "states": [
     {
+      "id": "state_opened",
+      "label": "Дело №136 на конторке",
+      "condition": {
+        "flag": "case136_read"
+      },
+      "image": "assets/img/scenes/scene_archive_opened.jpg",
+      "sound": "sfx_book",
+      "sound_volume": 0.75
+    },
+    {
       "id": "state_main",
       "label": "Всегда",
       "condition": null,

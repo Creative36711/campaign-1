@@ -9,6 +9,16 @@
   "chapter": "ch_price",
   "states": [
     {
+      "id": "state_lockdown",
+      "label": "Режим тишины",
+      "condition": {
+        "flag": "lockdown"
+      },
+      "image": "assets/img/scenes/scene_office_lockdown.jpg",
+      "sound": "sfx_lockdown",
+      "sound_volume": 0.85
+    },
+    {
       "id": "state_main",
       "label": "Всегда",
       "condition": null,
@@ -103,7 +113,8 @@
   "narrative_intro": [
     {
       "text": "Наверху сухо, светло и тихо. Здесь решают, кому достанется вода, и не спрашивают, кому она достанется на самом деле.",
-      "sfx": "sfx_door"
+      "sfx": "sfx_door",
+      "voice": "assets/voice/intro_office_1.mp3"
     },
     {
       "text": "Инспектор Каст улыбается так, как улыбаются в конце длинного дня: вежливо и без участия.",

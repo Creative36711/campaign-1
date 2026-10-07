@@ -9,6 +9,16 @@
   "chapter": "ch_signs",
   "states": [
     {
+      "id": "state_open",
+      "label": "Шкафчик вскрыт",
+      "condition": {
+        "flag": "clue_plate"
+      },
+      "image": "assets/img/scenes/scene_pump_room_open.jpg",
+      "sound": "sfx_lock",
+      "sound_volume": 0.7
+    },
+    {
       "id": "state_main",
       "label": "Всегда",
       "condition": null,
@@ -130,7 +140,7 @@
       "sfx": "sfx_lock"
     },
     {
-      "text": "На столе чертёж, на котором седьмая помпа есть. В сводке её уже нет.",
+      "text": "В железной печке ещё тлеют угли, а на дверце шкафчика висит тяжёлый навесной замок.",
       "sfx": "sfx_water"
     }
   ],

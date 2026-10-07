@@ -9,6 +9,16 @@
   "chapter": "ch_deep",
   "states": [
     {
+      "id": "state_ready",
+      "label": "Клапан установлен",
+      "condition": {
+        "flag": "sluice_ready"
+      },
+      "image": "assets/img/scenes/scene_sluice_ready.jpg",
+      "sound": "snd_latch",
+      "sound_volume": 0.8
+    },
+    {
       "id": "state_main",
       "label": "Всегда",
       "condition": null,
@@ -110,7 +120,7 @@
   "particles": "rain",
   "narrative_intro": [
     {
-      "text": "Затвор не закрыт — он приготовлен: колодка пуста, и пуста она не первый месяц.",
+      "text": "У чугунного полотна пахнет сырым железом и глубокой водой. Штурвал блестит так, будто за него недавно держались.",
       "sfx": "sfx_surge"
     },
     {

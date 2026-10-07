@@ -9,6 +9,16 @@
   "chapter": "ch_signs",
   "states": [
     {
+      "id": "state_roped",
+      "label": "Страховка закреплена",
+      "condition": {
+        "flag": "valve_found"
+      },
+      "image": "assets/img/scenes/scene_pump_shaft_drained.jpg",
+      "sound": "sfx_rungs",
+      "sound_volume": 0.75
+    },
+    {
       "id": "state_main",
       "label": "Всегда",
       "condition": null,
