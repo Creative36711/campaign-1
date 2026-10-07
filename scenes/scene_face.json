@@ -43,7 +43,7 @@
         "person"
       ],
       "shape": "rect",
-      "x": 60,
+      "x": 55,
       "y": 330,
       "w": 240,
       "h": 350,
@@ -65,7 +65,22 @@
       "y": 100,
       "w": 680,
       "h": 520,
-      "condition": null,
+      "condition": {
+        "type": "not",
+        "condition": {
+          "type": "or",
+          "conditions": [
+            {
+              "type": "flag_set",
+              "flag": "vein_braced"
+            },
+            {
+              "type": "flag_set",
+              "flag": "core_taken"
+            }
+          ]
+        }
+      },
       "default_entity": "npc_vein",
       "sound": "sfx_hum",
       "sound_volume": 0.8
@@ -77,10 +92,10 @@
         "prop"
       ],
       "shape": "rect",
-      "x": 1060,
-      "y": 100,
+      "x": 990,
+      "y": 80,
       "w": 220,
-      "h": 250,
+      "h": 600,
       "condition": null,
       "default_entity": "item_hoist",
       "sound": "snd_chain",

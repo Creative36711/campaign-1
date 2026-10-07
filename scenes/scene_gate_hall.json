@@ -39,7 +39,7 @@
       ],
       "shape": "rect",
       "x": 900,
-      "y": 220,
+      "y": 320,
       "w": 210,
       "h": 300,
       "condition": null,
@@ -55,10 +55,10 @@
         "prop"
       ],
       "shape": "rect",
-      "x": 520,
-      "y": 180,
-      "w": 210,
-      "h": 160,
+      "x": 460,
+      "y": 415,
+      "w": 95,
+      "h": 100,
       "condition": null,
       "default_entity": "item_board",
       "sound": "snd_paper",
@@ -73,10 +73,10 @@
         "item"
       ],
       "shape": "rect",
-      "x": 380,
-      "y": 520,
-      "w": 140,
-      "h": 110,
+      "x": 270,
+      "y": 495,
+      "w": 160,
+      "h": 130,
       "condition": null,
       "default_entity": "item_crate",
       "sound": "snd_creak",
@@ -91,7 +91,7 @@
       ],
       "shape": "rect",
       "x": 560,
-      "y": 380,
+      "y": 340,
       "w": 200,
       "h": 320,
       "condition": null,
@@ -103,10 +103,10 @@
     {
       "label": "На схему ярусов",
       "area": {
-        "x": 25,
-        "y": 235,
-        "w": 330,
-        "h": 330
+        "x": 20,
+        "y": 600,
+        "w": 160,
+        "h": 100
       },
       "open_map": true
     },

@@ -34,10 +34,10 @@
         "item"
       ],
       "shape": "rect",
-      "x": 200,
-      "y": 180,
-      "w": 190,
-      "h": 280,
+      "x": 55,
+      "y": 135,
+      "w": 235,
+      "h": 470,
       "condition": null,
       "default_entity": "item_case",
       "sound": "sfx_book",
@@ -69,10 +69,10 @@
         "prop"
       ],
       "shape": "rect",
-      "x": 150,
-      "y": 480,
-      "w": 200,
-      "h": 130,
+      "x": 300,
+      "y": 390,
+      "w": 165,
+      "h": 230,
       "condition": null,
       "default_entity": "item_cot",
       "sound": "snd_cloth",
@@ -87,10 +87,10 @@
         "workbench"
       ],
       "shape": "rect",
-      "x": 920,
-      "y": 350,
-      "w": 300,
-      "h": 210,
+      "x": 1000,
+      "y": 420,
+      "w": 280,
+      "h": 280,
       "condition": null,
       "default_entity": "item_bench",
       "sound": "sfx_anvil",
@@ -102,10 +102,10 @@
     {
       "label": "В шлюзовую камеру",
       "area": {
-        "x": 40,
-        "y": 290,
-        "w": 92,
-        "h": 210
+        "x": 690,
+        "y": 140,
+        "w": 165,
+        "h": 240
       },
       "go_to_scene": "scene_gate_hall",
       "cost_ticks": 0
