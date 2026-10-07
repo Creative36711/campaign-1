@@ -26,12 +26,17 @@ EXTERNAL set_flag(a0)
     -> Начало_hub
 + { has_item("item_ledger") } [Я нашёл гроссбух.]
     Она наконец поднимает глаза. Улыбка есть, тепла нет. # action
-    Покажи.
+    Покажи. # voice: assets/voice/kast_12.mp3
     -> Гроссбух
 + { has_item("item_note") } [Протянуть Каст записку мастера.]
     ~ present_item("Записка", "Записка_мимо", "item_note")
 + [Где мастер Реш?]
 Если бы я знала, ты бы здесь не стоял. Найди — и приведи. Живым желательно, но мне хватит и вины. # emotion: calm # voice: assets/voice/kast_2.mp3
+    -> Начало_hub
++ { get_flag("case_full") } [Показать сшитое дело.]
+    Она смотрит на нитку дольше, чем на сами листы. # action
+    Ты сшил дело. Я видела три таких за двадцать лет: два закрыли, одно закрыло дознавателя. # emotion: thoughtful # voice: assets/voice/kast_15.mp3
+    ~ set_flag("kast_case_shown")
     -> Начало_hub
 + [Мне пора.]
     -> DONE
@@ -43,7 +48,7 @@ EXTERNAL set_flag(a0)
 === Гроссбух_hub ===
 ~ set_dialogue_timer(15, "Молчание")
 + [Отдать гроссбух и закрыть дело.]
-    Вот и хорошо. Дело закрыто, виновный установлен, город спит. # emotion: calm
+    Вот и хорошо. Дело закрыто, виновный установлен, город спит. # emotion: calm # voice: assets/voice/kast_13.mp3
     ~ remove_item("item_ledger", 1)
     ~ set_flag("ledger_shown_kast")
     ~ fire_rule("rule_end_closed")
@@ -63,7 +68,7 @@ EXTERNAL set_flag(a0)
 
 === Молчание ===
 Молчание длится ровно столько, сколько нужно, чтобы его записали. # action
-Молчишь? Я запишу: «показаний не дал, улики не предъявил». Продолжай в том же духе. # sfx: snd_paper
+Молчишь? Я запишу: «показаний не дал, улики не предъявил». Продолжай в том же духе. # sfx: snd_paper # voice: assets/voice/kast_14.mp3
 ~ set_flag("kast_alerted")
 ~ fire_rule("rule_lockdown")
 -> Начало

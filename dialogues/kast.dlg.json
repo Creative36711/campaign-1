@@ -111,7 +111,8 @@
         {
          "kind": "line",
          "line": {
-          "text": "Покажи."
+          "text": "Покажи.",
+          "voice": "assets/voice/kast_12.mp3"
          }
         }
        ]
@@ -155,6 +156,44 @@
      "goto": "stay"
     },
     {
+     "text": "Показать сшитое дело.",
+     "sections": [
+      {
+       "steps": [
+        {
+         "kind": "line",
+         "line": {
+          "text": "Она смотрит на нитку дольше, чем на сами листы.",
+          "action": true
+         }
+        },
+        {
+         "kind": "line",
+         "line": {
+          "text": "Ты сшил дело. Я видела три таких за двадцать лет: два закрыли, одно закрыло дознавателя.",
+          "emotion": "thoughtful",
+          "voice": "assets/voice/kast_15.mp3"
+         }
+        },
+        {
+         "kind": "effect",
+         "effect": {
+          "type": "set_flag",
+          "flag": "kast_case_shown"
+         }
+        }
+       ]
+      }
+     ],
+     "goto": "stay",
+     "conds": [
+      {
+       "type": "flag",
+       "flag": "case_full"
+      }
+     ]
+    },
+    {
      "text": "Мне пора.",
      "sections": [],
      "goto": "end"
@@ -188,7 +227,8 @@
          "kind": "line",
          "line": {
           "text": "Вот и хорошо. Дело закрыто, виновный установлен, город спит.",
-          "emotion": "calm"
+          "emotion": "calm",
+          "voice": "assets/voice/kast_13.mp3"
          }
         },
         {
@@ -321,7 +361,8 @@
        "kind": "line",
        "line": {
         "text": "Молчишь? Я запишу: «показаний не дал, улики не предъявил». Продолжай в том же духе.",
-        "sfx": "snd_paper"
+        "sfx": "snd_paper",
+        "voice": "assets/voice/kast_14.mp3"
        }
       },
       {

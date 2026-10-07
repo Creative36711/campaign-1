@@ -184,7 +184,8 @@
     "codex_ledger.json",
     "codex_seal.json",
     "codex_nadzor.json",
-    "codex_case137.json"
+    "codex_case137.json",
+    "codex_time.json"
   ],
   "dialogues": [
     "ayla.ink",

@@ -665,6 +665,47 @@ def main():
                 if not (0 <= h[0] < g["cols"] and 0 <= h[1] < g["rows"]):
                     problems.append(f"АРЕНА {aid}: {grp} {h} вне сетки")
 
+    # повторяемые действия, которые списывают время или раздают награду
+    # (ловит «Разобрать бумаги» образца семнадцатого хода: час за нажатие,
+    # нажимать можно бесконечно, а нового ничего не происходит)
+    AGAIN_OK = {"change_need", "change_hp", "change_fatigue", "change_sanity",
+                "change_luck", "apply_status", "remove_status", "remove_item",
+                "hazard_fall", "start_combat", "start_dialogue", "open_craft",
+                "start_pursuit"}
+    AGAIN_BAD = {"advance_time", "grant_xp", "unlock_codex", "set_flag",
+                 "advance_quest", "add_item", "fire_rule", "unlock_recipe"}
+
+    def collect_kinds(effs, out):
+        for ef in effs or []:
+            out.add(ef.get("type"))
+            for k in ("success_effects", "fail_effects", "effects", "on_victory"):
+                if isinstance(ef.get(k), list):
+                    collect_kinds(ef[k], out)
+
+    for eid, e in sorted(ents.items()):
+        for o in e.get("interact_options") or []:
+            if o.get("once") or o.get("conditions"):
+                continue
+            kinds = set()
+            collect_kinds(o.get("effects"), kinds)
+            bad = kinds & AGAIN_BAD
+            if not bad or (kinds & AGAIN_OK):
+                continue
+            if "advance_time" in kinds:
+                problems.append(
+                    f"ПОВТОР {eid} / «{o.get('label')}»: действие без once и без условий "
+                    f"списывает время, а повторный клик ничего не меняет — игрок тратит "
+                    f"часы сам того не заметив")
+            elif kinds & {"grant_xp", "add_item"}:
+                problems.append(
+                    f"ПОВТОР {eid} / «{o.get('label')}»: действие без once и без условий "
+                    f"выдаёт награду {sorted(kinds & {'grant_xp', 'add_item'})} — её можно "
+                    f"нажать сколько угодно раз")
+            else:
+                notes.append(
+                    f"{eid} / «{o.get('label')}» повторяется и при повторе ничего не меняет "
+                    f"({sorted(bad)}); времени не стоит, но лучше условие или once")
+
     print(f"\nпроверено: сцен {len(scenes)}, сущностей {len(ents)}, правил {len(rules)}, "
           f"квестов {len(quests)}, арен {len(arenas)}, катсцен {len(cuts)}, "
           f"рецептов {len(recipes)}, кодекс {len(codex)}, диалогов {len(dlgs)}")
