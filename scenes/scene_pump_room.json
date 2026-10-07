@@ -137,11 +137,13 @@
   "narrative_intro": [
     {
       "text": "Чужую каморку открывают ключом, а читают глазами. Записи лежат так, будто хозяин собирался вернуться через час.",
-      "sfx": "sfx_lock"
+      "sfx": "sfx_lock",
+      "voice": "assets/voice/intro_pump_room_1.mp3"
     },
     {
       "text": "В железной печке ещё тлеют угли, а на дверце шкафчика висит тяжёлый навесной замок.",
-      "sfx": "sfx_water"
+      "sfx": "sfx_water",
+      "voice": "assets/voice/intro_pump_room_2.mp3"
     }
   ],
   "narrative_intro_once": true,

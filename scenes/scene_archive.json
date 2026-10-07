@@ -115,11 +115,13 @@
   "narrative_intro": [
     {
       "text": "В архиве своя погода: пыль, лампа под зелёным стеклом и шелест бумаги, которой сто лет.",
-      "sfx": "sfx_archive_open"
+      "sfx": "sfx_archive_open",
+      "voice": "assets/voice/intro_archive_1.mp3"
     },
     {
       "text": "Зелёные абажуры качаются от тяги из вентиляции, а полки пахнут сургучом и старой пылью.",
-      "sfx": "sfx_flip"
+      "sfx": "sfx_flip",
+      "voice": "assets/voice/intro_archive_2.mp3"
     }
   ],
   "narrative_intro_once": true,

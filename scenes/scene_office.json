@@ -118,7 +118,8 @@
     },
     {
       "text": "Инспектор Каст улыбается так, как улыбаются в конце длинного дня: вежливо и без участия.",
-      "sfx": "snd_paper"
+      "sfx": "snd_paper",
+      "voice": "assets/voice/intro_office_2.mp3"
     }
   ],
   "narrative_intro_once": true,
