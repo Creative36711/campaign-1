@@ -56,5 +56,8 @@
       ]
     }
   ],
-  "interact_hint": "Вскрыть крышку схрона"
+  "interact_hint": "Вскрыть крышку схрона",
+  "portrait": {
+    "neutral": "assets/img/items/item_cache.jpg"
+  }
 }

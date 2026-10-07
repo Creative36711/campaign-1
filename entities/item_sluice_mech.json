@@ -78,5 +78,8 @@
       "hint": "перечитать можно бесплатно: без клапана затвор не закрыть"
     }
   ],
-  "interact_hint": "Осмотреть затвор"
+  "interact_hint": "Осмотреть затвор",
+  "portrait": {
+    "neutral": "assets/img/items/item_sluice_mech.jpg"
+  }
 }

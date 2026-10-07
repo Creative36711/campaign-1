@@ -83,7 +83,8 @@
     "npc_rotling.json",
     "npc_ashhound.json",
     "npc_watchman.json",
-    "npc_thug.json"
+    "npc_thug.json",
+    "item_coal.json"
   ],
   "rules": [
     "rule_air_restored.json",
@@ -133,7 +134,12 @@
     "rule_zero_warmth.json",
     "rule_zhuk_appears.json",
     "rule_zhuk_info.json",
-    "rule_zhuk_ledger.json"
+    "rule_zhuk_ledger.json",
+    "rule_warn_cold.json",
+    "rule_warn_hunger.json",
+    "rule_warn_rest.json",
+    "rule_warn_thirst.json",
+    "rule_zero_thirst.json"
   ],
   "arenas": [
     "arena_gate.json",

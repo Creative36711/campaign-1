@@ -59,5 +59,8 @@
       "hint": "перечитать можно бесплатно: срок и фабула"
     }
   ],
-  "interact_hint": "Разобрать бумаги"
+  "interact_hint": "Разобрать бумаги",
+  "portrait": {
+    "neutral": "assets/img/items/item_desk.jpg"
+  }
 }

@@ -351,5 +351,8 @@
       ]
     }
   ],
-  "interact_hint": "Открыть папку дела"
+  "interact_hint": "Открыть папку дела",
+  "portrait": {
+    "neutral": "assets/img/items/item_case.jpg"
+  }
 }

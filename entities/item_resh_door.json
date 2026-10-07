@@ -69,5 +69,8 @@
       "hint": "если мастер внутри, он не откроет"
     }
   ],
-  "interact_hint": "Открыть каморку мастера"
+  "interact_hint": "Открыть каморку мастера",
+  "portrait": {
+    "neutral": "assets/img/items/item_resh_door.jpg"
+  }
 }

@@ -60,5 +60,8 @@
       "hint": "ведомость без приложения — как помпа без мастера"
     }
   ],
-  "interact_hint": "Запросить дело в архиве"
+  "interact_hint": "Запросить дело в архиве",
+  "portrait": {
+    "neutral": "assets/img/items/item_shelf.jpg"
+  }
 }
