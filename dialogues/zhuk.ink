@@ -1,3 +1,4 @@
+EXTERNAL npc_known(a0)
 EXTERNAL fire_rule(a0)
 EXTERNAL get_flag(a0)
 EXTERNAL item_count(a0)
@@ -24,7 +25,7 @@ VAR r = 0
     ~ r = skill_check("persuade", 50)
     {r: -> Начало_hub_ok1 | -> Начало_hub_no1}
 + { item_count("item_mark") >= 50 and not (get_flag("zhuk_paid")) } [Пятьдесят марок. Вспоминай.]
-    Он протягивает руку, не глядя. Марки исчезают в рукаве. # action # sfx: sfx_coin
+    Он протягивает руку, не глядя. Марки исчезают в рукаве. # action # sfx: sfx_coin # voice: assets/voice/narr_zhuk_2.mp3
     Стража Келла, двенадцать человек, вниз. Мастер — наверх, потом снова вниз, с сердцевиной в сумке. А наряд в архиве подшит к делу тринадцать-К: без пломбы тебе его не дадут. # voice: assets/voice/zhuk_11.mp3
     ~ remove_item("item_mark", 50)
     ~ fire_rule("rule_zhuk_info")
@@ -42,7 +43,7 @@ VAR r = 0
 + { has_item("item_ledger") } [Дать Жуку полистать гроссбух.]
     ~ present_item("Расход", "Расход_мимо", "item_ledger")
     -> DONE
-* { not (get_flag("resh_found")) } [Где мастер?]
+* { not (get_flag("resh_found")) and not (npc_known("npc_resh")) } [Где мастер?]
 Ниже восьмого. Там, где жила поёт. Хочешь — спускайся, хочешь — живи. # emotion: calm # voice: assets/voice/zhuk_3.mp3
     ~ fire_rule("rule_reveal_deep")
     -> Начало_hub

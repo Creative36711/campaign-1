@@ -9,6 +9,16 @@
   "chapter": "ch_deep",
   "states": [
     {
+      "id": "state_collared",
+      "label": "Шов стянут бандажом",
+      "condition": {
+        "flag": "vein_braced"
+      },
+      "image": "assets/img/scenes/scene_face_collared.jpg",
+      "sound": "sfx_brace",
+      "sound_volume": 0.8
+    },
+    {
       "id": "state_main",
       "label": "Всегда",
       "condition": null,
@@ -132,7 +142,16 @@
   "lighting": "none",
   "particles": "sparks",
   "narrative_intro": [
-    "Забой зовётся слепым, потому что из него нечего брать. Оказалось — есть что.",
-    "Стена светится ровно, как бирюза под водой, и свет этот не от лампы."
-  ]
+    {
+      "text": "Забой зовётся слепым, потому что из него нечего брать. Оказалось — есть что.",
+      "sfx": "sfx_hum"
+    },
+    {
+      "text": "Стена светится ровно, как бирюза под водой, и свет этот не от лампы.",
+      "sfx": "snd_chain"
+    }
+  ],
+  "narrative_intro_once": true,
+  "narrative_intro_next_label": "Далее ▶",
+  "narrative_intro_done_label": "Прислушаться к Жиле ▶"
 }

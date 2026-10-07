@@ -175,6 +175,11 @@
        "type": "flag",
        "flag": "resh_found",
        "not": true
+      },
+      {
+       "type": "npc_known",
+       "entity": "npc_resh",
+       "known": false
       }
      ]
     },
@@ -519,7 +524,8 @@
        "kind": "line",
        "line": {
         "text": "Она даже не поднимает глаз.",
-        "action": true
+        "action": true,
+        "voice": "assets/voice/narr_kast_7.mp3"
        }
       },
       {

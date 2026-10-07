@@ -4,7 +4,8 @@
   "label": "Боевик Надзора",
   "description": "Нанятый «для охраны порядка»: кирза, дубинка и полное безразличие к тому, чей это порядок.",
   "portrait": {
-    "neutral": "assets/img/npc/thug_neutral.jpg"
+    "neutral": "assets/img/npc/thug_neutral.jpg",
+    "angry": "assets/img/npc/thug_angry.jpg"
   },
   "stats": {
     "STR": 11,
