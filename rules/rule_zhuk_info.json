@@ -30,7 +30,7 @@
   },
   {
    "type": "play_sound",
-   "sound": "sfx_coin",
+   "sound": "sfx_coins",
    "volume": 0.8
   }
  ]

@@ -337,7 +337,9 @@
    "w": 190,
    "h": 280,
    "condition": null,
-   "default_entity": "item_case"
+   "default_entity": "item_case",
+   "sound": "sfx_book",
+   "sound_volume": 0.6
   },
   {
    "id": "slot_desk",
@@ -352,7 +354,9 @@
    "w": 380,
    "h": 190,
    "condition": null,
-   "default_entity": "item_desk"
+   "default_entity": "item_desk",
+   "sound": "snd_paper",
+   "sound_volume": 0.6
   },
   {
    "id": "slot_cot",
@@ -366,7 +370,9 @@
    "w": 200,
    "h": 130,
    "condition": null,
-   "default_entity": "item_cot"
+   "default_entity": "item_cot",
+   "sound": "snd_cloth",
+   "sound_volume": 0.5
   },
   {
    "id": "slot_bench",
@@ -381,7 +387,9 @@
    "w": 300,
    "h": 210,
    "condition": null,
-   "default_entity": "item_bench"
+   "default_entity": "item_bench",
+   "sound": "sfx_anvil",
+   "sound_volume": 0.7
   }
  ],
  "navigation": [

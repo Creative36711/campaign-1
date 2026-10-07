@@ -240,7 +240,8 @@
          "kind": "line",
          "line": {
           "text": "Иди. Она любит, когда к ней идут с пустыми руками.",
-          "emotion": "calm"
+          "emotion": "calm",
+          "voice": "assets/voice/kell_10.mp3"
          }
         }
        ]

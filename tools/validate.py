@@ -108,6 +108,9 @@ def walk_effects(effs, where, depth=0):
         elif t == "override_music":
             for tr in e.get("tracks", []):
                 need(where, "music", tr)
+        elif t == "stop_sound":
+            if e.get("sound"):
+                need(where, "sound", e["sound"])
         elif t == "clear_music_override":
             if e.get("fade") is not None and float(e["fade"]) <= 0:
                 problems.append(f"ЗВУК кроссфейд должен быть больше нуля ({where})")
@@ -340,9 +343,17 @@ def main():
                 for hook in ("sound", "depart_sound", "arrive_sound"):
                     if tc.get(hook):
                         need(f"дорога {l['id']}→{tc.get('to')}", "sound", tc[hook])
+                    v = tc.get(hook + "_volume")
+                    if isinstance(v, (int, float)) and not 0 <= v <= 1:
+                        problems.append(f"ГРОМКОСТЬ дороги {l['id']}→{tc.get('to')} ({hook}) вне 0…1")
             for mr in l.get("music", []) or []:
                 for tr in mr.get("tracks", []):
                     need(f"локация {l['id']}", "music", tr)
+            for stt in l.get("states", []):
+                if stt.get("sound"):
+                    need(f"локация {l['id']}/{stt['id']}", "sound", stt["sound"])
+                if isinstance(stt.get("sound_volume"), (int, float)) and not 0 <= stt["sound_volume"] <= 1:
+                    problems.append(f"ГРОМКОСТЬ состояния {l['id']}/{stt['id']} вне 0…1")
             for a in l.get("ambient", []):
                 if isinstance(a, dict):  # AmbientRule: слой с условиями
                     for one in a.get("sounds", []) + ([a["sound"]] if a.get("sound") else []):
@@ -354,6 +365,38 @@ def main():
                     need(f"локация {l['id']}", "sound", a)
             for orl in l.get("on_enter_rules", []):
                 need(f"локация {l['id']}", "rule", orl)
+
+    def check_ambient(where, layers):
+        if not layers:
+            return
+        plain = {}
+        for a in layers:
+            if not isinstance(a, dict):
+                problems.append(f"ФОН {where}: слой строкой, а не AmbientRule («{a}»)")
+                continue
+            for one in a.get("sounds", []) + ([a["sound"]] if a.get("sound") else []):
+                if one in plain and not a.get("conditions"):
+                    problems.append(f"ФОН {where}: звук «{one}» в двух слоях без условий "
+                                    f"— слои наложатся, громкость перестанет работать")
+                plain[one] = True
+
+    for sid, sc in scenes.items():
+        check_ambient(f"сцена {sid}", sc.get("ambient"))
+        for stt in sc.get("states", []):
+            if stt.get("sound"):
+                need(f"сцена {sid}/{stt['id']}", "sound", stt["sound"])
+            v = stt.get("sound_volume")
+            if isinstance(v, (int, float)) and not 0 <= v <= 1:
+                problems.append(f"ГРОМКОСТЬ {sid}/{stt['id']} вне 0…1")
+        for sl in sc.get("slots", []):
+            if sl.get("sound"):
+                need(f"сцена {sid}/слот", "sound", sl["sound"])
+            v = sl.get("sound_volume")
+            if isinstance(v, (int, float)) and not 0 <= v <= 1:
+                problems.append(f"ГРОМКОСТЬ слота {sid} вне 0…1")
+    for r in world["regions"]:
+        for l in r.get("locations", []):
+            check_ambient(f"локация {l['id']}", l.get("ambient"))
 
     for eid, e in ents.items():
         for k in ("portrait",):
@@ -417,6 +460,9 @@ def main():
     for rid, r in recipes.items():
         if r.get("sound"):
             need(f"рецепт {rid}", "sound", r["sound"])
+        v = r.get("sound_volume")
+        if isinstance(v, (int, float)) and not 0 <= v <= 1:
+            problems.append(f"ГРОМКОСТЬ рецепта {rid} вне 0…1")
         for i in r.get("inputs", []):
             need(f"рецепт {rid}", "item", i.get("item"))
         for t in r.get("tools", []):
@@ -460,6 +506,9 @@ def main():
             if isinstance(one, str):
                 asset(f"звук {s['id']}", one)
     for sd in camp.get("statuses", []):
+        for key in ("apply_sound", "remove_sound"):
+            if sd.get(key):
+                need(f"статус {sd['id']}", "sound", sd[key])
         for sm in sd.get("skill_mods", []):
             need(f"статус {sd['id']}", "skill", sm.get("skill"))
         for e in sd.get("on_apply", []) + sd.get("on_expire", []):

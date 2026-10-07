@@ -27,5 +27,6 @@
  "message": "Маска села плотно. Пахнет маслом и, слава помпам, ничем больше.",
  "workbench": true,
  "category": "gear",
- "sound": "sfx_gear"
+ "sound": "sfx_gear",
+ "sound_volume": 0.7
 }

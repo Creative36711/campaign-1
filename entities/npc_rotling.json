@@ -54,5 +54,10 @@
  "morale": {
   "below_hp_pct": 20,
   "flee_chance": 35
+ },
+ "sounds": {
+  "attack": "sfx_squelch",
+  "hit": "sfx_squelch",
+  "death": "sfx_squelch"
  }
 }

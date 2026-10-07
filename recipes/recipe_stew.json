@@ -20,5 +20,6 @@
   "quantity": 1
  },
  "message": "Паёк разбух, вода пожелтела. Пахнет так, что хочется есть даже сытому.",
- "sound": "snd_pot"
+ "sound": "snd_pot",
+ "sound_volume": 0.7
 }

@@ -68,8 +68,8 @@
   },
   {
    "type": "play_sound",
-   "sound": "sfx_gear",
-   "volume": 0.7
+   "sound": "sfx_machine",
+   "volume": 0.6
   }
  ],
  "chapter": "ch_deep"

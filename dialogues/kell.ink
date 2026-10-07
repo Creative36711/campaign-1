@@ -33,7 +33,7 @@ VAR r = 0
 Помпа не моя. Иди, смотри. Только вниз не суйся: там не наша вода. # emotion: thoughtful # voice: assets/voice/kell_1.mp3
     -> Начало_hub
 + [Я иду к инспектору.]
-    Иди. Она любит, когда к ней идут с пустыми руками. # emotion: calm
+    Иди. Она любит, когда к ней идут с пустыми руками. # emotion: calm # voice: assets/voice/kell_10.mp3
     -> DONE
 - -> Начало_hub
 

@@ -208,7 +208,8 @@
          "kind": "line",
          "line": {
           "text": "Бери, что нужно. И оставь себе на воду — воды всегда нужно больше.",
-          "emotion": "calm"
+          "emotion": "calm",
+          "voice": "assets/voice/ayla_7.mp3"
          }
         },
         {

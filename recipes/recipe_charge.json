@@ -38,5 +38,6 @@
    "flag": "resh_charge_recipe"
   }
  ],
- "sound": "snd_charge"
+ "sound": "snd_charge",
+ "sound_volume": 0.8
 }

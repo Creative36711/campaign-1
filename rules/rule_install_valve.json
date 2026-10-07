@@ -31,8 +31,8 @@
   },
   {
    "type": "play_sound",
-   "sound": "sfx_gear",
-   "volume": 0.9
+   "sound": "sfx_lever",
+   "volume": 0.8
   }
  ],
  "chapter": "ch_deep"

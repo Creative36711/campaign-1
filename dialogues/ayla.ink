@@ -39,7 +39,7 @@ EXTERNAL unlock_recipe(a0)
     ~ set_description("npc_ayla", "Лекарь Сухого ряда. Знает, кто уходил закрывать затвор — и кто не вернулся.")
     -> Начало_hub
 + [Торговать.]
-    Бери, что нужно. И оставь себе на воду — воды всегда нужно больше. # emotion: calm
+    Бери, что нужно. И оставь себе на воду — воды всегда нужно больше. # emotion: calm # voice: assets/voice/ayla_7.mp3
     ~ open_trade("npc_ayla")
     -> DONE
 + [Пока.]

@@ -25,8 +25,8 @@ EXTERNAL unlock_codex(a0)
     ~ unlock_codex("codex_karkas")
     -> Начало_hub
 * [Ищу Жука.]
-    У жаровни сидит, греется, как честный человек. # emotion: calm
-    Скажи, что от Дожа. Он скинет — не много, но скинет.
+    У жаровни сидит, греется, как честный человек. # emotion: calm # voice: assets/voice/dozh_8.mp3
+    Скажи, что от Дожа. Он скинет — не много, но скинет. # voice: assets/voice/dozh_9.mp3
     ~ change_disposition("npc_zhuk", 8)
     -> Начало_hub
 + { item_count("item_mark") >= 34 and not (has_item("item_filter")) } [Купить дыхатель (34 марки).]

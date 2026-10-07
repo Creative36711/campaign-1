@@ -28,7 +28,7 @@
   },
   {
    "type": "play_sound",
-   "sound": "snd_vent",
+   "sound": "sfx_gasp",
    "volume": 1.0
   },
   {

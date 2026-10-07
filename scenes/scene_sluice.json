@@ -706,7 +706,9 @@
    "w": 440,
    "h": 540,
    "condition": null,
-   "default_entity": "item_sluice_mech"
+   "default_entity": "item_sluice_mech",
+   "sound": "sfx_machine",
+   "sound_volume": 0.7
   },
   {
    "id": "slot_dead_guard",
@@ -720,7 +722,9 @@
    "w": 250,
    "h": 190,
    "condition": null,
-   "default_entity": "item_dead_guard"
+   "default_entity": "item_dead_guard",
+   "sound": "snd_cloth",
+   "sound_volume": 0.5
   }
  ],
  "navigation": [
@@ -765,7 +769,12 @@
   }
  ],
  "ambient": [
-  "snd_water_amb"
+  {
+   "sounds": [
+    "snd_water_amb"
+   ],
+   "volume": 0.6
+  }
  ],
  "lighting": "indoor"
 }

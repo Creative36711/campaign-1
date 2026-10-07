@@ -62,5 +62,10 @@
   "below_hp_pct": 25,
   "flee_chance": 20
  },
- "scene_sprite": "assets/img/npc/sprite_kell.png"
+ "scene_sprite": "assets/img/npc/sprite_kell.png",
+ "sounds": {
+  "attack": "snd_blade",
+  "hit": "sfx_hit",
+  "death": "snd_cloth"
+ }
 }

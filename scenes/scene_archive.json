@@ -415,7 +415,9 @@
    "w": 220,
    "h": 400,
    "condition": null,
-   "default_entity": "npc_registrar"
+   "default_entity": "npc_registrar",
+   "sound": "sfx_tick",
+   "sound_volume": 0.5
   },
   {
    "id": "slot_shelf",
@@ -430,7 +432,9 @@
    "w": 340,
    "h": 420,
    "condition": null,
-   "default_entity": "item_shelf"
+   "default_entity": "item_shelf",
+   "sound": "sfx_book",
+   "sound_volume": 0.7
   }
  ],
  "navigation": [

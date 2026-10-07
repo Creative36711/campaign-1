@@ -7,7 +7,7 @@ EXTERNAL unlock_codex(a0)
 
 === Начало ===
 Регистратор щёлкает реле: два стеклянных глаза разгораются бирюзой. # action # sfx: sfx_click
-Назовите номер дела, шифр или дату. Говорите чётко: я пишу, как слышу. # voice: assets/voice/registrar_1.mp3
+Назовите номер дела, шифр или дату. Говорите чётко: я пишу, как слышу. # voice: assets/voice/registrar_1.mp3 # sfx: sfx_tick
 -> Начало_hub
 
 === Начало_hub ===
@@ -23,7 +23,7 @@ EXTERNAL unlock_codex(a0)
     ~ advance_time(1)
     -> Начало_hub
 + { not (has_item("item_plate")) } [Наряд стражи за ночь тринадцатого.]
-    Пломба не предъявлена. Наряды без пломбы не выдаются. # emotion: calm
+    Пломба не предъявлена. Наряды без пломбы не выдаются. # emotion: calm # sfx: sfx_error # voice: assets/voice/registrar_7.mp3
     -> Начало_hub
 + [Ведомость седьмой помпы.]
 Расход мазута, смены мастера Реша Э. Пометка: «режим тишины — см. приложение». Приложение изъято. # emotion: calm # voice: assets/voice/registrar_3.mp3

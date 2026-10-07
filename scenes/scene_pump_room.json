@@ -286,7 +286,9 @@
    "w": 320,
    "h": 210,
    "condition": null,
-   "default_entity": "item_resh_notes"
+   "default_entity": "item_resh_notes",
+   "sound": "snd_paper",
+   "sound_volume": 0.6
   },
   {
    "id": "slot_locker",
@@ -301,7 +303,9 @@
    "w": 240,
    "h": 300,
    "condition": null,
-   "default_entity": "item_locker"
+   "default_entity": "item_locker",
+   "sound": "sfx_lock",
+   "sound_volume": 0.7
   },
   {
    "id": "slot_stove",
@@ -315,7 +319,9 @@
    "w": 150,
    "h": 240,
    "condition": null,
-   "default_entity": "item_stove"
+   "default_entity": "item_stove",
+   "sound": "snd_pot",
+   "sound_volume": 0.5
   }
  ],
  "navigation": [
@@ -334,10 +340,22 @@
  "music": [
   {
    "tracks": [
+    "music_works"
+   ],
+   "conditions": [
+    {
+     "type": "flag_set",
+     "flag": "end_pump"
+    }
+   ]
+  },
+  {
+   "tracks": [
     "music_alarm"
    ],
    "conditions": [
     {
+     "type": "flag_set",
      "flag": "lockdown"
     }
    ]

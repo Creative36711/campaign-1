@@ -30,7 +30,7 @@
   },
   {
    "type": "play_sound",
-   "sound": "sfx_steam",
+   "sound": "sfx_gasp",
    "volume": 0.9
   }
  ],

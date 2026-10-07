@@ -38,6 +38,9 @@
    "volume": 1.0
   },
   {
+   "type": "stop_sound"
+  },
+  {
    "type": "game_over_victory"
   }
  ],

@@ -20,7 +20,8 @@
        "kind": "line",
        "line": {
         "text": "Назовите номер дела, шифр или дату. Говорите чётко: я пишу, как слышу.",
-        "voice": "assets/voice/registrar_1.mp3"
+        "voice": "assets/voice/registrar_1.mp3",
+        "sfx": "sfx_tick"
        }
       }
      ]
@@ -117,7 +118,9 @@
          "kind": "line",
          "line": {
           "text": "Пломба не предъявлена. Наряды без пломбы не выдаются.",
-          "emotion": "calm"
+          "emotion": "calm",
+          "sfx": "sfx_error",
+          "voice": "assets/voice/registrar_7.mp3"
          }
         }
        ]

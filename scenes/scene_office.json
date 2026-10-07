@@ -275,7 +275,9 @@
    "w": 280,
    "h": 310,
    "condition": null,
-   "default_entity": "npc_kast"
+   "default_entity": "npc_kast",
+   "sound": "snd_paper",
+   "sound_volume": 0.5
   },
   {
    "id": "slot_kell",
@@ -289,7 +291,9 @@
    "w": 200,
    "h": 400,
    "condition": null,
-   "default_entity": "npc_kell"
+   "default_entity": "npc_kell",
+   "sound": "snd_blade",
+   "sound_volume": 0.5
   }
  ],
  "navigation": [

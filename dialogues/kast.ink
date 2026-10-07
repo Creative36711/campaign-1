@@ -20,7 +20,7 @@ EXTERNAL set_flag(a0)
     ~ set_flag("kast_brief")
     -> Начало_hub
 + { get_flag("clue_roster") } [Кто приказал закрыть ярус?]
-    Я. И не «закрыть», а «взять на учёт». Ты же видишь разницу, ты человек с образованием. # emotion: calm
+    Я. И не «закрыть», а «взять на учёт». Ты же видишь разницу, ты человек с образованием. # emotion: calm # voice: assets/voice/kast_11.mp3
     ~ set_flag("kast_alerted")
     ~ fire_rule("rule_lockdown")
     -> Начало_hub

@@ -508,7 +508,9 @@
      }
     ]
    },
-   "image": "assets/img/scenes/scene_gate_hall.jpg"
+   "image": "assets/img/scenes/scene_gate_hall.jpg",
+   "sound": "sfx_lever",
+   "sound_volume": 0.6
   },
   {
    "id": "state_night",
@@ -1031,7 +1033,9 @@
      }
     ]
    },
-   "image": "assets/img/scenes/scene_gate_hall_night.jpg"
+   "image": "assets/img/scenes/scene_gate_hall_night.jpg",
+   "sound": "sfx_bell",
+   "sound_volume": 0.7
   }
  ],
  "slots": [
@@ -1047,7 +1051,9 @@
    "w": 210,
    "h": 300,
    "condition": null,
-   "default_entity": "npc_vex"
+   "default_entity": "npc_vex",
+   "sound": "sfx_click",
+   "sound_volume": 0.5
   },
   {
    "id": "slot_board",
@@ -1062,7 +1068,9 @@
    "w": 210,
    "h": 160,
    "condition": null,
-   "default_entity": "item_board"
+   "default_entity": "item_board",
+   "sound": "snd_paper",
+   "sound_volume": 0.6
   },
   {
    "id": "slot_crate",
@@ -1077,7 +1085,9 @@
    "w": 140,
    "h": 110,
    "condition": null,
-   "default_entity": "item_crate"
+   "default_entity": "item_crate",
+   "sound": "snd_creak",
+   "sound_volume": 0.6
   },
   {
    "id": "slot_guest",
@@ -1090,7 +1100,9 @@
    "y": 380,
    "w": 200,
    "h": 320,
-   "condition": null
+   "condition": null,
+   "sound": "sfx_door",
+   "sound_volume": 0.6
   }
  ],
  "navigation": [
@@ -1135,7 +1147,12 @@
   }
  ],
  "ambient": [
-  "snd_wind"
+  {
+   "sounds": [
+    "snd_wind"
+   ],
+   "volume": 0.5
+  }
  ],
  "lighting": "indoor"
 }

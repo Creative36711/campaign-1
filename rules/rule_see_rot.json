@@ -20,8 +20,8 @@
   },
   {
    "type": "play_sound",
-   "sound": "sfx_water",
-   "volume": 0.6
+   "sound": "sfx_squelch",
+   "volume": 0.7
   }
  ],
  "chapter": "ch_deep"

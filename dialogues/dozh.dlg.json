@@ -91,13 +91,15 @@
          "kind": "line",
          "line": {
           "text": "У жаровни сидит, греется, как честный человек.",
-          "emotion": "calm"
+          "emotion": "calm",
+          "voice": "assets/voice/dozh_8.mp3"
          }
         },
         {
          "kind": "line",
          "line": {
-          "text": "Скажи, что от Дожа. Он скинет — не много, но скинет."
+          "text": "Скажи, что от Дожа. Он скинет — не много, но скинет.",
+          "voice": "assets/voice/dozh_9.mp3"
          }
         },
         {

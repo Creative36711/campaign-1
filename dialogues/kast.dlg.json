@@ -67,7 +67,8 @@
          "kind": "line",
          "line": {
           "text": "Я. И не «закрыть», а «взять на учёт». Ты же видишь разницу, ты человек с образованием.",
-          "emotion": "calm"
+          "emotion": "calm",
+          "voice": "assets/voice/kast_11.mp3"
          }
         },
         {

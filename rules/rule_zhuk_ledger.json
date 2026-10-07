@@ -16,7 +16,7 @@
   },
   {
    "type": "play_sound",
-   "sound": "snd_page",
+   "sound": "sfx_flip",
    "volume": 0.7
   }
  ],
