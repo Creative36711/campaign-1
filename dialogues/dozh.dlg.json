@@ -35,7 +35,8 @@
          "kind": "line",
          "line": {
           "text": "Ну наконец-то. Смотри, не трогай руками: руками только платят.",
-          "emotion": "calm"
+          "emotion": "calm",
+          "voice": "assets/voice/dozh_10.mp3"
          }
         },
         {
@@ -208,7 +209,8 @@
          "kind": "line",
          "line": {
           "text": "Руки показывай, когда они полные. Пустыми торгуют только нищие.",
-          "emotion": "calm"
+          "emotion": "calm",
+          "voice": "assets/voice/dozh_11.mp3"
          }
         }
        ],
@@ -325,7 +327,8 @@
        "kind": "line",
        "line": {
         "text": "Руки показывай, когда они полные. Пустыми торгуют только нищие.",
-        "emotion": "calm"
+        "emotion": "calm",
+        "voice": "assets/voice/dozh_11.mp3"
        }
       }
      ]

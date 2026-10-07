@@ -16,7 +16,7 @@ EXTERNAL unlock_codex(a0)
 === Начало_hub ===
 ~ set_dialogue_timer(20, "Молчание")
 + [Торговать.]
-    Ну наконец-то. Смотри, не трогай руками: руками только платят. # emotion: calm
+    Ну наконец-то. Смотри, не трогай руками: руками только платят. # emotion: calm # voice: assets/voice/dozh_10.mp3
     ~ open_trade("npc_dozh")
     -> DONE
 + [Что слышно про помпу?]
@@ -56,5 +56,5 @@ EXTERNAL unlock_codex(a0)
 
 === Оценка_мимо ===
 Дож разводит руками: пусто. # action
-Руки показывай, когда они полные. Пустыми торгуют только нищие. # emotion: calm
+Руки показывай, когда они полные. Пустыми торгуют только нищие. # emotion: calm # voice: assets/voice/dozh_11.mp3
 -> Начало_hub
