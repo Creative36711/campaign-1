@@ -1,3 +1,4 @@
+EXTERNAL set_flag(a0)
 EXTERNAL add_item(a0, a1)
 EXTERNAL change_disposition(a0, a1)
 EXTERNAL fire_rule(a0)
@@ -27,11 +28,11 @@ VAR r = 0
 * { not (has_item("item_key_resh")) and not (get_flag("resh_room_open")) } [Где ключ от его каморки?]
     ~ r = skill_check("persuade", 50)
     {r: -> Начало_hub_ok1 | -> Начало_hub_no1}
-* { get_flag("clue_guard") and not (get_flag("body_returned")) } [Твой брат — Стась Яров?]
+* { get_flag("clue_guard") and not (get_flag("ira_told_brother")) } [Твой брат — Стась Яров?]
     Она замирает. Ветошь падает на пол. # action # voice: assets/voice/narr_ira_3.mp3
     Он в ночную сменился. Двенадцатого. Сказал — к утру. # voice: assets/voice/ira_8.mp3
     -> Брат
-+ { has_item("item_guard_token") } [Я нашёл его жетон.]
+* { has_item("item_guard_token") and get_flag("ira_told_brother") } [Я нашёл его жетон.]
     Она берёт жетон двумя руками, как воду. # action # sfx: snd_tag # voice: assets/voice/narr_ira_4.mp3
 Спасибо. За то, что не написал «погиб при исполнении». Он не при исполнении. # voice: assets/voice/ira_3.mp3
     ~ fire_rule("rule_ira_brother")
@@ -59,6 +60,7 @@ VAR r = 0
 Она поднимает ветошь, но не вытирает руки. # action # voice: assets/voice/narr_ira_7.mp3
 Говори. Ты же не просто так спросил. # voice: assets/voice/ira_14.mp3
 Только не говори «погиб». Это про него уже сказали, а я его ещё не видела. # voice: assets/voice/ira_15.mp3
+~ set_flag("ira_told_brother")
 -> Брат_hub
 
 === Брат_hub ===

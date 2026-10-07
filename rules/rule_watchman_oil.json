@@ -46,7 +46,7 @@
         },
         {
           "type": "play_sound",
-          "sound": "snd_chain",
+          "sound": "sfx_oil",
           "volume": 0.8
         },
         {

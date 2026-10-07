@@ -194,7 +194,7 @@
       },
       {
        "type": "flag",
-       "flag": "body_returned",
+       "flag": "ira_told_brother",
        "not": true
       }
      ],
@@ -236,8 +236,13 @@
       {
        "type": "has_item",
        "item": "item_guard_token"
+      },
+      {
+       "type": "flag",
+       "flag": "ira_told_brother"
       }
-     ]
+     ],
+     "once": true
     },
     {
      "text": "Кто, по-твоему, остановил помпу?",
@@ -390,6 +395,13 @@
        "line": {
         "text": "Только не говори «погиб». Это про него уже сказали, а я его ещё не видела.",
         "voice": "assets/voice/ira_15.mp3"
+       }
+      },
+      {
+       "kind": "effect",
+       "effect": {
+        "type": "set_flag",
+        "flag": "ira_told_brother"
        }
       }
      ]
