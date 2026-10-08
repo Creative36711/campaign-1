@@ -9,6 +9,12 @@
   "chapter": "ch_signs",
   "states": [
     {
+      "id": "state_main",
+      "label": "Основное состояние",
+      "condition": null,
+      "image": "assets/img/scenes/scene_pump_hall.jpg"
+    },
+    {
       "id": "state_running",
       "label": "Помпа пошла",
       "condition": {
@@ -16,13 +22,7 @@
       },
       "image": "assets/img/scenes/scene_pump_hall_running.jpg",
       "sound": "sfx_machine",
-      "sound_volume": 1.0
-    },
-    {
-      "id": "state_main",
-      "label": "Всегда",
-      "condition": null,
-      "image": "assets/img/scenes/scene_pump_hall.jpg"
+      "sound_volume": 1
     }
   ],
   "slots": [
@@ -33,10 +33,10 @@
         "prop"
       ],
       "shape": "rect",
-      "x": 340,
-      "y": 170,
-      "w": 600,
-      "h": 390,
+      "x": 500,
+      "y": 100,
+      "w": 450,
+      "h": 460,
       "condition": null,
       "default_entity": "item_pump_engine",
       "sprite_scale": 0.9,
@@ -52,9 +52,9 @@
       ],
       "shape": "rect",
       "x": 100,
-      "y": 240,
+      "y": 300,
       "w": 240,
-      "h": 340,
+      "h": 360,
       "condition": {
         "not_flag": "ira_joined"
       },
@@ -70,10 +70,10 @@
         "item"
       ],
       "shape": "rect",
-      "x": 1150,
-      "y": 250,
-      "w": 92,
-      "h": 210,
+      "x": 1030,
+      "y": 225,
+      "w": 110,
+      "h": 235,
       "condition": null,
       "default_entity": "item_resh_door",
       "sound": "sfx_door",
@@ -97,19 +97,19 @@
       "label": "На схему ярусов",
       "area": {
         "x": 20,
-        "y": 600,
+        "y": 665,
         "w": 220,
-        "h": 110
+        "h": 50
       },
       "open_map": true
     },
     {
       "label": "В каморку мастера",
       "area": {
-        "x": 1140,
-        "y": 470,
+        "x": 1025,
+        "y": 460,
         "w": 120,
-        "h": 90
+        "h": 70
       },
       "go_to_scene": "scene_pump_room",
       "cost_ticks": 0,

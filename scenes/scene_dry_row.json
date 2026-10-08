@@ -10,20 +10,18 @@
   "states": [
     {
       "id": "state_day",
-      "label": "Днём и вечером",
-      "condition": {
-        "time_of_day": [
-          "morning",
-          "day",
-          "evening"
-        ]
-      },
+      "label": "Основное состояние",
+      "condition": null,
       "image": "assets/img/scenes/scene_dry_row.jpg"
     },
     {
       "id": "state_night",
       "label": "Ночью",
-      "condition": null,
+      "condition": {
+        "time_of_day": [
+          "night"
+        ]
+      },
       "image": "assets/img/scenes/scene_dry_row_night.jpg",
       "sound": "sfx_bell",
       "sound_volume": 0.5
@@ -37,10 +35,10 @@
         "person"
       ],
       "shape": "rect",
-      "x": 200,
-      "y": 250,
+      "x": 190,
+      "y": 360,
       "w": 240,
-      "h": 300,
+      "h": 330,
       "condition": null,
       "default_entity": "npc_dozh",
       "sound": "sfx_coins",
@@ -53,10 +51,10 @@
         "person"
       ],
       "shape": "rect",
-      "x": 820,
-      "y": 250,
+      "x": 860,
+      "y": 350,
       "w": 240,
-      "h": 300,
+      "h": 310,
       "condition": null,
       "default_entity": "npc_ayla",
       "sound": "sfx_glass",
@@ -69,10 +67,10 @@
         "person"
       ],
       "shape": "rect",
-      "x": 560,
-      "y": 290,
-      "w": 190,
-      "h": 150,
+      "x": 600,
+      "y": 245,
+      "w": 150,
+      "h": 200,
       "condition": null,
       "default_entity": "npc_zhuk",
       "sound": "snd_pot",
@@ -86,10 +84,10 @@
         "workbench"
       ],
       "shape": "rect",
-      "x": 570,
-      "y": 450,
-      "w": 170,
-      "h": 140,
+      "x": 645,
+      "y": 445,
+      "w": 140,
+      "h": 145,
       "condition": null,
       "default_entity": "item_brazier",
       "sound": "snd_pot",
@@ -105,10 +103,10 @@
         "workbench"
       ],
       "shape": "rect",
-      "x": 150,
-      "y": 565,
-      "w": 230,
-      "h": 125,
+      "x": 440,
+      "y": 415,
+      "w": 145,
+      "h": 130,
       "condition": null,
       "default_entity": "item_bench",
       "sound": "sfx_anvil",

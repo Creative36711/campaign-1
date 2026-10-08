@@ -4,7 +4,7 @@
   "category": "prop",
   "label": "Койка",
   "description": "Железная койка с тощим матрасом. Внизу спят одетыми — на всякий случай.",
-  "weight": 20.0,
+  "weight": 20,
   "stackable": false,
   "value": {
     "mark": 0

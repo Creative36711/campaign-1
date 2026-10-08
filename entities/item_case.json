@@ -4,7 +4,7 @@
   "category": "container",
   "label": "Шкаф с делами",
   "description": "Шкаф, в котором хранят закрытые дела. У каждого дознавателя здесь есть папка, которую он не открывает.",
-  "weight": 30.0,
+  "weight": 30,
   "stackable": false,
   "value": {
     "mark": 0

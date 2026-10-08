@@ -4,7 +4,7 @@
   "category": "prop",
   "label": "Трубный узел",
   "description": "Ствол, задвижка и фланец, который подтекает ровно по графику смены.",
-  "weight": 150.0,
+  "weight": 150,
   "stackable": false,
   "value": {
     "mark": 0
