@@ -143,7 +143,10 @@
     "rule_warn_thirst.json",
     "rule_zero_thirst.json",
     "rule_register_case.json",
-    "rule_vein_brace_reward.json"
+    "rule_vein_brace_reward.json",
+    "rule_filter_protect.json",
+    "rule_filter_unprotect.json",
+    "rule_filter_clear_cough.json"
   ],
   "arenas": [
     "arena_gate.json",

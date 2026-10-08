@@ -4,7 +4,8 @@
   "private": true,
   "description": "Offline authoring and validation tools for the Chronicle campaign package",
   "scripts": {
-    "check:ink": "node tools/inkwalk.js node_modules/inkjs/dist/ink-full.js"
+    "check:ink": "node tools/inkwalk.js node_modules/inkjs/dist/ink-full.js",
+    "test:ink": "node tests/registrar.js"
   },
   "devDependencies": {
     "inkjs": "2.4.0"

@@ -6,12 +6,12 @@
 локации из `navigation`, переходы между локациями из `world.json`) и считает
 три сметы:
 
-- критический путь — герой знает, куда идти, и делает только обязательное;
+- план по ключевым сценам — предполагает свободные пути и выбранные действия;
 - добросовестный проход — обязательное плюс обыски и одна ночёвка;
 - полный — все действия, все улики, три ночёвки.
 
-Цены действий заданы таблицей ACTIONS: берутся из `advance_time` в эффектах
-предметов и правил, плюс оценка на разговоры и бой.
+Цены действий — плановые оценки в ROUTE, не автоматическая сумма эффектов.
+Замки, повторные проверки и RNG не моделируются; это не маршрутный плейтест.
 """
 import glob
 import heapq
@@ -61,7 +61,8 @@ def build_graph():
             loc_of[sid] = loc['id']
             g.setdefault(sid, {})
     for path in sorted(glob.glob(os.path.join(ROOT, 'scenes', '*.json'))):
-        scene = json.load(open(path, encoding='utf-8'))
+        with open(path, encoding='utf-8') as fh:
+            scene = json.load(fh)
         a = scene['id']
         for edge in scene.get('navigation', []):
             b = edge.get('go_to_scene')
@@ -117,7 +118,7 @@ def main():
         travel += d
         actions += cost
         cur = scene
-    # обратно к помпе: финал разыгрывается на седьмом ярусе
+    # Planning return to the pump; not every finale requires this exact itinerary.
     back = shortest(g, cur, 'scene_pump_hall')
     if back is None:
         print('НЕТ ПУТИ назад к помпе')
@@ -137,19 +138,19 @@ def main():
         print(f'  {a:22} → {b:22} {d:2} ч')
     print()
     print(f'  дорога по маршруту:            {travel:3} ч')
-    print(f'  обязательные действия:         {actions:3} ч')
+    print(f'  плановые действия:         {actions:3} ч')
     print(f'  план по ключевым сценам:              {critical:3} ч  ({critical / deadline:.0%} срока)')
     print(f'  добросовестный проход (+ночь): {thorough:3} ч  ({thorough / deadline:.0%} срока)')
     print(f'  полный проход (+три ночи):     {full:3} ч  ({full / deadline:.0%} срока)')
     print()
     if critical > deadline:
-        print('  ПРОБЛЕМА: критический путь не влезает в срок — дело не закрыть.')
+        print('  ПРЕДУПРЕЖДЕНИЕ: предложенный план не влезает; это не доказательство невозможности.')
     elif full <= deadline * 0.75:
         print('  ПРОБЛЕМА: даже полный проход оставляет четверть срока — дедлайн не чувствуется.')
     elif full <= deadline:
-        print('  норма: полный проход укладывается, но почти без запаса — всё успеть нельзя.')
+        print('  норма: полный проход укладывается, но почти без запаса — запас нужно проверять в реальном маршруте.')
     else:
-        print('  норма: полный проход не влезает в срок, критический — с запасом.')
+        print('  норма: полный проход не влезает в срок, предложенный план — с запасом.')
     return 0
 
 

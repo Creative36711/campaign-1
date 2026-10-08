@@ -26,7 +26,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def load(p):
-    return json.load(open(os.path.join(ROOT, p), encoding="utf-8"))
+    with open(os.path.join(ROOT, p), encoding="utf-8") as fh:
+        return json.load(fh)
 
 
 def effects_of(obj):
@@ -299,7 +300,13 @@ def main():
             for sub in c.get("conditions", []) or []:
                 if sub.get("flag"):
                     used.add(sub["flag"])
-    never = sorted(f for f in used if f not in known)
+    producers = set()
+    for _, _, effs in groups:
+        local = []
+        walk_effects(effs, local, rules=rules_by_id)
+        producers.update(value for kind, value, _ in local if kind == 'set')
+    never = sorted(f for f in used if f not in producers)
+    closure_miss = sorted(f for f in used if f in producers and f not in known)
     def has_block(conds):
         for c in conds or []:
             if c.get("type") == "flag_not_set":
@@ -315,16 +322,19 @@ def main():
             if n not in fired and not has_block(conds)]
     alt = [n for n, conds, _ in groups if n not in fired and has_block(conds)]
 
+    print("Статический анализ флагов, не плейтест; монотонная сумма не моделирует снятие/повторное надевание и отрицательные условия.")
     print(f"источников эффектов: {len(groups)}, сработало: {len(fired)}")
     print(f"флагов достигнуто: {len(known)} из {len(registry)} в реестре")
     print("\n--- концовки:")
     for e in camp["endings"]:
         need = [c.get("flag") for c in e.get("conditions", []) if c.get("flag")]
         ok = all(f in known for f in need) if need else True
-        print(f"   {e['id']:16s} {'достижима' if ok else 'НЕ достижима флагами'} "
+        print(f"   {e['id']:16s} {'есть в статической сумме' if ok else 'не достигнута этим анализом'} "
               f"{('(' + ', '.join(need) + ')') if need else '(без условий — срабатывает последней)'}")
     print("\n--- флаги, которые проверяют, но никто не поднимает:")
     print("   " + (", ".join(never) if never else "нет"))
+    print("\n--- флаги с источником, но вне монотонной суммы (не доказательство тупика):")
+    print("   " + (", ".join(closure_miss) if closure_miss else "нет"))
     miss_items = sorted(i for i in needed_items if i not in granted)
     codex_ids = set()
     for f in man.get("codex", []):
@@ -357,7 +367,7 @@ def main():
     print("   " + (", ".join(miss_codex) if miss_codex else "нет"))
     print("\n--- правила-альтернативы (ждут, что флаг ещё не поднят):")
     print("   " + (", ".join(alt[:10]) if alt else "нет"))
-    print("\n--- правила, которые ни разу не сработали:")
+    print("\n--- правила вне монотонной суммы (не доказательство ошибки):")
     print("   " + (", ".join(dead[:20]) if dead else "нет"))
     if len(dead) > 20:
         print(f"   …и ещё {len(dead) - 20}")
