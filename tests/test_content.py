@@ -343,6 +343,20 @@ class ContentRegressions(unittest.TestCase):
         model.rule('rule_filter_clear_cough')
         self.assertNotIn('status_filter_spent', model.statuses)
 
+    def test_package_file_list_is_complete_and_canonical(self):
+        from tools.pack import collect_files
+        files = collect_files(ROOT)
+        self.assertIn('encounters/encounters.json', files)
+        self.assertNotIn('rules/encounters.json', files)
+        self.assertIn('assets/img/items/sprite_dead_guard.png', files)
+        self.assertIn('assets/audio/sfx/sfx_fire.ogg', files)
+        self.assertEqual(len(files), len(set(files)))
+        self.assertTrue(all(not f.startswith(('__chronicle_ai__/', 'tools/', 'tests/')) for f in files))
+        self.assertFalse(any(f.endswith('.chronicle') for f in files))
+
+    def test_current_design_doc_copy_matches_campaign(self):
+        self.assertEqual(load('campaign.json')['design_doc'], (ROOT/'tools/design_doc.md').read_text())
+
     def test_alpha_check_rejects_opaque_png(self):
         from PIL import Image
         with tempfile.TemporaryDirectory() as tmp:
