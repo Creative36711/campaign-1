@@ -7,3 +7,7 @@ _ai-temp/previews/
 _ai-temp/raw/
 node_modules/
 .venv/
+
+# Keep exactly one importable campaign package in the repository.
+*.chronicle
+!/campaign-1.chronicle
