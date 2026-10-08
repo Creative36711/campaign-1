@@ -1181,7 +1181,7 @@
     {
       "id": "kell_down",
       "label": "Келл выведен из игры",
-      "description": "Старшина стражи побеждён у затвора. Читается в концовке «Т��шина»."
+      "description": "Старшина стражи побеждён у затвора. Читается в концовке «Тишина»."
     },
     {
       "id": "kell_pressed",
@@ -1342,6 +1342,16 @@
       "id": "vein_hidden",
       "label": "Жила в породе скрыта",
       "description": "Шов Жилы стянут свинцовым бандажом и/или сердцевина вынута из тайника: на сцене «Слепой забой» слот «Жила в породе» скрыт, потому что фон сменился на стянутый/опорожнённый. Ставится взаимодействием с подъёмником и правилом открытия схрона; снимается при ослаблении бандажа, если сердце ещё на месте."
+    },
+    {
+      "id": "case_registered",
+      "label": "Дело во входящих",
+      "description": "Регистратор присвоил сшитому делу входящий номер. Блокирует повторную платную регистрацию; читается в диалоге, шкафу дел и записи журнала."
+    },
+    {
+      "id": "guard_body_recovered",
+      "label": "Яров вынесен из воды",
+      "description": "Дознаватель и Ира вынесли тело Стася на сухой уступ с помощью верёвки. Скрывает одно тело в двух ракурсах восьмого яруса; читается в осмотре и журнале. Не путать с возвратом жетона."
     }
   ],
   "emotions": [
@@ -1469,212 +1479,254 @@
     {
       "id": "sfx_anvil",
       "label": "Молоток по железу",
-      "src": "assets/audio/sfx/sfx_anvil.ogg"
+      "src": "assets/audio/sfx/sfx_anvil.ogg",
+      "loop": false
     },
     {
       "id": "sfx_archive_close",
       "label": "Папка закрыта",
-      "src": "assets/audio/sfx/sfx_archive_close.ogg"
+      "src": "assets/audio/sfx/sfx_archive_close.ogg",
+      "loop": false
     },
     {
       "id": "sfx_archive_open",
       "label": "Папка архива",
-      "src": "assets/audio/sfx/sfx_archive_open.ogg"
+      "src": "assets/audio/sfx/sfx_archive_open.ogg",
+      "loop": false
     },
     {
       "id": "sfx_bag_close",
       "label": "Сумка закрыта",
-      "src": "assets/audio/sfx/sfx_bag_close.ogg"
+      "src": "assets/audio/sfx/sfx_bag_close.ogg",
+      "loop": false
     },
     {
       "id": "sfx_bell",
       "label": "Колокол яруса",
-      "src": "assets/audio/sfx/sfx_bell.ogg"
+      "src": "assets/audio/sfx/sfx_bell.ogg",
+      "loop": false
     },
     {
       "id": "sfx_book",
       "label": "Дело в архиве",
-      "src": "assets/audio/sfx/sfx_book.ogg"
+      "src": "assets/audio/sfx/sfx_book.ogg",
+      "loop": false
     },
     {
       "id": "sfx_click",
       "label": "Щелчок",
-      "src": "assets/audio/sfx/sfx_click.ogg"
+      "src": "assets/audio/sfx/sfx_click.ogg",
+      "loop": false
     },
     {
       "id": "sfx_coin",
       "label": "Звон марки",
-      "src": "assets/audio/sfx/sfx_coin.ogg"
+      "src": "assets/audio/sfx/sfx_coin.ogg",
+      "loop": false
     },
     {
       "id": "sfx_coins",
       "label": "Марки в ладони",
-      "src": "assets/audio/sfx/sfx_coins.ogg"
+      "src": "assets/audio/sfx/sfx_coins.ogg",
+      "loop": false
     },
     {
       "id": "sfx_crit",
       "label": "Тяжёлый удар",
-      "src": "assets/audio/sfx/sfx_crit.ogg"
+      "src": "assets/audio/sfx/sfx_crit.ogg",
+      "loop": false
     },
     {
       "id": "sfx_door",
       "label": "Лязг двери",
-      "src": "assets/audio/sfx/sfx_door.ogg"
+      "src": "assets/audio/sfx/sfx_door.ogg",
+      "loop": false
     },
     {
       "id": "sfx_error",
       "label": "Отказ механизма",
-      "src": "assets/audio/sfx/sfx_error.ogg"
+      "src": "assets/audio/sfx/sfx_error.ogg",
+      "loop": false
     },
     {
       "id": "sfx_file",
       "label": "Бумага в папку",
-      "src": "assets/audio/sfx/sfx_file.ogg"
+      "src": "assets/audio/sfx/sfx_file.ogg",
+      "loop": false
     },
     {
       "id": "sfx_flip",
       "label": "Листание страниц",
-      "src": "assets/audio/sfx/sfx_flip.ogg"
+      "src": "assets/audio/sfx/sfx_flip.ogg",
+      "loop": false
     },
     {
       "id": "sfx_gasp",
       "label": "Выдох воздуха",
-      "src": "assets/audio/sfx/sfx_gasp.ogg"
+      "src": "assets/audio/sfx/sfx_gasp.ogg",
+      "loop": false
     },
     {
       "id": "sfx_gear",
       "label": "Храповик",
-      "src": "assets/audio/sfx/sfx_gear.ogg"
+      "src": "assets/audio/sfx/sfx_gear.ogg",
+      "loop": false
     },
     {
       "id": "sfx_glass",
       "label": "Звон стекла",
-      "src": "assets/audio/sfx/sfx_glass.ogg"
+      "src": "assets/audio/sfx/sfx_glass.ogg",
+      "loop": false
     },
     {
       "id": "sfx_hit",
       "label": "Удар",
-      "src": "assets/audio/sfx/sfx_hit.ogg"
+      "src": "assets/audio/sfx/sfx_hit.ogg",
+      "loop": false
     },
     {
       "id": "sfx_horn",
       "label": "Гудок смены",
-      "src": "assets/audio/sfx/sfx_horn.ogg"
+      "src": "assets/audio/sfx/sfx_horn.ogg",
+      "loop": false
     },
     {
       "id": "sfx_hum",
       "label": "Гул жилы",
-      "src": "assets/audio/sfx/sfx_hum.mp3"
+      "src": "assets/audio/sfx/sfx_hum.mp3",
+      "loop": false
     },
     {
       "id": "sfx_journal_close",
       "label": "Дело закрыто",
-      "src": "assets/audio/sfx/sfx_journal_close.ogg"
+      "src": "assets/audio/sfx/sfx_journal_close.ogg",
+      "loop": false
     },
     {
       "id": "sfx_journal_open",
       "label": "Дело раскрыто",
-      "src": "assets/audio/sfx/sfx_journal_open.ogg"
+      "src": "assets/audio/sfx/sfx_journal_open.ogg",
+      "loop": false
     },
     {
       "id": "sfx_lamp",
       "label": "Лампа",
-      "src": "assets/audio/sfx/sfx_lamp.ogg"
+      "src": "assets/audio/sfx/sfx_lamp.ogg",
+      "loop": false
     },
     {
       "id": "sfx_lever",
       "label": "Рычаг",
-      "src": "assets/audio/sfx/sfx_lever.ogg"
+      "src": "assets/audio/sfx/sfx_lever.ogg",
+      "loop": false
     },
     {
       "id": "sfx_lock",
       "label": "Замок и ключ",
-      "src": "assets/audio/sfx/sfx_lock.ogg"
+      "src": "assets/audio/sfx/sfx_lock.ogg",
+      "loop": false
     },
     {
       "id": "sfx_machine",
       "label": "Запуск механизма",
-      "src": "assets/audio/sfx/sfx_machine.ogg"
+      "src": "assets/audio/sfx/sfx_machine.ogg",
+      "loop": false
     },
     {
       "id": "sfx_miss",
       "label": "Промах",
-      "src": "assets/audio/sfx/sfx_miss.ogg"
+      "src": "assets/audio/sfx/sfx_miss.ogg",
+      "loop": false
     },
     {
       "id": "sfx_pickup",
       "label": "Взял вещь",
-      "src": "assets/audio/sfx/sfx_pickup.ogg"
+      "src": "assets/audio/sfx/sfx_pickup.ogg",
+      "loop": false
     },
     {
       "id": "sfx_rungs",
       "label": "Ступени лестницы",
-      "src": "assets/audio/sfx/sfx_rungs.ogg"
+      "src": "assets/audio/sfx/sfx_rungs.ogg",
+      "loop": false
     },
     {
       "id": "sfx_squelch",
       "label": "Хлюп гнильца",
-      "src": "assets/audio/sfx/sfx_squelch.ogg"
+      "src": "assets/audio/sfx/sfx_squelch.ogg",
+      "loop": false
     },
     {
       "id": "sfx_steam",
       "label": "Выхлоп пара",
-      "src": "assets/audio/sfx/sfx_steam.ogg"
+      "src": "assets/audio/sfx/sfx_steam.ogg",
+      "loop": false
     },
     {
       "id": "sfx_step",
       "label": "Шаги по камню",
-      "src": "assets/audio/sfx/sfx_step.ogg"
+      "src": "assets/audio/sfx/sfx_step.ogg",
+      "loop": false
     },
     {
       "id": "sfx_surge",
       "label": "Наплыв воды",
-      "src": "assets/audio/sfx/sfx_surge.mp3"
+      "src": "assets/audio/sfx/sfx_surge.mp3",
+      "loop": false
     },
     {
       "id": "sfx_tick",
       "label": "Счётчик",
-      "src": "assets/audio/sfx/sfx_tick.ogg"
+      "src": "assets/audio/sfx/sfx_tick.ogg",
+      "loop": false
     },
     {
       "id": "sfx_wade",
       "label": "Шаг по воде",
-      "src": "assets/audio/sfx/sfx_wade.ogg"
+      "src": "assets/audio/sfx/sfx_wade.ogg",
+      "loop": false
     },
     {
       "id": "sfx_water",
       "label": "Капля тяжёлой воды",
-      "src": "assets/audio/sfx/sfx_water.mp3"
+      "src": "assets/audio/sfx/sfx_water.mp3",
+      "loop": false
     },
     {
       "id": "snd_blade",
       "label": "Клинок",
-      "src": "assets/audio/sfx/snd_blade.ogg"
+      "src": "assets/audio/sfx/snd_blade.ogg",
+      "loop": false
     },
     {
       "id": "snd_chain",
       "label": "Цепь лебёдки",
-      "src": "assets/audio/sfx/snd_chain.ogg"
+      "src": "assets/audio/sfx/snd_chain.ogg",
+      "loop": false
     },
     {
       "id": "snd_charge",
       "label": "Защёлка заряда",
-      "src": "assets/audio/sfx/snd_charge.ogg"
+      "src": "assets/audio/sfx/snd_charge.ogg",
+      "loop": false
     },
     {
       "id": "snd_cloth",
       "label": "Ткань",
-      "src": "assets/audio/sfx/snd_cloth.ogg"
+      "src": "assets/audio/sfx/snd_cloth.ogg",
+      "loop": false
     },
     {
       "id": "snd_creak",
       "label": "Скрип",
-      "src": "assets/audio/sfx/snd_creak.ogg"
+      "src": "assets/audio/sfx/snd_creak.ogg",
+      "loop": false
     },
     {
       "id": "snd_crowd",
       "label": "Гул Сухого ряда (фон)",
-      "src": "assets/audio/amb/snd_crowd.mp3"
+      "src": "assets/audio/amb/snd_crowd.mp3",
+      "loop": true
     },
     {
       "id": "snd_deep_drone",
@@ -1685,37 +1737,44 @@
     {
       "id": "snd_drops",
       "label": "Капель в каморке (фон)",
-      "src": "assets/audio/amb/snd_drops.mp3"
+      "src": "assets/audio/amb/snd_drops.mp3",
+      "loop": true
     },
     {
       "id": "snd_fire",
-      "label": "Трес�� жаровни (фон)",
-      "src": "assets/audio/amb/snd_fire.mp3"
+      "label": "Треск жаровни (фон)",
+      "src": "assets/audio/amb/snd_fire.mp3",
+      "loop": true
     },
     {
       "id": "snd_knock",
       "label": "Стук в металл",
-      "src": "assets/audio/sfx/snd_knock.ogg"
+      "src": "assets/audio/sfx/snd_knock.ogg",
+      "loop": false
     },
     {
       "id": "snd_latch",
       "label": "Защёлка",
-      "src": "assets/audio/sfx/snd_latch.ogg"
+      "src": "assets/audio/sfx/snd_latch.ogg",
+      "loop": false
     },
     {
       "id": "snd_page",
       "label": "Страница",
-      "src": "assets/audio/sfx/snd_page.ogg"
+      "src": "assets/audio/sfx/snd_page.ogg",
+      "loop": false
     },
     {
       "id": "snd_paper",
       "label": "Бумага",
-      "src": "assets/audio/sfx/snd_paper.ogg"
+      "src": "assets/audio/sfx/snd_paper.ogg",
+      "loop": false
     },
     {
       "id": "snd_pot",
       "label": "Котелок",
-      "src": "assets/audio/sfx/snd_pot.ogg"
+      "src": "assets/audio/sfx/snd_pot.ogg",
+      "loop": false
     },
     {
       "id": "snd_pump_amb",
@@ -1726,22 +1785,26 @@
     {
       "id": "snd_rain",
       "label": "Ливень (фон)",
-      "src": "assets/audio/amb/snd_rain.mp3"
+      "src": "assets/audio/amb/snd_rain.mp3",
+      "loop": true
     },
     {
       "id": "snd_stone",
       "label": "Порода",
-      "src": "assets/audio/sfx/snd_stone.ogg"
+      "src": "assets/audio/sfx/snd_stone.ogg",
+      "loop": false
     },
     {
       "id": "snd_tag",
       "label": "Метка на металле",
-      "src": "assets/audio/sfx/snd_tag.ogg"
+      "src": "assets/audio/sfx/snd_tag.ogg",
+      "loop": false
     },
     {
       "id": "snd_vent",
       "label": "Воздух в вентиляции",
-      "src": "assets/audio/sfx/snd_vent.ogg"
+      "src": "assets/audio/sfx/snd_vent.ogg",
+      "loop": false
     },
     {
       "id": "snd_water_amb",
@@ -1761,7 +1824,8 @@
       "src": [
         "assets/audio/sfx/snd_coal_1.ogg",
         "assets/audio/sfx/snd_coal_2.ogg"
-      ]
+      ],
+      "loop": false
     },
     {
       "id": "snd_city_amb",
@@ -1778,37 +1842,50 @@
     {
       "id": "sfx_stamp",
       "label": "Штамп входящего реестра",
-      "src": "assets/audio/sfx/sfx_stamp.ogg"
+      "src": "assets/audio/sfx/sfx_stamp.ogg",
+      "loop": false
     },
     {
       "id": "sfx_crossbow",
       "label": "Спуск тетивы самострела",
-      "src": "assets/audio/sfx/sfx_crossbow.ogg"
+      "src": "assets/audio/sfx/sfx_crossbow.ogg",
+      "loop": false
     },
     {
       "id": "sfx_oil",
       "label": "Маслёнка",
-      "src": "assets/audio/sfx/sfx_oil.ogg"
+      "src": "assets/audio/sfx/sfx_oil.ogg",
+      "loop": false
     },
     {
       "id": "sfx_brace",
       "label": "Стяжка бандажа",
-      "src": "assets/audio/sfx/sfx_brace.ogg"
+      "src": "assets/audio/sfx/sfx_brace.ogg",
+      "loop": false
     },
     {
       "id": "sfx_lockdown",
       "label": "Сигнал режима тишины",
-      "src": "assets/audio/sfx/sfx_lockdown.ogg"
+      "src": "assets/audio/sfx/sfx_lockdown.ogg",
+      "loop": false
     },
     {
       "id": "sfx_flask",
       "label": "Глоток из фляги",
-      "src": "assets/audio/sfx/sfx_flask.ogg"
+      "src": "assets/audio/sfx/sfx_flask.ogg",
+      "loop": false
     },
     {
       "id": "sfx_seal",
       "label": "Печать закрытия дела",
-      "src": "assets/audio/sfx/sfx_seal.ogg"
+      "src": "assets/audio/sfx/sfx_seal.ogg",
+      "loop": false
+    },
+    {
+      "id": "sfx_fire",
+      "label": "Короткий треск огня",
+      "src": "assets/audio/sfx/sfx_fire.ogg",
+      "loop": false
     }
   ],
   "ui_sounds": {

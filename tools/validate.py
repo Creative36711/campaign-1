@@ -222,9 +222,9 @@ def main():
         n = f[:-4]
         dlgs[n] = load(os.path.join(ROOT, "dialogues", n + ".dlg.json"))
     for f in manifest.get("encounters", []):
-        p = os.path.join(ROOT, "rules", f)
+        p = os.path.join(ROOT, "encounters", f)
         if not os.path.exists(p):
-            p = os.path.join(ROOT, "encounters", f)
+            p = os.path.join(ROOT, "rules", f)
         if os.path.exists(p):
             for t in load(p)["encounter_tables"]:
                 enct[t["id"]] = t
@@ -611,7 +611,7 @@ def main():
             problems.append(f"МАНИФЕСТ dialogues: {f} не .ink")
     dirs = {"scenes": "scenes", "entities": "entities", "rules": "rules", "arenas": "arenas",
             "quests": "quests", "cutscenes": "cutscenes", "recipes": "recipes",
-            "codex": "codex", "encounters": "rules"}
+            "codex": "codex", "encounters": "encounters"}
     for key, sub in dirs.items():
         for f in manifest.get(key, []):
             p = os.path.join(ROOT, sub, f)

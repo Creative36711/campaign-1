@@ -60,5 +60,6 @@
     "attack": "sfx_squelch",
     "hit": "sfx_squelch",
     "death": "sfx_squelch"
-  }
+  },
+  "breathe": false
 }

@@ -10,13 +10,13 @@
   "states": [
     {
       "id": "state_day",
-      "label": "Основное состояние",
+      "label": "У общего огня",
       "condition": null,
       "image": "assets/img/scenes/scene_dry_row.jpg"
     },
     {
       "id": "state_night",
-      "label": "Ночью",
+      "label": "Ночной Сухой ряд",
       "condition": {
         "time_of_day": [
           "night"
@@ -35,7 +35,7 @@
         "person"
       ],
       "shape": "rect",
-      "x": 298,
+      "x": 280,
       "y": 286,
       "w": 150,
       "h": 420,
@@ -67,10 +67,10 @@
         "person"
       ],
       "shape": "rect",
-      "x": 523,
-      "y": 298,
-      "w": 150,
-      "h": 300,
+      "x": 533,
+      "y": 305,
+      "w": 108,
+      "h": 310,
       "condition": null,
       "default_entity": "npc_zhuk",
       "sound": "snd_pot",
@@ -104,9 +104,9 @@
       ],
       "shape": "rect",
       "x": 440,
-      "y": 415,
-      "w": 145,
-      "h": 130,
+      "y": 438,
+      "w": 85,
+      "h": 100,
       "condition": null,
       "default_entity": "item_bench",
       "sound": "sfx_anvil",
@@ -182,7 +182,7 @@
   "narrative_intro": [
     {
       "text": "Ряд зовётся Сухим, потому что вода сюда не дошла. Пока не дошла.",
-      "sfx": "snd_fire",
+      "sfx": "sfx_fire",
       "voice": "assets/voice/intro_dry_row_1.mp3"
     },
     {

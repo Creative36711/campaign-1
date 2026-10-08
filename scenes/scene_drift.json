@@ -10,13 +10,13 @@
   "states": [
     {
       "id": "state_main",
-      "label": "Основное состояние",
+      "label": "Глухая штольня",
       "condition": null,
       "image": "assets/img/scenes/scene_drift.jpg"
     },
     {
       "id": "state_open",
-      "label": "Тайник вскрыт",
+      "label": "Открытый тайник",
       "condition": {
         "flag": "cache_open"
       },

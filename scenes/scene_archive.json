@@ -10,13 +10,13 @@
   "states": [
     {
       "id": "state_main",
-      "label": "Основное состояние",
+      "label": "Папки под печатями",
       "condition": null,
       "image": "assets/img/scenes/scene_archive.jpg"
     },
     {
       "id": "state_opened",
-      "label": "Дело №136 на конторке",
+      "label": "Дело №136 раскрыто",
       "condition": {
         "flag": "case136_read"
       },

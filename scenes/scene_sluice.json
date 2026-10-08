@@ -10,13 +10,13 @@
   "states": [
     {
       "id": "state_main",
-      "label": "Основное состояние",
+      "label": "Вода давит на затвор",
       "condition": null,
       "image": "assets/img/scenes/scene_sluice.jpg"
     },
     {
       "id": "state_drained",
-      "label": "Затвор заперт и вода сброшена",
+      "label": "Вода сброшена",
       "condition": {
         "flag": "sluice_ready"
       },
@@ -26,9 +26,10 @@
     },
     {
       "id": "state_ready",
-      "label": "Клапан найден в шахте",
+      "label": "Клапан для затвора",
       "condition": {
-        "flag": "valve_found"
+        "flag": "valve_found",
+        "not_flag": "sluice_ready"
       },
       "image": "assets/img/scenes/scene_sluice_ready.jpg",
       "sound": "sfx_gear",
@@ -60,15 +61,17 @@
         "item"
       ],
       "shape": "rect",
-      "x": 90,
-      "y": 400,
-      "w": 240,
-      "h": 240,
-      "condition": null,
+      "x": 36,
+      "y": 475,
+      "w": 378,
+      "h": 150,
+      "condition": {
+        "not_flag": "guard_body_recovered"
+      },
       "default_entity": "item_dead_guard",
       "sound": "snd_cloth",
       "sound_volume": 0.5,
-      "environmental": true
+      "environmental": false
     }
   ],
   "navigation": [

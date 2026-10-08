@@ -141,7 +141,8 @@
     "rule_warn_hunger.json",
     "rule_warn_rest.json",
     "rule_warn_thirst.json",
-    "rule_zero_thirst.json"
+    "rule_zero_thirst.json",
+    "rule_register_case.json"
   ],
   "arenas": [
     "arena_gate.json",
@@ -194,7 +195,8 @@
     "codex_silence.json",
     "codex_time.json",
     "codex_vein.json",
-    "codex_watchman.json"
+    "codex_watchman.json",
+    "codex_registry.json"
   ],
   "dialogues": [
     "ayla.ink",

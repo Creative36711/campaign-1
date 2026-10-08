@@ -14,7 +14,7 @@ checks = [
     ('campaign.json', 'CampaignMeta'),
     ('world.json', 'WorldDef'),
     ('manifest.json', 'CampaignManifest'),
-    ('rules/encounters.json', 'EncounterFileDef'),
+    ('encounters/encounters.json', 'EncounterFileDef'),
 ]
 for f in sorted(glob.glob('scenes/*.json')): checks.append((f, 'SceneDef'))
 for f in sorted(glob.glob('entities/*.json')): checks.append((f, 'EntityDef'))
@@ -40,3 +40,4 @@ for f, defname in checks:
         for e in errs[:6]:
             print("   ", "/".join(map(str, e.absolute_path)) or "<root>", ":", e.message[:160])
 print(f"\nTOTAL ERRORS: {errors} across {len(checks)} files")
+sys.exit(1 if errors else 0)

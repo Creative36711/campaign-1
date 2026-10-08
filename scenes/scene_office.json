@@ -10,7 +10,7 @@
   "states": [
     {
       "id": "state_main",
-      "label": "Основное состояние",
+      "label": "Приёмные часы",
       "condition": null,
       "image": "assets/img/scenes/scene_office.jpg"
     },

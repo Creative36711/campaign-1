@@ -10,13 +10,13 @@
   "states": [
     {
       "id": "state_main",
-      "label": "Основное состояние",
+      "label": "Жила в породе",
       "condition": null,
       "image": "assets/img/scenes/scene_face.jpg"
     },
     {
       "id": "state_sealed",
-      "label": "Шов стянут свинцовым бандажом",
+      "label": "Шов стянут",
       "condition": {
         "flag": "vein_braced"
       },
@@ -26,7 +26,7 @@
     },
     {
       "id": "state_collared",
-      "label": "Сердцевина вынута из тайника",
+      "label": "Сердцевина вынута",
       "condition": {
         "flag": "core_taken"
       },

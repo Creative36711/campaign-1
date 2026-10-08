@@ -10,13 +10,13 @@
   "states": [
     {
       "id": "state_main",
-      "label": "Основное состояние",
+      "label": "Каморка без хозяина",
       "condition": null,
       "image": "assets/img/scenes/scene_pump_room.jpg"
     },
     {
       "id": "state_open",
-      "label": "Шкафчик вскрыт",
+      "label": "Вскрытый шкафчик",
       "condition": {
         "flag": "clue_plate"
       },

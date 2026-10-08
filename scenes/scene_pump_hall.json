@@ -10,13 +10,13 @@
   "states": [
     {
       "id": "state_main",
-      "label": "Основное состояние",
+      "label": "Помпа молчит",
       "condition": null,
       "image": "assets/img/scenes/scene_pump_hall.jpg"
     },
     {
       "id": "state_running",
-      "label": "Помпа пошла",
+      "label": "Помпа работает",
       "condition": {
         "flag": "end_pump"
       },

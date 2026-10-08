@@ -10,13 +10,13 @@
   "states": [
     {
       "id": "state_main",
-      "label": "Основное состояние",
+      "label": "Дело на столе",
       "condition": null,
       "image": "assets/img/scenes/scene_gate_office.jpg"
     },
     {
       "id": "state_pinned",
-      "label": "Дело №137 сшито",
+      "label": "Сшитое дело",
       "condition": {
         "flag": "case_full"
       },
@@ -165,7 +165,7 @@
   "narrative_intro": [
     {
       "text": "В будке пахнет маслом и чужим табаком. Журнал лежит раскрытым, будто из него только что вышли.",
-      "sfx": "snd_fire",
+      "sfx": "sfx_fire",
       "voice": "assets/voice/intro_gate_office_1.mp3"
     },
     {

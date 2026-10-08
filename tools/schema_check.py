@@ -26,7 +26,7 @@ MODULES = [
     ('codex/*.json', 'CodexEntryDef'),
     ('arenas/*.json', 'ArenaDef'),
     ('dialogues/*.dlg.json', 'DlgDoc'),
-    ('rules/encounters.json', 'EncounterFileDef'),
+    ('encounters/*.json', 'EncounterFileDef'),
 ]
 
 # поля, которых нет в схеме, но которые требует руководство движка.

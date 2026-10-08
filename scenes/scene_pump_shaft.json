@@ -10,13 +10,13 @@
   "states": [
     {
       "id": "state_main",
-      "label": "Основное состояние",
+      "label": "Над чёрным провалом",
       "condition": null,
       "image": "assets/img/scenes/scene_pump_shaft.jpg"
     },
     {
       "id": "state_roped",
-      "label": "Страховка закреплена",
+      "label": "Спуск со страховкой",
       "condition": {
         "flag": "valve_found"
       },

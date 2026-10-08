@@ -9,8 +9,10 @@ const fs = require('fs');
 const path = require('path');
 
 let modPath = process.argv[2];
+if (modPath) modPath = path.resolve(modPath);
 if (!modPath) {
-  const cands = ['/home/user/.tools/node_modules/inkjs/dist/ink-full.js',
+  const cands = [path.resolve(__dirname, '../node_modules/inkjs/dist/ink-full.js'),
+                 '/home/user/.tools/node_modules/inkjs/dist/ink-full.js',
                  '/home/user/node_modules/inkjs/dist/ink-full.js'];
   modPath = cands.find((p) => fs.existsSync(p));
 }

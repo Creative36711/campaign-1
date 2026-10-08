@@ -56,5 +56,6 @@
     "attack": "sfx_machine",
     "hit": "sfx_gear",
     "death": "sfx_machine"
-  }
+  },
+  "breathe": false
 }
