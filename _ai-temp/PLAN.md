@@ -11,6 +11,9 @@ unzip -q -o b7305faa-8e10-4d26-96bb-f1b5ed5e493f-ai-task.chronicle -d /tmp/ai-ca
 unzip -q -o campaign-1.chronicle -d /tmp/old-case                                     # старый чемодан (движок 07.10.2026)
 pip install -q --break-system-packages soundfile jsonschema
 python3 _ai-temp/validate.py     # валидация всех модулей по схеме
+# Пересборка campaign-1.chronicle (импортный файл): из корня репо упаковать campaign.json, world.json,
+# manifest.json, scenes, entities, rules, arenas, quests, recipes, codex, cutscenes, dialogues, assets
+# (media — ZIP_STORED, остальное DEFLATED; порядок топ-уровня как в старом архиве; __chronicle_ai__ НЕ включать)
 python3 _ai-temp/analyze_audio.py # аудит громкости озвучки
 ```
 Квоты на ход: **10 изображений + 10 озвучек**. Держи учёт в §6.
@@ -35,6 +38,11 @@ python3 _ai-temp/analyze_audio.py # аудит громкости озвучки
 | Аудит состояний сущностей (один человек, разная эмоция) | 🟡 В процессе — см. §5 |
 | «Шлюз 7-го яруса → Контора дознавателя»: звук печки пропадает | ✅ Разобралось: не баг — одноразовый sfx интро. Доделано: тихая печка добавлена в ambient сцены (0.22, вне lockdown) |
 | Аудио: найти тихие записи и переозвучить | ✅ Найдены ira_10.mp3 и zhuk_5.mp3 (~-18 дБ от нормы); новые голоса выбраны мастером; реплики перегенерированы, громкость в норме |
+
+## 2б. Архив для импорта
+- **`campaign-1.chronicle` — ФАЙЛ ДЛЯ ИМПОРТА В ИГРУ.** Пересобран из актуального репо (734 файла, 80 МБ, структура как раньше: 12 корневых элементов, без `__chronicle_ai__`). Проверено: 0 ошибок схемы (192 файла), 528/528 медиа-ссылок существуют, все правки хода 1 внутри.
+- `b7305faa-...-ai-task.chronicle` — пакет задания от мастера (входной), НЕ трогаем.
+- После КАЖДОГО хода с правками контента: пересобрать `campaign-1.chronicle` (скрипт-пример в §0) и закоммитить.
 
 ## 3. Баг-фиксы, сделанные этим ходом (08.10.2026, ход 1)
 1. `scene_face.json` slot «Жила в породе»: условие `not(or(flag vein_braced, flag core_taken))` — вне схемы. Заменено на `not_flag: vein_hidden`. Новый флаг `vein_hidden` (зарегистрирован в `campaign.json.flags`):
