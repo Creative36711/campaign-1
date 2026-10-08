@@ -51,10 +51,10 @@
         "person"
       ],
       "shape": "rect",
-      "x": 100,
-      "y": 300,
-      "w": 240,
-      "h": 360,
+      "x": 250,
+      "y": 260,
+      "w": 150,
+      "h": 420,
       "condition": {
         "not_flag": "ira_joined"
       },
@@ -91,7 +91,8 @@
         "h": 120
       },
       "go_to_scene": "scene_pump_shaft",
-      "cost_ticks": 1
+      "cost_ticks": 1,
+      "conditions": []
     },
     {
       "label": "На схему ярусов",

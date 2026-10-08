@@ -43,10 +43,10 @@
         "person"
       ],
       "shape": "rect",
-      "x": 55,
-      "y": 330,
-      "w": 240,
-      "h": 350,
+      "x": 110,
+      "y": 280,
+      "w": 150,
+      "h": 420,
       "condition": {
         "not_flag": "resh_joined"
       },

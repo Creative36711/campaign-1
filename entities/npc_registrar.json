@@ -30,5 +30,6 @@
   "base_disposition": 0,
   "schedule": [],
   "dialogue": "dialogues/registrar.ink",
-  "scene_sprite": "assets/img/npc/sprite_registrar.png"
+  "scene_sprite": "assets/img/npc/sprite_registrar.png",
+  "sounds": {}
 }
