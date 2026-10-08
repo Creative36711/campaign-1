@@ -376,6 +376,11 @@ def main():
 
     for sid, sc in scenes.items():
         check_ambient(f"сцена {sid}", sc.get("ambient"))
+        for i, intro in enumerate(sc.get("narrative_intro", [])):
+            if isinstance(intro, dict):
+                asset(f"интро {sid}/{i}", intro.get("voice"))
+                if intro.get("sfx"):
+                    need(f"интро {sid}/{i}", "sound", intro["sfx"])
         for stt in sc.get("states", []):
             if stt.get("sound"):
                 need(f"сцена {sid}/{stt['id']}", "sound", stt["sound"])

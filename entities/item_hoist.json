@@ -42,7 +42,7 @@
     },
     {
       "label": "Стянуть шов Жилы цепным бандажом",
-      "hint": "ремонт 45 (1 ч при срыве): прижать свинцовые накладки к породе цепью подъёмника",
+      "hint": "Ремонт 45; при срыве 1 ч. Награда за первую установку — один раз; ослаблять и стягивать цепь можно снова.",
       "sound": "sfx_brace",
       "conditions": [
         {
@@ -65,13 +65,8 @@
               "flag": "vein_hidden"
             },
             {
-              "type": "grant_xp",
-              "points": 15
-            },
-            {
-              "type": "change_need",
-              "need": "need_warmth",
-              "delta": 10
+              "type": "fire_rule",
+              "rule": "rule_vein_brace_reward"
             },
             {
               "type": "show_message",

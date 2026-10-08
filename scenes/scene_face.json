@@ -18,7 +18,8 @@
       "id": "state_sealed",
       "label": "Шов стянут",
       "condition": {
-        "flag": "vein_braced"
+        "flag": "vein_braced",
+        "not_flag": "core_taken"
       },
       "image": "assets/img/scenes/scene_face_sealed.jpg",
       "sound": "sfx_brace",

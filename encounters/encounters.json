@@ -15,7 +15,7 @@
             {
               "entity": "npc_rotling",
               "count_min": 1,
-              "count_max": 2
+              "count_max": 1
             }
           ],
           "arena": "arena_gallery",
@@ -28,11 +28,11 @@
             {
               "entity": "npc_ashhound",
               "count_min": 1,
-              "count_max": 2
+              "count_max": 1
             }
           ],
           "arena": "arena_gallery",
-          "intro": "Стая выходит из-под арки без звука."
+          "intro": "Из-под арки выходит один пёс. Его стая осталась в темноте."
         },
         {
           "weight": 2,
@@ -103,11 +103,11 @@
             {
               "entity": "npc_rotling",
               "count_min": 1,
-              "count_max": 2
+              "count_max": 1
             }
           ],
           "arena": "arena_deep",
-          "intro": "Впереди шевелятся: гнильцы идут на свет лампы."
+          "intro": "У рельса шевелится гнилец: он идёт на свет лампы."
         },
         {
           "weight": 2,

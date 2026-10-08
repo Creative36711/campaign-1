@@ -142,7 +142,8 @@
     "rule_warn_rest.json",
     "rule_warn_thirst.json",
     "rule_zero_thirst.json",
-    "rule_register_case.json"
+    "rule_register_case.json",
+    "rule_vein_brace_reward.json"
   ],
   "arenas": [
     "arena_gate.json",

@@ -48,44 +48,36 @@ def load(p):
 
 
 def build_graph():
-    """Возвращает граф сцен: {сцена: {сцена: часов}}."""
-    g = {}
-    loc_of = {}
-    w = load('world.json')
-    region = w['regions'][0]
-    for loc in region['locations']:
-        for s in loc.get('scenes', []):
-            sid = s if isinstance(s, str) else s.get('id')
+    """Directed scene graph: map exits go only to the destination arrival scene.
+
+    This is an optimistic planning graph: locked/revealed paths are assumed open.
+    It must not invent reverse navigation or teleport to every destination room.
+    """
+    g, loc_of, map_exits = {}, {}, set()
+    region = load('world.json')['regions'][0]
+    locations = {loc['id']: loc for loc in region['locations']}
+    for loc in locations.values():
+        for sid in loc.get('scenes', []):
             loc_of[sid] = loc['id']
             g.setdefault(sid, {})
-
-    # переходы внутри сцен (navigation)
     for path in sorted(glob.glob(os.path.join(ROOT, 'scenes', '*.json'))):
-        s = json.load(open(path, encoding='utf-8'))
-        a = s['id']
-        g.setdefault(a, {})
-        for e in s.get('navigation', []):
-            b = e.get('go_to_scene')
+        scene = json.load(open(path, encoding='utf-8'))
+        a = scene['id']
+        for edge in scene.get('navigation', []):
+            b = edge.get('go_to_scene')
             if b:
-                g.setdefault(b, {})
-                cost = e.get('cost_ticks', 0) or 0
-                if b not in g[a] or cost < g[a][b]:
-                    g[a][b] = cost
-                    g[b][a] = cost
-
-    # переходы между локациями: от каждой сцены одной локации к каждой сцене другой
-    for loc in region['locations']:
-        for t in loc.get('travel_connections', []):
-            cost = t.get('cost_ticks', 0) or 0
-            to_loc = t['to']
-            for a in loc_of:
-                if loc_of[a] != loc['id']:
-                    continue
-                for b in loc_of:
-                    if loc_of[b] != to_loc:
-                        continue
-                    if b not in g[a] or cost < g[a][b]:
-                        g[a][b] = cost
+                cost = edge.get('cost_ticks', 0) or 0
+                g[a][b] = min(g[a].get(b, float('inf')), cost)
+            if edge.get('open_map'):
+                map_exits.add(a)
+    for loc in locations.values():
+        for edge in loc.get('travel_connections', []):
+            target = locations[edge['to']]
+            arrival = target['arrival_scene']
+            for a in map_exits:
+                if loc_of[a] == loc['id']:
+                    cost = edge.get('cost_ticks', 0) or 0
+                    g[a][arrival] = min(g[a].get(arrival, float('inf')), cost)
     return g
 
 
@@ -110,7 +102,7 @@ def main():
     g = build_graph()
     camp = load('campaign.json')
     start = camp.get('starting_scene', 'scene_gate_hall')
-    deadline = DEADLINE
+    deadline = camp.get('deadline_ticks', DEADLINE)
 
     travel = 0
     actions = 0
@@ -126,7 +118,10 @@ def main():
         actions += cost
         cur = scene
     # обратно к помпе: финал разыгрывается на седьмом ярусе
-    back = shortest(g, cur, 'scene_pump_hall') or 0
+    back = shortest(g, cur, 'scene_pump_hall')
+    if back is None:
+        print('НЕТ ПУТИ назад к помпе')
+        return 1
     legs.append((cur, 'scene_pump_hall', back))
     travel += back
 
@@ -134,15 +129,16 @@ def main():
     thorough = critical + EXTRA_THOROUGH + SLEEP_TICKS
     full = critical + EXTRA_FULL + SLEEP_TICKS * 3
 
-    print('СМЕТА ВРЕМЕНИ, часов (срок дела — %d, потоп на %d-м тику)'
+    print('ПЛАНОВАЯ СМЕТА ПО ВСЕМ КЛЮЧЕВЫМ СЦЕНАМ, часов (срок дела — %d, потоп на %d-м тику)'
           % (deadline, camp.get('starting_tick', 0) + deadline))
+    print('Это оценка со свободными переходами и плановыми затратами действий, не игровой маршрутный плейтест.')
     print()
     for a, b, d in legs:
         print(f'  {a:22} → {b:22} {d:2} ч')
     print()
     print(f'  дорога по маршруту:            {travel:3} ч')
     print(f'  обязательные действия:         {actions:3} ч')
-    print(f'  критический путь:              {critical:3} ч  ({critical / deadline:.0%} срока)')
+    print(f'  план по ключевым сценам:              {critical:3} ч  ({critical / deadline:.0%} срока)')
     print(f'  добросовестный проход (+ночь): {thorough:3} ч  ({thorough / deadline:.0%} срока)')
     print(f'  полный проход (+три ночи):     {full:3} ч  ({full / deadline:.0%} срока)')
     print()

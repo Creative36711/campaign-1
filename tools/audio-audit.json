@@ -1,0 +1,6457 @@
+{
+  "method": "decoded waveform metrics and static playback-context audit, not listening or engine playtest",
+  "sounds_count": 68,
+  "ambient_count": 10,
+  "music_count": 10,
+  "voice_count": 213,
+  "decoded_file_count": 292,
+  "issues": [],
+  "sounds": [
+    {
+      "id": "sfx_anvil",
+      "label": "Молоток по железу",
+      "src": "assets/audio/sfx/sfx_anvil.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_anvil.ogg",
+          "duration_s": 0.9,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -18.69,
+          "peak_db": 9.77,
+          "silent_windows_fraction": 0.3333,
+          "near_clip_fraction": 0.0022928,
+          "join_difference_db": -19.78
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:craft",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/craft",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_dry_row.json",
+          "path": "/slots/4/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_gate_office.json",
+          "path": "/slots/3/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_bench.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_resh_notes.json",
+          "path": "/interact_options/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_scrap.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_wrench.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_wrench.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "recipes/recipe_bolt.json",
+          "path": "/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_archive_close",
+      "label": "Папка закрыта",
+      "src": "assets/audio/sfx/sfx_archive_close.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_archive_close.ogg",
+          "duration_s": 0.338,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -33.51,
+          "peak_db": -9.42,
+          "silent_windows_fraction": 0.3333,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -96.46
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:codex:close",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_archive_open",
+      "label": "Папка архива",
+      "src": "assets/audio/sfx/sfx_archive_open.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_archive_open.ogg",
+          "duration_s": 0.415,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -17.22,
+          "peak_db": 1.33,
+          "silent_windows_fraction": 0.25,
+          "near_clip_fraction": 0.0012837,
+          "join_difference_db": -80.45
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:codex",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_archive.json",
+          "path": "/narrative_intro/0/sfx",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_bag_close",
+      "label": "Сумка закрыта",
+      "src": "assets/audio/sfx/sfx_bag_close.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_bag_close.ogg",
+          "duration_s": 0.415,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -27.14,
+          "peak_db": -6.68,
+          "silent_windows_fraction": 0.25,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -81.37
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:inventory:close",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:character:close",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_bell",
+      "label": "Колокол яруса",
+      "src": "assets/audio/sfx/sfx_bell.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_bell.ogg",
+          "duration_s": 0.697,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -19.21,
+          "peak_db": 3.81,
+          "silent_windows_fraction": 0.1667,
+          "near_clip_fraction": 0.0013984,
+          "join_difference_db": -20.33
+        }
+      ],
+      "usage": [
+        {
+          "file": "scenes/scene_dry_row.json",
+          "path": "/states/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_gate_hall.json",
+          "path": "/states/1/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_book",
+      "label": "Дело в архиве",
+      "src": "assets/audio/sfx/sfx_book.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_book.ogg",
+          "duration_s": 0.231,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -12.89,
+          "peak_db": 6.77,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0135693,
+          "join_difference_db": -49.63
+        }
+      ],
+      "usage": [
+        {
+          "file": "scenes/scene_archive.json",
+          "path": "/states/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_archive.json",
+          "path": "/slots/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_gate_office.json",
+          "path": "/slots/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_case.json",
+          "path": "/interact_options/6/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_case.json",
+          "path": "/interact_options/7/effects/4/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_case.json",
+          "path": "/interact_options/7/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_roster.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_roster.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_shelf.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_roster_got.json",
+          "path": "/effects/5/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_click",
+      "label": "Щелчок",
+      "src": "assets/audio/sfx/sfx_click.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_click.ogg",
+          "duration_s": 0.094,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -38.1,
+          "peak_db": -14.99,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -53.59
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/click",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/message",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_gate_hall.json",
+          "path": "/slots/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/npc_vex.json",
+          "path": "/sounds/talk",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/registrar.dlg.json",
+          "path": "/nodes/0/sections/0/steps/0/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/vex.dlg.json",
+          "path": "/nodes/0/sections/0/steps/0/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/registrar.ink",
+          "path": "line 10",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/vex.ink",
+          "path": "line 10",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_coin",
+      "label": "Звон марки",
+      "src": "assets/audio/sfx/sfx_coin.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_coin.ogg",
+          "duration_s": 0.846,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -28.83,
+          "peak_db": 0.19,
+          "silent_windows_fraction": 0.375,
+          "near_clip_fraction": 2.46e-05,
+          "join_difference_db": -78.18
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/quest_completed",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/skill_up",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/coin",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_mark.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_mark.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/zhuk.dlg.json",
+          "path": "/nodes/0/choices/1/sections/0/steps/0/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/zhuk.ink",
+          "path": "line 28",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_coins",
+      "label": "Марки в ладони",
+      "src": "assets/audio/sfx/sfx_coins.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_coins.ogg",
+          "duration_s": 0.338,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -30.09,
+          "peak_db": -8.23,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -73.08
+        }
+      ],
+      "usage": [
+        {
+          "file": "scenes/scene_dry_row.json",
+          "path": "/slots/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_dry_row.json",
+          "path": "/narrative_intro/1/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_mark.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_zhuk_appears.json",
+          "path": "/effects/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_zhuk_info.json",
+          "path": "/effects/4/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_crit",
+      "label": "Тяжёлый удар",
+      "src": "assets/audio/sfx/sfx_crit.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_crit.ogg",
+          "duration_s": 0.168,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -20.5,
+          "peak_db": -0.93,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -34.51
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/crit",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/kill",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_door",
+      "label": "Лязг двери",
+      "src": "assets/audio/sfx/sfx_door.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_door.ogg",
+          "duration_s": 0.919,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -20.21,
+          "peak_db": 0.58,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.00017,
+          "join_difference_db": -52.12
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel_open",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel_close",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/scene_transition",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:open",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/0/travel_connections/0/arrive_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/1/travel_connections/0/depart_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_gate_hall.json",
+          "path": "/slots/3/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_gate_hall.json",
+          "path": "/narrative_intro/0/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_office.json",
+          "path": "/narrative_intro/0/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_hall.json",
+          "path": "/slots/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_resh_door.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_gate_first.json",
+          "path": "/effects/3/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_error",
+      "label": "Отказ механизма",
+      "src": "assets/audio/sfx/sfx_error.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_error.ogg",
+          "duration_s": 0.165,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -14.66,
+          "peak_db": 3.48,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0033072,
+          "join_difference_db": 1.11
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/error",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/registrar.dlg.json",
+          "path": "/nodes/0/choices/2/sections/0/steps/0/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/registrar.ink",
+          "path": "line 29",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_file",
+      "label": "Бумага в папку",
+      "src": "assets/audio/sfx/sfx_file.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_file.ogg",
+          "duration_s": 0.45,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -26.56,
+          "peak_db": -0.55,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -60.71
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:help",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_gate_office.json",
+          "path": "/states/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_case.json",
+          "path": "/interact_options/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_case.json",
+          "path": "/interact_options/3/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_case.json",
+          "path": "/interact_options/4/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_case.json",
+          "path": "/interact_options/5/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_flip",
+      "label": "Листание страниц",
+      "src": "assets/audio/sfx/sfx_flip.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_flip.ogg",
+          "duration_s": 0.7,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -32.42,
+          "peak_db": -2.93,
+          "silent_windows_fraction": 0.1429,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -87.15
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:map:close",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_archive.json",
+          "path": "/narrative_intro/1/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_case.json",
+          "path": "/interact_options/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_ledger.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_ledger.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_resh_notes.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_resh_notes.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_zhuk_ledger.json",
+          "path": "/effects/2/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_gasp",
+      "label": "Выдох воздуха",
+      "src": "assets/audio/sfx/sfx_gasp.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_gasp.ogg",
+          "duration_s": 1.5,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -20.28,
+          "peak_db": -6.71,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -109.39
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/statuses/1/apply_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/statuses/5/apply_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_air_restored.json",
+          "path": "/effects/5/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_filter_spent.json",
+          "path": "/effects/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_zero_air.json",
+          "path": "/effects/4/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_zero_thirst.json",
+          "path": "/effects/3/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_gear",
+      "label": "Храповик",
+      "src": "assets/audio/sfx/sfx_gear.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_gear.ogg",
+          "duration_s": 0.261,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -20.44,
+          "peak_db": 1.62,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0005979,
+          "join_difference_db": -70.38
+        }
+      ],
+      "usage": [
+        {
+          "file": "scenes/scene_flood_gallery.json",
+          "path": "/slots/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_hall.json",
+          "path": "/slots/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_hall.json",
+          "path": "/narrative_intro/0/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_sluice.json",
+          "path": "/states/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_pump_engine.json",
+          "path": "/interact_options/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_pump_engine.json",
+          "path": "/interact_options/3/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_pump_engine.json",
+          "path": "/interact_options/4/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_scrap.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_scrap.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_valve.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_valve.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_valve.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/npc_watchman.json",
+          "path": "/sounds/hit",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/vex.dlg.json",
+          "path": "/nodes/0/choices/0/sections/0/steps/1/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "recipes/recipe_filter.json",
+          "path": "/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/vex.ink",
+          "path": "line 19",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_glass",
+      "label": "Звон стекла",
+      "src": "assets/audio/sfx/sfx_glass.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_glass.ogg",
+          "duration_s": 0.21,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -14.05,
+          "peak_db": 4.77,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0104944,
+          "join_difference_db": -23.6
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/statuses/0/remove_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/statuses/3/apply_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/statuses/8/apply_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_dry_row.json",
+          "path": "/slots/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_antirot.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_antirot.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_core.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_tonic.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_tonic.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_hit",
+      "label": "Удар",
+      "src": "assets/audio/sfx/sfx_hit.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_hit.ogg",
+          "duration_s": 0.431,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -17.18,
+          "peak_db": -1.11,
+          "silent_windows_fraction": 0.5,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -61.79
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/hit",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/npc_ashhound.json",
+          "path": "/sounds/attack",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/npc_kell.json",
+          "path": "/sounds/hit",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/npc_thug.json",
+          "path": "/sounds/hit",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_camp_ambush.json",
+          "path": "/effects/1/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_horn",
+      "label": "Гудок смены",
+      "src": "assets/audio/sfx/sfx_horn.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_horn.ogg",
+          "duration_s": 1.555,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -17.3,
+          "peak_db": -2.55,
+          "silent_windows_fraction": 0.0667,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -53.67
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/victory",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_deadline_warn.json",
+          "path": "/effects/4/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_hum",
+      "label": "Гул жилы",
+      "src": "assets/audio/sfx/sfx_hum.mp3",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_hum.mp3",
+          "duration_s": 3.0,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -24.58,
+          "peak_db": -11.07,
+          "silent_windows_fraction": 0.0667,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -110.76
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/statuses/4/apply_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/statuses/4/remove_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_face.json",
+          "path": "/states/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_face.json",
+          "path": "/slots/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_face.json",
+          "path": "/slots/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_face.json",
+          "path": "/narrative_intro/0/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_core.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_core.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_end_vein.json",
+          "path": "/effects/6/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_resh_found.json",
+          "path": "/effects/4/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/vein.dlg.json",
+          "path": "/nodes/0/choices/2/sections/0/steps/0/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/vein.dlg.json",
+          "path": "/nodes/1/sections/0/steps/0/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/vein.ink",
+          "path": "line 29",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/vein.ink",
+          "path": "line 40",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_journal_close",
+      "label": "Дело закрыто",
+      "src": "assets/audio/sfx/sfx_journal_close.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_journal_close.ogg",
+          "duration_s": 0.277,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -15.72,
+          "peak_db": 3.17,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0094649,
+          "join_difference_db": -85.97
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:journal:close",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:log:close",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_journal_open",
+      "label": "Дело раскрыто",
+      "src": "assets/audio/sfx/sfx_journal_open.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_journal_open.ogg",
+          "duration_s": 0.49,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -31.16,
+          "peak_db": -6.46,
+          "silent_windows_fraction": 0.5,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -177.65
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:journal",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:log",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_lamp",
+      "label": "Лампа",
+      "src": "assets/audio/sfx/sfx_lamp.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_lamp.ogg",
+          "duration_s": 0.192,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -36.34,
+          "peak_db": -10.93,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -63.53
+        }
+      ],
+      "usage": [
+        {
+          "file": "entities/item_lamp.json",
+          "path": "/sounds/equip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_lamp.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_lamp.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "recipes/recipe_repair_lamp.json",
+          "path": "/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_lever",
+      "label": "Рычаг",
+      "src": "assets/audio/sfx/sfx_lever.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_lever.ogg",
+          "duration_s": 0.5,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -9.95,
+          "peak_db": 4.36,
+          "silent_windows_fraction": 0.4,
+          "near_clip_fraction": 0.0181406,
+          "join_difference_db": -28.84
+        }
+      ],
+      "usage": [
+        {
+          "file": "scenes/scene_gate_hall.json",
+          "path": "/states/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_hall.json",
+          "path": "/slots/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_sluice.json",
+          "path": "/narrative_intro/1/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_install_valve.json",
+          "path": "/effects/4/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_lock",
+      "label": "Замок и ключ",
+      "src": "assets/audio/sfx/sfx_lock.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_lock.ogg",
+          "duration_s": 0.261,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -15.63,
+          "peak_db": 6.14,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0092842,
+          "join_difference_db": -72.8
+        }
+      ],
+      "usage": [
+        {
+          "file": "scenes/scene_drift.json",
+          "path": "/states/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_drift.json",
+          "path": "/slots/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_room.json",
+          "path": "/states/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_room.json",
+          "path": "/slots/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_room.json",
+          "path": "/narrative_intro/0/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_key_cache.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_key_cache.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_key_cache.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_key_resh.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_key_resh.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_key_resh.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_machine",
+      "label": "Запуск механизма",
+      "src": "assets/audio/sfx/sfx_machine.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_machine.ogg",
+          "duration_s": 3.0,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -12.1,
+          "peak_db": 0.25,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 2.27e-05,
+          "join_difference_db": -76.8
+        }
+      ],
+      "usage": [
+        {
+          "file": "scenes/scene_drift.json",
+          "path": "/narrative_intro/1/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_hall.json",
+          "path": "/states/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_sluice.json",
+          "path": "/slots/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/npc_watchman.json",
+          "path": "/sounds/attack",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/npc_watchman.json",
+          "path": "/sounds/death",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_end_pump.json",
+          "path": "/effects/6/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_watchman.json",
+          "path": "/effects/2/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_miss",
+      "label": "Промах",
+      "src": "assets/audio/sfx/sfx_miss.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_miss.ogg",
+          "duration_s": 0.139,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -20.33,
+          "peak_db": -1.24,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -50.07
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/miss",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_pickup",
+      "label": "Взял вещь",
+      "src": "assets/audio/sfx/sfx_pickup.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_pickup.ogg",
+          "duration_s": 0.338,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -35.73,
+          "peak_db": -11.62,
+          "silent_windows_fraction": 0.6667,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -75.87
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/quest_started",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/item_get",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_crate.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_rungs",
+      "label": "Ступени лестницы",
+      "src": "assets/audio/sfx/sfx_rungs.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_rungs.ogg",
+          "duration_s": 0.697,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -15.17,
+          "peak_db": 3.64,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0026023,
+          "join_difference_db": -43.15
+        }
+      ],
+      "usage": [
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/1/travel_connections/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/2/travel_connections/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_shaft.json",
+          "path": "/states/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_shaft.json",
+          "path": "/slots/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_shaft.json",
+          "path": "/narrative_intro/0/sfx",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_squelch",
+      "label": "Хлюп гнильца",
+      "src": "assets/audio/sfx/sfx_squelch.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_squelch.ogg",
+          "duration_s": 0.5,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -24.3,
+          "peak_db": -1.79,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -62.09
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/statuses/0/apply_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/npc_rotling.json",
+          "path": "/sounds/attack",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/npc_rotling.json",
+          "path": "/sounds/hit",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/npc_rotling.json",
+          "path": "/sounds/death",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_see_rot.json",
+          "path": "/effects/2/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_steam",
+      "label": "Выхлоп пара",
+      "src": "assets/audio/sfx/sfx_steam.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_steam.ogg",
+          "duration_s": 1.4,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -18.21,
+          "peak_db": -2.69,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -73.29
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/combat_start",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_step",
+      "label": "Шаги по камню",
+      "src": "assets/audio/sfx/sfx_step.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_step.ogg",
+          "duration_s": 0.874,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -18.72,
+          "peak_db": 6.13,
+          "silent_windows_fraction": 0.5,
+          "near_clip_fraction": 0.003942,
+          "join_difference_db": -34.6
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/travel_depart",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/travel_arrive",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/flee",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/0/travel_connections/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/0/travel_connections/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/1/travel_connections/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/2/travel_connections/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/3/travel_connections/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/4/travel_connections/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_gate_hall.json",
+          "path": "/narrative_intro/1/sfx",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_surge",
+      "label": "Наплыв воды",
+      "src": "assets/audio/sfx/sfx_surge.mp3",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_surge.mp3",
+          "duration_s": 3.0,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -22.52,
+          "peak_db": -9.5,
+          "silent_windows_fraction": 0.0333,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -103.17
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/statuses/6/apply_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_flood_gallery.json",
+          "path": "/states/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_sluice.json",
+          "path": "/narrative_intro/0/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_water_rises.json",
+          "path": "/effects/2/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_tick",
+      "label": "Счётчик",
+      "src": "assets/audio/sfx/sfx_tick.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_tick.ogg",
+          "duration_s": 0.405,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -21.78,
+          "peak_db": 2.77,
+          "silent_windows_fraction": 0.25,
+          "near_clip_fraction": 0.0025196,
+          "join_difference_db": 1.52
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/statuses/3/remove_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_archive.json",
+          "path": "/slots/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/registrar.dlg.json",
+          "path": "/nodes/0/sections/0/steps/1/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/registrar.ink",
+          "path": "line 11",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_wade",
+      "label": "Шаг по воде",
+      "src": "assets/audio/sfx/sfx_wade.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_wade.ogg",
+          "duration_s": 0.903,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -22.18,
+          "peak_db": 6.39,
+          "silent_windows_fraction": 0.1111,
+          "near_clip_fraction": 0.0012306,
+          "join_difference_db": -240.0
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/statuses/6/remove_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/2/travel_connections/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/3/travel_connections/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_flood_gallery.json",
+          "path": "/narrative_intro/0/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_hounds.json",
+          "path": "/effects/0/success_effects/2/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_water",
+      "label": "Капля тяжёлой воды",
+      "src": "assets/audio/sfx/sfx_water.mp3",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_water.mp3",
+          "duration_s": 1.6,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -28.75,
+          "peak_db": -12.36,
+          "silent_windows_fraction": 0.0625,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -240.0
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/death",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/defeat",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/2/travel_connections/2/arrive_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/3/travel_connections/0/depart_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_flood_gallery.json",
+          "path": "/narrative_intro/1/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_hall.json",
+          "path": "/narrative_intro/1/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_room.json",
+          "path": "/narrative_intro/1/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_shaft.json",
+          "path": "/narrative_intro/1/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_dead_guard.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_ladder.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_water.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_downpour.json",
+          "path": "/effects/3/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_sluice_first.json",
+          "path": "/effects/3/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/ayla.dlg.json",
+          "path": "/nodes/0/sections/0/steps/0/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/ayla.ink",
+          "path": "line 17",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "snd_blade",
+      "label": "Клинок",
+      "src": "assets/audio/sfx/snd_blade.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/snd_blade.ogg",
+          "duration_s": 0.4,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -44.68,
+          "peak_db": -24.28,
+          "silent_windows_fraction": 0.3333,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -72.68
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/parry",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_office.json",
+          "path": "/slots/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_knife.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_knife.json",
+          "path": "/sounds/equip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_knife.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_knife.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_service_blade.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_service_blade.json",
+          "path": "/sounds/equip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_service_blade.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_service_blade.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/npc_kell.json",
+          "path": "/sounds/attack",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/npc_thug.json",
+          "path": "/sounds/attack",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/kell.dlg.json",
+          "path": "/nodes/0/sections/0/steps/0/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/kell.ink",
+          "path": "line 13",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "snd_chain",
+      "label": "Цепь лебёдки",
+      "src": "assets/audio/sfx/snd_chain.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/snd_chain.ogg",
+          "duration_s": 0.277,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -28.23,
+          "peak_db": -3.29,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -76.94
+        }
+      ],
+      "usage": [
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/1/travel_connections/1/depart_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/2/travel_connections/0/arrive_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_face.json",
+          "path": "/slots/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_face.json",
+          "path": "/narrative_intro/1/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_shaft.json",
+          "path": "/slots/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_dead_guard.json",
+          "path": "/interact_options/3/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_dead_guard.json",
+          "path": "/interact_options/5/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_hoist.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_hoist.json",
+          "path": "/interact_options/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_hoist.json",
+          "path": "/interact_options/3/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_rope.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_rope.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_sluice_mech.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_sluice_mech.json",
+          "path": "/interact_options/3/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_winch.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_watchman_oil.json",
+          "path": "/effects/1/fail_effects/1/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "snd_charge",
+      "label": "Защёлка заряда",
+      "src": "assets/audio/sfx/snd_charge.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/snd_charge.ogg",
+          "duration_s": 0.261,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -20.44,
+          "peak_db": 1.62,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0005979,
+          "join_difference_db": -70.38
+        }
+      ],
+      "usage": [
+        {
+          "file": "entities/item_charge.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_charge.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_charge.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_sluice_mech.json",
+          "path": "/interact_options/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_end_silence.json",
+          "path": "/effects/6/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "recipes/recipe_charge.json",
+          "path": "/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "snd_cloth",
+      "label": "Ткань",
+      "src": "assets/audio/sfx/snd_cloth.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/snd_cloth.ogg",
+          "duration_s": 0.661,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -24.56,
+          "peak_db": -3.49,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -63.45
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/statuses/2/remove_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/statuses/7/remove_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/statuses/8/remove_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/statuses/9/apply_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:inventory",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:character",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/unequip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/item_lose",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:close",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_flood_gallery.json",
+          "path": "/slots/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_gate_office.json",
+          "path": "/slots/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_sluice.json",
+          "path": "/slots/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_bandage.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_bandage.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_bandage.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_cloth.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_cloth.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_cloth.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_coat.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_coat.json",
+          "path": "/sounds/equip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_coat.json",
+          "path": "/sounds/unequip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_coat.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_cot.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_crossbow.json",
+          "path": "/sounds/unequip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_dead_guard.json",
+          "path": "/interact_options/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_dead_guard.json",
+          "path": "/interact_options/4/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_filter.json",
+          "path": "/sounds/unequip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_glove.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_knife.json",
+          "path": "/sounds/unequip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_lamp.json",
+          "path": "/sounds/unequip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_ration.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_ration.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_rope.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_service_blade.json",
+          "path": "/sounds/unequip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_vest.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_vest.json",
+          "path": "/sounds/unequip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_wrench.json",
+          "path": "/sounds/unequip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/npc_ashhound.json",
+          "path": "/sounds/death",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/npc_kell.json",
+          "path": "/sounds/death",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/npc_thug.json",
+          "path": "/sounds/death",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/ira.dlg.json",
+          "path": "/nodes/0/choices/0/sections/0/steps/2/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/ira.dlg.json",
+          "path": "/nodes/0/choices/6/sections/0/steps/1/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/kell.dlg.json",
+          "path": "/nodes/0/choices/7/sections/0/steps/1/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "recipes/recipe_bandage.json",
+          "path": "/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/ira.ink",
+          "path": "line 25",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/ira.ink",
+          "path": "line 51",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/kell.ink",
+          "path": "line 40",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "snd_creak",
+      "label": "Скрип",
+      "src": "assets/audio/sfx/snd_creak.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/snd_creak.ogg",
+          "duration_s": 0.661,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -25.76,
+          "peak_db": -6.69,
+          "silent_windows_fraction": 0.1667,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -72.4
+        }
+      ],
+      "usage": [
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/0/travel_connections/1/arrive_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/1/travel_connections/1/arrive_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/2/travel_connections/0/depart_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/2/travel_connections/1/depart_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/3/travel_connections/1/depart_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/4/travel_connections/0/arrive_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_gate_hall.json",
+          "path": "/slots/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_cache.json",
+          "path": "/interact_options/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_pipes.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_pump_engine.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_resh_door.json",
+          "path": "/interact_options/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_reveal_deep.json",
+          "path": "/effects/3/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "snd_crowd",
+      "label": "Гул Сухого ряда (фон)",
+      "src": "assets/audio/amb/snd_crowd.mp3",
+      "loop": true,
+      "sources": [
+        {
+          "path": "assets/audio/amb/snd_crowd.mp3",
+          "duration_s": 32.0,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -27.06,
+          "peak_db": -3.35,
+          "silent_windows_fraction": 0.0156,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -107.85
+        }
+      ],
+      "usage": [
+        {
+          "file": "scenes/scene_dry_row.json",
+          "path": "/ambient/0/sounds/0",
+          "mode": "ambient"
+        }
+      ],
+      "decision": "Постоянный фоновый слой"
+    },
+    {
+      "id": "snd_deep_drone",
+      "label": "Гул нижних ярусов (фон)",
+      "loop": true,
+      "src": "assets/audio/amb/snd_deep_drone.mp3",
+      "sources": [
+        {
+          "path": "assets/audio/amb/snd_deep_drone.mp3",
+          "duration_s": 36.0,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -27.51,
+          "peak_db": -7.05,
+          "silent_windows_fraction": 0.1028,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -124.68
+        }
+      ],
+      "usage": [
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/2/ambient/1/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/4/ambient/0/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_drift.json",
+          "path": "/ambient/0/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_face.json",
+          "path": "/ambient/0/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_pump_hall.json",
+          "path": "/ambient/1/sounds/0",
+          "mode": "ambient"
+        }
+      ],
+      "decision": "Постоянный фоновый слой"
+    },
+    {
+      "id": "snd_drops",
+      "label": "Капель в каморке (фон)",
+      "src": "assets/audio/amb/snd_drops.mp3",
+      "loop": true,
+      "sources": [
+        {
+          "path": "assets/audio/amb/snd_drops.mp3",
+          "duration_s": 32.0,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -31.69,
+          "peak_db": -2.81,
+          "silent_windows_fraction": 0.0312,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -116.84
+        }
+      ],
+      "usage": [
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/3/ambient/1/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_pump_room.json",
+          "path": "/ambient/0/sounds/0",
+          "mode": "ambient"
+        }
+      ],
+      "decision": "Постоянный фоновый слой"
+    },
+    {
+      "id": "snd_fire",
+      "label": "Треск жаровни (фон)",
+      "src": "assets/audio/amb/snd_fire.mp3",
+      "loop": true,
+      "sources": [
+        {
+          "path": "assets/audio/amb/snd_fire.mp3",
+          "duration_s": 32.0,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -30.1,
+          "peak_db": -2.76,
+          "silent_windows_fraction": 0.0219,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -107.92
+        }
+      ],
+      "usage": [
+        {
+          "file": "scenes/scene_dry_row.json",
+          "path": "/ambient/1/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_gate_office.json",
+          "path": "/ambient/1/sounds/0",
+          "mode": "ambient"
+        }
+      ],
+      "decision": "Постоянный фоновый слой"
+    },
+    {
+      "id": "snd_knock",
+      "label": "Стук в металл",
+      "src": "assets/audio/sfx/snd_knock.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/snd_knock.ogg",
+          "duration_s": 0.168,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -20.5,
+          "peak_db": -0.93,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -34.51
+        }
+      ],
+      "usage": [
+        {
+          "file": "entities/item_resh_door.json",
+          "path": "/interact_options/3/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "snd_latch",
+      "label": "Защёлка",
+      "src": "assets/audio/sfx/snd_latch.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/snd_latch.ogg",
+          "duration_s": 0.938,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -13.8,
+          "peak_db": 1.54,
+          "silent_windows_fraction": 0.3333,
+          "near_clip_fraction": 0.0060538,
+          "join_difference_db": -47.92
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/statuses/5/remove_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/statuses/9/remove_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/equip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:craft:close",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:saves",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:saves:close",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/0/travel_connections/0/depart_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/0/travel_connections/1/depart_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/1/travel_connections/0/arrive_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/2/travel_connections/1/arrive_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/2/travel_connections/2/depart_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/3/travel_connections/0/arrive_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_sluice.json",
+          "path": "/states/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_bench.json",
+          "path": "/interact_options/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_cache.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_desk.json",
+          "path": "/interact_options/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_filter.json",
+          "path": "/sounds/equip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_locker.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_pump_engine.json",
+          "path": "/interact_options/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_resh_door.json",
+          "path": "/interact_options/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_sluice_mech.json",
+          "path": "/interact_options/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_vest.json",
+          "path": "/sounds/equip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_vest.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_wrench.json",
+          "path": "/sounds/equip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/dozh.dlg.json",
+          "path": "/nodes/2/sections/0/steps/0/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/registrar.dlg.json",
+          "path": "/nodes/0/choices/1/sections/0/steps/0/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/dozh.ink",
+          "path": "line 57",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/registrar.ink",
+          "path": "line 22",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "snd_page",
+      "label": "Страница",
+      "src": "assets/audio/sfx/snd_page.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/snd_page.ogg",
+          "duration_s": 0.769,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -29.79,
+          "peak_db": 0.47,
+          "silent_windows_fraction": 0.4286,
+          "near_clip_fraction": 0.000122,
+          "join_difference_db": -88.42
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:chronicle",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:meta",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_board.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_case.json",
+          "path": "/interact_options/8/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_case.json",
+          "path": "/interact_options/9/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_desk.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_shelf.json",
+          "path": "/interact_options/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_shelf.json",
+          "path": "/interact_options/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/kast.dlg.json",
+          "path": "/nodes/1/sections/0/steps/0/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/zhuk.dlg.json",
+          "path": "/nodes/2/sections/0/steps/0/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/kast.ink",
+          "path": "line 51",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/zhuk.ink",
+          "path": "line 74",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "snd_paper",
+      "label": "Бумага",
+      "src": "assets/audio/sfx/snd_paper.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/snd_paper.ogg",
+          "duration_s": 0.154,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -33.65,
+          "peak_db": -11.54,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -56.93
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:map",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:chronicle:close",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:meta:close",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/panel:help:close",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_gate_hall.json",
+          "path": "/slots/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_gate_office.json",
+          "path": "/slots/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_gate_office.json",
+          "path": "/narrative_intro/1/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_office.json",
+          "path": "/slots/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_office.json",
+          "path": "/narrative_intro/1/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_room.json",
+          "path": "/slots/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_board.json",
+          "path": "/interact_options/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_case.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_case.json",
+          "path": "/interact_options/10/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_dead_guard.json",
+          "path": "/interact_options/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_desk.json",
+          "path": "/interact_options/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_niche.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_note.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_note.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_ration.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_ira_story.json",
+          "path": "/effects/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_kast_note.json",
+          "path": "/effects/3/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/kast.dlg.json",
+          "path": "/nodes/2/sections/0/steps/1/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/kast.ink",
+          "path": "line 77",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "snd_pot",
+      "label": "Котелок",
+      "src": "assets/audio/sfx/snd_pot.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/snd_pot.ogg",
+          "duration_s": 0.907,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -11.6,
+          "peak_db": 2.3,
+          "silent_windows_fraction": 0.2222,
+          "near_clip_fraction": 0.0110483,
+          "join_difference_db": -52.0
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/statuses/7/apply_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_dry_row.json",
+          "path": "/slots/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_dry_row.json",
+          "path": "/slots/3/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_room.json",
+          "path": "/slots/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_brazier.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_brazier.json",
+          "path": "/interact_options/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_stew.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_stew.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_stew.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_stove.json",
+          "path": "/interact_options/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_stove.json",
+          "path": "/interact_options/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "recipes/recipe_stew.json",
+          "path": "/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "recipes/recipe_tonic.json",
+          "path": "/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "snd_pump_amb",
+      "label": "Работа помп (фон)",
+      "loop": true,
+      "src": "assets/audio/amb/snd_pump_amb.mp3",
+      "sources": [
+        {
+          "path": "assets/audio/amb/snd_pump_amb.mp3",
+          "duration_s": 18.0,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -27.35,
+          "peak_db": -16.14,
+          "silent_windows_fraction": 0.0333,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -125.02
+        }
+      ],
+      "usage": [
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/2/ambient/0/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_pump_hall.json",
+          "path": "/ambient/0/sounds/0",
+          "mode": "ambient"
+        }
+      ],
+      "decision": "Постоянный фоновый слой"
+    },
+    {
+      "id": "snd_rain",
+      "label": "Ливень (фон)",
+      "src": "assets/audio/amb/snd_rain.mp3",
+      "loop": true,
+      "sources": [
+        {
+          "path": "assets/audio/amb/snd_rain.mp3",
+          "duration_s": 32.0,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -24.33,
+          "peak_db": -3.63,
+          "silent_windows_fraction": 0.0125,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -84.57
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/weathers/2/ambient/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_flood_gallery.json",
+          "path": "/ambient/2/sounds/0",
+          "mode": "ambient"
+        }
+      ],
+      "decision": "Постоянный фоновый слой"
+    },
+    {
+      "id": "snd_stone",
+      "label": "Порода",
+      "src": "assets/audio/sfx/snd_stone.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/snd_stone.ogg",
+          "duration_s": 0.937,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -20.59,
+          "peak_db": -1.06,
+          "silent_windows_fraction": 0.4444,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -30.97
+        }
+      ],
+      "usage": [
+        {
+          "file": "scenes/scene_drift.json",
+          "path": "/slots/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_drift.json",
+          "path": "/narrative_intro/0/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_flood_gallery.json",
+          "path": "/slots/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_pump_shaft.json",
+          "path": "/slots/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_debris.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_plate.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_hounds.json",
+          "path": "/effects/0/fail_effects/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_open_cache.json",
+          "path": "/effects/9/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/resh.dlg.json",
+          "path": "/nodes/0/choices/5/sections/0/steps/0/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/resh.ink",
+          "path": "line 49",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "snd_tag",
+      "label": "Метка на металле",
+      "src": "assets/audio/sfx/snd_tag.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/snd_tag.ogg",
+          "duration_s": 0.446,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -34.33,
+          "peak_db": -6.93,
+          "silent_windows_fraction": 0.25,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -35.98
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/dialogue_present",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_badge.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_guard_token.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_guard_token.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_marker.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_plate.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_ira_brother.json",
+          "path": "/effects/6/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_kell_token.json",
+          "path": "/effects/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/ira.dlg.json",
+          "path": "/nodes/0/choices/3/sections/0/steps/0/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/kell.dlg.json",
+          "path": "/nodes/2/sections/0/steps/0/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/ira.ink",
+          "path": "line 37",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/kell.ink",
+          "path": "line 80",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "snd_vent",
+      "label": "Воздух в вентиляции",
+      "src": "assets/audio/sfx/snd_vent.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/snd_vent.ogg",
+          "duration_s": 0.532,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -17.6,
+          "peak_db": -0.93,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -47.48
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/statuses/1/remove_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "campaign.json",
+          "path": "/statuses/2/apply_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/3/travel_connections/1/arrive_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/4/travel_connections/0/depart_sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_drift.json",
+          "path": "/slots/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_bench.json",
+          "path": "/interact_options/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_filter.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_filter.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_vent.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_air_warn.json",
+          "path": "/effects/3/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_ashfall.json",
+          "path": "/effects/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_filter_bank1.json",
+          "path": "/effects/2/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_filter_bank2.json",
+          "path": "/effects/2/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "snd_water_amb",
+      "label": "Вода в галерее (фон)",
+      "loop": true,
+      "src": "assets/audio/amb/snd_water_amb.mp3",
+      "sources": [
+        {
+          "path": "assets/audio/amb/snd_water_amb.mp3",
+          "duration_s": 42.0,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -29.19,
+          "peak_db": -11.76,
+          "silent_windows_fraction": 0.0429,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -115.89
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/weathers/1/ambient/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/3/ambient/0/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_drift.json",
+          "path": "/ambient/1/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_face.json",
+          "path": "/ambient/1/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_flood_gallery.json",
+          "path": "/ambient/0/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_flood_gallery.json",
+          "path": "/ambient/1/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_pump_shaft.json",
+          "path": "/ambient/0/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_pump_shaft.json",
+          "path": "/ambient/1/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_sluice.json",
+          "path": "/ambient/0/sounds/0",
+          "mode": "ambient"
+        }
+      ],
+      "decision": "Постоянный фоновый слой"
+    },
+    {
+      "id": "snd_wind",
+      "label": "Тяга шахты",
+      "loop": true,
+      "src": "assets/audio/amb/snd_wind.mp3",
+      "sources": [
+        {
+          "path": "assets/audio/amb/snd_wind.mp3",
+          "duration_s": 42.0,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -28.27,
+          "peak_db": -14.68,
+          "silent_windows_fraction": 0.0548,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -240.0
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/weathers/0/ambient/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/0/ambient/0/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "world.json",
+          "path": "/regions/0/locations/1/ambient/0/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_gate_hall.json",
+          "path": "/ambient/0/sounds/0",
+          "mode": "ambient"
+        }
+      ],
+      "decision": "Постоянный фоновый слой"
+    },
+    {
+      "id": "snd_coal",
+      "label": "Уголь в печку",
+      "src": [
+        "assets/audio/sfx/snd_coal_1.ogg",
+        "assets/audio/sfx/snd_coal_2.ogg"
+      ],
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/snd_coal_1.ogg",
+          "duration_s": 0.313,
+          "sample_rate": 192000,
+          "channels": 2,
+          "rms_db": -20.66,
+          "peak_db": -2.09,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -37.52
+        },
+        {
+          "path": "assets/audio/sfx/snd_coal_2.ogg",
+          "duration_s": 0.116,
+          "sample_rate": 192000,
+          "channels": 2,
+          "rms_db": -19.5,
+          "peak_db": -1.89,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -32.88
+        }
+      ],
+      "usage": [
+        {
+          "file": "entities/item_brazier.json",
+          "path": "/interact_options/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_coal.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_coal.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_coal.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_stove.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "snd_city_amb",
+      "label": "Гул города (фон)",
+      "src": "assets/audio/amb/snd_city_amb.mp3",
+      "loop": true,
+      "sources": [
+        {
+          "path": "assets/audio/amb/snd_city_amb.mp3",
+          "duration_s": 16.0,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -32.69,
+          "peak_db": -20.59,
+          "silent_windows_fraction": 0.05,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -131.97
+        }
+      ],
+      "usage": [
+        {
+          "file": "scenes/scene_archive.json",
+          "path": "/ambient/0/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_gate_office.json",
+          "path": "/ambient/0/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_office.json",
+          "path": "/ambient/0/sounds/0",
+          "mode": "ambient"
+        }
+      ],
+      "decision": "Постоянный фоновый слой"
+    },
+    {
+      "id": "snd_shaft_amb",
+      "label": "Тяга в стволе шахты (фон)",
+      "src": "assets/audio/amb/snd_shaft_amb.mp3",
+      "loop": true,
+      "sources": [
+        {
+          "path": "assets/audio/amb/snd_shaft_amb.mp3",
+          "duration_s": 16.0,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -34.58,
+          "peak_db": -15.12,
+          "silent_windows_fraction": 0.0813,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -118.2
+        }
+      ],
+      "usage": [
+        {
+          "file": "scenes/scene_pump_shaft.json",
+          "path": "/ambient/2/sounds/0",
+          "mode": "ambient"
+        },
+        {
+          "file": "scenes/scene_sluice.json",
+          "path": "/ambient/1/sounds/0",
+          "mode": "ambient"
+        }
+      ],
+      "decision": "Постоянный фоновый слой"
+    },
+    {
+      "id": "sfx_stamp",
+      "label": "Штамп входящего реестра",
+      "src": "assets/audio/sfx/sfx_stamp.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_stamp.ogg",
+          "duration_s": 0.938,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -21.18,
+          "peak_db": -1.14,
+          "silent_windows_fraction": 0.3333,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -63.17
+        }
+      ],
+      "usage": [
+        {
+          "file": "entities/item_badge.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_badge.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/registrar.dlg.json",
+          "path": "/nodes/0/choices/5/sections/0/steps/0/line/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "dialogues/registrar.ink",
+          "path": "line 39",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_crossbow",
+      "label": "Спуск тетивы самострела",
+      "src": "assets/audio/sfx/sfx_crossbow.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_crossbow.ogg",
+          "duration_s": 0.938,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -13.09,
+          "peak_db": 4.39,
+          "silent_windows_fraction": 0.3333,
+          "near_clip_fraction": 0.010708,
+          "join_difference_db": -50.08
+        }
+      ],
+      "usage": [
+        {
+          "file": "entities/item_bolt.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_bolt.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_bolt.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_crossbow.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_crossbow.json",
+          "path": "/sounds/equip",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_crossbow.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_crossbow.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_oil",
+      "label": "Маслёнка",
+      "src": "assets/audio/sfx/sfx_oil.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_oil.ogg",
+          "duration_s": 2.011,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -23.81,
+          "peak_db": -2.6,
+          "silent_windows_fraction": 0.1,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -119.63
+        }
+      ],
+      "usage": [
+        {
+          "file": "entities/item_oil.json",
+          "path": "/sounds/pickup",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_oil.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_oil.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_watchman_oil.json",
+          "path": "/effects/1/success_effects/3/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_brace",
+      "label": "Стяжка бандажа",
+      "src": "assets/audio/sfx/sfx_brace.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_brace.ogg",
+          "duration_s": 1.271,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -16.91,
+          "peak_db": 5.35,
+          "silent_windows_fraction": 0.3333,
+          "near_clip_fraction": 0.0007619,
+          "join_difference_db": -70.2
+        }
+      ],
+      "usage": [
+        {
+          "file": "scenes/scene_face.json",
+          "path": "/states/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_hoist.json",
+          "path": "/interact_options/1/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_lockdown",
+      "label": "Сигнал режима тишины",
+      "src": "assets/audio/sfx/sfx_lockdown.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_lockdown.ogg",
+          "duration_s": 1.675,
+          "sample_rate": 48000,
+          "channels": 2,
+          "rms_db": -17.96,
+          "peak_db": 1.32,
+          "silent_windows_fraction": 0.0625,
+          "near_clip_fraction": 0.0002364,
+          "join_difference_db": -50.91
+        }
+      ],
+      "usage": [
+        {
+          "file": "scenes/scene_office.json",
+          "path": "/states/1/sound",
+          "mode": "one-shot"
+        },
+        {
+          "file": "rules/rule_lockdown.json",
+          "path": "/effects/6/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_flask",
+      "label": "Глоток из фляги",
+      "src": "assets/audio/sfx/sfx_flask.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_flask.ogg",
+          "duration_s": 1.78,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -21.41,
+          "peak_db": 3.09,
+          "silent_windows_fraction": 0.0,
+          "near_clip_fraction": 0.0006242,
+          "join_difference_db": -22.05
+        }
+      ],
+      "usage": [
+        {
+          "file": "campaign.json",
+          "path": "/ui_sounds/heal",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_antirot.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_tonic.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_water.json",
+          "path": "/sounds/use",
+          "mode": "one-shot"
+        },
+        {
+          "file": "entities/item_water.json",
+          "path": "/interact_options/0/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_seal",
+      "label": "Печать закрытия дела",
+      "src": "assets/audio/sfx/sfx_seal.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_seal.ogg",
+          "duration_s": 1.58,
+          "sample_rate": 44100,
+          "channels": 1,
+          "rms_db": -13.53,
+          "peak_db": 5.47,
+          "silent_windows_fraction": 0.1333,
+          "near_clip_fraction": 0.0083532,
+          "join_difference_db": -42.72
+        }
+      ],
+      "usage": [
+        {
+          "file": "rules/rule_end_closed.json",
+          "path": "/effects/6/sound",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    },
+    {
+      "id": "sfx_fire",
+      "label": "Короткий треск огня",
+      "src": "assets/audio/sfx/sfx_fire.ogg",
+      "loop": false,
+      "sources": [
+        {
+          "path": "assets/audio/sfx/sfx_fire.ogg",
+          "duration_s": 2.8,
+          "sample_rate": 44100,
+          "channels": 2,
+          "rms_db": -30.73,
+          "peak_db": -3.33,
+          "silent_windows_fraction": 0.1071,
+          "near_clip_fraction": 0.0,
+          "join_difference_db": -76.27
+        }
+      ],
+      "usage": [
+        {
+          "file": "scenes/scene_dry_row.json",
+          "path": "/narrative_intro/0/sfx",
+          "mode": "one-shot"
+        },
+        {
+          "file": "scenes/scene_gate_office.json",
+          "path": "/narrative_intro/0/sfx",
+          "mode": "one-shot"
+        }
+      ],
+      "decision": "Разовый звук действия/сигнал/ответ"
+    }
+  ],
+  "music": [
+    {
+      "id": "music_alarm",
+      "label": "Тревога: режим тишины (CC0)",
+      "loop": true,
+      "volume": 0.7,
+      "src": "assets/audio/music/music_alarm.mp3",
+      "metrics": {
+        "duration_s": 105.0,
+        "sample_rate": 44100,
+        "channels": 2,
+        "rms_db": -16.96,
+        "peak_db": -3.42,
+        "silent_windows_fraction": 0.0105,
+        "near_clip_fraction": 0.0,
+        "join_difference_db": -132.53
+      }
+    },
+    {
+      "id": "music_battle",
+      "label": "Схватка в ярусах (CC0)",
+      "loop": true,
+      "volume": 0.8,
+      "src": "assets/audio/music/music_battle.mp3",
+      "metrics": {
+        "duration_s": 76.912,
+        "sample_rate": 44100,
+        "channels": 2,
+        "rms_db": -20.41,
+        "peak_db": -3.98,
+        "silent_windows_fraction": 0.0754,
+        "near_clip_fraction": 0.0,
+        "join_difference_db": -240.0
+      }
+    },
+    {
+      "id": "music_deep",
+      "label": "Нижние ярусы (CC0)",
+      "loop": true,
+      "volume": 0.7,
+      "src": "assets/audio/music/music_deep.mp3",
+      "metrics": {
+        "duration_s": 150.0,
+        "sample_rate": 44100,
+        "channels": 2,
+        "rms_db": -19.36,
+        "peak_db": -2.28,
+        "silent_windows_fraction": 0.012,
+        "near_clip_fraction": 0.0,
+        "join_difference_db": -152.01
+      }
+    },
+    {
+      "id": "music_end",
+      "label": "Итог дела (CC0)",
+      "loop": true,
+      "volume": 0.8,
+      "src": "assets/audio/music/music_end.mp3",
+      "metrics": {
+        "duration_s": 165.0,
+        "sample_rate": 44100,
+        "channels": 2,
+        "rms_db": -21.6,
+        "peak_db": -2.12,
+        "silent_windows_fraction": 0.0285,
+        "near_clip_fraction": 0.0,
+        "join_difference_db": -240.0
+      }
+    },
+    {
+      "id": "music_gate",
+      "label": "Шлюз седьмого яруса (CC0)",
+      "loop": true,
+      "volume": 0.7,
+      "src": "assets/audio/music/music_gate.mp3",
+      "metrics": {
+        "duration_s": 45.942,
+        "sample_rate": 44100,
+        "channels": 2,
+        "rms_db": -20.79,
+        "peak_db": -2.3,
+        "silent_windows_fraction": 0.1089,
+        "near_clip_fraction": 0.0,
+        "join_difference_db": -196.38
+      }
+    },
+    {
+      "id": "music_menu",
+      "label": "Тема меню: Каркас (CC0)",
+      "loop": true,
+      "volume": 0.75,
+      "src": "assets/audio/music/music_menu.mp3",
+      "metrics": {
+        "duration_s": 165.0,
+        "sample_rate": 44100,
+        "channels": 2,
+        "rms_db": -18.61,
+        "peak_db": -1.93,
+        "silent_windows_fraction": 0.0127,
+        "near_clip_fraction": 0.0,
+        "join_difference_db": -134.06
+      }
+    },
+    {
+      "id": "music_office",
+      "label": "Контора Надзора (CC0)",
+      "loop": true,
+      "volume": 0.65,
+      "src": "assets/audio/music/music_office.mp3",
+      "metrics": {
+        "duration_s": 97.995,
+        "sample_rate": 44100,
+        "channels": 2,
+        "rms_db": -18.89,
+        "peak_db": -2.15,
+        "silent_windows_fraction": 0.047,
+        "near_clip_fraction": 0.0,
+        "join_difference_db": -165.57
+      }
+    },
+    {
+      "id": "music_pump",
+      "label": "Мёртвая помпа (CC0)",
+      "loop": true,
+      "volume": 0.7,
+      "src": "assets/audio/music/music_pump.mp3",
+      "metrics": {
+        "duration_s": 53.99,
+        "sample_rate": 44100,
+        "channels": 2,
+        "rms_db": -19.88,
+        "peak_db": -1.97,
+        "silent_windows_fraction": 0.0519,
+        "near_clip_fraction": 0.0,
+        "join_difference_db": -148.5
+      }
+    },
+    {
+      "id": "music_vein",
+      "label": "Девятый ярус: жила (CC0)",
+      "loop": true,
+      "volume": 0.55,
+      "src": "assets/audio/music/music_vein.mp3",
+      "metrics": {
+        "duration_s": 120.0,
+        "sample_rate": 44100,
+        "channels": 2,
+        "rms_db": -18.04,
+        "peak_db": -2.43,
+        "silent_windows_fraction": 0.0158,
+        "near_clip_fraction": 0.0,
+        "join_difference_db": -154.17
+      }
+    },
+    {
+      "id": "music_works",
+      "label": "Семь помп (CC0)",
+      "src": "assets/audio/music/music_works.mp3",
+      "loop": true,
+      "metrics": {
+        "duration_s": 68.0,
+        "sample_rate": 44100,
+        "channels": 2,
+        "rms_db": -19.76,
+        "peak_db": -1.28,
+        "silent_windows_fraction": 0.0074,
+        "near_clip_fraction": 0.0,
+        "join_difference_db": -98.59
+      }
+    }
+  ],
+  "voices": [
+    {
+      "path": "assets/voice/ayla_1.mp3",
+      "duration_s": 6.96,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.13,
+      "peak_db": -3.66,
+      "silent_windows_fraction": 0.2029,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -81.68
+    },
+    {
+      "path": "assets/voice/ayla_10.mp3",
+      "duration_s": 14.48,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.05,
+      "peak_db": -3.55,
+      "silent_windows_fraction": 0.2569,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -90.36
+    },
+    {
+      "path": "assets/voice/ayla_11.mp3",
+      "duration_s": 10.52,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.75,
+      "peak_db": -3.24,
+      "silent_windows_fraction": 0.219,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -113.2
+    },
+    {
+      "path": "assets/voice/ayla_2.mp3",
+      "duration_s": 7.64,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.3,
+      "peak_db": -4.32,
+      "silent_windows_fraction": 0.2895,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -125.58
+    },
+    {
+      "path": "assets/voice/ayla_3.mp3",
+      "duration_s": 5.64,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.36,
+      "peak_db": -2.57,
+      "silent_windows_fraction": 0.3214,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -112.16
+    },
+    {
+      "path": "assets/voice/ayla_4.mp3",
+      "duration_s": 5.08,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.98,
+      "peak_db": -5.88,
+      "silent_windows_fraction": 0.28,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -105.76
+    },
+    {
+      "path": "assets/voice/ayla_5.mp3",
+      "duration_s": 6.44,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.45,
+      "peak_db": -2.89,
+      "silent_windows_fraction": 0.3125,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -104.44
+    },
+    {
+      "path": "assets/voice/ayla_6.mp3",
+      "duration_s": 7.32,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.28,
+      "peak_db": -2.31,
+      "silent_windows_fraction": 0.3151,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -104.5
+    },
+    {
+      "path": "assets/voice/ayla_7.mp3",
+      "duration_s": 5.72,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.41,
+      "peak_db": -3.16,
+      "silent_windows_fraction": 0.2281,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -90.83
+    },
+    {
+      "path": "assets/voice/ayla_8.mp3",
+      "duration_s": 8.6,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.79,
+      "peak_db": -2.64,
+      "silent_windows_fraction": 0.1512,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -91.67
+    },
+    {
+      "path": "assets/voice/ayla_9.mp3",
+      "duration_s": 6.92,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.59,
+      "peak_db": -6.24,
+      "silent_windows_fraction": 0.2464,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -87.7
+    },
+    {
+      "path": "assets/voice/dozh_1.mp3",
+      "duration_s": 5.6,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.32,
+      "peak_db": -2.48,
+      "silent_windows_fraction": 0.1786,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -94.93
+    },
+    {
+      "path": "assets/voice/dozh_10.mp3",
+      "duration_s": 5.72,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.86,
+      "peak_db": -1.82,
+      "silent_windows_fraction": 0.2281,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -92.8
+    },
+    {
+      "path": "assets/voice/dozh_11.mp3",
+      "duration_s": 5.68,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.17,
+      "peak_db": -3.06,
+      "silent_windows_fraction": 0.1964,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -85.59
+    },
+    {
+      "path": "assets/voice/dozh_14.mp3",
+      "duration_s": 10.48,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.64,
+      "peak_db": -3.68,
+      "silent_windows_fraction": 0.1442,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -106.15
+    },
+    {
+      "path": "assets/voice/dozh_2.mp3",
+      "duration_s": 5.84,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.49,
+      "peak_db": -2.21,
+      "silent_windows_fraction": 0.2931,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -80.13
+    },
+    {
+      "path": "assets/voice/dozh_3.mp3",
+      "duration_s": 6.28,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.37,
+      "peak_db": -1.68,
+      "silent_windows_fraction": 0.1935,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -90.21
+    },
+    {
+      "path": "assets/voice/dozh_4.mp3",
+      "duration_s": 4.24,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.76,
+      "peak_db": -2.34,
+      "silent_windows_fraction": 0.2143,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -102.88
+    },
+    {
+      "path": "assets/voice/dozh_5.mp3",
+      "duration_s": 6.8,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.08,
+      "peak_db": -2.02,
+      "silent_windows_fraction": 0.2206,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -83.92
+    },
+    {
+      "path": "assets/voice/dozh_6.mp3",
+      "duration_s": 7.16,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.07,
+      "peak_db": -4.49,
+      "silent_windows_fraction": 0.2535,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -89.42
+    },
+    {
+      "path": "assets/voice/dozh_7.mp3",
+      "duration_s": 4.92,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.69,
+      "peak_db": -3.25,
+      "silent_windows_fraction": 0.3061,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -90.85
+    },
+    {
+      "path": "assets/voice/dozh_8.mp3",
+      "duration_s": 4.56,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.05,
+      "peak_db": -1.86,
+      "silent_windows_fraction": 0.1556,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -99.46
+    },
+    {
+      "path": "assets/voice/dozh_9.mp3",
+      "duration_s": 5.44,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.94,
+      "peak_db": -4.26,
+      "silent_windows_fraction": 0.2407,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -95.97
+    },
+    {
+      "path": "assets/voice/final_pump_1.mp3",
+      "duration_s": 4.981,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -20.23,
+      "peak_db": -4.45,
+      "silent_windows_fraction": 0.1429,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/final_pump_2.mp3",
+      "duration_s": 8.046,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.69,
+      "peak_db": -4.49,
+      "silent_windows_fraction": 0.15,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/final_pump_3.mp3",
+      "duration_s": 14.408,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.55,
+      "peak_db": -2.99,
+      "silent_windows_fraction": 0.1111,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/final_silence_1.mp3",
+      "duration_s": 6.954,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.7,
+      "peak_db": -3.39,
+      "silent_windows_fraction": 0.1304,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/final_silence_2.mp3",
+      "duration_s": 6.095,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.95,
+      "peak_db": -4.88,
+      "silent_windows_fraction": 0.1667,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/final_silence_3.mp3",
+      "duration_s": 14.965,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.48,
+      "peak_db": -3.77,
+      "silent_windows_fraction": 0.094,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/final_vein_1.mp3",
+      "duration_s": 7.5,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.52,
+      "peak_db": -4.75,
+      "silent_windows_fraction": 0.08,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/final_vein_2.mp3",
+      "duration_s": 9.718,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.44,
+      "peak_db": -4.44,
+      "silent_windows_fraction": 0.1134,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/final_vein_3.mp3",
+      "duration_s": 13.514,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.44,
+      "peak_db": -3.92,
+      "silent_windows_fraction": 0.0815,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/flood_1.mp3",
+      "duration_s": 8.615,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.81,
+      "peak_db": -4.86,
+      "silent_windows_fraction": 0.1163,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/flood_2.mp3",
+      "duration_s": 6.304,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.99,
+      "peak_db": -5.61,
+      "silent_windows_fraction": 0.0952,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_archive_1.mp3",
+      "duration_s": 6.989,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.69,
+      "peak_db": -3.12,
+      "silent_windows_fraction": 0.1449,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_archive_2.mp3",
+      "duration_s": 6.653,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.73,
+      "peak_db": -5.1,
+      "silent_windows_fraction": 0.0758,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_drift_1.mp3",
+      "duration_s": 15.43,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.71,
+      "peak_db": -3.55,
+      "silent_windows_fraction": 0.1234,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_drift_2.mp3",
+      "duration_s": 11.726,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.68,
+      "peak_db": -3.67,
+      "silent_windows_fraction": 0.0855,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_dry_row_1.mp3",
+      "duration_s": 4.772,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.43,
+      "peak_db": -4.92,
+      "silent_windows_fraction": 0.0638,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_dry_row_2.mp3",
+      "duration_s": 6.432,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.28,
+      "peak_db": -4.55,
+      "silent_windows_fraction": 0.1406,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_face_1.mp3",
+      "duration_s": 13.166,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.65,
+      "peak_db": -4.24,
+      "silent_windows_fraction": 0.0916,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_face_2.mp3",
+      "duration_s": 12.666,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.76,
+      "peak_db": -4.71,
+      "silent_windows_fraction": 0.0952,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_flood_gallery_1.mp3",
+      "duration_s": 7.036,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.83,
+      "peak_db": -3.78,
+      "silent_windows_fraction": 0.1286,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_flood_gallery_2.mp3",
+      "duration_s": 13.131,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.57,
+      "peak_db": -4.84,
+      "silent_windows_fraction": 0.0763,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_gate_hall_1.mp3",
+      "duration_s": 8.568,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.59,
+      "peak_db": -2.74,
+      "silent_windows_fraction": 0.1412,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_gate_hall_2.mp3",
+      "duration_s": 5.538,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.55,
+      "peak_db": -4.18,
+      "silent_windows_fraction": 0.1091,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_gate_office_1.mp3",
+      "duration_s": 6.827,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.3,
+      "peak_db": -3.01,
+      "silent_windows_fraction": 0.0882,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_gate_office_2.mp3",
+      "duration_s": 7.291,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.71,
+      "peak_db": -4.9,
+      "silent_windows_fraction": 0.0972,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_office_1.mp3",
+      "duration_s": 9.543,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.66,
+      "peak_db": -3.62,
+      "silent_windows_fraction": 0.1158,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_office_2.mp3",
+      "duration_s": 6.606,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.64,
+      "peak_db": -4.64,
+      "silent_windows_fraction": 0.1212,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_pump_hall_1.mp3",
+      "duration_s": 8.185,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.73,
+      "peak_db": -3.9,
+      "silent_windows_fraction": 0.0988,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_pump_hall_2.mp3",
+      "duration_s": 3.75,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.33,
+      "peak_db": -6.41,
+      "silent_windows_fraction": 0.0811,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -161.02
+    },
+    {
+      "path": "assets/voice/intro_pump_room_1.mp3",
+      "duration_s": 7.628,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.75,
+      "peak_db": -3.65,
+      "silent_windows_fraction": 0.1053,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_pump_room_2.mp3",
+      "duration_s": 6.304,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.68,
+      "peak_db": -4.17,
+      "silent_windows_fraction": 0.1111,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_pump_shaft_1.mp3",
+      "duration_s": 5.457,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.71,
+      "peak_db": -4.64,
+      "silent_windows_fraction": 0.1111,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_pump_shaft_2.mp3",
+      "duration_s": 5.283,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.9,
+      "peak_db": -4.8,
+      "silent_windows_fraction": 0.1154,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_sluice_1.mp3",
+      "duration_s": 13.514,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.55,
+      "peak_db": -4.9,
+      "silent_windows_fraction": 0.0889,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/intro_sluice_2.mp3",
+      "duration_s": 13.897,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.56,
+      "peak_db": -3.78,
+      "silent_windows_fraction": 0.1014,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/ira_1.mp3",
+      "duration_s": 4.315,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.08,
+      "peak_db": -2.22,
+      "silent_windows_fraction": 0.093,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -115.35
+    },
+    {
+      "path": "assets/voice/ira_10.mp3",
+      "duration_s": 3.541,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -18.93,
+      "peak_db": -6.65,
+      "silent_windows_fraction": 0.1143,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -143.93
+    },
+    {
+      "path": "assets/voice/ira_11.mp3",
+      "duration_s": 4.143,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.09,
+      "peak_db": -1.93,
+      "silent_windows_fraction": 0.0488,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -88.71
+    },
+    {
+      "path": "assets/voice/ira_12.mp3",
+      "duration_s": 4.479,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -18.81,
+      "peak_db": -2.39,
+      "silent_windows_fraction": 0.1136,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -102.19
+    },
+    {
+      "path": "assets/voice/ira_13.mp3",
+      "duration_s": 3.11,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -18.93,
+      "peak_db": -3.13,
+      "silent_windows_fraction": 0.0968,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -89.64
+    },
+    {
+      "path": "assets/voice/ira_14.mp3",
+      "duration_s": 2.394,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.3,
+      "peak_db": -2.5,
+      "silent_windows_fraction": 0.087,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -109.57
+    },
+    {
+      "path": "assets/voice/ira_15.mp3",
+      "duration_s": 4.47,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.27,
+      "peak_db": -2.37,
+      "silent_windows_fraction": 0.0909,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -96.65
+    },
+    {
+      "path": "assets/voice/ira_16.mp3",
+      "duration_s": 7.919,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.18,
+      "peak_db": -1.83,
+      "silent_windows_fraction": 0.0633,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -88.48
+    },
+    {
+      "path": "assets/voice/ira_17.mp3",
+      "duration_s": 3.105,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.05,
+      "peak_db": -2.61,
+      "silent_windows_fraction": 0.0323,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -88.11
+    },
+    {
+      "path": "assets/voice/ira_2.mp3",
+      "duration_s": 6.47,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.54,
+      "peak_db": -2.17,
+      "silent_windows_fraction": 0.0469,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -104.55
+    },
+    {
+      "path": "assets/voice/ira_3.mp3",
+      "duration_s": 4.79,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.51,
+      "peak_db": -1.87,
+      "silent_windows_fraction": 0.0851,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -105.46
+    },
+    {
+      "path": "assets/voice/ira_4.mp3",
+      "duration_s": 5.75,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.81,
+      "peak_db": -1.54,
+      "silent_windows_fraction": 0.1228,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -83.4
+    },
+    {
+      "path": "assets/voice/ira_5.mp3",
+      "duration_s": 5.193,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.49,
+      "peak_db": -1.82,
+      "silent_windows_fraction": 0.0588,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -79.22
+    },
+    {
+      "path": "assets/voice/ira_6.mp3",
+      "duration_s": 4.23,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.52,
+      "peak_db": -1.93,
+      "silent_windows_fraction": 0.119,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -100.94
+    },
+    {
+      "path": "assets/voice/ira_7.mp3",
+      "duration_s": 4.311,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.43,
+      "peak_db": -1.87,
+      "silent_windows_fraction": 0.0698,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -88.79
+    },
+    {
+      "path": "assets/voice/ira_8.mp3",
+      "duration_s": 3.91,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -20.01,
+      "peak_db": -1.76,
+      "silent_windows_fraction": 0.1026,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -122.72
+    },
+    {
+      "path": "assets/voice/ira_9.mp3",
+      "duration_s": 3.106,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.39,
+      "peak_db": -1.87,
+      "silent_windows_fraction": 0.0968,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -92.7
+    },
+    {
+      "path": "assets/voice/kast_1.mp3",
+      "duration_s": 4.95,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.55,
+      "peak_db": -1.59,
+      "silent_windows_fraction": 0.1429,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -78.53
+    },
+    {
+      "path": "assets/voice/kast_10.mp3",
+      "duration_s": 3.447,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.63,
+      "peak_db": -3.08,
+      "silent_windows_fraction": 0.0882,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -90.81
+    },
+    {
+      "path": "assets/voice/kast_11.mp3",
+      "duration_s": 5.354,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.49,
+      "peak_db": -1.96,
+      "silent_windows_fraction": 0.0755,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -106.01
+    },
+    {
+      "path": "assets/voice/kast_12.mp3",
+      "duration_s": 0.71,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.87,
+      "peak_db": -3.35,
+      "silent_windows_fraction": 0.1429,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -77.12
+    },
+    {
+      "path": "assets/voice/kast_13.mp3",
+      "duration_s": 4.39,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.4,
+      "peak_db": -2.8,
+      "silent_windows_fraction": 0.093,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -130.19
+    },
+    {
+      "path": "assets/voice/kast_14.mp3",
+      "duration_s": 5.83,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.31,
+      "peak_db": -1.83,
+      "silent_windows_fraction": 0.1207,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -91.46
+    },
+    {
+      "path": "assets/voice/kast_15.mp3",
+      "duration_s": 6.47,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.47,
+      "peak_db": -2.1,
+      "silent_windows_fraction": 0.1094,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -97.6
+    },
+    {
+      "path": "assets/voice/kast_16.mp3",
+      "duration_s": 6.71,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.1,
+      "peak_db": -2.13,
+      "silent_windows_fraction": 0.0448,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -98.59
+    },
+    {
+      "path": "assets/voice/kast_17.mp3",
+      "duration_s": 7.35,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -18.99,
+      "peak_db": -2.48,
+      "silent_windows_fraction": 0.0959,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -101.72
+    },
+    {
+      "path": "assets/voice/kast_2.mp3",
+      "duration_s": 5.91,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.03,
+      "peak_db": -1.97,
+      "silent_windows_fraction": 0.0508,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -88.17
+    },
+    {
+      "path": "assets/voice/kast_3.mp3",
+      "duration_s": 5.51,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.37,
+      "peak_db": -1.84,
+      "silent_windows_fraction": 0.0364,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -67.66
+    },
+    {
+      "path": "assets/voice/kast_4.mp3",
+      "duration_s": 5.359,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -18.57,
+      "peak_db": -1.98,
+      "silent_windows_fraction": 0.0755,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -99.93
+    },
+    {
+      "path": "assets/voice/kast_5.mp3",
+      "duration_s": 4.706,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.39,
+      "peak_db": -2.0,
+      "silent_windows_fraction": 0.0213,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -73.13
+    },
+    {
+      "path": "assets/voice/kast_6.mp3",
+      "duration_s": 7.029,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.03,
+      "peak_db": -2.38,
+      "silent_windows_fraction": 0.0857,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -95.88
+    },
+    {
+      "path": "assets/voice/kast_7.mp3",
+      "duration_s": 10.703,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -18.83,
+      "peak_db": -2.02,
+      "silent_windows_fraction": 0.0561,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -85.66
+    },
+    {
+      "path": "assets/voice/kast_8.mp3",
+      "duration_s": 4.71,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.4,
+      "peak_db": -2.26,
+      "silent_windows_fraction": 0.0213,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -89.78
+    },
+    {
+      "path": "assets/voice/kast_9.mp3",
+      "duration_s": 4.31,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.45,
+      "peak_db": -2.14,
+      "silent_windows_fraction": 0.0698,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -81.94
+    },
+    {
+      "path": "assets/voice/kell_1.mp3",
+      "duration_s": 5.886,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.88,
+      "peak_db": -4.01,
+      "silent_windows_fraction": 0.1724,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -166.5
+    },
+    {
+      "path": "assets/voice/kell_10.mp3",
+      "duration_s": 4.47,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -20.39,
+      "peak_db": -5.6,
+      "silent_windows_fraction": 0.2045,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -162.54
+    },
+    {
+      "path": "assets/voice/kell_11.mp3",
+      "duration_s": 6.989,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.7,
+      "peak_db": -3.21,
+      "silent_windows_fraction": 0.1159,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -149.12
+    },
+    {
+      "path": "assets/voice/kell_12.mp3",
+      "duration_s": 3.367,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.48,
+      "peak_db": -4.24,
+      "silent_windows_fraction": 0.1212,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -166.16
+    },
+    {
+      "path": "assets/voice/kell_13.mp3",
+      "duration_s": 10.066,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.86,
+      "peak_db": -3.94,
+      "silent_windows_fraction": 0.13,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -151.9
+    },
+    {
+      "path": "assets/voice/kell_14.mp3",
+      "duration_s": 7.082,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.38,
+      "peak_db": -3.74,
+      "silent_windows_fraction": 0.1143,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -163.1
+    },
+    {
+      "path": "assets/voice/kell_15.mp3",
+      "duration_s": 4.946,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.58,
+      "peak_db": -5.66,
+      "silent_windows_fraction": 0.102,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -175.47
+    },
+    {
+      "path": "assets/voice/kell_2.mp3",
+      "duration_s": 5.12,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.72,
+      "peak_db": -5.68,
+      "silent_windows_fraction": 0.1176,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -179.43
+    },
+    {
+      "path": "assets/voice/kell_3.mp3",
+      "duration_s": 8.789,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.97,
+      "peak_db": -3.83,
+      "silent_windows_fraction": 0.1724,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -148.21
+    },
+    {
+      "path": "assets/voice/kell_4.mp3",
+      "duration_s": 5.84,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.65,
+      "peak_db": -4.88,
+      "silent_windows_fraction": 0.1034,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -166.83
+    },
+    {
+      "path": "assets/voice/kell_5.mp3",
+      "duration_s": 8.313,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.67,
+      "peak_db": -5.48,
+      "silent_windows_fraction": 0.1566,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -175.11
+    },
+    {
+      "path": "assets/voice/kell_6.mp3",
+      "duration_s": 2.856,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.79,
+      "peak_db": -6.06,
+      "silent_windows_fraction": 0.1786,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -183.07
+    },
+    {
+      "path": "assets/voice/kell_7.mp3",
+      "duration_s": 9.207,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.61,
+      "peak_db": -4.31,
+      "silent_windows_fraction": 0.1522,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -148.71
+    },
+    {
+      "path": "assets/voice/kell_8.mp3",
+      "duration_s": 3.495,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.6,
+      "peak_db": -4.88,
+      "silent_windows_fraction": 0.1471,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -153.52
+    },
+    {
+      "path": "assets/voice/kell_9.mp3",
+      "duration_s": 7.721,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.53,
+      "peak_db": -4.67,
+      "silent_windows_fraction": 0.1558,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -160.88
+    },
+    {
+      "path": "assets/voice/narr_ayla_1.mp3",
+      "duration_s": 3.111,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.59,
+      "peak_db": -5.11,
+      "silent_windows_fraction": 0.0968,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_dozh_1.mp3",
+      "duration_s": 4.563,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.29,
+      "peak_db": -4.88,
+      "silent_windows_fraction": 0.0889,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_dozh_2.mp3",
+      "duration_s": 4.261,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -20.06,
+      "peak_db": -3.08,
+      "silent_windows_fraction": 0.2143,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_dozh_3.mp3",
+      "duration_s": 3.111,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.95,
+      "peak_db": -4.61,
+      "silent_windows_fraction": 0.0968,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_dozh_4.mp3",
+      "duration_s": 2.601,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -20.3,
+      "peak_db": -4.18,
+      "silent_windows_fraction": 0.2308,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_ira_1.mp3",
+      "duration_s": 4.435,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.78,
+      "peak_db": -4.23,
+      "silent_windows_fraction": 0.0455,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_ira_2.mp3",
+      "duration_s": 4.052,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.57,
+      "peak_db": -5.7,
+      "silent_windows_fraction": 0.125,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_ira_3.mp3",
+      "duration_s": 3.111,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.75,
+      "peak_db": -3.39,
+      "silent_windows_fraction": 0.1935,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -164.03
+    },
+    {
+      "path": "assets/voice/narr_ira_4.mp3",
+      "duration_s": 2.856,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.34,
+      "peak_db": -4.83,
+      "silent_windows_fraction": 0.0714,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_ira_5.mp3",
+      "duration_s": 2.601,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.53,
+      "peak_db": -5.77,
+      "silent_windows_fraction": 0.1154,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_ira_6.mp3",
+      "duration_s": 4.818,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.18,
+      "peak_db": -3.69,
+      "silent_windows_fraction": 0.1042,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_ira_7.mp3",
+      "duration_s": 3.495,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.7,
+      "peak_db": -5.91,
+      "silent_windows_fraction": 0.1471,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_ira_8.mp3",
+      "duration_s": 3.75,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.89,
+      "peak_db": -4.03,
+      "silent_windows_fraction": 0.1351,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -153.32
+    },
+    {
+      "path": "assets/voice/narr_kast_1.mp3",
+      "duration_s": 2.252,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.7,
+      "peak_db": -5.45,
+      "silent_windows_fraction": 0.0909,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_kast_2.mp3",
+      "duration_s": 4.598,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -18.98,
+      "peak_db": -2.91,
+      "silent_windows_fraction": 0.1778,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_kast_3.mp3",
+      "duration_s": 3.193,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.96,
+      "peak_db": -5.3,
+      "silent_windows_fraction": 0.0645,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_kast_4.mp3",
+      "duration_s": 5.84,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.63,
+      "peak_db": -4.38,
+      "silent_windows_fraction": 0.0862,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_kast_5.mp3",
+      "duration_s": 4.052,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.36,
+      "peak_db": -5.77,
+      "silent_windows_fraction": 0.05,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_kast_6.mp3",
+      "duration_s": 5.155,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.72,
+      "peak_db": -4.79,
+      "silent_windows_fraction": 0.098,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_kast_7.mp3",
+      "duration_s": 2.252,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.8,
+      "peak_db": -4.49,
+      "silent_windows_fraction": 0.0909,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_kell_1.mp3",
+      "duration_s": 4.47,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.61,
+      "peak_db": -3.31,
+      "silent_windows_fraction": 0.1136,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_kell_2.mp3",
+      "duration_s": 3.193,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.49,
+      "peak_db": -4.13,
+      "silent_windows_fraction": 0.0645,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_kell_3.mp3",
+      "duration_s": 4.087,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.12,
+      "peak_db": -5.79,
+      "silent_windows_fraction": 0.1,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_kell_4.mp3",
+      "duration_s": 3.878,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.16,
+      "peak_db": -5.52,
+      "silent_windows_fraction": 0.1053,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_kell_5.mp3",
+      "duration_s": 4.69,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.46,
+      "peak_db": -4.77,
+      "silent_windows_fraction": 0.1087,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_registrar_1.mp3",
+      "duration_s": 5.248,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.84,
+      "peak_db": -4.99,
+      "silent_windows_fraction": 0.0962,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_resh_1.mp3",
+      "duration_s": 3.75,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.89,
+      "peak_db": -5.82,
+      "silent_windows_fraction": 0.0811,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_resh_2.mp3",
+      "duration_s": 2.984,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -20.36,
+      "peak_db": -5.57,
+      "silent_windows_fraction": 0.069,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_vein_1.mp3",
+      "duration_s": 5.155,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.46,
+      "peak_db": -3.55,
+      "silent_windows_fraction": 0.0784,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_vein_2.mp3",
+      "duration_s": 5.283,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -20.08,
+      "peak_db": -3.36,
+      "silent_windows_fraction": 0.2308,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_vein_3.mp3",
+      "duration_s": 3.239,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.6,
+      "peak_db": -5.05,
+      "silent_windows_fraction": 0.1562,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_vex_1.mp3",
+      "duration_s": 4.516,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.13,
+      "peak_db": -4.68,
+      "silent_windows_fraction": 0.0667,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_vex_2.mp3",
+      "duration_s": 5.027,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.58,
+      "peak_db": -3.02,
+      "silent_windows_fraction": 0.12,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_zhuk_1.mp3",
+      "duration_s": 3.924,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.51,
+      "peak_db": -3.44,
+      "silent_windows_fraction": 0.1282,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_zhuk_2.mp3",
+      "duration_s": 4.598,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.57,
+      "peak_db": -3.36,
+      "silent_windows_fraction": 0.1111,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_zhuk_3.mp3",
+      "duration_s": 3.495,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.82,
+      "peak_db": -5.57,
+      "silent_windows_fraction": 0.0294,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_zhuk_4.mp3",
+      "duration_s": 5.41,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.45,
+      "peak_db": -2.66,
+      "silent_windows_fraction": 0.1296,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_zhuk_5.mp3",
+      "duration_s": 3.959,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.61,
+      "peak_db": -5.97,
+      "silent_windows_fraction": 0.0769,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/narr_zhuk_6.mp3",
+      "duration_s": 3.622,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.93,
+      "peak_db": -3.86,
+      "silent_windows_fraction": 0.1389,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/prologue_1.mp3",
+      "duration_s": 7.628,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.66,
+      "peak_db": -4.49,
+      "silent_windows_fraction": 0.0921,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/prologue_2.mp3",
+      "duration_s": 7.465,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.74,
+      "peak_db": -4.45,
+      "silent_windows_fraction": 0.0946,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/prologue_3.mp3",
+      "duration_s": 8.104,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.69,
+      "peak_db": -4.91,
+      "silent_windows_fraction": 0.1235,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/registrar_1.mp3",
+      "duration_s": 8.812,
+      "sample_rate": 48000,
+      "channels": 1,
+      "rms_db": -19.45,
+      "peak_db": -5.49,
+      "silent_windows_fraction": 0.3409,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -77.73
+    },
+    {
+      "path": "assets/voice/registrar_10.mp3",
+      "duration_s": 12.796,
+      "sample_rate": 48000,
+      "channels": 1,
+      "rms_db": -19.44,
+      "peak_db": -5.75,
+      "silent_windows_fraction": 0.1969,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -80.29
+    },
+    {
+      "path": "assets/voice/registrar_2.mp3",
+      "duration_s": 9.9,
+      "sample_rate": 48000,
+      "channels": 1,
+      "rms_db": -19.44,
+      "peak_db": -5.11,
+      "silent_windows_fraction": 0.303,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -108.23
+    },
+    {
+      "path": "assets/voice/registrar_3.mp3",
+      "duration_s": 11.052,
+      "sample_rate": 48000,
+      "channels": 1,
+      "rms_db": -19.44,
+      "peak_db": -5.57,
+      "silent_windows_fraction": 0.3545,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -98.55
+    },
+    {
+      "path": "assets/voice/registrar_4.mp3",
+      "duration_s": 2.308,
+      "sample_rate": 48000,
+      "channels": 1,
+      "rms_db": -19.45,
+      "peak_db": -5.26,
+      "silent_windows_fraction": 0.3478,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -44.6
+    },
+    {
+      "path": "assets/voice/registrar_5.mp3",
+      "duration_s": 10.188,
+      "sample_rate": 48000,
+      "channels": 1,
+      "rms_db": -19.45,
+      "peak_db": -5.74,
+      "silent_windows_fraction": 0.2277,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -91.36
+    },
+    {
+      "path": "assets/voice/registrar_6.mp3",
+      "duration_s": 11.612,
+      "sample_rate": 48000,
+      "channels": 1,
+      "rms_db": -19.44,
+      "peak_db": -5.35,
+      "silent_windows_fraction": 0.3793,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -60.14
+    },
+    {
+      "path": "assets/voice/registrar_7.mp3",
+      "duration_s": 4.412,
+      "sample_rate": 48000,
+      "channels": 1,
+      "rms_db": -19.45,
+      "peak_db": -6.35,
+      "silent_windows_fraction": 0.1818,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -88.0
+    },
+    {
+      "path": "assets/voice/registrar_8.mp3",
+      "duration_s": 13.852,
+      "sample_rate": 48000,
+      "channels": 1,
+      "rms_db": -19.45,
+      "peak_db": -5.69,
+      "silent_windows_fraction": 0.2536,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -92.13
+    },
+    {
+      "path": "assets/voice/registrar_9.mp3",
+      "duration_s": 9.068,
+      "sample_rate": 48000,
+      "channels": 1,
+      "rms_db": -19.44,
+      "peak_db": -6.02,
+      "silent_windows_fraction": 0.1889,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -48.26
+    },
+    {
+      "path": "assets/voice/resh_1.mp3",
+      "duration_s": 7.56,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.28,
+      "peak_db": -5.34,
+      "silent_windows_fraction": 0.24,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -89.15
+    },
+    {
+      "path": "assets/voice/resh_10.mp3",
+      "duration_s": 8.68,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.29,
+      "peak_db": -4.46,
+      "silent_windows_fraction": 0.2674,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -89.86
+    },
+    {
+      "path": "assets/voice/resh_11.mp3",
+      "duration_s": 7.4,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.71,
+      "peak_db": -7.15,
+      "silent_windows_fraction": 0.1622,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -86.32
+    },
+    {
+      "path": "assets/voice/resh_12.mp3",
+      "duration_s": 9.4,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.93,
+      "peak_db": -6.46,
+      "silent_windows_fraction": 0.1383,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -87.02
+    },
+    {
+      "path": "assets/voice/resh_13.mp3",
+      "duration_s": 5.6,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.24,
+      "peak_db": -6.01,
+      "silent_windows_fraction": 0.1607,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -89.56
+    },
+    {
+      "path": "assets/voice/resh_14.mp3",
+      "duration_s": 12.24,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.63,
+      "peak_db": -5.4,
+      "silent_windows_fraction": 0.1885,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -103.65
+    },
+    {
+      "path": "assets/voice/resh_15.mp3",
+      "duration_s": 10.36,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.99,
+      "peak_db": -4.93,
+      "silent_windows_fraction": 0.1942,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -90.81
+    },
+    {
+      "path": "assets/voice/resh_2.mp3",
+      "duration_s": 7.52,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.5,
+      "peak_db": -4.38,
+      "silent_windows_fraction": 0.1867,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -97.27
+    },
+    {
+      "path": "assets/voice/resh_3.mp3",
+      "duration_s": 9.6,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.43,
+      "peak_db": -4.42,
+      "silent_windows_fraction": 0.1979,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -84.27
+    },
+    {
+      "path": "assets/voice/resh_4.mp3",
+      "duration_s": 8.08,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.31,
+      "peak_db": -5.17,
+      "silent_windows_fraction": 0.15,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -79.5
+    },
+    {
+      "path": "assets/voice/resh_5.mp3",
+      "duration_s": 8.84,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.32,
+      "peak_db": -5.54,
+      "silent_windows_fraction": 0.2273,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -96.3
+    },
+    {
+      "path": "assets/voice/resh_6.mp3",
+      "duration_s": 8.92,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.26,
+      "peak_db": -2.02,
+      "silent_windows_fraction": 0.2472,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -105.71
+    },
+    {
+      "path": "assets/voice/resh_7.mp3",
+      "duration_s": 8.08,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -18.89,
+      "peak_db": -5.28,
+      "silent_windows_fraction": 0.2,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -88.29
+    },
+    {
+      "path": "assets/voice/resh_8.mp3",
+      "duration_s": 7.4,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -21.13,
+      "peak_db": -2.72,
+      "silent_windows_fraction": 0.1892,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -103.65
+    },
+    {
+      "path": "assets/voice/resh_9.mp3",
+      "duration_s": 5.52,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.33,
+      "peak_db": -5.26,
+      "silent_windows_fraction": 0.1636,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -128.07
+    },
+    {
+      "path": "assets/voice/rev_1.mp3",
+      "duration_s": 5.201,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -20.71,
+      "peak_db": -5.73,
+      "silent_windows_fraction": 0.2308,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/rev_2.mp3",
+      "duration_s": 7.674,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.55,
+      "peak_db": -3.85,
+      "silent_windows_fraction": 0.1447,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/rev_3.mp3",
+      "duration_s": 7.93,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.47,
+      "peak_db": -4.67,
+      "silent_windows_fraction": 0.1899,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -240.0
+    },
+    {
+      "path": "assets/voice/vein_1.mp3",
+      "duration_s": 6.56,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.35,
+      "peak_db": -5.52,
+      "silent_windows_fraction": 0.1231,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -188.6
+    },
+    {
+      "path": "assets/voice/vein_10.mp3",
+      "duration_s": 7.338,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.8,
+      "peak_db": -6.35,
+      "silent_windows_fraction": 0.1781,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -179.0
+    },
+    {
+      "path": "assets/voice/vein_2.mp3",
+      "duration_s": 7.338,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -20.0,
+      "peak_db": -5.47,
+      "silent_windows_fraction": 0.1644,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -153.28
+    },
+    {
+      "path": "assets/voice/vein_3.mp3",
+      "duration_s": 9.578,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.77,
+      "peak_db": -5.62,
+      "silent_windows_fraction": 0.1474,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -147.56
+    },
+    {
+      "path": "assets/voice/vein_4.mp3",
+      "duration_s": 5.457,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.98,
+      "peak_db": -4.29,
+      "silent_windows_fraction": 0.2593,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -167.46
+    },
+    {
+      "path": "assets/voice/vein_5.mp3",
+      "duration_s": 6.989,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.81,
+      "peak_db": -5.97,
+      "silent_windows_fraction": 0.087,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -164.63
+    },
+    {
+      "path": "assets/voice/vein_6.mp3",
+      "duration_s": 9.044,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.58,
+      "peak_db": -5.45,
+      "silent_windows_fraction": 0.1111,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -157.08
+    },
+    {
+      "path": "assets/voice/vein_7.mp3",
+      "duration_s": 4.598,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.3,
+      "peak_db": -5.46,
+      "silent_windows_fraction": 0.1111,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -160.09
+    },
+    {
+      "path": "assets/voice/vein_8.mp3",
+      "duration_s": 6.908,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.77,
+      "peak_db": -5.09,
+      "silent_windows_fraction": 0.1594,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -174.84
+    },
+    {
+      "path": "assets/voice/vein_9.mp3",
+      "duration_s": 6.56,
+      "sample_rate": 44100,
+      "channels": 1,
+      "rms_db": -19.39,
+      "peak_db": -4.56,
+      "silent_windows_fraction": 0.1077,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -172.17
+    },
+    {
+      "path": "assets/voice/vex_1.mp3",
+      "duration_s": 9.2,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.04,
+      "peak_db": -6.04,
+      "silent_windows_fraction": 0.2174,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -87.31
+    },
+    {
+      "path": "assets/voice/vex_10.mp3",
+      "duration_s": 5.04,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.5,
+      "peak_db": -4.92,
+      "silent_windows_fraction": 0.18,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -96.23
+    },
+    {
+      "path": "assets/voice/vex_11.mp3",
+      "duration_s": 5.36,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.86,
+      "peak_db": -5.75,
+      "silent_windows_fraction": 0.2453,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -96.74
+    },
+    {
+      "path": "assets/voice/vex_12.mp3",
+      "duration_s": 6.16,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.73,
+      "peak_db": -6.24,
+      "silent_windows_fraction": 0.1967,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -75.89
+    },
+    {
+      "path": "assets/voice/vex_2.mp3",
+      "duration_s": 4.0,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.67,
+      "peak_db": -5.36,
+      "silent_windows_fraction": 0.15,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -85.31
+    },
+    {
+      "path": "assets/voice/vex_3.mp3",
+      "duration_s": 8.0,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.84,
+      "peak_db": -2.92,
+      "silent_windows_fraction": 0.1625,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -99.57
+    },
+    {
+      "path": "assets/voice/vex_4.mp3",
+      "duration_s": 11.32,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.26,
+      "peak_db": -3.3,
+      "silent_windows_fraction": 0.2035,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -79.35
+    },
+    {
+      "path": "assets/voice/vex_5.mp3",
+      "duration_s": 2.92,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -22.33,
+      "peak_db": -6.13,
+      "silent_windows_fraction": 0.3448,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -75.14
+    },
+    {
+      "path": "assets/voice/vex_6.mp3",
+      "duration_s": 4.6,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.4,
+      "peak_db": -5.93,
+      "silent_windows_fraction": 0.1739,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -90.18
+    },
+    {
+      "path": "assets/voice/vex_7.mp3",
+      "duration_s": 3.32,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.44,
+      "peak_db": -2.07,
+      "silent_windows_fraction": 0.2424,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -115.78
+    },
+    {
+      "path": "assets/voice/vex_8.mp3",
+      "duration_s": 5.32,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.95,
+      "peak_db": -5.5,
+      "silent_windows_fraction": 0.2642,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -108.13
+    },
+    {
+      "path": "assets/voice/vex_9.mp3",
+      "duration_s": 6.44,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.37,
+      "peak_db": -4.04,
+      "silent_windows_fraction": 0.1875,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -85.07
+    },
+    {
+      "path": "assets/voice/zhuk_1.mp3",
+      "duration_s": 6.56,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.11,
+      "peak_db": -3.77,
+      "silent_windows_fraction": 0.2769,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -72.5
+    },
+    {
+      "path": "assets/voice/zhuk_10.mp3",
+      "duration_s": 7.44,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.71,
+      "peak_db": -1.94,
+      "silent_windows_fraction": 0.1486,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -92.88
+    },
+    {
+      "path": "assets/voice/zhuk_11.mp3",
+      "duration_s": 15.72,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.25,
+      "peak_db": -1.59,
+      "silent_windows_fraction": 0.2357,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -88.31
+    },
+    {
+      "path": "assets/voice/zhuk_12.mp3",
+      "duration_s": 11.92,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.47,
+      "peak_db": -2.57,
+      "silent_windows_fraction": 0.1597,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -125.83
+    },
+    {
+      "path": "assets/voice/zhuk_13.mp3",
+      "duration_s": 9.16,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.4,
+      "peak_db": -3.23,
+      "silent_windows_fraction": 0.1319,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -82.97
+    },
+    {
+      "path": "assets/voice/zhuk_14.mp3",
+      "duration_s": 8.52,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.18,
+      "peak_db": -3.62,
+      "silent_windows_fraction": 0.1529,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -100.42
+    },
+    {
+      "path": "assets/voice/zhuk_2.mp3",
+      "duration_s": 6.52,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.34,
+      "peak_db": -1.6,
+      "silent_windows_fraction": 0.1846,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -93.43
+    },
+    {
+      "path": "assets/voice/zhuk_3.mp3",
+      "duration_s": 6.8,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.72,
+      "peak_db": -1.8,
+      "silent_windows_fraction": 0.2794,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -85.12
+    },
+    {
+      "path": "assets/voice/zhuk_4.mp3",
+      "duration_s": 7.68,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.93,
+      "peak_db": -1.91,
+      "silent_windows_fraction": 0.1447,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -90.81
+    },
+    {
+      "path": "assets/voice/zhuk_5.mp3",
+      "duration_s": 0.938,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.19,
+      "peak_db": -7.54,
+      "silent_windows_fraction": 0.1111,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -64.53
+    },
+    {
+      "path": "assets/voice/zhuk_6.mp3",
+      "duration_s": 9.32,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.92,
+      "peak_db": -2.34,
+      "silent_windows_fraction": 0.2258,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -76.82
+    },
+    {
+      "path": "assets/voice/zhuk_7.mp3",
+      "duration_s": 4.84,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.93,
+      "peak_db": -2.26,
+      "silent_windows_fraction": 0.2292,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -100.25
+    },
+    {
+      "path": "assets/voice/zhuk_8.mp3",
+      "duration_s": 3.92,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -20.64,
+      "peak_db": -0.69,
+      "silent_windows_fraction": 0.2564,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -85.68
+    },
+    {
+      "path": "assets/voice/zhuk_9.mp3",
+      "duration_s": 11.72,
+      "sample_rate": 24000,
+      "channels": 1,
+      "rms_db": -19.78,
+      "peak_db": -1.59,
+      "silent_windows_fraction": 0.1795,
+      "near_clip_fraction": 0.0,
+      "join_difference_db": -80.94
+    }
+  ]
+}
