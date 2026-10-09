@@ -61,5 +61,7 @@
     "hit": "sfx_squelch",
     "death": "sfx_squelch"
   },
-  "breathe": false
+  "breathe": false,
+  "combat_figure": "assets/img/npc/fig_rotling.png",
+  "figure_mode": "topdown"
 }
