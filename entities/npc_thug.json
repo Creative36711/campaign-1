@@ -69,5 +69,7 @@
     "attack": "snd_blade",
     "hit": "sfx_hit",
     "death": "snd_cloth"
-  }
+  },
+  "combat_figure": "assets/img/npc/fig_thug.png",
+  "figure_mode": "topdown"
 }

@@ -32,5 +32,7 @@
   "dialogue": "dialogues/registrar.ink",
   "scene_sprite": "assets/img/npc/sprite_registrar.png",
   "sounds": {},
+  "combat_figure": "assets/img/npc/fig_registrar.png",
+  "figure_mode": "topdown",
   "breathe": false
 }

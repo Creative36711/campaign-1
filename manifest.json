@@ -146,7 +146,8 @@
     "rule_vein_brace_reward.json",
     "rule_filter_protect.json",
     "rule_filter_unprotect.json",
-    "rule_filter_clear_cough.json"
+    "rule_filter_clear_cough.json",
+    "rule_reset_filter.json"
   ],
   "arenas": [
     "arena_gate.json",

@@ -6699,6 +6699,21 @@
             },
             "sfx": {
               "type": "string"
+            },
+            "image": {
+              "type": "string"
+            },
+            "camera": {
+              "$ref": "#/$defs/CameraDoc"
+            },
+            "conditions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Condition"
+              }
+            },
+            "duration": {
+              "type": "number"
             }
           },
           "required": [
@@ -6888,6 +6903,10 @@
         "durability": {
           "type": "number",
           "description": "Прочность конкретного экземпляра (аудит §5.6 п.10): запись с этим полем —\nотдельная копия многоразового предмета, стакается только с себе равными."
+        },
+        "freshness": {
+          "type": "number",
+          "description": "Срок годности / свежесть конкретного экземпляра в игровых тиках (часах):\nУбывает каждый тик; при достижении 0 превращается в spoil_into или уничтожается."
         }
       },
       "required": [
@@ -7418,6 +7437,31 @@
         "quest_item": {
           "type": "boolean",
           "description": "сюжетный/квестовый предмет: нельзя случайно выбросить или продать"
+        },
+        "decay_ticks": {
+          "type": "number",
+          "description": "Срок годности предмета в игровых тиках (например, 24 = 24 часа). Если не задан — предмет не портится"
+        },
+        "spoil_into": {
+          "type": "string",
+          "description": "В какой предмет превращается после порчи (например item_meat_spoiled или item_scrap)"
+        },
+        "spoil_action": {
+          "type": "string",
+          "enum": [
+            "transform",
+            "destroy",
+            "rule"
+          ],
+          "description": "Действие при порче: 'transform' (в spoil_into), 'destroy' (исчезает), 'rule' (запуск правила)"
+        },
+        "spoil_rule": {
+          "type": "string",
+          "description": "Идентификатор правила, запускаемого при порче (если spoil_action === 'rule')"
+        },
+        "spoil_msg": {
+          "type": "string",
+          "description": "Сообщение в журнал при порче предмета"
         },
         "weapon_data": {
           "$ref": "#/$defs/WeaponData"

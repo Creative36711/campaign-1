@@ -57,5 +57,7 @@
     "hit": "sfx_gear",
     "death": "sfx_machine"
   },
+  "combat_figure": "assets/img/npc/fig_watchman.png",
+  "figure_mode": "topdown",
   "breathe": false
 }

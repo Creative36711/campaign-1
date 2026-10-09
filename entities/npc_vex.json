@@ -91,5 +91,7 @@
   "sounds": {
     "talk": "sfx_click"
   },
-  "scene_sprite": "assets/img/npc/sprite_vex.png"
+  "scene_sprite": "assets/img/npc/sprite_vex.png",
+  "combat_figure": "assets/img/npc/fig_vex.png",
+  "figure_mode": "topdown"
 }

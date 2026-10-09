@@ -241,6 +241,5 @@
     "neutral": "assets/img/items/item_dead_guard.jpg"
   },
   "scene_sprite": "assets/img/items/sprite_dead_guard.png",
-  "shadow": false,
-  "breathe": false
+  "shadow": false
 }

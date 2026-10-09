@@ -15,7 +15,7 @@
             {
               "entity": "npc_rotling",
               "count_min": 1,
-              "count_max": 1
+              "count_max": 2
             }
           ],
           "arena": "arena_gallery",
@@ -48,43 +48,9 @@
         },
         {
           "weight": 1,
-          "type": "skill_check",
-          "skill": "stealth",
-          "difficulty": 45,
-          "message": "Мостки уходят из-под ног: держись за трубу.",
-          "success_effects": [
-            {
-              "type": "show_message",
-              "text": "Ты удержался на трубе."
-            }
-          ],
-          "fail_effects": [
-            {
-              "type": "change_hp",
-              "delta": -4
-            },
-            {
-              "type": "show_message",
-              "text": "Ты падаешь в воду коленями на рельс."
-            }
-          ]
-        },
-        {
-          "weight": 1,
           "type": "event",
-          "message": "В нише за трубой — чужой тайник: банка с маслом и моток проволоки.",
-          "effects": [
-            {
-              "type": "add_item",
-              "item": "item_oil",
-              "quantity": 1
-            },
-            {
-              "type": "add_item",
-              "item": "item_scrap",
-              "quantity": 1
-            }
-          ]
+          "message": "Под настилом хлюпает — ещё немного, и вода пойдёт через щели.",
+          "effects": []
         }
       ]
     },
@@ -103,61 +69,34 @@
             {
               "entity": "npc_rotling",
               "count_min": 1,
-              "count_max": 1
+              "count_max": 2
             }
           ],
           "arena": "arena_deep",
-          "intro": "У рельса шевелится гнилец: он идёт на свет лампы."
+          "intro": "Во тьме шевелятся: гнильцы идут на свет лампы."
         },
         {
           "weight": 2,
-          "type": "event",
-          "message": "В нише — свёрток: тряпьё и бутылка масла.",
-          "effects": [
+          "type": "combat",
+          "enemies": [
             {
-              "type": "add_item",
-              "item": "item_cloth",
-              "quantity": 1
-            },
-            {
-              "type": "add_item",
-              "item": "item_oil",
-              "quantity": 1
-            }
-          ]
-        },
-        {
-          "weight": 1,
-          "type": "skill_check",
-          "skill": "perception",
-          "difficulty": 50,
-          "message": "Свод проседает: слышно, как сыплется порода.",
-          "success_effects": [
-            {
-              "type": "show_message",
-              "text": "Ты успеваешь отойти от кромки обрушения."
+              "entity": "npc_ashhound",
+              "count_min": 1,
+              "count_max": 2
             }
           ],
-          "fail_effects": [
-            {
-              "type": "change_hp",
-              "delta": -5
-            },
-            {
-              "type": "show_message",
-              "text": "Камень бьёт по плечу, и штольня замолкает."
-            }
-          ]
+          "arena": "arena_deep",
+          "intro": "Стая выходит из-за поворота без единого звука."
         },
         {
           "weight": 1,
           "type": "event",
-          "message": "У рельса стоит ведро с чистой водой: нижние оставляют его для своих.",
+          "message": "В штольне ровно и тонко поёт жила. На секунду становится спокойно.",
           "effects": [
             {
-              "type": "add_item",
-              "item": "item_water",
-              "quantity": 1
+              "type": "change_need",
+              "need": "need_rest",
+              "delta": -5
             }
           ]
         }

@@ -1,7 +1,0 @@
-# Recreate after a sandbox reset: python -m venv .venv && .venv/bin/pip install -r requirements-dev.txt
-Pillow>=11,<13
-jsonschema>=4.23,<5
-numpy>=2,<3
-scipy>=1.14,<2
-soundfile>=0.13,<1
-imageio-ffmpeg>=0.6,<1
