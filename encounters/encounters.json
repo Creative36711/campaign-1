@@ -40,16 +40,37 @@
         },
         {
           "weight": 1,
-          "type": "combat",
-          "enemies": [
+          "type": "skill_check",
+          "skill": "dodge",
+          "difficulty": 45,
+          "message": "Из-за опоры прямо на тебя выходит гнилец — заметить его было негде.",
+          "success_effects": [
             {
-              "entity": "npc_rotling",
-              "count_min": 1,
-              "count_max": 1
+              "type": "change_hp",
+              "delta": -2
+            },
+            {
+              "type": "grant_xp",
+              "points": 3
+            },
+            {
+              "type": "show_message",
+              "text": "Ты отшатываешься на дальний настил. Гнилец задевает плечо когтистой пятернёй и теряет тебя в темноте: на свет он идёт, на всплеск — нет."
             }
           ],
-          "arena": "arena_gallery",
-          "intro": "Гнилец выходит из-за опоры прямо на тебя — заметить его было негде."
+          "fail_effects": [
+            {
+              "type": "start_combat",
+              "enemies": [
+                {
+                  "entity": "npc_rotling",
+                  "count": 1
+                }
+              ],
+              "arena": "arena_gallery",
+              "intro": "Гнилец выходит из-за опоры прямо на тебя — отскочить не вышло."
+            }
+          ]
         },
         {
           "weight": 2,
@@ -171,16 +192,37 @@
         },
         {
           "weight": 1,
-          "type": "combat",
-          "enemies": [
+          "type": "skill_check",
+          "skill": "dodge",
+          "difficulty": 50,
+          "message": "Из бокового штрека прямо под лампу вываливается гнилец.",
+          "success_effects": [
             {
-              "entity": "npc_rotling",
-              "count_min": 1,
-              "count_max": 1
+              "type": "change_hp",
+              "delta": -2
+            },
+            {
+              "type": "grant_xp",
+              "points": 3
+            },
+            {
+              "type": "show_message",
+              "text": "Ты ныряешь под крепь и гасишь лампу. Гнилец бьёт по стойке, а не по тебе; щепа рассекает щёку, но в темноте он тебя уже не найдёт."
             }
           ],
-          "arena": "arena_deep",
-          "intro": "Гнилец вываливается из бокового штрека прямо под лампу."
+          "fail_effects": [
+            {
+              "type": "start_combat",
+              "enemies": [
+                {
+                  "entity": "npc_rotling",
+                  "count": 1
+                }
+              ],
+              "arena": "arena_deep",
+              "intro": "Гнилец вываливается из бокового штрека прямо под лампу — увернуться не вышло."
+            }
+          ]
         },
         {
           "weight": 2,
