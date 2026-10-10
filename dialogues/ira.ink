@@ -15,7 +15,7 @@ VAR r = 0
 
 === Начало ===
 Ира стирает мазут с ладоней ветошью и смотрит на тебя исподлобья. # action # voice: assets/voice/narr_ira_1.mp3
-Ты насчёт помпы? Я уже всё рассказала старшине. Он велел не мешать. # voice: assets/voice/ira_1.mp3 # emotion: afraid
+Ты насчёт помпы? Я Ира Ярова, помощница мастера. Всё уже рассказала старшине — он велел не мешать. # voice: assets/voice/ira_1.mp3 # emotion: afraid
 ~ learn_name("npc_ira")
 -> Начало_hub
 
@@ -33,7 +33,7 @@ VAR r = 0
     {r: -> Начало_hub_ok1 | -> Начало_hub_no1}
 * { get_flag("clue_guard") and not (get_flag("ira_told_brother")) } [Твой брат — Стась Яров?]
     Она замирает. Ветошь падает на пол. # action # voice: assets/voice/narr_ira_3.mp3
-    Он в ночную сменился. Двенадцатого. Сказал — к утру. # voice: assets/voice/ira_8.mp3
+    Он в ночную сменился. Тринадцатого. Сказал — к утру вернётся. # voice: assets/voice/ira_8.mp3
     -> Брат
 * { has_item("item_guard_token") and get_flag("ira_told_brother") } [Я нашёл его жетон.]
     Она берёт жетон двумя руками, как воду. # action # sfx: snd_tag # voice: assets/voice/narr_ira_4.mp3
