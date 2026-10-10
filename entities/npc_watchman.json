@@ -59,5 +59,9 @@
   },
   "combat_figure": "assets/img/npc/fig_watchman.png",
   "figure_mode": "topdown",
-  "breathe": false
+  "breathe": false,
+  "combat_figure_states": {
+    "down": "assets/img/npc/fig_watchman_dead.png",
+    "dead": "assets/img/npc/fig_watchman_dead.png"
+  }
 }

@@ -30,5 +30,13 @@
 3. Сироты с неизвестным текстом (не подвязывать без перезаписи): zhuk_tip1, zhuk_price, dozh_wares, dozh_wrench,
    narr_ambush1, kast_intro, kast_warn, resh_greeting, narr_rested, narr_arrival, narr_kast_intro, vex_welcome, ...
 
+## Изображения этого хода (10/10)
+- Вертикальные портреты: vein_{afraid,thoughtful,sad,calm}, watchman_afraid → все портреты NPC вертикальные.
+  Исправлено: registrar.portrait.afraid ссылался на старый альбомный registrar.jpg (→ _legacy).
+- Боевые фигурки героя (top-down, хромакей → cutout-chromakey.py): fig_hero / fig_hero_f / fig_hero_vet,
+  подключены в char_creation.portraits[].combat_figure и player_hero.combat_figure (раньше герой был кружком).
+- combat_figure_states: Келл down/dead (fig_kell_down — без сознания, без крови), Смотритель down/dead (fig_watchman_dead).
+
 ## TODO (изображения)
-- Вертикализировать: vein_{afraid,thoughtful,sad,calm}, watchman_afraid.
+- Портреты героя альбомные (1408×768): hero_*, hero_f_*, hero_vet_* — 18 шт., вертикализировать с якорем на *_neutral.
+- combat_figure_states для thug (down), rotling/ashhound (dead — без крови, «обмякшее тело»).
