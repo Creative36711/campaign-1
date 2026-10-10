@@ -47,6 +47,13 @@ VAR r = 0
 Ниже восьмого. Там, где жила поёт. Хочешь — спускайся, хочешь — живи. # emotion: calm # voice: assets/voice/zhuk_3.mp3
     ~ fire_rule("rule_reveal_deep")
     -> Начало_hub
++ { get_flag("lockdown") and not (get_flag("zhuk_patrol_tip")) and not (get_flag("patrol_pump_met")) and item_count("item_mark") >= 10 } [Сколько стоит пройти мимо дежурных у помпы? (10 марок)]
+    Жук пересчитывает марки на ощупь, не опуская глаз. # action # sfx: sfx_coin
+    Дежурным у седьмой платят за смену, не за кровь. Старший — тот, что с перебитым носом: у него жена на девятом, и он считает часы до конца вахты. # emotion: thoughtful
+    Назови ему дело и скажи, что после тебя придёт Надзор, а не ты. Ключ держи за поясом: потянешься — будут бить вдвоём. # emotion: calm
+    ~ remove_item("item_mark", 10)
+    ~ set_flag("zhuk_patrol_tip")
+    -> Начало_hub
 + { has_item("item_glove") } [Узнаёшь рукавицу? Семёрка на манжете, заплата на пальце.]
     Партия седьмого яруса, прошлогодняя выдача. Я сам эти тюки через шлюз принимал — брезент двойной, сносу нет. # emotion: calm # voice: assets/voice/zhuk_13.mp3
     А заплата — это к Айле или к Ире: караульные у нас гордые, но когда палец мёрзнет, идут кланяться в Сухой ряд. # emotion: thoughtful # voice: assets/voice/zhuk_14.mp3

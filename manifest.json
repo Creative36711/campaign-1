@@ -122,6 +122,7 @@
     "rule_open_cache.json",
     "rule_patrol_gate.json",
     "rule_patrol_pump.json",
+    "rule_patrol_pump_tip.json",
     "rule_pump_first.json",
     "rule_register_case.json",
     "rule_reset_filter.json",

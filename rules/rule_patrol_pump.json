@@ -11,9 +11,21 @@
     {
       "type": "player_enters_location",
       "location": "loc_pump7"
+    },
+    {
+      "type": "flag_not_set",
+      "flag": "zhuk_patrol_tip"
+    },
+    {
+      "type": "flag_not_set",
+      "flag": "patrol_pump_met"
     }
   ],
   "effects": [
+    {
+      "type": "set_flag",
+      "flag": "patrol_pump_met"
+    },
     {
       "type": "skill_check_gate",
       "skill": "persuade",
@@ -42,7 +54,7 @@
             }
           ],
           "arena": "arena_pump",
-          "intro": "У помпы теперь дежурство: двое с дубинками и приказом никого не пускать.",
+          "intro": "У помпы теперь дежурство: двое с ножами и приказом никого не пускать.",
           "on_victory": [
             {
               "type": "show_message",
