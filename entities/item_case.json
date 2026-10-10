@@ -243,6 +243,76 @@
       "hint": "шестая страница дела"
     },
     {
+      "label": "Переписать в дело замер с рейки",
+      "conditions": [
+        {
+          "type": "flag_set",
+          "flag": "vex_job_measured"
+        },
+        {
+          "type": "flag_not_set",
+          "flag": "case_filed_gauge"
+        }
+      ],
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "case_filed_gauge"
+        },
+        {
+          "type": "change_variable",
+          "var": "case_filed",
+          "delta": 1
+        },
+        {
+          "type": "journal_update",
+          "quest": "quest_pump",
+          "text_key": "j_gauge"
+        },
+        {
+          "type": "grant_xp",
+          "points": 5
+        }
+      ],
+      "hint": "улика: цифры с рейки против сводок Надзора",
+      "sound": "snd_page"
+    },
+    {
+      "label": "Записать показания стекольщика",
+      "conditions": [
+        {
+          "type": "flag_set",
+          "flag": "glazier_named"
+        },
+        {
+          "type": "flag_not_set",
+          "flag": "case_filed_glazier"
+        }
+      ],
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "case_filed_glazier"
+        },
+        {
+          "type": "change_variable",
+          "var": "case_filed",
+          "delta": 1
+        },
+        {
+          "type": "journal_update",
+          "quest": "quest_pump",
+          "text_key": "j_glazier"
+        },
+        {
+          "type": "grant_xp",
+          "points": 5
+        }
+      ],
+      "hint": "улика: квитанции стекольщика с подписью конторы",
+      "sound": "snd_page"
+    },
+    {
       "label": "Сшить дело",
       "conditions": [
         {
