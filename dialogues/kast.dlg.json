@@ -385,6 +385,74 @@
           "once": true
         },
         {
+          "text": "Ночью за моим делом приходили. Вот что было у вора.",
+          "conds": [
+            {
+              "type": "has_item",
+              "item": "item_burn_note"
+            },
+            {
+              "type": "flag",
+              "flag": "kast_burn",
+              "not": true
+            }
+          ],
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "kast_burn"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Каст читает записку дважды, второй раз — подняв её к лампе, будто ищет водяной знак.",
+                    "voice": "assets/voice/narr_kast_9.mp3",
+                    "action": true
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "«В печь». Даже не подписал: думает, что завиток и есть подпись. И он прав — в моём отделе этот завиток знают все.",
+                    "voice": "assets/voice/kast_22.mp3",
+                    "emotion": "angry"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Оставь записку в деле. Кто приходит за папкой ночью, тот боится её днём.",
+                    "voice": "assets/voice/kast_23.mp3",
+                    "emotion": "calm"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "change_disposition",
+                    "target": "npc_kast",
+                    "delta": 3
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "fire_rule",
+                    "rule": "rule_kast_burn"
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "stay",
+          "once": true
+        },
+        {
           "text": "Мне пора.",
           "sections": [],
           "goto": "end"

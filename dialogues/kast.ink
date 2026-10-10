@@ -58,6 +58,14 @@ EXTERNAL set_flag(a0)
     Приведи его, если сможешь. Если нет — больше никому не говори, что он жив. # emotion: calm # voice: assets/voice/kast_21.mp3
     ~ fire_rule("rule_kast_resh")
     -> Начало_hub
+* { has_item("item_burn_note") and not (get_flag("kast_burn")) } [Ночью за моим делом приходили. Вот что было у вора.]
+    ~ set_flag("kast_burn")
+    Каст читает записку дважды, второй раз — подняв её к лампе, будто ищет водяной знак. # action # voice: assets/voice/narr_kast_9.mp3
+    «В печь». Даже не подписал: думает, что завиток и есть подпись. И он прав — в моём отделе этот завиток знают все. # emotion: angry # voice: assets/voice/kast_22.mp3
+    Оставь записку в деле. Кто приходит за папкой ночью, тот боится её днём. # emotion: calm # voice: assets/voice/kast_23.mp3
+    ~ change_disposition("npc_kast", 3)
+    ~ fire_rule("rule_kast_burn")
+    -> Начало_hub
 + [Мне пора.]
     -> DONE
 

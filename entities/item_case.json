@@ -380,6 +380,43 @@
       "sound": "snd_page"
     },
     {
+      "label": "Пришить записку «в печь»",
+      "conditions": [
+        {
+          "type": "has_item",
+          "item": "item_burn_note"
+        },
+        {
+          "type": "flag_not_set",
+          "flag": "case_filed_burn"
+        }
+      ],
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "case_filed_burn"
+        },
+        {
+          "type": "change_variable",
+          "var": "case_filed",
+          "delta": 1
+        },
+        {
+          "type": "journal_update",
+          "quest": "quest_pump",
+          "text_key": "j_burn"
+        },
+        {
+          "type": "grant_xp",
+          "points": 5
+        }
+      ],
+      "message": "Записка ложится в дело, которое она велела сжечь. Завиток на хвосте последней буквы теперь подшит рядом с нарядом.",
+      "sound": "sfx_file",
+      "sound_volume": 0.8,
+      "hint": "улика: приказ сжечь дело, тем же почерком"
+    },
+    {
       "label": "Сшить дело",
       "conditions": [
         {

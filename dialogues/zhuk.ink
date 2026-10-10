@@ -74,6 +74,10 @@ VAR r = 0
     Квитанции с завитком, говоришь? Внизу так не пишут, внизу ставят крестик. Сверь завиток с любой бумагой из конторы — увидишь, чья рука. # emotion: thoughtful # voice: assets/voice/zhuk_18.mp3
     ~ change_disposition("npc_zhuk", 3)
     -> Начало_hub
+* { get_flag("kell_pressed") and not (get_flag("case_registered")) and not (get_flag("zhuk_warn")) } [Что слышно про Келла?]
+    ~ set_flag("zhuk_warn")
+    Слыхал, ты Келлу на мозоль наступил. Ночью в конторе дверь подпирай: бумагу, которой нет в реестре, жгут вместе с печкой. # emotion: thoughtful # voice: assets/voice/zhuk_20.mp3
+    -> Начало_hub
 + [Пока.]
     -> DONE
 - -> Начало_hub

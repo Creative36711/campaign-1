@@ -548,6 +548,48 @@
           ]
         },
         {
+          "text": "Что слышно про Келла?",
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "kell_pressed"
+            },
+            {
+              "type": "flag",
+              "flag": "case_registered",
+              "not": true
+            },
+            {
+              "type": "flag",
+              "flag": "zhuk_warn",
+              "not": true
+            }
+          ],
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "zhuk_warn"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Слыхал, ты Келлу на мозоль наступил. Ночью в конторе дверь подпирай: бумагу, которой нет в реестре, жгут вместе с печкой.",
+                    "voice": "assets/voice/zhuk_20.mp3",
+                    "emotion": "thoughtful"
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "stay",
+          "once": true
+        },
+        {
           "text": "Пока.",
           "sections": [],
           "goto": "end"

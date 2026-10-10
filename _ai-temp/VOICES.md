@@ -5,6 +5,14 @@
 (короткие реплики < 3 с дают 0.80–0.89 — это норма). Эмбеддинги-кэш: `_ai-temp/voice_emb.json` (не в git).
 **`add_voice` НЕ вызывать** — только существующие voice-id ниже.
 
+
+## ПРАВИЛА МАСТЕРА ПО ОЗВУЧКЕ (10.10, после итерации 16)
+- Переозвучка — НЕ приоритет, делать попутно (остаток аудио-квоты после нового контента).
+- Рассказчика (75 файлов старого голоса) переозвучивать В САМЫЙ ПОСЛЕДНИЙ МОМЕНТ — после всех персонажей.
+- Если при переозвучке меняются слова — ОБЯЗАТЕЛЬНО менять текст в ink, dlg.json и JSON (катсцены/сцены), чтобы текст = аудио.
+- Прослушивание (`add_voice`) пользователю не предлагать; найти тот же старый голос нереально — рандом слишком большой.
+- Келла (старый голос, похож на старого рассказчика: 0.926, но это РАЗНЫЕ голоса) не трогать.
+
 ## Текущие голоса (voice-id этой сессии)
 
 | voice-id | Кто говорит | Эталонные файлы |
@@ -12,7 +20,7 @@
 | voice-01 | Айла | ayla_1–13 (все уже одним голосом) |
 | voice-03 | Рассказчик (narr_*, intro_*, prologue_*, final_*, flood_*, rev_*) | narr_glazier_1–2, final_silence_3, narr_resh_3, narr_vex_3–4, narr_kast_8, narr_ira_9–11 |
 | voice-04 | Реш **и** Дож (один голос на двоих — известное ограничение) | resh_2, 4, 11, 14–17; dozh_1, 8, 14–16 |
-| voice-05 | Жук | zhuk_4, 6, 12, 14–19 (+ переозвучены 1, 2, 7, 11) |
+| voice-05 | Жук | ВСЕ реплики Жука (zhuk_1–20 + шаблоны) — переозвучка завершена в ходе 17 |
 | voice-06 | Векс | vex_1–20 — **ВЕСЬ Векс готов** |
 | voice-07 | Ира **и** Каст (один голос на двоих) | ira_18–30; kast_18–21 |
 | voice-08 | Стекольщик (Сыч) | glazier_1–7 |
@@ -22,7 +30,7 @@
 
 | Старый голос | Совпадает с | Файлы в нём |
 |---|---|---|
-| **СТАРЫЙ-РАССКАЗЧИК** | голос Келла (0.92) | 75 файлов рассказчика (список ниже) + все kell_1–15 (Келла оставляем) |
+| **СТАРЫЙ-РАССКАЗЧИК** | похож на Келла (0.926), но не тот же (одинаковые голоса дают ≥0.96) | 75 файлов рассказчика (список ниже) + все kell_1–15 (Келла оставляем) |
 | **СТАРАЯ-ИРА** | похож на голос Жилы (0.84) и старой Каст (0.84) | ira_1–13, 15–17 (ira_14 уже voice-07) |
 | **СТАРАЯ-КАСТ** | — | kast_1–17 (kast_12 — одно слово «Покажи.», голос не определить; переозвучить вместе со всеми) |
 | **= voice-08 (стекольщик)** | старый Реш | resh_1, 3, 5, 6, 7, 8, 10, 12 (+ resh_greeting — сирота) |
@@ -42,14 +50,14 @@ zhuk_5, zhuk_8 — уже voice-05 (0.91). resh_9, resh_13 — уже voice-04. 
 - **Старый голос рассказчика**: 75 подключённых файлов — ВСЕ на переозвучку voice-03:
   final_pump_1, final_pump_2, final_pump_3, final_silence_1, final_silence_2, final_vein_1, final_vein_2, final_vein_3, flood_1, flood_2, intro_archive_1, intro_archive_2, intro_drift_1, intro_drift_2, intro_dry_row_1, intro_dry_row_2, intro_face_1, intro_face_2, intro_flood_gallery_1, intro_flood_gallery_2, intro_gate_hall_1, intro_gate_hall_2, intro_gate_office_1, intro_gate_office_2, intro_office_1, intro_office_2, intro_pump_hall_1, intro_pump_hall_2, intro_pump_room_1, intro_pump_room_2, intro_pump_shaft_1, intro_pump_shaft_2, intro_sluice_1, intro_sluice_2, narr_ayla_1, narr_dozh_1, narr_dozh_2, narr_dozh_3, narr_ira_1, narr_ira_2, narr_ira_3, narr_ira_4, narr_ira_6, narr_ira_7, narr_ira_8, narr_kast_2, narr_kast_3, narr_kast_4, narr_kast_5, narr_kast_6, narr_kell_1, narr_kell_2, narr_kell_3, narr_kell_4, narr_kell_5, narr_registrar_1, narr_resh_1, narr_resh_2, narr_vein_1, narr_vein_2, narr_vein_3, narr_vex_1, narr_vex_2, narr_zhuk_1, narr_zhuk_2, narr_zhuk_3, narr_zhuk_4, narr_zhuk_5, narr_zhuk_6, prologue_1, prologue_2, prologue_3, rev_1, rev_2, rev_3
 
-## ОЧЕРЕДЬ ПЕРЕОЗВУЧКИ (итого 125)
+## ОЧЕРЕДЬ ПЕРЕОЗВУЧКИ (было 125, осталось 119)
 
-1. Жук (voice-05) — 4: zhuk_3, zhuk_9, zhuk_10, zhuk_13
-2. Дож (voice-04) — 5: dozh_2, dozh_3, dozh_5, dozh_6, dozh_10
+1. ~~Жук (voice-05)~~ — ГОТОВО (ход 17: zhuk_3, 9, 10, 13)
+2. Дож (voice-04) — осталось 3: dozh_5, dozh_6, dozh_10 (dozh_2, dozh_3 переозвучены в ходе 17)
 3. Реш (voice-04) — 8: resh_1, resh_3, resh_5, resh_6, resh_7, resh_8, resh_10, resh_12
 4. Каст (voice-07) — 17: kast_1 … kast_17
 5. Ира (voice-07) — 16: ira_1 … ira_13, ira_15, ira_16, ira_17
-6. Рассказчик (voice-03) — 75: список выше (включая rev_1–3 из cutscene_revelation и flood_1 с дописанной фразой)
+6. Рассказчик (voice-03) — ПОСЛЕДНИМ — 75: список выше (включая rev_1–3 из cutscene_revelation и flood_1 с дописанной фразой)
 
 Порядок работы с каждым файлом: текст — из ink/JSON (`tools/voice_map.py`, для катсцен/сцен — поле `text` рядом с `voice`);
 после генерации — `tools/voice_audit.py text <файлы>` и `tools/voice_audit.py voice <файлы>`; обновить этот реестр.
@@ -57,3 +65,7 @@ zhuk_5, zhuk_8 — уже voice-05 (0.91). resh_9, resh_13 — уже voice-04. 
 ## Сироты (файлы есть, нигде не подключены; не переозвучивать без надобности)
 dozh_wares, dozh_wrench, kast_intro, kast_warn, resh_greeting, vex_reset1, vex_welcome, zhuk_price, zhuk_tip1,
 hound_amb, rotling_amb, narr_ambush1, narr_arrival, narr_filter_tip, narr_flood, narr_kast_intro, narr_lowair, narr_rested, narr_title
+
+
+## Новые реплики хода 17
+zhuk_20 (voice-05), kast_22, kast_23 (voice-07 — целевой голос Каст), narr_kast_9 (voice-03 — целевой голос рассказчика).
