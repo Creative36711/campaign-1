@@ -255,3 +255,27 @@ TODO:
 **Квоты**: 10/10 изображений, 10/10 аудио. validate.py ✓, dlg_sync_check — 0 расхождений.
 
 **TODO**: проверить в движке, как слот в координатах холста 1280×720 накладывается на фон 1376×768 (стекольщик на левом уступе, x340 y140 w115 h330).
+
+## Итерация 16 (10.10) — аудит озвучки по патчу мастера
+
+**Патч мастера применён**: `scenes/scene_flood_gallery.json` (сдвинуты слоты ранца, наноса и стекольщика); обновлён `__chronicle_ai__/`.
+
+**Метод.** Все 288 mp3 распознаны офлайн (Vosk small-ru) и сверены с текстом в ink/JSON; голоса сравнены эмбеддингами Resemblyzer. Инструмент: `tools/voice_audit.py` (`text` — текст≠аудио, `voice` — чужой голос). Порог: близость к эталону голоса ≥ 0.85.
+
+**Текст ≠ аудио (найдено 9):**
+- текст исправлен под аудио: vex_5 (+«Механики приходили…»), ira_14 (+«Каждый вопрос здесь чего-нибудь стоит…»), flood_1 (+«И расписание это писал не ты.»), ira_30 (убрана ремарка, которой нет в аудио);
+- переозвучены по тексту (аудио не подходило по смыслу или было на «вы»): vex_2, vex_6 (текст уточнён: «Ниже машинного зала не ходи…»), vex_7, zhuk_7, zhuk_11 (вернулась подсказка про пломбу).
+
+**Два голоса у персонажа (кластеры эмбеддингов):** рассказчик, Ира, Каст, Реш, Жук, Векс (vex_1/3/4 были голосом стекольщика), Дож (dozh_2/3/5/6/10 — голосом старого Жука). Келл, регистратор, жила, Айла, стекольщик — один голос, не трогаем.
+
+**Переозвучено в этом ходу (10):** vex_1, vex_2, vex_3, vex_4, vex_6, vex_7 — Векс теперь целиком voice-06; zhuk_1, zhuk_2, zhuk_7, zhuk_11. Проверка: текст 96–100 %, голос 0.89–0.98 к эталону, 0.70–0.79 к старому.
+
+**ОЧЕРЕДЬ ПЕРЕОЗВУЧКИ (текст брать из ink через tools/voice_map.py; после — `tools/voice_audit.py voice <файлы>`):**
+- narrator (voice-03) — 72: final_pump_1, final_pump_2, final_pump_3, final_silence_1, final_silence_2, final_vein_1, final_vein_2, final_vein_3, flood_1, flood_2, intro_archive_1, intro_archive_2, intro_drift_1, intro_drift_2, intro_dry_row_1, intro_dry_row_2, intro_face_1, intro_face_2, intro_flood_gallery_1, intro_flood_gallery_2, intro_gate_hall_1, intro_gate_hall_2, intro_gate_office_1, intro_gate_office_2, intro_office_1, intro_office_2, intro_pump_hall_1, intro_pump_hall_2, intro_pump_room_1, intro_pump_room_2, intro_pump_shaft_1, intro_pump_shaft_2, intro_sluice_1, intro_sluice_2, narr_ayla_1, narr_dozh_1, narr_dozh_2, narr_dozh_3, narr_ira_1, narr_ira_2, narr_ira_3, narr_ira_4, narr_ira_6, narr_ira_7, narr_ira_8, narr_kast_2, narr_kast_3, narr_kast_4, narr_kast_5, narr_kast_6, narr_kell_1, narr_kell_2, narr_kell_3, narr_kell_4, narr_kell_5, narr_registrar_1, narr_resh_1, narr_resh_2, narr_vein_1, narr_vein_2, narr_vein_3, narr_vex_1, narr_vex_2, narr_zhuk_1, narr_zhuk_2, narr_zhuk_3, narr_zhuk_4, narr_zhuk_5, narr_zhuk_6, prologue_1, prologue_2, prologue_3
+- ira (voice-07) — 16: ira_1, ira_2, ira_3, ira_4, ira_5, ira_6, ira_7, ira_8, ira_9, ira_10, ira_11, ira_12, ira_13, ira_15, ira_16, ira_17
+- kast (voice-07) — 17: kast_1, kast_2, kast_3, kast_4, kast_5, kast_6, kast_7, kast_8, kast_9, kast_10, kast_11, kast_12, kast_13, kast_14, kast_15, kast_16, kast_17
+- resh (voice-04) — 8: resh_1, resh_3, resh_5, resh_6, resh_7, resh_8, resh_10, resh_12
+- zhuk (voice-05) — 4: zhuk_3, zhuk_9, zhuk_10, zhuk_13
+- dozh (voice-04) — 5: dozh_2, dozh_3, dozh_5, dozh_6, dozh_10
+
+Осталось: 122 файлов (~13 ходов). Порядок: Жук → Дож → Реш → Каст → Ира → рассказчик.

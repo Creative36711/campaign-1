@@ -61,7 +61,7 @@ VAR r = 0
     Реш поднимается со скамьи и долго смотрит на Иру, будто проверяет, не мерещится ли. # action # voice: assets/voice/narr_resh_3.mp3
     Ира... Я думал, тебя увели наверх вместе со сменой. Хорошо, что не послушалась. # emotion: sad # voice: assets/voice/resh_16.mp3
     Я шёл мимо затвора той ночью, вниз, с сердцевиной. Стась был там, живой, ругался на пустую колодку. Больше я его не видел. # emotion: thoughtful # voice: assets/voice/resh_17.mp3
-    «Ругался на колодку... Значит, знал, что его поставили к затвору, который не закрыть.» — Ира говорит это не Решу, а себе. # action # voice: assets/voice/ira_30.mp3
+    «Ругался на колодку... Значит, знал, что его поставили к затвору, который не закрыть». # action # voice: assets/voice/ira_30.mp3
     ~ change_disposition("npc_ira", 5)
     ~ change_disposition("npc_resh", 5)
     ~ set_flag("resh_trusts")
