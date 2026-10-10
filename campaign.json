@@ -2141,6 +2141,18 @@
           {
             "item": "item_knife",
             "quantity": 1
+          },
+          {
+            "item": "item_ration",
+            "quantity": 2
+          },
+          {
+            "item": "item_water",
+            "quantity": 1
+          },
+          {
+            "item": "item_coal",
+            "quantity": 2
           }
         ]
       },
@@ -2181,6 +2193,22 @@
           {
             "item": "item_knife",
             "quantity": 1
+          },
+          {
+            "item": "item_badge",
+            "quantity": 1
+          },
+          {
+            "item": "item_ration",
+            "quantity": 2
+          },
+          {
+            "item": "item_water",
+            "quantity": 1
+          },
+          {
+            "item": "item_coal",
+            "quantity": 2
           }
         ]
       },
@@ -2213,7 +2241,7 @@
           },
           {
             "item": "item_ration",
-            "quantity": 1
+            "quantity": 2
           },
           {
             "item": "item_coat",
@@ -2222,6 +2250,18 @@
           {
             "item": "item_knife",
             "quantity": 1
+          },
+          {
+            "item": "item_badge",
+            "quantity": 1
+          },
+          {
+            "item": "item_water",
+            "quantity": 1
+          },
+          {
+            "item": "item_coal",
+            "quantity": 2
           }
         ]
       }
