@@ -117,6 +117,7 @@
     "rule_ira_joins.json",
     "rule_ira_story.json",
     "rule_kast_note.json",
+    "rule_kast_rumor.json",
     "rule_kell_token.json",
     "rule_lockdown.json",
     "rule_open_cache.json",
