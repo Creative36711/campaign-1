@@ -86,7 +86,8 @@
     "npc_thug.json",
     "item_coal.json",
     "item_glove.json",
-    "item_pack.json"
+    "item_pack.json",
+    "item_gauge_note.json"
   ],
   "rules": [
     "rule_air_restored.json",
@@ -152,7 +153,8 @@
     "rule_zero_warmth.json",
     "rule_zhuk_appears.json",
     "rule_zhuk_info.json",
-    "rule_zhuk_ledger.json"
+    "rule_zhuk_ledger.json",
+    "rule_vex_job_done.json"
   ],
   "arenas": [
     "arena_gate.json",

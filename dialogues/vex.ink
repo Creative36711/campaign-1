@@ -40,6 +40,17 @@ VAR r = 0
     ~ change_disposition("npc_vex", 6)
     ~ fire_rule("rule_vex_journal")
     -> Начало_hub
++ { not (get_flag("vex_job")) } [Есть работа для дознавателя?]
+    Есть. В галерее восьмого, на трубном узле, стоит мерная рейка. Запиши, где сейчас вода. Надзор шлёт сводки «уровень стабилен», а я своим глазам верю больше, чем их чернилам. Двенадцать марок за цифру. # voice: assets/voice/vex_15.mp3
+    ~ set_flag("vex_job")
+    -> Начало_hub
++ { get_flag("vex_job") and has_item("item_gauge_note") and not (get_flag("vex_job_done")) } [Вот замер с рейки.]
+    Два и три четверти аршина. А тринадцатого стоял один — вон, мелом отмечено. # emotion: thoughtful # voice: assets/voice/vex_16.mp3
+    А в сводке Надзора — «стабилен». Значит, сводку пишут не по рейке, а под диктовку. И диктует тот, кому нужно, чтобы восьмой залило тихо. # emotion: angry # voice: assets/voice/vex_17.mp3
+    ~ set_flag("vex_job_done")
+    ~ change_disposition("npc_vex", 4)
+    ~ fire_rule("rule_vex_job_done")
+    -> Начало_hub
 + [Покажи, что есть в продаже.]
     Торг без разговоров. Люблю такие. # emotion: calm # voice: assets/voice/vex_7.mp3
     ~ open_trade("npc_vex")

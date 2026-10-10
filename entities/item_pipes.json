@@ -60,6 +60,40 @@
           "flag": "pipes_closed"
         }
       ]
+    },
+    {
+      "label": "Снять показания мерной рейки",
+      "effects": [
+        {
+          "type": "advance_time",
+          "ticks": 1
+        },
+        {
+          "type": "set_flag",
+          "flag": "vex_job_measured"
+        },
+        {
+          "type": "add_item",
+          "item": "item_gauge_note",
+          "quantity": 1
+        },
+        {
+          "type": "show_message",
+          "text": "Ржавая рейка прикручена к стволу трубы. Вода стоит на отметке «2¾». Выше — меловая черта чужой рукой: «13-е — 1». За три дня почти два аршина. Ты переписываешь обе цифры."
+        }
+      ],
+      "sound": "snd_page",
+      "hint": "замер для Векса: час работы, марки — у шлюза",
+      "conditions": [
+        {
+          "type": "flag_set",
+          "flag": "vex_job"
+        },
+        {
+          "type": "flag_not_set",
+          "flag": "vex_job_measured"
+        }
+      ]
     }
   ],
   "interact_hint": "Перекрыть узел",
