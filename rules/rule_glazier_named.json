@@ -1,0 +1,23 @@
+{
+  "id": "rule_glazier_named",
+  "label": "Стекольщик назвал покупателя",
+  "once": true,
+  "manual": true,
+  "conditions": [],
+  "effects": [
+    {
+      "type": "grant_xp",
+      "points": 10
+    },
+    {
+      "type": "unlock_codex",
+      "entry": "codex_glass"
+    },
+    {
+      "type": "play_sound",
+      "sound": "snd_page",
+      "volume": 0.6
+    }
+  ],
+  "chapter": "ch_signs"
+}

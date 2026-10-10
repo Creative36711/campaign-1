@@ -32,6 +32,11 @@ def main():
         rel=f"dialogues/{stem}.ink"
         if not os.path.exists(os.path.join(ROOT,rel)): errs.append(f"{rel}: missing ink")
         else: fc+=1
+        dj=os.path.join(ROOT,f"dialogues/{stem}.dlg.json")
+        if os.path.exists(dj):
+            fc+=1
+            try: v(lj(dj),"DlgDoc",sch,errs,f"dialogues/{stem}.dlg.json")
+            except Exception as e: errs.append(f"dialogues/{stem}.dlg.json: bad json: {e}")
     # media
     SKIP=("sfx_","bgm_","mus_","amb_","snd_","@","http:","https:","#")
     MK={"image","sprite","icon","sound","portrait","combat_figure","scene_sprite","title_art","frame","background_image","audio","voice"}

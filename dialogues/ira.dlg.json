@@ -42,6 +42,13 @@
             {
               "steps": [
                 {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "ira_story"
+                  }
+                },
+                {
                   "kind": "line",
                   "line": {
                     "text": "Смена шла ровно. В восемнадцать сорок мастер спустился в шахту: сказал — проверить привод.",
@@ -83,7 +90,14 @@
             }
           ],
           "goto": "stay",
-          "once": true
+          "once": true,
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "ira_story",
+              "not": true
+            }
+          ]
         },
         {
           "text": "Где ключ от его каморки?",
@@ -250,6 +264,13 @@
             {
               "steps": [
                 {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "ira_journal"
+                  }
+                },
+                {
                   "kind": "line",
                   "line": {
                     "text": "Она долго молчит, сжимая ветошь в кулаке.",
@@ -289,11 +310,61 @@
           "conds": [
             {
               "type": "flag",
+              "flag": "ira_journal",
+              "not": true
+            },
+            {
+              "type": "flag",
               "flag": "vex_journal"
             },
             {
               "type": "flag",
               "flag": "ira_told_brother"
+            }
+          ]
+        },
+        {
+          "text": "Векс говорит: сводки о воде пишут под диктовку.",
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "ira_gauge"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Я это по помпе слышала раньше, чем он по рейке. Когда привод стоит, вода стабильной не бывает. Стабильной бывает только ложь.",
+                    "emotion": "angry",
+                    "voice": "assets/voice/ira_20.mp3"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "change_disposition",
+                    "target": "npc_ira",
+                    "delta": 4
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "stay",
+          "once": true,
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "ira_gauge",
+              "not": true
+            },
+            {
+              "type": "flag",
+              "flag": "vex_job_done"
             }
           ]
         },
@@ -370,6 +441,11 @@
           "text": "Показать рукавицу с привода.",
           "conds": [
             {
+              "type": "flag",
+              "flag": "ira_glove",
+              "not": true
+            },
+            {
               "type": "has_item",
               "item": "item_glove"
             }
@@ -377,6 +453,13 @@
           "sections": [
             {
               "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "ira_glove"
+                  }
+                },
                 {
                   "kind": "line",
                   "line": {

@@ -19,7 +19,8 @@ VAR r = 0
 -> Начало_hub
 
 === Начало_hub ===
-* [Расскажи, что случилось в ночь тринадцатого.]
+* { not (get_flag("ira_story")) } [Расскажи, что случилось в ночь тринадцатого.]
+    ~ set_flag("ira_story")
     Смена шла ровно. В восемнадцать сорок мастер спустился в шахту: сказал — проверить привод. # voice: assets/voice/ira_4.mp3
 В девятнадцать десять помпа встала. В двадцать ноль-ноль в зал зашёл Келл со взводом и велел всем выйти. # voice: assets/voice/ira_2.mp3
     Она вытирает ладони о штаны. Полотно всё равно чёрное. # action # sfx: snd_cloth # voice: assets/voice/narr_ira_2.mp3
@@ -38,11 +39,17 @@ VAR r = 0
 Спасибо. За то, что не написал «погиб при исполнении». Он не при исполнении. # voice: assets/voice/ira_3.mp3
     ~ fire_rule("rule_ira_brother")
     -> Начало_hub
-* { get_flag("vex_journal") and get_flag("ira_told_brother") } [Векс записал: вниз ушли двенадцать, вернулись одиннадцать.]
+* { not (get_flag("ira_journal")) and get_flag("vex_journal") and get_flag("ira_told_brother") } [Векс записал: вниз ушли двенадцать, вернулись одиннадцать.]
+    ~ set_flag("ira_journal")
     Она долго молчит, сжимая ветошь в кулаке. # action # voice: assets/voice/narr_ira_9.mp3
     Одиннадцать. Значит, его не забыли записать. Его не вернули. # emotion: sad # voice: assets/voice/ira_18.mp3
     Келл сказал матери — перевели на другой ярус. На другой ярус без записи не переводят. # emotion: angry # voice: assets/voice/ira_19.mp3
     ~ change_disposition("npc_ira", 6)
+    -> Начало_hub
+* { not (get_flag("ira_gauge")) and get_flag("vex_job_done") } [Векс говорит: сводки о воде пишут под диктовку.]
+    ~ set_flag("ira_gauge")
+    Я это по помпе слышала раньше, чем он по рейке. Когда привод стоит, вода стабильной не бывает. Стабильной бывает только ложь. # emotion: angry # voice: assets/voice/ira_20.mp3
+    ~ change_disposition("npc_ira", 4)
     -> Начало_hub
 + [Кто, по-твоему, остановил помпу?]
     Кто-то, кому выгодно, чтобы восьмой затопило. # voice: assets/voice/ira_10.mp3
@@ -53,7 +60,8 @@ VAR r = 0
     Только дай взять ключ. И фонарь. И ещё раз ключ. # voice: assets/voice/ira_9.mp3
     ~ fire_rule("rule_ira_joins")
     -> Начало_hub
-* { has_item("item_glove") } [Показать рукавицу с привода.]
+* { not (get_flag("ira_glove")) and has_item("item_glove") } [Показать рукавицу с привода.]
+    ~ set_flag("ira_glove")
     Она берёт рукавицу за манжет двумя пальцами, как чужую вещь. # action # sfx: snd_cloth # voice: assets/voice/narr_ira_6.mp3
     Реш носил кожаные и жаловался, что они жмут. А заплату ставили в Сухом ряду: у Айлы так штопают, когда нечем платить. # emotion: thoughtful # voice: assets/voice/ira_16.mp3
     ~ change_disposition("npc_ira", 4)

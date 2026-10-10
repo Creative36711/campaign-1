@@ -1,13 +1,15 @@
 EXTERNAL add_item(a0, a1)
 EXTERNAL change_disposition(a0, a1)
+EXTERNAL get_flag(a0)
 EXTERNAL has_item(a0)
-EXTERNAL present_item(a0, a1, a2)
 EXTERNAL item_count(a0)
+EXTERNAL learn_name(a0)
 EXTERNAL open_trade(a0)
+EXTERNAL present_item(a0, a1, a2)
 EXTERNAL remove_item(a0, a1)
 EXTERNAL set_dialogue_timer(a0, a1)
+EXTERNAL set_flag(a0)
 EXTERNAL unlock_codex(a0)
-EXTERNAL learn_name(a0)
 
 === Начало ===
 Дож что-то взвешивает на ладони и прячет в рукав, не глядя. # action # voice: assets/voice/narr_dozh_1.mp3
@@ -26,7 +28,8 @@ EXTERNAL learn_name(a0)
     Говорят, на девятом жилу нашли. Живую. Говорят, из-за неё всё. # voice: assets/voice/dozh_3.mp3
     ~ unlock_codex("codex_karkas")
     -> Начало_hub
-* [Кто там сидит у жаровни?]
+* { not (get_flag("dozh_who")) } [Кто там сидит у жаровни?]
+    ~ set_flag("dozh_who")
     У жаровни сидит, греется, как честный человек. # emotion: calm # voice: assets/voice/dozh_8.mp3
     Скажи, что от Дожа. Он скинет — не много, но скинет. # voice: assets/voice/dozh_9.mp3
     ~ change_disposition("npc_zhuk", 8)
@@ -40,7 +43,8 @@ EXTERNAL learn_name(a0)
 * [Показать Дожу вещь.]
     ~ present_item("Оценка", "Оценка_мимо", "")
     -> DONE
-* [Что берут с собой те, кто ходит ниже восьмого?]
+* { not (get_flag("dozh_kit")) } [Что берут с собой те, кто ходит ниже восьмого?]
+    ~ set_flag("dozh_kit")
     Дож оглядывает тебя, как товар, который не продаётся. # action # voice: assets/voice/narr_dozh_5.mp3
     Гнилец медленный, но крепкий: пока он идёт, бей издалека. Самострел у меня один, болты — по две марки. # emotion: calm # voice: assets/voice/dozh_15.mp3
     Пёс быстрый, а держит плохо: не беги от него, бей в ответ. И с голой грудью вниз не ходи — жилеты у людей Келла хорошие, только снимают их с себя неохотно. # emotion: thoughtful # voice: assets/voice/dozh_16.mp3

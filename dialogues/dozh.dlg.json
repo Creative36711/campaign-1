@@ -98,6 +98,13 @@
             {
               "steps": [
                 {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "dozh_who"
+                  }
+                },
+                {
                   "kind": "line",
                   "line": {
                     "text": "У жаровни сидит, греется, как честный человек.",
@@ -131,7 +138,14 @@
             }
           ],
           "goto": "stay",
-          "once": true
+          "once": true,
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "dozh_who",
+              "not": true
+            }
+          ]
         },
         {
           "text": "Купить дыхатель (34 марки).",
@@ -204,6 +218,13 @@
             {
               "steps": [
                 {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "dozh_kit"
+                  }
+                },
+                {
                   "kind": "line",
                   "line": {
                     "text": "Дож оглядывает тебя, как товар, который не продаётся.",
@@ -239,7 +260,14 @@
             }
           ],
           "goto": "stay",
-          "once": true
+          "once": true,
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "dozh_kit",
+              "not": true
+            }
+          ]
         },
         {
           "text": "Почему у тебя всё дороже, чем наверху?",

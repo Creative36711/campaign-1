@@ -30,7 +30,19 @@
       "choices": [
         {
           "text": "Где ты был в ночь тринадцатого?",
-          "sections": [],
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "kell_asked13"
+                  }
+                }
+              ]
+            }
+          ],
           "goto": "stay",
           "check": {
             "skill": "intimidate",
@@ -91,7 +103,14 @@
               "goto": "stay"
             }
           },
-          "once": true
+          "once": true,
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "kell_asked13",
+              "not": true
+            }
+          ]
         },
         {
           "text": "Что такое режим тишины?",
@@ -121,9 +140,26 @@
         },
         {
           "text": "Ты убил стража Ярова.",
-          "sections": [],
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "kell_accused"
+                  }
+                }
+              ]
+            }
+          ],
           "goto": "stay",
           "conds": [
+            {
+              "type": "flag",
+              "flag": "kell_accused",
+              "not": true
+            },
             {
               "type": "flag",
               "flag": "clue_guard"
@@ -284,6 +320,11 @@
           "text": "Показать рукавицу с привода.",
           "conds": [
             {
+              "type": "flag",
+              "flag": "kell_glove",
+              "not": true
+            },
+            {
               "type": "has_item",
               "item": "item_glove"
             }
@@ -291,6 +332,13 @@
           "sections": [
             {
               "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "kell_glove"
+                  }
+                },
                 {
                   "kind": "line",
                   "line": {

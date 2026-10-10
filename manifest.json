@@ -87,7 +87,9 @@
     "item_coal.json",
     "item_glove.json",
     "item_pack.json",
-    "item_gauge_note.json"
+    "item_gauge_note.json",
+    "npc_glazier.json",
+    "item_vein_shard.json"
   ],
   "rules": [
     "rule_air_restored.json",
@@ -157,7 +159,9 @@
     "rule_vex_job_done.json",
     "rule_final_rig.json",
     "rule_final_rematch.json",
-    "rule_final_rematch_case.json"
+    "rule_final_rematch_case.json",
+    "rule_glazier_named.json",
+    "rule_glazier_fight.json"
   ],
   "arenas": [
     "arena_gate.json",
@@ -212,7 +216,8 @@
     "codex_vein.json",
     "codex_watchman.json",
     "codex_registry.json",
-    "codex_gate_log.json"
+    "codex_gate_log.json",
+    "codex_glass.json"
   ],
   "dialogues": [
     "ayla.ink",
@@ -224,6 +229,7 @@
     "resh.ink",
     "vein.ink",
     "vex.ink",
-    "zhuk.ink"
+    "zhuk.ink",
+    "glazier.ink"
   ]
 }
