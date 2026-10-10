@@ -136,6 +136,7 @@
     "rule_sluice_first.json",
     "rule_unlock_resh_room.json",
     "rule_vein_brace_reward.json",
+    "rule_vex_journal.json",
     "rule_warn_cold.json",
     "rule_warn_hunger.json",
     "rule_warn_rest.json",

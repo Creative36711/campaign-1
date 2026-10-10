@@ -1,0 +1,19 @@
+{
+  "id": "rule_vex_journal",
+  "label": "Журнал шлюза: двенадцать вниз, одиннадцать обратно",
+  "once": true,
+  "manual": true,
+  "chapter": "ch_signs",
+  "conditions": [],
+  "effects": [
+    {
+      "type": "grant_xp",
+      "points": 10
+    },
+    {
+      "type": "play_sound",
+      "sound": "snd_page",
+      "volume": 0.7
+    }
+  ]
+}

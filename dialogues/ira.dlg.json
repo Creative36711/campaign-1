@@ -245,6 +245,56 @@
           "once": true
         },
         {
+          "text": "Векс записал: вниз ушли двенадцать, вернулись одиннадцать.",
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Она долго молчит, сжимая ветошь в кулаке.",
+                    "action": true
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Одиннадцать. Значит, его не забыли записать. Его не вернули.",
+                    "emotion": "sad"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Келл сказал матери — перевели на другой ярус. На другой ярус без записи не переводят.",
+                    "emotion": "angry"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "change_disposition",
+                    "target": "npc_ira",
+                    "delta": 6
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "stay",
+          "once": true,
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "vex_journal"
+            },
+            {
+              "type": "flag",
+              "flag": "ira_told_brother"
+            }
+          ]
+        },
+        {
           "text": "Кто, по-твоему, остановил помпу?",
           "sections": [
             {

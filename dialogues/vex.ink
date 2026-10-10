@@ -1,4 +1,7 @@
 EXTERNAL change_disposition(a0, a1)
+EXTERNAL fire_rule(a0)
+EXTERNAL get_flag(a0)
+EXTERNAL has_item(a0)
 EXTERNAL open_trade(a0)
 EXTERNAL set_flag(a0)
 EXTERNAL skill_check(a0, a1)
@@ -29,6 +32,14 @@ VAR r = 0
     Ты спускался ниже седьмого? Нет? Тогда не спорь со мной про воду. # voice: assets/voice/vex_11.mp3
     На восьмом теперь считают не часы, а уголь: сколько унёс, столько и прожил. # emotion: thoughtful # voice: assets/voice/vex_12.mp3
     -> Начало_hub
++ { has_item("item_roster") and not (get_flag("vex_journal")) } [Вот выписка из архива. Покажи журнал целиком.]
+    Векс читает выписку, сверяет номер с корешком журнала и только потом разворачивает книгу к тебе. # action # sfx: snd_page
+    Двенадцать — вниз в двадцать ноль-ноль. Обратно — одиннадцать, в шесть утра. Одного я так и не записал: решил, что ошибся в счёте. # emotion: thoughtful
+    Теперь вижу, что не ошибся. Журнал врёт редко. # emotion: sad
+    ~ set_flag("vex_journal")
+    ~ change_disposition("npc_vex", 6)
+    ~ fire_rule("rule_vex_journal")
+    -> Начало_hub
 + [Покажи, что есть в продаже.]
     Торг без разговоров. Люблю такие. # emotion: calm # voice: assets/voice/vex_7.mp3
     ~ open_trade("npc_vex")
@@ -40,7 +51,6 @@ VAR r = 0
 === Начало_hub_ok1 ===
 Взвод Келла Ястреба. Двенадцать человек, все с клеймом стражи. Шли вниз, а запись делали наверх — так быстрее, сказал старшина. # voice: assets/voice/vex_4.mp3
 ~ change_disposition("npc_vex", 8)
-~ set_flag("gate_intro_done")
 -> Начало_hub
 
 === Начало_hub_no1 ===
