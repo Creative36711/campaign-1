@@ -253,21 +253,24 @@
                   "kind": "line",
                   "line": {
                     "text": "Она долго молчит, сжимая ветошь в кулаке.",
-                    "action": true
+                    "action": true,
+                    "voice": "assets/voice/narr_ira_9.mp3"
                   }
                 },
                 {
                   "kind": "line",
                   "line": {
                     "text": "Одиннадцать. Значит, его не забыли записать. Его не вернули.",
-                    "emotion": "sad"
+                    "emotion": "sad",
+                    "voice": "assets/voice/ira_18.mp3"
                   }
                 },
                 {
                   "kind": "line",
                   "line": {
                     "text": "Келл сказал матери — перевели на другой ярус. На другой ярус без записи не переводят.",
-                    "emotion": "angry"
+                    "emotion": "angry",
+                    "voice": "assets/voice/ira_19.mp3"
                   }
                 },
                 {

@@ -50,7 +50,7 @@ VAR r = 0
 + { get_flag("lockdown") and not (get_flag("zhuk_patrol_tip")) and not (get_flag("patrol_pump_met")) and item_count("item_mark") >= 10 } [Сколько стоит пройти мимо дежурных у помпы? (10 марок)]
     Жук пересчитывает марки на ощупь, не опуская глаз. # action # sfx: sfx_coin # voice: assets/voice/narr_zhuk_7.mp3
     Дежурным у седьмой платят за смену, не за кровь. Старший — тот, что с перебитым носом: у него жена на девятом, и он считает часы до конца вахты. # emotion: thoughtful # voice: assets/voice/zhuk_15.mp3
-    Назови ему дело и скажи, что после тебя придёт Надзор, а не ты. Ключ держи за поясом: потянешься — разговор кончится, а их там двое. # emotion: calm
+    Назови ему дело и скажи, что после тебя придёт Надзор, а не ты. Ключ держи за поясом: потянешься — разговор кончится, а их там двое. # emotion: calm # voice: assets/voice/zhuk_16.mp3
     ~ remove_item("item_mark", 10)
     ~ set_flag("zhuk_patrol_tip")
     -> Начало_hub

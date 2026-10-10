@@ -33,9 +33,9 @@ VAR r = 0
     На восьмом теперь считают не часы, а уголь: сколько унёс, столько и прожил. # emotion: thoughtful # voice: assets/voice/vex_12.mp3
     -> Начало_hub
 + { has_item("item_roster") and not (get_flag("vex_journal")) } [Вот выписка из архива. Покажи журнал целиком.]
-    Векс читает выписку, сверяет номер с корешком журнала и только потом разворачивает книгу к тебе. # action # sfx: snd_page
-    Двенадцать — вниз в двадцать ноль-ноль. Обратно — одиннадцать, в шесть утра. Одного я так и не записал: решил, что ошибся в счёте. # emotion: thoughtful
-    Теперь вижу, что не ошибся. Журнал врёт редко. # emotion: sad
+    Векс читает выписку, сверяет номер с корешком журнала и только потом разворачивает книгу к тебе. # action # sfx: snd_page # voice: assets/voice/narr_vex_3.mp3
+    Двенадцать — вниз в двадцать ноль-ноль. Обратно — одиннадцать, в шесть утра. Одного я так и не записал: решил, что ошибся в счёте. # emotion: thoughtful # voice: assets/voice/vex_13.mp3
+    Теперь вижу, что не ошибся. Журнал врёт редко. # emotion: sad # voice: assets/voice/vex_14.mp3
     ~ set_flag("vex_journal")
     ~ change_disposition("npc_vex", 6)
     ~ fire_rule("rule_vex_journal")

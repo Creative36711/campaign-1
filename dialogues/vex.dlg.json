@@ -189,21 +189,24 @@
                   "line": {
                     "text": "Векс читает выписку, сверяет номер с корешком журнала и только потом разворачивает книгу к тебе.",
                     "action": true,
-                    "sfx": "snd_page"
+                    "sfx": "snd_page",
+                    "voice": "assets/voice/narr_vex_3.mp3"
                   }
                 },
                 {
                   "kind": "line",
                   "line": {
                     "text": "Двенадцать — вниз в двадцать ноль-ноль. Обратно — одиннадцать, в шесть утра. Одного я так и не записал: решил, что ошибся в счёте.",
-                    "emotion": "thoughtful"
+                    "emotion": "thoughtful",
+                    "voice": "assets/voice/vex_13.mp3"
                   }
                 },
                 {
                   "kind": "line",
                   "line": {
                     "text": "Теперь вижу, что не ошибся. Журнал врёт редко.",
-                    "emotion": "sad"
+                    "emotion": "sad",
+                    "voice": "assets/voice/vex_14.mp3"
                   }
                 },
                 {
