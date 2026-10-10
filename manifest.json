@@ -91,7 +91,12 @@
     "npc_glazier.json",
     "item_vein_shard.json",
     "item_receipt.json",
-    "item_burn_note.json"
+    "item_burn_note.json",
+    "item_satchel.json",
+    "item_backpack.json",
+    "item_stew_cold.json",
+    "item_stew_sour.json",
+    "item_vein_shard_dim.json"
   ],
   "rules": [
     "rule_air_restored.json",

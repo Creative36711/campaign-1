@@ -37,7 +37,9 @@
       "y": 486,
       "w": 250,
       "h": 204,
-      "condition": null,
+      "condition": {
+        "not_flag": "pack_taken"
+      },
       "default_entity": "item_pack",
       "sound": "snd_cloth",
       "sound_volume": 0.5,

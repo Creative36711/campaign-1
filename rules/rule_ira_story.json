@@ -6,6 +6,13 @@
   "conditions": [],
   "effects": [
     {
+      "type": "postcard",
+      "image": "assets/img/pc_timeline.jpg",
+      "text": "Пятьдесят минут без объяснений.",
+      "preset": "шёпот",
+      "seconds": 5
+    },
+    {
       "type": "journal_update",
       "quest": "quest_pump",
       "text_key": "j_clues"

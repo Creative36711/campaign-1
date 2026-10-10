@@ -67,6 +67,11 @@
         "stock": 2
       },
       {
+        "item": "item_backpack",
+        "price": 18,
+        "stock": 1
+      },
+      {
         "item": "item_ration",
         "price": 5,
         "stock": 5

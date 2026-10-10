@@ -6,6 +6,13 @@
   "conditions": [],
   "effects": [
     {
+      "type": "postcard",
+      "image": "assets/img/pc_ira_wade.jpg",
+      "text": "К ригелю — по воде.",
+      "preset": "шёпот",
+      "seconds": 5
+    },
+    {
       "type": "grant_xp",
       "points": 5
     },

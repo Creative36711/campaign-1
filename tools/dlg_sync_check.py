@@ -5,7 +5,7 @@ def ink_lines(p):
     L, C = set(), set()
     for raw in open(p, encoding='utf-8'):
         s = raw.strip()
-        if not s or s.startswith(('EXTERNAL', 'VAR', '===', '~', '->', '//', '-', '{', '}')): continue
+        if not s or s.startswith(('EXTERNAL', 'VAR', '===', '= ', '~', '->', '//', '-', '{', '}')): continue
         if s.startswith(('*', '+')):
             m = re.search(r'\[([^\]]*)\]', s)
             if m: C.add(m.group(1).strip())

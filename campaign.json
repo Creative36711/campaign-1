@@ -464,6 +464,10 @@
     {
       "id": "gear",
       "label": "Снаряжение"
+    },
+    {
+      "id": "back",
+      "label": "Спина"
     }
   ],
   "calendar": {
@@ -1686,6 +1690,16 @@
       "id": "kast_burn",
       "label": "Каст видела записку",
       "description": "Каст прочла записку «в печь»."
+    },
+    {
+      "id": "pack_taken",
+      "label": "Ранец забран",
+      "description": "Герой забрал ранец стражи из затопленной галереи: слот ранца в сцене скрыт (scene_flood_gallery, item_pack)."
+    },
+    {
+      "id": "dozh_back",
+      "label": "Дож о грузе",
+      "description": "Дож рассказал о перегрузе и предложил заплечный короб (диалог dozh)."
     }
   ],
   "emotions": [
@@ -2990,5 +3004,23 @@
     }
   ],
   "deadline_ticks": 72,
-  "deadline_label": "До срока"
+  "deadline_label": "До срока",
+  "encumbrance": {
+    "enabled": true,
+    "formula": "str_con",
+    "capacity_multiplier": 1.0,
+    "travel_penalty": true,
+    "light_travel_multiplier": 1.5,
+    "heavy_travel_multiplier": 2.0,
+    "critical_threshold": 2.0,
+    "light_dodge_penalty": 10,
+    "heavy_dodge_penalty": 20,
+    "critical_dodge_penalty": 40,
+    "light_mov_penalty": 1,
+    "heavy_mov_penalty": 2,
+    "critical_mov_penalty": 3,
+    "light_agility_skills_penalty": 10,
+    "heavy_agility_skills_penalty": 20,
+    "critical_agility_skills_penalty": 40
+  }
 }

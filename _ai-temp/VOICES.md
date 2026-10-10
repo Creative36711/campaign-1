@@ -50,11 +50,11 @@ zhuk_5, zhuk_8 — уже voice-05 (0.91). resh_9, resh_13 — уже voice-04. 
 - **Старый голос рассказчика**: 75 подключённых файлов — ВСЕ на переозвучку voice-03:
   final_pump_1, final_pump_2, final_pump_3, final_silence_1, final_silence_2, final_vein_1, final_vein_2, final_vein_3, flood_1, flood_2, intro_archive_1, intro_archive_2, intro_drift_1, intro_drift_2, intro_dry_row_1, intro_dry_row_2, intro_face_1, intro_face_2, intro_flood_gallery_1, intro_flood_gallery_2, intro_gate_hall_1, intro_gate_hall_2, intro_gate_office_1, intro_gate_office_2, intro_office_1, intro_office_2, intro_pump_hall_1, intro_pump_hall_2, intro_pump_room_1, intro_pump_room_2, intro_pump_shaft_1, intro_pump_shaft_2, intro_sluice_1, intro_sluice_2, narr_ayla_1, narr_dozh_1, narr_dozh_2, narr_dozh_3, narr_ira_1, narr_ira_2, narr_ira_3, narr_ira_4, narr_ira_6, narr_ira_7, narr_ira_8, narr_kast_2, narr_kast_3, narr_kast_4, narr_kast_5, narr_kast_6, narr_kell_1, narr_kell_2, narr_kell_3, narr_kell_4, narr_kell_5, narr_registrar_1, narr_resh_1, narr_resh_2, narr_vein_1, narr_vein_2, narr_vein_3, narr_vex_1, narr_vex_2, narr_zhuk_1, narr_zhuk_2, narr_zhuk_3, narr_zhuk_4, narr_zhuk_5, narr_zhuk_6, prologue_1, prologue_2, prologue_3, rev_1, rev_2, rev_3
 
-## ОЧЕРЕДЬ ПЕРЕОЗВУЧКИ (было 125, осталось 119)
+## ОЧЕРЕДЬ ПЕРЕОЗВУЧКИ (было 125, осталось 111)
 
 1. ~~Жук (voice-05)~~ — ГОТОВО (ход 17: zhuk_3, 9, 10, 13)
-2. Дож (voice-04) — осталось 3: dozh_5, dozh_6, dozh_10 (dozh_2, dozh_3 переозвучены в ходе 17)
-3. Реш (voice-04) — 8: resh_1, resh_3, resh_5, resh_6, resh_7, resh_8, resh_10, resh_12
+2. ~~Дож (voice-04)~~ — ГОТОВО (ход 17: dozh_2, 3; ход 18: dozh_5, 6, 10)
+3. Реш (voice-04) — 8: resh_1, resh_3, resh_5, resh_6, resh_7, resh_8, resh_10, resh_12  → ход 18: переозвучены resh_1, 3, 5, 6, 7; осталось resh_8, 10, 12
 4. Каст (voice-07) — 17: kast_1 … kast_17
 5. Ира (voice-07) — 16: ira_1 … ira_13, ira_15, ira_16, ira_17
 6. Рассказчик (voice-03) — ПОСЛЕДНИМ — 75: список выше (включая rev_1–3 из cutscene_revelation и flood_1 с дописанной фразой)
@@ -69,3 +69,6 @@ hound_amb, rotling_amb, narr_ambush1, narr_arrival, narr_filter_tip, narr_flood,
 
 ## Новые реплики хода 17
 zhuk_20 (voice-05), kast_22, kast_23 (voice-07 — целевой голос Каст), narr_kast_9 (voice-03 — целевой голос рассказчика).
+
+## Ход 18
+Переозвучены dozh_5, 6, 10 (Дож — один голос voice-04), resh_1, 3, 5, 6, 7 (voice-04). Новые: dozh_17, dozh_18 (voice-04).

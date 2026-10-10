@@ -119,9 +119,10 @@ VAR r = 0
 === У_затвора ===
 Ира останавливается у края воды и долго смотрит на штурвал. Ключ в её руке висит, как лишний. # action # sfx: sfx_water # voice: assets/voice/narr_ira_10.mp3
 Стась здесь стоял каждую смену. Говорил: затвор — как сердце. Пока ходит, ярус живёт. # emotion: sad # voice: assets/voice/ira_21.mp3
-{ get_flag("clue_guard"):
-    А его здесь оставили. Одного, у воды. Свои оставили. # emotion: angry # voice: assets/voice/ira_22.mp3
-}
+{ get_flag("clue_guard"): -> страж }
+-> У_затвора_hub
+= страж
+А его здесь оставили. Одного, у воды. Свои оставили. # emotion: angry # voice: assets/voice/ira_22.mp3
 -> У_затвора_hub
 
 === У_затвора_hub ===
@@ -140,9 +141,10 @@ VAR r = 0
 === В_штольне ===
 Ира поднимает фонарь и замирает. Из-за крепи доносится тонкий звон, будто кто-то ведёт пальцем по краю стакана. # action # sfx: sfx_hum # voice: assets/voice/narr_ira_11.mp3
 Слышишь? Отец говорил: жила поёт тем, кто стоит к ней слишком долго. Не стой долго. # emotion: afraid # voice: assets/voice/ira_25.mp3
-{ has_item("item_vein_shard"):
-    И от тебя звенит. Ты носишь стекляшку того, с гогглами? Выбрось, пока она тебя не выбрала. # emotion: angry # voice: assets/voice/ira_27.mp3
-}
+{ has_item("item_vein_shard"): -> звон }
+-> В_штольне_hub
+= звон
+И от тебя звенит. Ты носишь стекляшку того, с гогглами? Выбрось, пока она тебя не выбрала. # emotion: angry # voice: assets/voice/ira_27.mp3
 -> В_штольне_hub
 
 === В_штольне_hub ===

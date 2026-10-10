@@ -270,6 +270,47 @@
           ]
         },
         {
+          "text": "Как тут таскают тяжёлое?",
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "dozh_back",
+              "not": true
+            }
+          ],
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "dozh_back"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Тяжёлое тут таскают на горбу, а горб у каждого один. Кто нагрузится сверх меры, тот идёт вдвое дольше — и дышит вдвое чаще.",
+                    "voice": "assets/voice/dozh_17.mp3",
+                    "emotion": "thoughtful"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Возьми короб: плетёный, на ремнях, с ним ещё девять кило унесёшь. Восемнадцать марок — дешевле, чем надорваться.",
+                    "voice": "assets/voice/dozh_18.mp3",
+                    "emotion": "calm"
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "stay",
+          "once": true
+        },
+        {
           "text": "Почему у тебя всё дороже, чем наверху?",
           "sections": [
             {
