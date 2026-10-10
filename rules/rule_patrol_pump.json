@@ -70,6 +70,13 @@
             {
               "type": "grant_xp",
               "points": 30
+            },
+            {
+              "type": "postcard",
+              "image": "assets/img/pc_patrol_beaten.jpg",
+              "text": "Караульные уходят, прижимая руки к бокам.",
+              "preset": "шёпот",
+              "seconds": 5
             }
           ]
         }

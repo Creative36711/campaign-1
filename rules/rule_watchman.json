@@ -73,6 +73,13 @@
             {
               "type": "show_message",
               "text": "Смотритель оседает на рельсы. В его захвате зажат кусок лома."
+            },
+            {
+              "type": "postcard",
+              "image": "assets/img/pc_watchman_down.jpg",
+              "text": "Смотритель оседает на рельсы.",
+              "preset": "шёпот",
+              "seconds": 5
             }
           ],
           "on_fled": [

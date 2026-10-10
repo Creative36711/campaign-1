@@ -75,6 +75,13 @@
         {
           "type": "show_message",
           "text": "Мешок с биркой «Сухой ряд» стоит у ящика, где сказал Векс. Шесть кило ложатся на плечо."
+        },
+        {
+          "type": "postcard",
+          "image": "assets/img/pc_coal_take.jpg",
+          "text": "Мешок с биркой «Сухой ряд».",
+          "preset": "шёпот",
+          "seconds": 5
         }
       ],
       "sound": "snd_coal",

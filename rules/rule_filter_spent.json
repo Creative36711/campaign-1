@@ -39,6 +39,13 @@
       "type": "play_sound",
       "sound": "sfx_gasp",
       "volume": 0.9
+    },
+    {
+      "type": "postcard",
+      "image": "assets/img/pc_filter_spent.jpg",
+      "text": "Банок нет. Считай вдохи.",
+      "preset": "шёпот",
+      "seconds": 5
     }
   ],
   "chapter": "ch_deep",

@@ -188,7 +188,8 @@
     "rule_gate_postcard.json",
     "rule_coal_delivered.json",
     "rule_camp_ambush_ward.json",
-    "rule_camp_ambush_deep.json"
+    "rule_camp_ambush_deep.json",
+    "rule_water_rises_pc.json"
   ],
   "arenas": [
     "arena_gate.json",

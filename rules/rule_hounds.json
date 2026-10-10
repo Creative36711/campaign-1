@@ -59,6 +59,13 @@
             {
               "type": "grant_xp",
               "points": 15
+            },
+            {
+              "type": "postcard",
+              "image": "assets/img/pc_hound_retreats.jpg",
+              "text": "Пёс уходит в воду.",
+              "preset": "шёпот",
+              "seconds": 5
             }
           ]
         },
