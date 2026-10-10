@@ -55,5 +55,6 @@
     "death": "snd_cloth"
   },
   "combat_figure": "assets/img/npc/fig_ashhound.png",
-  "figure_mode": "topdown"
+  "figure_mode": "topdown",
+  "breathe": false
 }
