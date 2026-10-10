@@ -28,7 +28,7 @@ VAR r = 0
     ~ change_disposition("npc_ira", 6)
     ~ fire_rule("rule_ira_story")
     -> Начало_hub
-* { not (has_item("item_key_resh")) and not (get_flag("resh_room_open")) } [Где ключ от его каморки?]
+* { not (has_item("item_key_resh")) and not (get_flag("resh_room_open")) } [Где ключ от каморки мастера?]
     ~ r = skill_check("persuade", 50)
     {r: -> Начало_hub_ok1 | -> Начало_hub_no1}
 * { get_flag("clue_guard") and not (get_flag("ira_told_brother")) } [Твой брат — Стась Яров?]
