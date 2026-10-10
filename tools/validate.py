@@ -32,6 +32,12 @@ def main():
         rel=f"dialogues/{stem}.ink"
         if not os.path.exists(os.path.join(ROOT,rel)): errs.append(f"{rel}: missing ink")
         else: fc+=1
+        import re as _re
+        for _f in (rel, f"dialogues/{stem}.dlg.json"):
+            _p=os.path.join(ROOT,_f)
+            if os.path.exists(_p):
+                for _v in set(_re.findall(r'assets/voice/[\w\-]+\.mp3', open(_p,encoding='utf-8').read())):
+                    if not os.path.exists(os.path.join(ROOT,_v)): errs.append(f"{_f}: нет озвучки {_v}")
         dj=os.path.join(ROOT,f"dialogues/{stem}.dlg.json")
         if os.path.exists(dj):
             fc+=1
