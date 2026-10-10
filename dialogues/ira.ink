@@ -68,7 +68,7 @@ VAR r = 0
     ~ change_disposition("npc_ira", 4)
     ~ learn_name("npc_ayla")
     -> Начало_hub
-* { get_flag("pack_tag") and not (get_flag("ira_pack")) } [В галерее лежит казённый ранец. Бирка: «Смена 13-го. Ярус 8».]
+* { get_flag("pack_tag") and not (get_flag("ira_pack")) } [В галерее я нашёл казённый ранец. Бирка: «Смена 13-го. Ярус 8».]
     ~ set_flag("ira_pack")
     Лямку узлом он вязал. Устав велит пряжкой, а Стась говорил: пряжка на бегу расстёгивается. Это его ранец. # emotion: sad # voice: assets/voice/ira_28.mp3
     Паёк и флягу бросил... Значит, не прятался. Бежал к затвору — закрывать воду, пока ещё можно было. # emotion: thoughtful # voice: assets/voice/ira_29.mp3
