@@ -2153,6 +2153,10 @@
           {
             "item": "item_coal",
             "quantity": 2
+          },
+          {
+            "item": "item_lamp",
+            "quantity": 1
           }
         ]
       },
@@ -2209,6 +2213,10 @@
           {
             "item": "item_coal",
             "quantity": 2
+          },
+          {
+            "item": "item_lamp",
+            "quantity": 1
           }
         ]
       },
@@ -2262,6 +2270,10 @@
           {
             "item": "item_coal",
             "quantity": 2
+          },
+          {
+            "item": "item_lamp",
+            "quantity": 1
           }
         ]
       }
