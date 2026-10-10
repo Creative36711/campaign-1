@@ -85,7 +85,8 @@
     "npc_watchman.json",
     "npc_thug.json",
     "item_coal.json",
-    "item_glove.json"
+    "item_glove.json",
+    "item_pack.json"
   ],
   "rules": [
     "rule_air_restored.json",

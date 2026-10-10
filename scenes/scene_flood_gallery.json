@@ -27,22 +27,20 @@
   ],
   "slots": [
     {
-      "id": "slot_corpse",
-      "label": "Тело у воды",
+      "id": "slot_pack",
+      "label": "Ранец на наносе",
       "type": [
         "item"
       ],
       "shape": "rect",
-      "x": 258,
-      "y": 488,
-      "w": 370,
-      "h": 154,
-      "condition": {
-        "not_flag": "guard_body_recovered"
-      },
-      "default_entity": "item_dead_guard",
+      "x": 245,
+      "y": 465,
+      "w": 250,
+      "h": 225,
+      "condition": null,
+      "default_entity": "item_pack",
       "sound": "snd_cloth",
-      "sound_volume": 0.6,
+      "sound_volume": 0.5,
       "environmental": false
     },
     {
