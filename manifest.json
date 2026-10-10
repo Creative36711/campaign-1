@@ -183,7 +183,8 @@
     "rule_final_rematch_patrol.json",
     "rule_final_rig_alone.json",
     "rule_final_rig_tip_alone.json",
-    "rule_kast_burn.json"
+    "rule_kast_burn.json",
+    "rule_gate_postcard.json"
   ],
   "arenas": [
     "arena_gate.json",
