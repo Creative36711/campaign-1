@@ -392,12 +392,12 @@
     {
       "id": "ability_steam",
       "label": "Паровой выдох",
-      "description": "Автомат выпускает струю перегретого пара.",
+      "description": "Автомат выпускает струю перегретого пара: обжигает сквозь щели в броне.",
       "mp_cost": 0,
       "cooldown_rounds": 3,
       "range": 2,
       "kind": "damage",
-      "damage": "1d8"
+      "damage": "1d6"
     },
     {
       "id": "ability_howl",

@@ -55,9 +55,34 @@
         {
           "type": "has_item",
           "item": "item_charge"
+        },
+        {
+          "type": "flag_not_set",
+          "flag": "case_full"
         }
       ],
       "hint": "Затвор уйдёт под воду вместе с жилой",
+      "sound": "snd_charge"
+    },
+    {
+      "label": "Заложить заряд",
+      "effects": [
+        {
+          "type": "fire_rule",
+          "rule": "rule_final_fight_case"
+        }
+      ],
+      "conditions": [
+        {
+          "type": "has_item",
+          "item": "item_charge"
+        },
+        {
+          "type": "flag_set",
+          "flag": "case_full"
+        }
+      ],
+      "hint": "Затвор уйдёт под воду вместе с жилой. Сшитое дело — аргумент для Келла",
       "sound": "snd_charge"
     },
     {

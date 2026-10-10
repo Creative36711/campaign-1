@@ -12,16 +12,16 @@
     "calm": "assets/img/npc/kell_calm.jpg"
   },
   "stats": {
-    "STR": 14,
+    "STR": 13,
     "CON": 13,
-    "SIZ": 13,
+    "SIZ": 11,
     "DEX": 11,
     "INT": 10,
     "POW": 11,
     "CHA": 9
   },
   "skills": {
-    "blade": 52,
+    "blade": 48,
     "brawl": 50,
     "shoot": 42,
     "intimidate": 58,

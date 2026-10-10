@@ -15,7 +15,7 @@
             {
               "entity": "npc_rotling",
               "count_min": 1,
-              "count_max": 2
+              "count_max": 1
             }
           ],
           "arena": "arena_gallery",
@@ -63,17 +63,30 @@
           "type": "nothing"
         },
         {
-          "weight": 3,
+          "weight": 2,
           "type": "combat",
           "enemies": [
             {
               "entity": "npc_rotling",
               "count_min": 1,
+              "count_max": 1
+            }
+          ],
+          "arena": "arena_deep",
+          "intro": "Во тьме что-то шевелится: гнилец идёт на свет лампы."
+        },
+        {
+          "weight": 1,
+          "type": "combat",
+          "enemies": [
+            {
+              "entity": "npc_rotling",
+              "count_min": 2,
               "count_max": 2
             }
           ],
           "arena": "arena_deep",
-          "intro": "Во тьме шевелятся: гнильцы идут на свет лампы."
+          "intro": "Во тьме шевелятся двое: гнильцы идут на свет лампы. Можно отступить к проходу — там они не обойдут с боков."
         },
         {
           "weight": 2,
@@ -82,11 +95,11 @@
             {
               "entity": "npc_ashhound",
               "count_min": 1,
-              "count_max": 2
+              "count_max": 1
             }
           ],
           "arena": "arena_deep",
-          "intro": "Стая выходит из-за поворота без единого звука."
+          "intro": "Из-за поворота выходит пёс. Стая где-то рядом, но пока он один."
         },
         {
           "weight": 1,
