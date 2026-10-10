@@ -9,7 +9,37 @@
           "type": "nothing"
         },
         {
-          "weight": 3,
+          "weight": 2,
+          "type": "skill_check",
+          "skill": "perception",
+          "difficulty": 45,
+          "message": "Вода у стенки идёт кругами, хотя капель сверху нет.",
+          "success_effects": [
+            {
+              "type": "grant_xp",
+              "points": 5
+            },
+            {
+              "type": "show_message",
+              "text": "Ты замечаешь его раньше, чем он тебя: гнилец стоит по грудь в воде и слушает. Ты прикрываешь лампу полой плаща и обходишь по дальнему настилу."
+            }
+          ],
+          "fail_effects": [
+            {
+              "type": "start_combat",
+              "enemies": [
+                {
+                  "entity": "npc_rotling",
+                  "count": 1
+                }
+              ],
+              "arena": "arena_gallery",
+              "intro": "Из воды поднимается гнилец: он ещё помнит, кем был."
+            }
+          ]
+        },
+        {
+          "weight": 1,
           "type": "combat",
           "enemies": [
             {
@@ -19,20 +49,37 @@
             }
           ],
           "arena": "arena_gallery",
-          "intro": "Из воды поднимается гнилец: он ещё помнит, кем был."
+          "intro": "Гнилец выходит из-за опоры прямо на тебя — заметить его было негде."
         },
         {
           "weight": 2,
-          "type": "combat",
-          "enemies": [
+          "type": "skill_check",
+          "skill": "stealth",
+          "difficulty": 50,
+          "message": "Под аркой цокают когти по мокрому бетону.",
+          "success_effects": [
             {
-              "entity": "npc_ashhound",
-              "count_min": 1,
-              "count_max": 1
+              "type": "grant_xp",
+              "points": 5
+            },
+            {
+              "type": "show_message",
+              "text": "Ты замираешь у стены и не дышишь. Пёс поводит мордой, фыркает на запах мазута и уходит обратно в темноту."
             }
           ],
-          "arena": "arena_gallery",
-          "intro": "Из-под арки выходит один пёс. Его стая осталась в темноте."
+          "fail_effects": [
+            {
+              "type": "start_combat",
+              "enemies": [
+                {
+                  "entity": "npc_ashhound",
+                  "count": 1
+                }
+              ],
+              "arena": "arena_gallery",
+              "intro": "Из-под арки выходит один пёс. Его стая осталась в темноте."
+            }
+          ]
         },
         {
           "weight": 2,
@@ -64,16 +111,63 @@
         },
         {
           "weight": 2,
-          "type": "combat",
-          "enemies": [
+          "type": "skill_check",
+          "skill": "perception",
+          "difficulty": 50,
+          "message": "Впереди, за поворотом, кто-то волочит ноги по воде.",
+          "success_effects": [
             {
-              "entity": "npc_rotling",
-              "count_min": 1,
-              "count_max": 1
+              "type": "grant_xp",
+              "points": 5
+            },
+            {
+              "type": "show_message",
+              "text": "Ты гасишь лампу до искры и пережидаешь в нише. Гнилец проходит в двух шагах, не повернув головы: на свет он идёт, на темноту — нет."
             }
           ],
-          "arena": "arena_deep",
-          "intro": "Во тьме что-то шевелится: гнилец идёт на свет лампы."
+          "fail_effects": [
+            {
+              "type": "start_combat",
+              "enemies": [
+                {
+                  "entity": "npc_rotling",
+                  "count": 1
+                }
+              ],
+              "arena": "arena_deep",
+              "intro": "Во тьме что-то шевелится: гнилец идёт на свет лампы."
+            }
+          ]
+        },
+        {
+          "weight": 1,
+          "type": "skill_check",
+          "skill": "perception",
+          "difficulty": 55,
+          "message": "Плеск сразу с двух сторон — и оба приближаются.",
+          "success_effects": [
+            {
+              "type": "grant_xp",
+              "points": 8
+            },
+            {
+              "type": "show_message",
+              "text": "Ты успеваешь отступить в узкий проход раньше, чем они сходятся. Двое гнильцов топчутся у развилки и расходятся каждый в свою темноту."
+            }
+          ],
+          "fail_effects": [
+            {
+              "type": "start_combat",
+              "enemies": [
+                {
+                  "entity": "npc_rotling",
+                  "count": 2
+                }
+              ],
+              "arena": "arena_deep",
+              "intro": "Во тьме шевелятся двое: гнильцы идут на свет лампы. Можно отступить к проходу — там они не обойдут с боков."
+            }
+          ]
         },
         {
           "weight": 1,
@@ -81,30 +175,47 @@
           "enemies": [
             {
               "entity": "npc_rotling",
-              "count_min": 2,
-              "count_max": 2
-            }
-          ],
-          "arena": "arena_deep",
-          "intro": "Во тьме шевелятся двое: гнильцы идут на свет лампы. Можно отступить к проходу — там они не обойдут с боков."
-        },
-        {
-          "weight": 2,
-          "type": "combat",
-          "enemies": [
-            {
-              "entity": "npc_ashhound",
               "count_min": 1,
               "count_max": 1
             }
           ],
           "arena": "arena_deep",
-          "intro": "Из-за поворота выходит пёс. Стая где-то рядом, но пока он один."
+          "intro": "Гнилец вываливается из бокового штрека прямо под лампу."
+        },
+        {
+          "weight": 2,
+          "type": "skill_check",
+          "skill": "stealth",
+          "difficulty": 50,
+          "message": "Из-за поворота доносится частое сухое дыхание.",
+          "success_effects": [
+            {
+              "type": "grant_xp",
+              "points": 5
+            },
+            {
+              "type": "show_message",
+              "text": "Пёс проходит по верхнему уступу, не опуская головы. Стая где-то дальше; ты ждёшь, пока стихнут когти, и идёшь своей дорогой."
+            }
+          ],
+          "fail_effects": [
+            {
+              "type": "start_combat",
+              "enemies": [
+                {
+                  "entity": "npc_ashhound",
+                  "count": 1
+                }
+              ],
+              "arena": "arena_deep",
+              "intro": "Из-за поворота выходит пёс. Стая где-то рядом, но пока он один."
+            }
+          ]
         },
         {
           "weight": 1,
           "type": "event",
-          "message": "В штольне ровно и тонко поёт жила. На секунду становится спокойно.",
+          "message": "В штольне ровно и тонко поёт жила. На секунду становится спокойно — и веки тяжелеют, будто ты не спал сутки. Айла предупреждала: заслушаешься — останешься внизу.",
           "effects": [
             {
               "type": "change_need",
