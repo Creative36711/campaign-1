@@ -96,7 +96,8 @@
     "item_backpack.json",
     "item_stew_cold.json",
     "item_stew_sour.json",
-    "item_vein_shard_dim.json"
+    "item_vein_shard_dim.json",
+    "item_coal_sack.json"
   ],
   "rules": [
     "rule_air_restored.json",
@@ -184,7 +185,8 @@
     "rule_final_rig_alone.json",
     "rule_final_rig_tip_alone.json",
     "rule_kast_burn.json",
-    "rule_gate_postcard.json"
+    "rule_gate_postcard.json",
+    "rule_coal_delivered.json"
   ],
   "arenas": [
     "arena_gate.json",
@@ -192,7 +194,8 @@
     "arena_gallery.json",
     "arena_sluice.json",
     "arena_deep.json",
-    "arena_office.json"
+    "arena_office.json",
+    "arena_night_office.json"
   ],
   "quests": [
     "quest_pump.json",
@@ -240,7 +243,8 @@
     "codex_watchman.json",
     "codex_registry.json",
     "codex_gate_log.json",
-    "codex_glass.json"
+    "codex_glass.json",
+    "codex_porters.json"
   ],
   "dialogues": [
     "ayla.ink",

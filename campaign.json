@@ -1700,6 +1700,21 @@
       "id": "dozh_back",
       "label": "Дож о грузе",
       "description": "Дож рассказал о перегрузе и предложил заплечный короб (диалог dozh)."
+    },
+    {
+      "id": "coal_job_taken",
+      "label": "Мешок угля взят",
+      "description": "Герой взял у Векса мешок угля для Дожа (item_crate на шлюзе)."
+    },
+    {
+      "id": "coal_delivered",
+      "label": "Уголь доставлен",
+      "description": "Мешок угля доставлен Дожу: +15 марок (rule_coal_delivered, диалог dozh)."
+    },
+    {
+      "id": "coal_stolen",
+      "label": "Уголь отсыпан",
+      "description": "Герой отсыпал уголь из мешка себе: Дож и Векс −10 к расположению (item_coal_sack)."
     }
   ],
   "emotions": [

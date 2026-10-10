@@ -17,7 +17,7 @@
           "count": 1
         }
       ],
-      "arena": "arena_deep",
+      "arena": "arena_gallery",
       "intro": "Сыч сбрасывает короб на сухой уступ и выдёргивает нож из рукава.",
       "on_victory": [
         {

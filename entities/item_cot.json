@@ -91,13 +91,6 @@
           "flag": "office_visit"
         },
         {
-          "type": "postcard",
-          "image": "assets/img/pc_office_night.jpg",
-          "text": "У шкафа с делами кто-то есть.",
-          "preset": "шёпот",
-          "seconds": 4
-        },
-        {
           "type": "group_stat_check",
           "mode": "skill",
           "skill": "perception",
@@ -105,6 +98,13 @@
           "helpers": 1,
           "need": 1,
           "success_effects": [
+            {
+              "type": "postcard",
+              "image": "assets/img/pc_office_night.jpg",
+              "text": "У шкафа с делами кто-то есть.",
+              "preset": "шёпот",
+              "seconds": 4
+            },
             {
               "type": "show_message",
               "text": "Под утро половица у шкафа скрипит не в такт печке. Ты открываешь глаза раньше, чем понимаешь почему."
@@ -117,7 +117,7 @@
                   "count": 1
                 }
               ],
-              "arena": "arena_office",
+              "arena": "arena_night_office",
               "intro": "У открытого шкафа стоит человек в кирзе, в руке — лист из твоей папки. Он не бежит: «Спал бы ты, дознаватель».",
               "on_victory": [
                 {
@@ -140,6 +140,13 @@
               ],
               "on_fled": [
                 {
+                  "type": "postcard",
+                  "image": "assets/img/pc_office_ash.jpg",
+                  "text": "В печке — свежий пепел.",
+                  "preset": "шёпот",
+                  "seconds": 4
+                },
+                {
                   "type": "change_variable",
                   "var": "case_filed",
                   "delta": -1
@@ -156,6 +163,13 @@
             }
           ],
           "fail_effects": [
+            {
+              "type": "postcard",
+              "image": "assets/img/pc_office_ash.jpg",
+              "text": "В печке — свежий пепел.",
+              "preset": "шёпот",
+              "seconds": 4
+            },
             {
               "type": "change_variable",
               "var": "case_filed",
@@ -233,13 +247,6 @@
           "flag": "office_visit"
         },
         {
-          "type": "postcard",
-          "image": "assets/img/pc_office_night.jpg",
-          "text": "У шкафа с делами кто-то есть.",
-          "preset": "шёпот",
-          "seconds": 4
-        },
-        {
           "type": "group_stat_check",
           "mode": "skill",
           "skill": "perception",
@@ -247,6 +254,13 @@
           "helpers": 1,
           "need": 1,
           "success_effects": [
+            {
+              "type": "postcard",
+              "image": "assets/img/pc_office_night.jpg",
+              "text": "У шкафа с делами кто-то есть.",
+              "preset": "шёпот",
+              "seconds": 4
+            },
             {
               "type": "show_message",
               "text": "Под утро в дверь коротко стучат — два раза, по-караульному. Голос патрульного, которого ты уговорил у затвора: «Дознаватель. К тебе гость». Шаги уходят. У шкафа уже кто-то есть."
@@ -259,7 +273,7 @@
                   "count": 1
                 }
               ],
-              "arena": "arena_office",
+              "arena": "arena_night_office",
               "intro": "У открытого шкафа стоит человек в кирзе, в руке — лист из твоей папки. Он не бежит: «Спал бы ты, дознаватель».",
               "on_victory": [
                 {
@@ -282,6 +296,13 @@
               ],
               "on_fled": [
                 {
+                  "type": "postcard",
+                  "image": "assets/img/pc_office_ash.jpg",
+                  "text": "В печке — свежий пепел.",
+                  "preset": "шёпот",
+                  "seconds": 4
+                },
+                {
                   "type": "change_variable",
                   "var": "case_filed",
                   "delta": -1
@@ -298,6 +319,13 @@
             }
           ],
           "fail_effects": [
+            {
+              "type": "postcard",
+              "image": "assets/img/pc_office_ash.jpg",
+              "text": "В печке — свежий пепел.",
+              "preset": "шёпот",
+              "seconds": 4
+            },
             {
               "type": "change_variable",
               "var": "case_filed",
@@ -375,13 +403,6 @@
           "flag": "office_visit"
         },
         {
-          "type": "postcard",
-          "image": "assets/img/pc_office_night.jpg",
-          "text": "У шкафа с делами кто-то есть.",
-          "preset": "шёпот",
-          "seconds": 4
-        },
-        {
           "type": "group_stat_check",
           "mode": "skill",
           "skill": "perception",
@@ -389,6 +410,13 @@
           "helpers": 1,
           "need": 1,
           "success_effects": [
+            {
+              "type": "postcard",
+              "image": "assets/img/pc_office_night.jpg",
+              "text": "У шкафа с делами кто-то есть.",
+              "preset": "шёпот",
+              "seconds": 4
+            },
             {
               "type": "show_message",
               "text": "Под утро задвижка на двери звякает о табурет — тихо, но ты уже сидишь на койке."
@@ -401,7 +429,7 @@
                   "count": 1
                 }
               ],
-              "arena": "arena_office",
+              "arena": "arena_night_office",
               "intro": "У открытого шкафа стоит человек в кирзе, в руке — лист из твоей папки. Он не бежит: «Спал бы ты, дознаватель».",
               "on_victory": [
                 {
@@ -424,6 +452,13 @@
               ],
               "on_fled": [
                 {
+                  "type": "postcard",
+                  "image": "assets/img/pc_office_ash.jpg",
+                  "text": "В печке — свежий пепел.",
+                  "preset": "шёпот",
+                  "seconds": 4
+                },
+                {
                   "type": "change_variable",
                   "var": "case_filed",
                   "delta": -1
@@ -440,6 +475,13 @@
             }
           ],
           "fail_effects": [
+            {
+              "type": "postcard",
+              "image": "assets/img/pc_office_ash.jpg",
+              "text": "В печке — свежий пепел.",
+              "preset": "шёпот",
+              "seconds": 4
+            },
             {
               "type": "change_variable",
               "var": "case_filed",

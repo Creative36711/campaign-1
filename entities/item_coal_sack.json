@@ -1,0 +1,75 @@
+{
+  "id": "item_coal_sack",
+  "type": "item",
+  "category": "misc",
+  "label": "Мешок угля для Дожа",
+  "description": "Тугой мешок, шесть кило угля с верхнего склада. На бирке рукой Векса: «Дожу, Сухой ряд. Донесёшь — заплатит». Тяжёлый, пачкает плечо.",
+  "weight": 6,
+  "stackable": false,
+  "quest_item": true,
+  "value": {
+    "mark": 0
+  },
+  "image": "assets/img/items/item_coal_sack.jpg",
+  "portrait": {
+    "neutral": "assets/img/items/item_coal_sack.jpg"
+  },
+  "sounds": {
+    "pickup": "snd_coal"
+  },
+  "interact_hint": "Прочитать бирку",
+  "interact_options": [
+    {
+      "label": "Прочитать бирку",
+      "hint": "отдать Дожу в Сухом ряду: 15 марок",
+      "sound": "snd_paper",
+      "effects": [
+        {
+          "type": "show_message",
+          "text": "«Дожу, Сухой ряд. Шесть кило. Донесёшь — заплатит пятнадцать. Векс». Ниже приписка: «Не отсыпай — взвешу»."
+        }
+      ]
+    },
+    {
+      "label": "Отсыпать угля себе",
+      "conditions": [
+        {
+          "type": "flag_not_set",
+          "flag": "coal_delivered"
+        }
+      ],
+      "hint": "4 угля в карман вместо 15 марок — и Векс с Дожем об этом узнают",
+      "effects": [
+        {
+          "type": "remove_item",
+          "item": "item_coal_sack",
+          "quantity": 1
+        },
+        {
+          "type": "add_item",
+          "item": "item_coal",
+          "quantity": 4
+        },
+        {
+          "type": "set_flag",
+          "flag": "coal_stolen"
+        },
+        {
+          "type": "change_disposition",
+          "target": "npc_dozh",
+          "delta": -10
+        },
+        {
+          "type": "change_disposition",
+          "target": "npc_vex",
+          "delta": -10
+        },
+        {
+          "type": "show_message",
+          "text": "Ты развязываешь мешок и набиваешь карманы. Остальное рассыпается по ступеням — нести полмешка нет смысла. Внизу всё взвешивают, и про недовес узнают раньше, чем ты дойдёшь до жаровни."
+        }
+      ],
+      "sound": "snd_coal"
+    }
+  ]
+}
