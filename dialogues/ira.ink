@@ -1,3 +1,4 @@
+EXTERNAL unlock_codex(a0)
 EXTERNAL in_party(a0)
 EXTERNAL set_flag(a0)
 EXTERNAL add_item(a0, a1)
@@ -107,3 +108,41 @@ VAR r = 0
 У нас был один ключ. Он ушёл вместе с ним. # emotion: sad # voice: assets/voice/ira_13.mp3
 ~ change_disposition("npc_ira", -3)
 -> Начало_hub
+
+=== У_затвора ===
+Ира останавливается у края воды и долго смотрит на штурвал. Ключ в её руке висит, как лишний. # action # sfx: sfx_water # voice: assets/voice/narr_ira_10.mp3
+Стась здесь стоял каждую смену. Говорил: затвор — как сердце. Пока ходит, ярус живёт. # emotion: sad # voice: assets/voice/ira_21.mp3
+{ get_flag("clue_guard"):
+    А его здесь оставили. Одного, у воды. Свои оставили. # emotion: angry # voice: assets/voice/ira_22.mp3
+}
+-> У_затвора_hub
+
+=== У_затвора_hub ===
+* [Мы закончим то, что он не успел.]
+    Тогда по-честному. Чтобы в отчёте стояло его имя, а не «пропал без вести». # emotion: calm # voice: assets/voice/ira_23.mp3
+    ~ change_disposition("npc_ira", 5)
+    -> У_затвора_hub
+* { not (get_flag("ira_rig_tip")) } [Ты знаешь, как он устроен?]
+    ~ set_flag("ira_rig_tip")
+    Стась показывал. Под нижними мостками есть ригель. К нему можно подойти по воде, и сверху тебя не видно. Он там от старшины прятался, когда курил. # emotion: thoughtful # voice: assets/voice/ira_24.mp3
+    ~ fire_rule("rule_ira_rig_tip")
+    -> У_затвора_hub
++ [Пойдём.]
+    -> DONE
+
+=== В_штольне ===
+Ира поднимает фонарь и замирает. Из-за крепи доносится тонкий звон, будто кто-то ведёт пальцем по краю стакана. # action # sfx: sfx_hum # voice: assets/voice/narr_ira_11.mp3
+Слышишь? Отец говорил: жила поёт тем, кто стоит к ней слишком долго. Не стой долго. # emotion: afraid # voice: assets/voice/ira_25.mp3
+{ has_item("item_vein_shard"):
+    И от тебя звенит. Ты носишь стекляшку того, с гогглами? Выбрось, пока она тебя не выбрала. # emotion: angry # voice: assets/voice/ira_27.mp3
+}
+-> В_штольне_hub
+
+=== В_штольне_hub ===
+* [Что ещё говорил твой отец?]
+    Что жилу не продают. Её либо закрывают, либо она закрывает тебя. Он закрыл одну, на седьмом. Потом кашлял до последнего дня. # emotion: sad # voice: assets/voice/ira_26.mp3
+    ~ change_disposition("npc_ira", 3)
+    ~ unlock_codex("codex_vein")
+    -> В_штольне_hub
++ [Пойдём.]
+    -> DONE

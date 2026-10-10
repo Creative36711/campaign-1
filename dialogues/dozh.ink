@@ -30,7 +30,7 @@ EXTERNAL unlock_codex(a0)
     -> Начало_hub
 * { not (get_flag("dozh_who")) } [Кто там сидит у жаровни?]
     ~ set_flag("dozh_who")
-    У жаровни сидит, греется, как честный человек. # emotion: calm # voice: assets/voice/dozh_8.mp3
+    Жук у жаровни сидит. Греется, как честный человек. # emotion: calm # voice: assets/voice/dozh_8.mp3
     Скажи, что от Дожа. Он скинет — не много, но скинет. # voice: assets/voice/dozh_9.mp3
     ~ change_disposition("npc_zhuk", 8)
     ~ learn_name("npc_zhuk")

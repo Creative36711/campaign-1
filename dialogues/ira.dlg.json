@@ -649,6 +649,215 @@
       ],
       "choices": [],
       "goto": "Начало"
+    },
+    {
+      "id": "У_затвора",
+      "label": "Ира у затвора (отряд)",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Ира останавливается у края воды и долго смотрит на штурвал. Ключ в её руке висит, как лишний.",
+                "action": true,
+                "sfx": "sfx_water",
+                "voice": "assets/voice/narr_ira_10.mp3"
+              }
+            },
+            {
+              "kind": "line",
+              "line": {
+                "text": "Стась здесь стоял каждую смену. Говорил: затвор — как сердце. Пока ходит, ярус живёт.",
+                "emotion": "sad",
+                "voice": "assets/voice/ira_21.mp3"
+              }
+            }
+          ]
+        },
+        {
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "clue_guard"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "А его здесь оставили. Одного, у воды. Свои оставили.",
+                "emotion": "angry",
+                "voice": "assets/voice/ira_22.mp3"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "text": "Мы закончим то, что он не успел.",
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Тогда по-честному. Чтобы в отчёте стояло его имя, а не «пропал без вести».",
+                    "emotion": "calm",
+                    "voice": "assets/voice/ira_23.mp3"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "change_disposition",
+                    "target": "npc_ira",
+                    "delta": 5
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "stay",
+          "once": true,
+          "conds": []
+        },
+        {
+          "text": "Ты знаешь, как он устроен?",
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "ira_rig_tip"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Стась показывал. Под нижними мостками есть ригель. К нему можно подойти по воде, и сверху тебя не видно. Он там от старшины прятался, когда курил.",
+                    "emotion": "thoughtful",
+                    "voice": "assets/voice/ira_24.mp3"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "fire_rule",
+                    "rule": "rule_ira_rig_tip"
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "stay",
+          "once": true,
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "ira_rig_tip",
+              "not": true
+            }
+          ]
+        },
+        {
+          "text": "Пойдём.",
+          "sections": [],
+          "goto": "end",
+          "conds": []
+        }
+      ]
+    },
+    {
+      "id": "В_штольне",
+      "label": "Ира в штольне (отряд)",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Ира поднимает фонарь и замирает. Из-за крепи доносится тонкий звон, будто кто-то ведёт пальцем по краю стакана.",
+                "action": true,
+                "sfx": "sfx_hum",
+                "voice": "assets/voice/narr_ira_11.mp3"
+              }
+            },
+            {
+              "kind": "line",
+              "line": {
+                "text": "Слышишь? Отец говорил: жила поёт тем, кто стоит к ней слишком долго. Не стой долго.",
+                "emotion": "afraid",
+                "voice": "assets/voice/ira_25.mp3"
+              }
+            }
+          ]
+        },
+        {
+          "conds": [
+            {
+              "type": "has_item",
+              "item": "item_vein_shard"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "И от тебя звенит. Ты носишь стекляшку того, с гогглами? Выбрось, пока она тебя не выбрала.",
+                "emotion": "angry",
+                "voice": "assets/voice/ira_27.mp3"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "text": "Что ещё говорил твой отец?",
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Что жилу не продают. Её либо закрывают, либо она закрывает тебя. Он закрыл одну, на седьмом. Потом кашлял до последнего дня.",
+                    "emotion": "sad",
+                    "voice": "assets/voice/ira_26.mp3"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "change_disposition",
+                    "target": "npc_ira",
+                    "delta": 3
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "unlock_codex",
+                    "entry": "codex_vein"
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "stay",
+          "once": true,
+          "conds": []
+        },
+        {
+          "text": "Пойдём.",
+          "sections": [],
+          "goto": "end",
+          "conds": []
+        }
+      ]
     }
   ]
 }

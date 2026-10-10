@@ -161,7 +161,11 @@
     "rule_final_rematch.json",
     "rule_final_rematch_case.json",
     "rule_glazier_named.json",
-    "rule_glazier_fight.json"
+    "rule_glazier_fight.json",
+    "rule_ira_sluice_talk.json",
+    "rule_ira_drift_talk.json",
+    "rule_ira_rig_tip.json",
+    "rule_final_rig_tip.json"
   ],
   "arenas": [
     "arena_gate.json",
