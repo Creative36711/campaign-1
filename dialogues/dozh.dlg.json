@@ -207,21 +207,24 @@
                   "kind": "line",
                   "line": {
                     "text": "Дож оглядывает тебя, как товар, который не продаётся.",
-                    "action": true
+                    "action": true,
+                    "voice": "assets/voice/narr_dozh_5.mp3"
                   }
                 },
                 {
                   "kind": "line",
                   "line": {
                     "text": "Гнилец медленный, но крепкий: пока он идёт, бей издалека. Самострел у меня один, болты — по две марки.",
-                    "emotion": "calm"
+                    "emotion": "calm",
+                    "voice": "assets/voice/dozh_15.mp3"
                   }
                 },
                 {
                   "kind": "line",
                   "line": {
                     "text": "Пёс быстрый, а держит плохо: не беги от него, бей в ответ. И с голой грудью вниз не ходи — жилеты у людей Келла хорошие, только снимают их с себя неохотно.",
-                    "emotion": "thoughtful"
+                    "emotion": "thoughtful",
+                    "voice": "assets/voice/dozh_16.mp3"
                   }
                 },
                 {
