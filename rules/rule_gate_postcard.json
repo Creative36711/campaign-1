@@ -17,7 +17,7 @@
     {
       "type": "postcard",
       "image": "assets/img/pc_gate_first.jpg",
-      "text": "Обратно — только с подписью.",
+      "text": "Вниз — записан. Наверх — посмотрим.",
       "preset": "шёпот",
       "seconds": 5
     }
