@@ -58,6 +58,12 @@ VAR r = 0
     Партия седьмого яруса, прошлогодняя выдача. Я сам эти тюки через шлюз принимал — брезент двойной, сносу нет. # emotion: calm # voice: assets/voice/zhuk_13.mp3
     А заплата — это к Айле или к Ире: караульные у нас гордые, но когда палец мёрзнет, идут кланяться в Сухой ряд. # emotion: thoughtful # voice: assets/voice/zhuk_14.mp3
     -> Начало_hub
++ { get_flag("glazier_named") and not (get_flag("zhuk_glazier")) } [Сыч носит стекло наверх. Мимо тебя.]
+    ~ set_flag("zhuk_glazier")
+    Мимо меня, это правда. Мне стекло ни к чему: на нём внизу долго не живут. # emotion: calm # voice: assets/voice/zhuk_17.mp3
+    Квитанции с завитком, говоришь? Внизу так не пишут, внизу ставят крестик. Сверь завиток с любой бумагой из конторы — увидишь, чья рука. # emotion: thoughtful # voice: assets/voice/zhuk_18.mp3
+    ~ change_disposition("npc_zhuk", 3)
+    -> Начало_hub
 + [Пока.]
     -> DONE
 - -> Начало_hub

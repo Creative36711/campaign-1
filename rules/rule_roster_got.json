@@ -36,6 +36,13 @@
       "type": "play_sound",
       "sound": "sfx_book",
       "volume": 0.7
+    },
+    {
+      "type": "postcard",
+      "image": "assets/img/pc_roster.jpg",
+      "text": "Наряд выдан. Пломба 13-К принята.",
+      "preset": "шёпот",
+      "seconds": 5
     }
   ],
   "chapter": "ch_price"

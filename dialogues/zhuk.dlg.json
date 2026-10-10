@@ -405,6 +405,58 @@
           ]
         },
         {
+          "text": "Сыч носит стекло наверх. Мимо тебя.",
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "zhuk_glazier"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Мимо меня, это правда. Мне стекло ни к чему: на нём внизу долго не живут.",
+                    "emotion": "calm",
+                    "voice": "assets/voice/zhuk_17.mp3"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Квитанции с завитком, говоришь? Внизу так не пишут, внизу ставят крестик. Сверь завиток с любой бумагой из конторы — увидишь, чья рука.",
+                    "emotion": "thoughtful",
+                    "voice": "assets/voice/zhuk_18.mp3"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "change_disposition",
+                    "target": "npc_zhuk",
+                    "delta": 3
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "stay",
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "glazier_named"
+            },
+            {
+              "type": "flag",
+              "flag": "zhuk_glazier",
+              "not": true
+            }
+          ]
+        },
+        {
           "text": "Пока.",
           "sections": [],
           "goto": "end"

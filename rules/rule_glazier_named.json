@@ -6,6 +6,15 @@
   "conditions": [],
   "effects": [
     {
+      "type": "add_item",
+      "item": "item_receipt",
+      "quantity": 1
+    },
+    {
+      "type": "show_message",
+      "text": "Сыч суёт тебе одну квитанцию: «Возьми. Мне с ней только хуже». Завиток в углу можно сличить с почерком любой бумаги из конторы."
+    },
+    {
       "type": "grant_xp",
       "points": 10
     },

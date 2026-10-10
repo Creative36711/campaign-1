@@ -361,6 +361,74 @@
           ]
         },
         {
+          "text": "Келл сказал: «спроси у Векса, он записывал».",
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "vex_kell_word"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "vex_asked13"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Векс хмыкает и, не глядя, кладёт ладонь на корешок журнала.",
+                    "action": true,
+                    "sfx": "snd_page",
+                    "voice": "assets/voice/narr_vex_4.mp3"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Келл меня назвал? Тогда скажу, раз старшина разрешил. Двенадцать вниз, с клеймом стражи, в двадцать ноль-ноль.",
+                    "emotion": "calm",
+                    "voice": "assets/voice/vex_18.mp3"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "А сколько вернулось, я вслух не считаю. Принеси наряд из архива, и посчитаем вместе.",
+                    "emotion": "thoughtful",
+                    "voice": "assets/voice/vex_19.mp3"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "change_disposition",
+                    "target": "npc_vex",
+                    "delta": 4
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "stay",
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "kell_pressed"
+            },
+            {
+              "type": "flag",
+              "flag": "vex_kell_word",
+              "not": true
+            }
+          ]
+        },
+        {
           "text": "Покажи, что есть в продаже.",
           "sections": [
             {

@@ -44,6 +44,14 @@ EXTERNAL set_flag(a0)
     Караульная партия. Значит, кто-то из двенадцати снял рукавицу, когда крутил муфту, и забыл в поддоне. # emotion: calm # voice: assets/voice/kast_16.mp3
     Не неси её сюда: масло пачкает сукно. Подшей к делу номер клейма — для трибунала нитка весит больше тряпки. # emotion: thoughtful # voice: assets/voice/kast_17.mp3
     -> Начало_hub
++ { get_flag("case_hand") and not (get_flag("kast_hand")) } [Тот же завиток — на квитанциях за жильное стекло.]
+    ~ set_flag("kast_hand")
+    Каст кладёт квитанцию рядом с нарядом и долго смотрит на две одинаковые петли. # action # sfx: snd_paper # voice: assets/voice/narr_kast_8.mp3
+    Значит, моей подписью не только запирают ярусы. Ею ещё и торгуют. # emotion: angry # voice: assets/voice/kast_18.mp3
+    Держать ярус взаперти я не стану. Не ради тебя: пусть он думает, что его не ищут. # emotion: calm # voice: assets/voice/kast_19.mp3
+    ~ change_disposition("npc_kast", 10)
+    ~ fire_rule("rule_kast_hand")
+    -> Начало_hub
 + [Мне пора.]
     -> DONE
 

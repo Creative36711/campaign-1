@@ -52,6 +52,14 @@ VAR r = 0
     ~ change_disposition("npc_vex", 4)
     ~ fire_rule("rule_vex_job_done")
     -> Начало_hub
++ { get_flag("kell_pressed") and not (get_flag("vex_kell_word")) } [Келл сказал: «спроси у Векса, он записывал».]
+    ~ set_flag("vex_kell_word")
+    ~ set_flag("vex_asked13")
+    Векс хмыкает и, не глядя, кладёт ладонь на корешок журнала. # action # sfx: snd_page # voice: assets/voice/narr_vex_4.mp3
+    Келл меня назвал? Тогда скажу, раз старшина разрешил. Двенадцать вниз, с клеймом стражи, в двадцать ноль-ноль. # emotion: calm # voice: assets/voice/vex_18.mp3
+    А сколько вернулось, я вслух не считаю. Принеси наряд из архива, и посчитаем вместе. # emotion: thoughtful # voice: assets/voice/vex_19.mp3
+    ~ change_disposition("npc_vex", 4)
+    -> Начало_hub
 + [Покажи, что есть в продаже.]
     Торг без разговоров. Люблю такие. # emotion: calm # voice: assets/voice/vex_7.mp3
     ~ open_trade("npc_vex")

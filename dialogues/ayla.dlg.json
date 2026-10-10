@@ -320,6 +320,45 @@
           ]
         },
         {
+          "text": "Под рёбрами гудит. Что со мной?",
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Зов жилы. Кто-то продал тебе стекло, и ты носишь его у сердца. Носи в сумке, в тряпице, и не слушай.",
+                    "emotion": "angry",
+                    "voice": "assets/voice/ayla_12.mp3"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Выпей. Горько, зато в голове будет тихо.",
+                    "emotion": "calm",
+                    "voice": "assets/voice/ayla_13.mp3"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "fire_rule",
+                    "rule": "rule_ayla_veinsong"
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "stay",
+          "conds": [
+            {
+              "type": "has_status",
+              "status": "status_veinsong"
+            }
+          ]
+        },
+        {
           "text": "Пока.",
           "sections": [],
           "goto": "end"

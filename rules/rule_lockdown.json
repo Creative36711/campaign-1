@@ -7,6 +7,10 @@
     {
       "type": "flag_not_set",
       "flag": "lockdown"
+    },
+    {
+      "type": "flag_not_set",
+      "flag": "kast_hand"
     }
   ],
   "effects": [

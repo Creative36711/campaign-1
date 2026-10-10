@@ -89,7 +89,8 @@
     "item_pack.json",
     "item_gauge_note.json",
     "npc_glazier.json",
-    "item_vein_shard.json"
+    "item_vein_shard.json",
+    "item_receipt.json"
   ],
   "rules": [
     "rule_air_restored.json",
@@ -165,7 +166,9 @@
     "rule_ira_sluice_talk.json",
     "rule_ira_drift_talk.json",
     "rule_ira_rig_tip.json",
-    "rule_final_rig_tip.json"
+    "rule_final_rig_tip.json",
+    "rule_kast_hand.json",
+    "rule_ayla_veinsong.json"
   ],
   "arenas": [
     "arena_gate.json",

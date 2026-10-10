@@ -22,6 +22,13 @@
       "type": "set_description",
       "entity": "npc_ira",
       "text": "Помощница мастера, пошедшая с дознавателем. Знает помпу по звуку и не верит бумагам."
+    },
+    {
+      "type": "postcard",
+      "image": "assets/img/pc_ira_joins.jpg",
+      "text": "Ира Ярова идёт с тобой.",
+      "preset": "шёпот",
+      "seconds": 5
     }
   ]
 }

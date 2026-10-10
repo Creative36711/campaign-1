@@ -265,6 +265,74 @@
           ]
         },
         {
+          "text": "Тот же завиток — на квитанциях за жильное стекло.",
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "kast_hand"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Каст кладёт квитанцию рядом с нарядом и долго смотрит на две одинаковые петли.",
+                    "action": true,
+                    "sfx": "snd_paper",
+                    "voice": "assets/voice/narr_kast_8.mp3"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Значит, моей подписью не только запирают ярусы. Ею ещё и торгуют.",
+                    "emotion": "angry",
+                    "voice": "assets/voice/kast_18.mp3"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Держать ярус взаперти я не стану. Не ради тебя: пусть он думает, что его не ищут.",
+                    "emotion": "calm",
+                    "voice": "assets/voice/kast_19.mp3"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "change_disposition",
+                    "target": "npc_kast",
+                    "delta": 10
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "fire_rule",
+                    "rule": "rule_kast_hand"
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "stay",
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "case_hand"
+            },
+            {
+              "type": "flag",
+              "flag": "kast_hand",
+              "not": true
+            }
+          ]
+        },
+        {
           "text": "Мне пора.",
           "sections": [],
           "goto": "end"
