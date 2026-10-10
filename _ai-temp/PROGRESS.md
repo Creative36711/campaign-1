@@ -88,3 +88,30 @@
 - Неиспользуемые флаги (kell_stood_down, ledger_shown_kast, hounds_past, case136_read и др.) — подвязать или убрать.
 - Мастер/Машинист (brawl 25) слаб в финале — поднять brawl/dodge призванию engineer или дать ему специальный обход.
 - В затопленном варианте фона галереи проверить, виден ли ранец.
+
+## Итерация 11 (10.10)
+
+### Баги
+- У концовки `ending_vein` не было фона → `end_vein.jpg`.
+- `codex_registry` использовал чужую картинку (case137) → собственная `codex_registry.jpg`.
+- Финал: убеждение Келла можно было перебрасывать бесконечно (провал → бой → побег → заряд снова). Теперь флаг `kell_refused`: повтор ведёт в `rule_final_rematch` / `rule_final_rematch_case` (сразу бой).
+- Флаги `kell_down` и `kell_stood_down` ставились, но не читались → теперь читаются концовками.
+
+### Баланс
+- **Обход финала для Машиниста:** «Заложить заряд снизу, на замедлитель» (`rule_final_rig`, ремонт 65). Мастер/Машинист (ремонт 80) получает свой путь к «Тишине» без боя. Провал → флаг `rig_spotted` (одна попытка) + бой Келл + громила.
+- Подработка у Векса: +12 марок, +10 XP, disposition +4 — мягкий источник денег за час и спуск на 8-й ярус (расход воздуха).
+
+### Контент
+- Подработка «Замер воды»: Векс → `item_pipes` в галерее («Снять показания мерной рейки») → `item_gauge_note` → Векс (`rule_vex_job_done`). Вывод Векса: сводки Надзора «уровень стабилен» пишутся под диктовку (намёк на Каст).
+- Кодекс `codex_gate_log` «Журнал шлюза» (открывается `rule_vex_journal`).
+- Концовки «Тишина» по судьбе Келла: `ending_silence_kell` (фон `end_silence_kell.jpg`), `ending_silence_stood`, `ending_silence_rigged`; общая `ending_silence` осталась запасной.
+
+### Медиа
+- Изображения ×10 (одна генерация заблокирована модерацией): end_vein, end_silence_kell, rotling_afraid, fig_ira_down, fig_ashhound_dead, item_gauge_note, codex_gate_log, codex_registry.
+- Аудио ×10: vex_15, vex_16, vex_17 (новые), переозвучка vex_12, zhuk_14, zhuk_12, resh_4, resh_14, resh_15, dozh_14.
+
+### TODO
+- Нечитаемые флаги: ledger_shown_kast, hounds_past, case136_read, case_written, charge_made, final_ready, kast_brief, kell_pressed, patrol_gate_passed, patrol_pump_passed — подвязать реакции (например, Каст на `ledger_shown_kast`, Келл на `kell_pressed` в финале).
+- Реакция Иры на подработку и на замер (ira_20).
+- Озвучка катсцен/реплик, если есть сироты — заменить.
+- Прогнать `combat_sim` для новых боёв-повторов (Келл один против Мастера/Машиниста).
