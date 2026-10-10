@@ -6,7 +6,7 @@
   "portrait": {
     "neutral": "assets/img/npc/registrar_neutral.jpg",
     "angry": "assets/img/npc/registrar_angry.jpg",
-    "afraid": "assets/img/npc/registrar.jpg",
+    "afraid": "assets/img/npc/registrar_afraid.jpg",
     "thoughtful": "assets/img/npc/registrar_thoughtful.jpg",
     "sad": "assets/img/npc/registrar_sad.jpg",
     "calm": "assets/img/npc/registrar_calm.jpg"
