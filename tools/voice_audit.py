@@ -29,7 +29,7 @@ REFERENCE = {
     'dozh':    ['dozh_1', 'dozh_8', 'dozh_14', 'dozh_15', 'dozh_16'],                  # voice-04
     'glazier': ['glazier_%d' % i for i in range(1, 8)],                                # voice-08
 }
-NARR_PREFIX = ('narr_', 'intro_', 'prologue', 'final_', 'flood_')
+NARR_PREFIX = ('narr_', 'intro_', 'prologue', 'final_', 'flood_', 'rev_')
 
 
 def speaker(fn):
