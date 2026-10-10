@@ -154,7 +154,8 @@
     "rule_zhuk_appears.json",
     "rule_zhuk_info.json",
     "rule_zhuk_ledger.json",
-    "rule_vex_job_done.json"
+    "rule_vex_job_done.json",
+    "rule_final_rig.json"
   ],
   "arenas": [
     "arena_gate.json",
