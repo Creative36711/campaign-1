@@ -5,7 +5,8 @@
   "description": "То, во что превращается человек, напившийся тяжёлой воды. Оно ещё помнит, кем было, и это хуже всего.",
   "portrait": {
     "neutral": "assets/img/npc/rotling_neutral.jpg",
-    "angry": "assets/img/npc/rotling_angry.jpg"
+    "angry": "assets/img/npc/rotling_angry.jpg",
+    "afraid": "assets/img/npc/rotling_afraid.jpg"
   },
   "stats": {
     "STR": 13,

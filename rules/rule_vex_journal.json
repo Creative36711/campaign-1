@@ -14,6 +14,10 @@
       "type": "play_sound",
       "sound": "snd_page",
       "volume": 0.7
+    },
+    {
+      "type": "unlock_codex",
+      "entry": "codex_gate_log"
     }
   ]
 }

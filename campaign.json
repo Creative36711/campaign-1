@@ -639,7 +639,8 @@
           "type": "flag_set",
           "flag": "end_vein"
         }
-      ]
+      ],
+      "image": "assets/img/end_vein.jpg"
     },
     {
       "id": "ending_closed",

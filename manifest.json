@@ -206,7 +206,8 @@
     "codex_time.json",
     "codex_vein.json",
     "codex_watchman.json",
-    "codex_registry.json"
+    "codex_registry.json",
+    "codex_gate_log.json"
   ],
   "dialogues": [
     "ayla.ink",
