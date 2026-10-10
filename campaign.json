@@ -1715,6 +1715,11 @@
       "id": "coal_stolen",
       "label": "Уголь отсыпан",
       "description": "Герой отсыпал уголь из мешка себе: Дож и Векс −10 к расположению (item_coal_sack)."
+    },
+    {
+      "id": "camp_ambush_pending",
+      "label": "Засада на привале",
+      "description": "Движок выбросил засаду на привале; правила rule_camp_ambush_ward/_deep запускают бой на арене текущего яруса и снимают флаг."
     }
   ],
   "emotions": [

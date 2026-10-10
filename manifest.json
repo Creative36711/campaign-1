@@ -186,7 +186,9 @@
     "rule_final_rig_tip_alone.json",
     "rule_kast_burn.json",
     "rule_gate_postcard.json",
-    "rule_coal_delivered.json"
+    "rule_coal_delivered.json",
+    "rule_camp_ambush_ward.json",
+    "rule_camp_ambush_deep.json"
   ],
   "arenas": [
     "arena_gate.json",
