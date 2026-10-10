@@ -454,6 +454,51 @@
           "goto": "end"
         },
         {
+          "text": "Режим тишины сняли.",
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "kast_hand"
+            },
+            {
+              "type": "flag",
+              "flag": "vex_lifted",
+              "not": true
+            }
+          ],
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "vex_lifted"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Сняли. Вводят шёпотом и снимают шёпотом, а журнал всё помнит. Проходи, дознаватель: сегодня тебя записываю я, а не Келл.",
+                    "voice": "assets/voice/vex_20.mp3",
+                    "emotion": "calm"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "change_disposition",
+                    "target": "npc_vex",
+                    "delta": 3
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "stay",
+          "once": true
+        },
+        {
           "text": "Мне пора.",
           "sections": [],
           "goto": "end"

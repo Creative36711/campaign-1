@@ -366,6 +366,97 @@
           ]
         },
         {
+          "text": "Ира пришла со мной.",
+          "conds": [
+            {
+              "type": "in_party",
+              "npc": "npc_ira"
+            },
+            {
+              "type": "flag",
+              "flag": "resh_ira",
+              "not": true
+            }
+          ],
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "resh_ira"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Реш поднимается со скамьи и долго смотрит на Иру, будто проверяет, не мерещится ли.",
+                    "voice": "assets/voice/narr_resh_3.mp3",
+                    "action": true
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Ира... Я думал, тебя увели наверх вместе со сменой. Хорошо, что не послушалась.",
+                    "voice": "assets/voice/resh_16.mp3",
+                    "emotion": "sad"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Я шёл мимо затвора той ночью, вниз, с сердцевиной. Стась был там, живой, ругался на пустую колодку. Больше я его не видел.",
+                    "voice": "assets/voice/resh_17.mp3",
+                    "emotion": "thoughtful"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "«Ругался на колодку... Значит, знал, что его поставили к затвору, который не закрыть.» — Ира говорит это не Решу, а себе.",
+                    "voice": "assets/voice/ira_30.mp3",
+                    "action": true
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "change_disposition",
+                    "target": "npc_ira",
+                    "delta": 5
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "change_disposition",
+                    "target": "npc_resh",
+                    "delta": 5
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "resh_trusts"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "fire_rule",
+                    "rule": "rule_resh_ira"
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "stay",
+          "once": true
+        },
+        {
           "text": "Мне пора.",
           "sections": [],
           "goto": "end"

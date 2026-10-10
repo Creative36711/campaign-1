@@ -77,6 +77,30 @@
       "sound": "snd_stone",
       "sound_volume": 0.6,
       "environmental": true
+    },
+    {
+      "id": "slot_glazier",
+      "label": "Огонёк на уступе",
+      "type": [
+        "person"
+      ],
+      "shape": "rect",
+      "x": 340,
+      "y": 140,
+      "w": 115,
+      "h": 330,
+      "condition": {
+        "time_of_day": [
+          "evening",
+          "night"
+        ],
+        "flag": "glazier_trades",
+        "not_flag": "downpour_flood"
+      },
+      "default_entity": "npc_glazier",
+      "sound": "sfx_glass",
+      "sound_volume": 0.5,
+      "environmental": false
     }
   ],
   "navigation": [

@@ -333,6 +333,58 @@
           ]
         },
         {
+          "text": "Мастер Реш жив.",
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "resh_found"
+            },
+            {
+              "type": "flag",
+              "flag": "kast_resh",
+              "not": true
+            }
+          ],
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "kast_resh"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Жив. Это хуже для всех, кроме него. Живой мастер — это свидетель, а свидетелей в моём отделе не любят.",
+                    "voice": "assets/voice/kast_20.mp3",
+                    "emotion": "thoughtful"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Приведи его, если сможешь. Если нет — больше никому не говори, что он жив.",
+                    "voice": "assets/voice/kast_21.mp3",
+                    "emotion": "calm"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "fire_rule",
+                    "rule": "rule_kast_resh"
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "stay",
+          "once": true
+        },
+        {
           "text": "Мне пора.",
           "sections": [],
           "goto": "end"

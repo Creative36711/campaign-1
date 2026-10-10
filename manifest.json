@@ -168,7 +168,11 @@
     "rule_ira_rig_tip.json",
     "rule_final_rig_tip.json",
     "rule_kast_hand.json",
-    "rule_ayla_veinsong.json"
+    "rule_ayla_veinsong.json",
+    "rule_glazier_night.json",
+    "rule_ira_pack.json",
+    "rule_kast_resh.json",
+    "rule_resh_ira.json"
   ],
   "arenas": [
     "arena_gate.json",

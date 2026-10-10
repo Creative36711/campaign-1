@@ -23,5 +23,6 @@
   },
   "message": "Настой получился мутным, тёплым и почти съедобным.",
   "sound": "snd_pot",
-  "sound_volume": 0.8
+  "sound_volume": 0.8,
+  "known": false
 }

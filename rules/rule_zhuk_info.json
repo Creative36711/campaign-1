@@ -32,6 +32,13 @@
       "type": "play_sound",
       "sound": "sfx_coins",
       "volume": 0.8
+    },
+    {
+      "type": "postcard",
+      "image": "assets/img/pc_zhuk_paid.jpg",
+      "text": "Марки ушли в рукав. Ночь тринадцатого продана.",
+      "preset": "шёпот",
+      "seconds": 5
     }
   ]
 }

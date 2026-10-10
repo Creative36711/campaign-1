@@ -99,6 +99,85 @@
           ]
         },
         {
+          "text": "Я от Дожа. Тридцать пять марок.",
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "От Дожа? Ладно, старику не откажу: он меня кормил, когда я ещё в карманах путался. Тридцать пять, и ни маркой меньше.",
+                    "voice": "assets/voice/zhuk_19.mp3",
+                    "emotion": "thoughtful"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Он протягивает руку, не глядя. Марки исчезают в рукаве.",
+                    "action": true,
+                    "sfx": "sfx_coin",
+                    "voice": "assets/voice/narr_zhuk_2.mp3"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Стража Келла, двенадцать человек, вниз. Мастер — наверх, потом снова вниз, с сердцевиной в сумке. А наряд в архиве подшит к делу тринадцать-К: без пломбы тебе его не дадут.",
+                    "voice": "assets/voice/zhuk_11.mp3"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "remove_item",
+                    "item": "item_mark",
+                    "qty": 35
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "zhuk_paid"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "zhuk_dozh_price"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "fire_rule",
+                    "rule": "rule_zhuk_info"
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "stay",
+          "conds": [
+            {
+              "type": "item_ge",
+              "item": "item_mark",
+              "count": 35
+            },
+            {
+              "type": "flag",
+              "flag": "dozh_who"
+            },
+            {
+              "type": "flag",
+              "flag": "zhuk_paid",
+              "not": true
+            }
+          ]
+        },
+        {
           "text": "Пятьдесят марок. Вспоминай.",
           "sections": [
             {
@@ -130,6 +209,13 @@
                 {
                   "kind": "effect",
                   "effect": {
+                    "type": "set_flag",
+                    "flag": "zhuk_paid"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
                     "type": "fire_rule",
                     "rule": "rule_zhuk_info"
                   }
@@ -143,6 +229,11 @@
               "type": "item_ge",
               "item": "item_mark",
               "count": 50
+            },
+            {
+              "type": "flag",
+              "flag": "dozh_who",
+              "not": true
             },
             {
               "type": "flag",

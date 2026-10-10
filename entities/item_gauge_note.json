@@ -11,5 +11,6 @@
   },
   "portrait": {
     "neutral": "assets/img/items/item_gauge_note.jpg"
-  }
+  },
+  "quest_item": true
 }

@@ -104,5 +104,6 @@
   "combat_figure_states": {
     "down": "assets/img/npc/fig_glazier_down.png",
     "dead": "assets/img/npc/fig_glazier_down.png"
-  }
+  },
+  "scene_sprite": "assets/img/npc/sprite_glazier.png"
 }

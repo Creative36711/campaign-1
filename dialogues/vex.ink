@@ -64,6 +64,11 @@ VAR r = 0
     Торг без разговоров. Люблю такие. # emotion: calm # voice: assets/voice/vex_7.mp3
     ~ open_trade("npc_vex")
     -> DONE
+* { get_flag("kast_hand") and not (get_flag("vex_lifted")) } [Режим тишины сняли.]
+    ~ set_flag("vex_lifted")
+    Сняли. Вводят шёпотом и снимают шёпотом, а журнал всё помнит. Проходи, дознаватель: сегодня тебя записываю я, а не Келл. # emotion: calm # voice: assets/voice/vex_20.mp3
+    ~ change_disposition("npc_vex", 3)
+    -> Начало_hub
 + [Мне пора.]
     -> DONE
 - -> Начало_hub

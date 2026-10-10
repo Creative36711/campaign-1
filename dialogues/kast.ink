@@ -52,6 +52,12 @@ EXTERNAL set_flag(a0)
     ~ change_disposition("npc_kast", 10)
     ~ fire_rule("rule_kast_hand")
     -> Начало_hub
+* { get_flag("resh_found") and not (get_flag("kast_resh")) } [Мастер Реш жив.]
+    ~ set_flag("kast_resh")
+    Жив. Это хуже для всех, кроме него. Живой мастер — это свидетель, а свидетелей в моём отделе не любят. # emotion: thoughtful # voice: assets/voice/kast_20.mp3
+    Приведи его, если сможешь. Если нет — больше никому не говори, что он жив. # emotion: calm # voice: assets/voice/kast_21.mp3
+    ~ fire_rule("rule_kast_resh")
+    -> Начало_hub
 + [Мне пора.]
     -> DONE
 

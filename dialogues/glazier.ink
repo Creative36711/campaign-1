@@ -1,3 +1,4 @@
+EXTERNAL clear_flag(flag)
 EXTERNAL add_item(a0, a1)
 EXTERNAL change_disposition(a0, a1)
 EXTERNAL fire_rule(a0)
@@ -15,6 +16,7 @@ VAR r = 0
 Из бокового штрека выходит человек с заплечным коробом, обмотанным мешковиной. Сквозь мешковину сочится бирюзовый свет. # action # sfx: snd_cloth # voice: assets/voice/narr_glazier_1.mp3
 Тихо, дознаватель. Ты меня не видел, я тебя не видел. Внизу так договариваются. # emotion: thoughtful # voice: assets/voice/glazier_1.mp3
 ~ set_flag("glazier_met")
+~ set_flag("glazier_trades")
 -> Начало_hub
 
 === Снова ===
@@ -55,11 +57,13 @@ VAR r = 0
 === Отдал ===
 Ладно, ладно! Забирай осколок, мне шея дороже стекла. А короб не трогай — он не мой. # emotion: afraid # voice: assets/voice/glazier_6.mp3
 ~ set_flag("glazier_robbed")
+~ clear_flag("glazier_trades")
 ~ add_item("item_vein_shard", 1)
 ~ change_disposition("npc_glazier", -15)
 -> DONE
 
 === Драка ===
 Зря ты так, дознаватель. Внизу Надзора нет. # emotion: angry # voice: assets/voice/glazier_7.mp3
+~ clear_flag("glazier_trades")
 ~ fire_rule("rule_glazier_fight")
 -> DONE

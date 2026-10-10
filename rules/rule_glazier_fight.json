@@ -6,6 +6,10 @@
   "conditions": [],
   "effects": [
     {
+      "type": "clear_flag",
+      "flag": "glazier_trades"
+    },
+    {
       "type": "start_combat",
       "enemies": [
         {

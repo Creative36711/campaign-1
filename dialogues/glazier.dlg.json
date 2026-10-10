@@ -47,6 +47,13 @@
                 "type": "set_flag",
                 "flag": "glazier_met"
               }
+            },
+            {
+              "kind": "effect",
+              "effect": {
+                "type": "set_flag",
+                "flag": "glazier_trades"
+              }
             }
           ]
         }
@@ -245,6 +252,13 @@
                     {
                       "kind": "effect",
                       "effect": {
+                        "type": "clear_flag",
+                        "flag": "glazier_trades"
+                      }
+                    },
+                    {
+                      "kind": "effect",
+                      "effect": {
                         "type": "add_item",
                         "item": "item_vein_shard",
                         "qty": 1
@@ -273,6 +287,13 @@
                         "text": "Зря ты так, дознаватель. Внизу Надзора нет.",
                         "emotion": "angry",
                         "voice": "assets/voice/glazier_7.mp3"
+                      }
+                    },
+                    {
+                      "kind": "effect",
+                      "effect": {
+                        "type": "clear_flag",
+                        "flag": "glazier_trades"
                       }
                     },
                     {

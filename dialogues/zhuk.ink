@@ -24,10 +24,20 @@ VAR r = 0
 * { not (get_flag("zhuk_paid")) } [Что ты видел в ночь тринадцатого?]
     ~ r = skill_check("persuade", 50)
     {r: -> Начало_hub_ok1 | -> Начало_hub_no1}
-+ { item_count("item_mark") >= 50 and not (get_flag("zhuk_paid")) } [Пятьдесят марок. Вспоминай.]
++ { item_count("item_mark") >= 35 and get_flag("dozh_who") and not (get_flag("zhuk_paid")) } [Я от Дожа. Тридцать пять марок.]
+    От Дожа? Ладно, старику не откажу: он меня кормил, когда я ещё в карманах путался. Тридцать пять, и ни маркой меньше. # emotion: thoughtful # voice: assets/voice/zhuk_19.mp3
+    Он протягивает руку, не глядя. Марки исчезают в рукаве. # action # sfx: sfx_coin # voice: assets/voice/narr_zhuk_2.mp3
+    Стража Келла, двенадцать человек, вниз. Мастер — наверх, потом снова вниз, с сердцевиной в сумке. А наряд в архиве подшит к делу тринадцать-К: без пломбы тебе его не дадут. # voice: assets/voice/zhuk_11.mp3
+    ~ remove_item("item_mark", 35)
+    ~ set_flag("zhuk_paid")
+    ~ set_flag("zhuk_dozh_price")
+    ~ fire_rule("rule_zhuk_info")
+    -> Начало_hub
++ { item_count("item_mark") >= 50 and not (get_flag("dozh_who")) and not (get_flag("zhuk_paid")) } [Пятьдесят марок. Вспоминай.]
     Он протягивает руку, не глядя. Марки исчезают в рукаве. # action # sfx: sfx_coin # voice: assets/voice/narr_zhuk_2.mp3
     Стража Келла, двенадцать человек, вниз. Мастер — наверх, потом снова вниз, с сердцевиной в сумке. А наряд в архиве подшит к делу тринадцать-К: без пломбы тебе его не дадут. # voice: assets/voice/zhuk_11.mp3
     ~ remove_item("item_mark", 50)
+    ~ set_flag("zhuk_paid")
     ~ fire_rule("rule_zhuk_info")
     -> Начало_hub
 + { get_flag("zhuk_paid") } [Кто заказал остановку помпы?]

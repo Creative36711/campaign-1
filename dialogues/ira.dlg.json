@@ -499,6 +499,66 @@
           "once": true
         },
         {
+          "text": "В галерее лежит казённый ранец. Бирка: «Смена 13-го. Ярус 8».",
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "pack_tag"
+            },
+            {
+              "type": "flag",
+              "flag": "ira_pack",
+              "not": true
+            }
+          ],
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "ira_pack"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Лямку узлом он вязал. Устав велит пряжкой, а Стась говорил: пряжка на бегу расстёгивается. Это его ранец.",
+                    "voice": "assets/voice/ira_28.mp3",
+                    "emotion": "sad"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Паёк и флягу бросил... Значит, не прятался. Бежал к затвору — закрывать воду, пока ещё можно было.",
+                    "voice": "assets/voice/ira_29.mp3",
+                    "emotion": "thoughtful"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "change_disposition",
+                    "target": "npc_ira",
+                    "delta": 4
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "fire_rule",
+                    "rule": "rule_ira_pack"
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "stay",
+          "once": true
+        },
+        {
           "text": "Мне пора.",
           "sections": [],
           "goto": "end"
