@@ -21,6 +21,10 @@
     {
       "type": "player_enters_location",
       "location": "loc_surface"
+    },
+    {
+      "type": "flag_not_set",
+      "flag": "kast_hand"
     }
   ],
   "effects": [
