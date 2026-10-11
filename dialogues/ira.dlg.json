@@ -867,6 +867,13 @@
                 {
                   "kind": "effect",
                   "effect": {
+                    "type": "fire_rule",
+                    "rule": "rule_ira_returns_card"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
                     "type": "set_description",
                     "entity": "npc_ira",
                     "text": "Помощница мастера. Ходила с дознавателем вниз, теперь снова ждёт у пульта."

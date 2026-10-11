@@ -112,6 +112,7 @@ VAR r = 0
 + { in_party("npc_ira") } [Возвращайся к пульту. Дальше я сам.]
     Ладно, вернусь к пульту. Только не пропадай там внизу, как он. # emotion: sad # voice: assets/voice/ira_37.mp3
     ~ leave_party("npc_ira")
+    ~ fire_rule("rule_ira_returns_card")
     ~ set_description("npc_ira", "Помощница мастера. Ходила с дознавателем вниз, теперь снова ждёт у пульта.")
     -> DONE
 + { not (in_party("npc_ira")) } [Мне пора.]

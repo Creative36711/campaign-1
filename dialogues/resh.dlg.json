@@ -750,6 +750,13 @@
                     "type": "leave_party",
                     "npc": "npc_resh"
                   }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "fire_rule",
+                    "rule": "rule_resh_returns_card"
+                  }
                 }
               ]
             }

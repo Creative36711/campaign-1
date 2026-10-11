@@ -102,6 +102,7 @@ VAR r = 0
 + { in_party("npc_resh") } [Возвращайся к забою. Дальше я сам.]
     Ладно. Вернусь к забою: там стена тёплая и жилу слышно. Позовёшь — приду. # emotion: calm # voice: assets/voice/resh_21.mp3
     ~ leave_party("npc_resh")
+    ~ fire_rule("rule_resh_returns_card")
     -> DONE
 + { not (in_party("npc_resh")) } [Мне пора.]
     -> DONE
