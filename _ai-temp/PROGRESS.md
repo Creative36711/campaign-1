@@ -473,3 +473,15 @@ TODO: тестовый бой с фигурками (ход 27); статусы 
 - Портреты героя status_choke / status_cold ×3 облика.
 - Открытка pc_kell_squad перед боем Келл+2 громилы (fight_party, rig_party, rig_tip_party; в rematch не ставил — once:false).
 - Аудит наград interact_options: все once:true.
+
+## Итерация 29b (12.10, по письму разработчика движка)
+- ira_joined/resh_joined = «сейчас в отряде»: clear_flag в ветках ухода (ira, resh, ссора у помпы) + rule_ira_unflag/rule_resh_unflag (once:false; flag_set + not in_party + entity_alive). Постоянные ira_recruited/resh_recruited — для первого найма и «Пойдём со мной снова».
+- Гибель: rule_ira_fallen/rule_resh_fallen (entity_dead → *_dead, ремарка, открытка). joined не снимается у мёртвых (сторож требует entity_alive) → слот остаётся пустым.
+- Реакции: rule_ira_on_resh_quarrel, rule_ira_on_resh_yield, rule_ira_mourns_resh, rule_resh_mourns_ira. Реш: узел Обида (после ссоры), отдельный повторный найм после resh_allows_pump.
+- У_помпы: второй довод «Стась» (ira_pack) persuade 35.
+- Бантер Реша: каморка, галерея (открытки), Сухой ряд (голос).
+- kell_at_gate: ставится в fail-ветках финала, прячет slot_kell в конторе.
+- Стекольщик: Начало → Ушёл при glazier_robbed/beaten (повтор озвученных narr_glazier_2 + glazier_7).
+- Аудит: хинт ниши, встреча «пение жилы» (Айла), открытка у затвора (Стась).
+- Портреты героя: status_veinsong, status_hunger ×3.
+- Бэклог: реплика Реша у затвора (rule_banter_resh_sluice) — цитата в show_message без голоса; озвучить в следующем ходу.
