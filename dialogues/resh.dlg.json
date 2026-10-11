@@ -11,6 +11,32 @@
             {
               "type": "flag",
               "flag": "met_resh"
+            },
+            {
+              "type": "in_party",
+              "npc": "npc_resh"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Реш шагает следом, придерживаясь ладонью за стену, и ждёт, что ты скажешь.",
+                "action": true
+              }
+            }
+          ]
+        },
+        {
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "met_resh"
+            },
+            {
+              "type": "in_party",
+              "not": true,
+              "npc": "npc_resh"
             }
           ],
           "steps": [
@@ -22,8 +48,17 @@
                 "voice": "assets/voice/narr_resh_rep.mp3"
               }
             }
+          ]
+        },
+        {
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "met_resh",
+              "not": true
+            }
           ],
-          "else_steps": [
+          "steps": [
             {
               "kind": "line",
               "line": {

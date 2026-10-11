@@ -96,7 +96,7 @@
     },
     {
       "id": "slot_bench_row",
-      "label": "Верстак у стены",
+      "label": "Скамья у стены",
       "type": [
         "person",
         "prop",
@@ -108,7 +108,7 @@
       "w": 85,
       "h": 100,
       "condition": null,
-      "default_entity": "item_bench",
+      "default_entity": "item_row_bench",
       "sound": "sfx_anvil",
       "sound_volume": 0.7,
       "environmental": true

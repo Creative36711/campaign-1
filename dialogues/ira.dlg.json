@@ -11,6 +11,32 @@
             {
               "type": "flag",
               "flag": "met_ira"
+            },
+            {
+              "type": "in_party",
+              "npc": "npc_ira"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Ира идёт рядом, держа фонарь пониже, и ждёт, что ты скажешь.",
+                "action": true
+              }
+            }
+          ]
+        },
+        {
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "met_ira"
+            },
+            {
+              "type": "in_party",
+              "not": true,
+              "npc": "npc_ira"
             }
           ],
           "steps": [
@@ -22,8 +48,17 @@
                 "voice": "assets/voice/narr_ira_rep.mp3"
               }
             }
+          ]
+        },
+        {
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "met_ira",
+              "not": true
+            }
           ],
-          "else_steps": [
+          "steps": [
             {
               "kind": "line",
               "line": {
