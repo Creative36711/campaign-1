@@ -42,6 +42,11 @@
     {
       "type": "clear_flag",
       "flag": "ira_rest_said"
+    },
+    {
+      "type": "set_entity_state",
+      "entity": "npc_ira",
+      "state": ""
     }
   ]
 }

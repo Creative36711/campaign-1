@@ -28,6 +28,11 @@
       "flag": "resh_worn"
     },
     {
+      "type": "set_entity_state",
+      "entity": "npc_resh",
+      "state": "tired"
+    },
+    {
       "type": "show_message",
       "text": "Реш сухо кашляет в кулак. Губы у него серые, как цементная пыль."
     }

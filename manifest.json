@@ -220,7 +220,8 @@
     "rule_comp_resh_ok.json",
     "rule_glazier_card.json",
     "rule_camp_ambush_card.json",
-    "rule_resh_joins_card.json"
+    "rule_resh_joins_card.json",
+    "rule_air_back_card.json"
   ],
   "arenas": [
     "arena_gate.json",

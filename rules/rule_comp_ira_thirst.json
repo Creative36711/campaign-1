@@ -28,6 +28,11 @@
       "flag": "ira_worn"
     },
     {
+      "type": "set_entity_state",
+      "entity": "npc_ira",
+      "state": "tired"
+    },
+    {
       "type": "show_message",
       "text": "Ира облизывает потрескавшиеся губы. Воды она не просит — ждёт, пока предложишь сам."
     }

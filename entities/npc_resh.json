@@ -9,7 +9,8 @@
     "afraid": "assets/img/npc/resh_afraid.jpg",
     "thoughtful": "assets/img/npc/resh_thoughtful.jpg",
     "sad": "assets/img/npc/resh_sad.jpg",
-    "calm": "assets/img/npc/resh_calm.jpg"
+    "calm": "assets/img/npc/resh_calm.jpg",
+    "tired": "assets/img/npc/resh_tired.jpg"
   },
   "stats": {
     "STR": 9,

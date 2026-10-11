@@ -28,6 +28,11 @@
       "flag": "ira_worn"
     },
     {
+      "type": "set_entity_state",
+      "entity": "npc_ira",
+      "state": "tired"
+    },
+    {
       "type": "show_message",
       "text": "Ира уже второй раз затягивает ремень потуже и делает вид, что так и было."
     }
