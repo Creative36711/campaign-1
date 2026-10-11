@@ -1085,6 +1085,53 @@
           "type": "object",
           "properties": {
             "type": {
+              "const": "change_companion_need"
+            },
+            "entity": {
+              "type": "string"
+            },
+            "need": {
+              "type": "string"
+            },
+            "delta": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "type",
+            "entity",
+            "need",
+            "delta"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "transfer_to_companion"
+            },
+            "entity": {
+              "type": "string"
+            },
+            "item": {
+              "type": "string"
+            },
+            "quantity": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "type",
+            "entity",
+            "item"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
               "const": "change_skill"
             },
             "skill": {
@@ -3479,6 +3526,54 @@
           "required": [
             "type",
             "entity"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "companion_need_le"
+            },
+            "entity": {
+              "type": "string"
+            },
+            "need": {
+              "type": "string"
+            },
+            "threshold": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "type",
+            "entity",
+            "need",
+            "threshold"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "companion_need_ge"
+            },
+            "entity": {
+              "type": "string"
+            },
+            "need": {
+              "type": "string"
+            },
+            "threshold": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "type",
+            "entity",
+            "need",
+            "threshold"
           ],
           "additionalProperties": false
         },
@@ -7401,6 +7496,17 @@
           "type": "number",
           "description": "Расовый/индивидуальный множитель грузоподъёмности (напр. 2.5 для мутантов, гигантов, четвероногих)"
         },
+        "companion_needs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "НАПАРНИК: набор потребностей, которые тикают у существа в отряде (id из\nреестра `meta.needs`; пусто/нет — потребностей нет: робот, нежить).\nУбывают и восстанавливаются по тикам теми же правилами, что у героя; общий\nстол: когда потребность героя растёт (еда, сон — эффект change_need с\nположительной дельтой), напарник, отслеживающий ту же потребность, растёт\nна столько же. Ниже `critical_threshold` собственной потребности — штраф\nнавыкам в бою и метка «истощён». Читать/менять из правил и ink:\nусловия `companion_need_le`/`companion_need_ge`, эффект\n`change_companion_need`."
+        },
+        "companion_carry": {
+          "type": "boolean",
+          "description": "НАПАРНИК: «вторая сумка» — у существа есть собственный инвентарь, между\nгероем и напарником можно передавать предметы; надетые напарником оружие\nи броня используются им в бою. Грузоподъёмность считается по тем же\nформулам энкадменса, что у героя"
+        },
         "trader": {
           "anyOf": [
             {
@@ -8981,6 +9087,70 @@
           "required": [
             "type",
             "delta"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "change_companion_need"
+            },
+            "npc": {
+              "type": "string"
+            },
+            "need": {
+              "type": "string"
+            },
+            "delta": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "type",
+            "npc",
+            "need",
+            "delta"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "transfer_to_companion"
+            },
+            "npc": {
+              "type": "string"
+            },
+            "item": {
+              "type": "string"
+            },
+            "qty": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "type",
+            "npc",
+            "item",
+            "qty"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "leave_party"
+            },
+            "npc": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type",
+            "npc"
           ],
           "additionalProperties": false
         },
