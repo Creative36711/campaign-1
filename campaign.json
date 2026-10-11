@@ -2850,7 +2850,10 @@
           "thoughtful": "assets/img/npc/hero_thoughtful.jpg",
           "angry": "assets/img/npc/hero_angry.jpg",
           "afraid": "assets/img/npc/hero_afraid.jpg",
-          "sad": "assets/img/npc/hero_sad.jpg"
+          "sad": "assets/img/npc/hero_sad.jpg",
+          "wounded": "assets/img/npc/hero_wounded.jpg",
+          "tired": "assets/img/npc/hero_tired.jpg",
+          "status_rot": "assets/img/npc/hero_rot.jpg"
         },
         "combat_figure": "assets/img/npc/fig_hero.png",
         "combat_figure_mode": "topdown",
@@ -2866,7 +2869,10 @@
           "thoughtful": "assets/img/npc/hero_f_thoughtful.jpg",
           "angry": "assets/img/npc/hero_f_angry.jpg",
           "afraid": "assets/img/npc/hero_f_afraid.jpg",
-          "sad": "assets/img/npc/hero_f_sad.jpg"
+          "sad": "assets/img/npc/hero_f_sad.jpg",
+          "wounded": "assets/img/npc/hero_f_wounded.jpg",
+          "tired": "assets/img/npc/hero_f_tired.jpg",
+          "status_rot": "assets/img/npc/hero_f_rot.jpg"
         },
         "combat_figure": "assets/img/npc/fig_hero_f.png",
         "combat_figure_mode": "topdown",
@@ -2882,7 +2888,10 @@
           "thoughtful": "assets/img/npc/hero_vet_thoughtful.jpg",
           "angry": "assets/img/npc/hero_vet_angry.jpg",
           "afraid": "assets/img/npc/hero_vet_afraid.jpg",
-          "sad": "assets/img/npc/hero_vet_sad.jpg"
+          "sad": "assets/img/npc/hero_vet_sad.jpg",
+          "wounded": "assets/img/npc/hero_vet_wounded.jpg",
+          "tired": "assets/img/npc/hero_vet_tired.jpg",
+          "status_rot": "assets/img/npc/hero_vet_rot.jpg"
         },
         "combat_figure": "assets/img/npc/fig_hero_vet.png",
         "combat_figure_mode": "topdown",
