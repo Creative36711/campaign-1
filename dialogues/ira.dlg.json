@@ -557,7 +557,7 @@
           "conds": [
             {
               "type": "flag",
-              "flag": "ira_joined",
+              "flag": "ira_recruited",
               "not": true
             },
             {
@@ -759,7 +759,7 @@
           "conds": [
             {
               "type": "flag",
-              "flag": "ira_joined"
+              "flag": "ira_recruited"
             },
             {
               "type": "in_party",
@@ -783,6 +783,13 @@
                   "effect": {
                     "type": "join_party",
                     "npc": "npc_ira"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "ira_joined"
                   }
                 },
                 {
@@ -862,6 +869,13 @@
                   "effect": {
                     "type": "leave_party",
                     "npc": "npc_ira"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "clear_flag",
+                    "flag": "ira_joined"
                   }
                 },
                 {

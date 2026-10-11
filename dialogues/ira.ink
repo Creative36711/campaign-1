@@ -1,3 +1,4 @@
+EXTERNAL clear_flag(a0)
 EXTERNAL set_description(a0, a1)
 EXTERNAL join_party(a0)
 EXTERNAL leave_party(a0)
@@ -76,7 +77,7 @@ VAR r = 0
     Кто-то, кому выгодно, чтобы восьмой затопило. # voice: assets/voice/ira_10.mp3
     Надзор два года просил Цех отдать девятый ярус. Теперь он ничей — и под водой. # emotion: thoughtful # voice: assets/voice/ira_5.mp3
     -> Начало_hub
-+ { not (get_flag("ira_joined")) and get_disposition("npc_ira") >= 25 } [Пойдём со мной. Здесь тебя не защитят.]
++ { not (get_flag("ira_recruited")) and get_disposition("npc_ira") >= 25 } [Пойдём со мной. Здесь тебя не защитят.]
     Она кивает раньше, чем ты договорил. # action # voice: assets/voice/narr_ira_5.mp3
     Только возьму фонарь. И ключ от затвора — у помощницы мастера он свой. # voice: assets/voice/ira_9.mp3
     ~ fire_rule("rule_ira_joins")
@@ -102,9 +103,10 @@ VAR r = 0
     ~ change_disposition("npc_ira", 3)
     ~ fire_rule("rule_ira_valve")
     -> Начало_hub
-+ { get_flag("ira_joined") and not (in_party("npc_ira")) } [Пойдём со мной снова.]
++ { get_flag("ira_recruited") and not (in_party("npc_ira")) } [Пойдём со мной снова.]
     Опять вниз? Пойдём. Фонарь я так и не выпустила из рук. # emotion: calm # voice: assets/voice/ira_38.mp3
     ~ join_party("npc_ira")
+    ~ set_flag("ira_joined")
     ~ set_description("npc_ira", "Помощница мастера, пошедшая с дознавателем. Знает помпу по звуку и не верит бумагам.")
     -> DONE
 + { in_party("npc_ira") } [Как ты держишься?]
@@ -112,6 +114,7 @@ VAR r = 0
 + { in_party("npc_ira") } [Возвращайся к пульту. Дальше я сам.]
     Ладно, вернусь к пульту. Только не пропадай там внизу, как он. # emotion: sad # voice: assets/voice/ira_37.mp3
     ~ leave_party("npc_ira")
+    ~ clear_flag("ira_joined")
     ~ fire_rule("rule_ira_returns_card")
     ~ set_description("npc_ira", "Помощница мастера. Ходила с дознавателем вниз, теперь снова ждёт у пульта.")
     -> DONE

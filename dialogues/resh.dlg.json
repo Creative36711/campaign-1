@@ -401,6 +401,13 @@
                 {
                   "kind": "effect",
                   "effect": {
+                    "type": "set_flag",
+                    "flag": "resh_recruited"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
                     "type": "change_companion_need",
                     "npc": "npc_resh",
                     "need": "need_hunger",
@@ -443,7 +450,7 @@
             },
             {
               "type": "flag",
-              "flag": "resh_joined",
+              "flag": "resh_recruited",
               "not": true
             }
           ],
@@ -668,6 +675,13 @@
                     "type": "join_party",
                     "npc": "npc_resh"
                   }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "resh_joined"
+                  }
                 }
               ]
             }
@@ -676,7 +690,7 @@
           "conds": [
             {
               "type": "flag",
-              "flag": "resh_joined"
+              "flag": "resh_recruited"
             },
             {
               "type": "in_party",
@@ -754,6 +768,13 @@
                   "effect": {
                     "type": "leave_party",
                     "npc": "npc_resh"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "clear_flag",
+                    "flag": "resh_joined"
                   }
                 },
                 {
@@ -902,6 +923,13 @@
                       "effect": {
                         "type": "leave_party",
                         "npc": "npc_resh"
+                      }
+                    },
+                    {
+                      "kind": "effect",
+                      "effect": {
+                        "type": "clear_flag",
+                        "flag": "resh_joined"
                       }
                     },
                     {

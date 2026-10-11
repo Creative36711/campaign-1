@@ -1,3 +1,4 @@
+EXTERNAL clear_flag(a0)
 EXTERNAL leave_party(a0)
 EXTERNAL change_companion_need(a0, a1, a2)
 EXTERNAL fire_rule(a0)
@@ -60,11 +61,12 @@ VAR r = 0
     ~ unlock_recipe("recipe_charge")
     ~ set_flag("resh_charge_recipe")
     -> Начало_hub
-* { get_flag("resh_trusts") and not (get_flag("resh_joined")) } [Пойдём со мной.]
+* { get_flag("resh_trusts") and not (get_flag("resh_recruited")) } [Пойдём со мной.]
     Он встаёт тяжело, опираясь о стену ладонью. # action # sfx: snd_stone # voice: assets/voice/narr_resh_2.mp3
     Хорошо. Но если я увижу, что ты вставишь сердцевину в привод — я лягу на муфту. # voice: assets/voice/resh_8.mp3
     ~ join_party("npc_resh")
     ~ set_flag("resh_joined")
+    ~ set_flag("resh_recruited")
     ~ change_companion_need("npc_resh", "need_hunger", -72)
     ~ change_companion_need("npc_resh", "need_thirst", -50)
     ~ change_companion_need("npc_resh", "need_rest", -45)
@@ -92,16 +94,18 @@ VAR r = 0
     ~ set_flag("core_taken")
     ~ fire_rule("rule_resh_core_given")
     -> Начало_hub
-+ { get_flag("resh_joined") and not (in_party("npc_resh")) and not (get_flag("resh_quarrel")) } [Пойдём со мной снова.]
++ { get_flag("resh_recruited") and not (in_party("npc_resh")) and not (get_flag("resh_quarrel")) } [Пойдём со мной снова.]
     Он встаёт тяжело, опираясь о стену ладонью. # action # sfx: snd_stone # voice: assets/voice/narr_resh_2.mp3
     Хорошо. Но если я увижу, что ты вставишь сердцевину в привод — я лягу на муфту. # voice: assets/voice/resh_8.mp3
     ~ join_party("npc_resh")
+    ~ set_flag("resh_joined")
     -> DONE
 + { in_party("npc_resh") } [Как ты держишься?]
     { get_flag("resh_worn"): -> Самочувствие_плохо | -> Самочувствие_хорошо }
 + { in_party("npc_resh") } [Возвращайся к забою. Дальше я сам.]
     Ладно. Вернусь к забою: там стена тёплая и жилу слышно. Позовёшь — приду. # emotion: calm # voice: assets/voice/resh_21.mp3
     ~ leave_party("npc_resh")
+    ~ clear_flag("resh_joined")
     ~ fire_rule("rule_resh_returns_card")
     -> DONE
 + { not (in_party("npc_resh")) } [Мне пора.]
@@ -150,6 +154,7 @@ VAR r = 0
 ~ change_disposition("npc_resh", -15)
 ~ set_flag("resh_quarrel")
 ~ leave_party("npc_resh")
+~ clear_flag("resh_joined")
 ~ fire_rule("rule_resh_quarrel")
 -> DONE
 
