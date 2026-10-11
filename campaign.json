@@ -2799,7 +2799,8 @@
           "sad": "assets/img/npc/hero_sad.jpg"
         },
         "combat_figure": "assets/img/npc/fig_hero.png",
-        "combat_figure_mode": "topdown"
+        "combat_figure_mode": "topdown",
+        "combat_facing_offset": 180
       },
       {
         "id": "portrait_wright",
@@ -2814,7 +2815,8 @@
           "sad": "assets/img/npc/hero_f_sad.jpg"
         },
         "combat_figure": "assets/img/npc/fig_hero_f.png",
-        "combat_figure_mode": "topdown"
+        "combat_figure_mode": "topdown",
+        "combat_facing_offset": 180
       },
       {
         "id": "portrait_veteran",
@@ -2829,7 +2831,8 @@
           "sad": "assets/img/npc/hero_vet_sad.jpg"
         },
         "combat_figure": "assets/img/npc/fig_hero_vet.png",
-        "combat_figure_mode": "topdown"
+        "combat_figure_mode": "topdown",
+        "combat_facing_offset": 180
       }
     ]
   },

@@ -50,5 +50,6 @@
     "armor": "item_coat"
   },
   "combat_figure": "assets/img/npc/fig_resh.png",
-  "figure_mode": "topdown"
+  "figure_mode": "topdown",
+  "facing_offset": 180
 }
