@@ -2895,7 +2895,9 @@
           "tired": "assets/img/npc/hero_tired.jpg",
           "status_rot": "assets/img/npc/hero_rot.jpg",
           "status_choke": "assets/img/npc/hero_choke.jpg",
-          "status_cold": "assets/img/npc/hero_cold.jpg"
+          "status_cold": "assets/img/npc/hero_cold.jpg",
+          "status_veinsong": "assets/img/npc/hero_veinsong.jpg",
+          "status_hunger": "assets/img/npc/hero_hunger.jpg"
         },
         "combat_figure": "assets/img/npc/fig_hero.png",
         "combat_figure_mode": "topdown",
@@ -2916,7 +2918,9 @@
           "tired": "assets/img/npc/hero_f_tired.jpg",
           "status_rot": "assets/img/npc/hero_f_rot.jpg",
           "status_choke": "assets/img/npc/hero_f_choke.jpg",
-          "status_cold": "assets/img/npc/hero_f_cold.jpg"
+          "status_cold": "assets/img/npc/hero_f_cold.jpg",
+          "status_veinsong": "assets/img/npc/hero_f_veinsong.jpg",
+          "status_hunger": "assets/img/npc/hero_f_hunger.jpg"
         },
         "combat_figure": "assets/img/npc/fig_hero_f.png",
         "combat_figure_mode": "topdown",
@@ -2937,7 +2941,9 @@
           "tired": "assets/img/npc/hero_vet_tired.jpg",
           "status_rot": "assets/img/npc/hero_vet_rot.jpg",
           "status_choke": "assets/img/npc/hero_vet_choke.jpg",
-          "status_cold": "assets/img/npc/hero_vet_cold.jpg"
+          "status_cold": "assets/img/npc/hero_vet_cold.jpg",
+          "status_veinsong": "assets/img/npc/hero_vet_veinsong.jpg",
+          "status_hunger": "assets/img/npc/hero_vet_hunger.jpg"
         },
         "combat_figure": "assets/img/npc/fig_hero_vet.png",
         "combat_figure_mode": "topdown",
