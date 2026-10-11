@@ -14,8 +14,8 @@ EXTERNAL unlock_codex(a0)
 
 === Начало ===
 { get_flag("met_dozh"): -> Снова }
-Дож что-то взвешивает на ладони и прячет в рукав, не глядя. # action # voice: assets/voice/narr_dozh_1.mp3
-Смотри, не покупатель. С покупателями я вежливей. # voice: assets/voice/dozh_4.mp3
+Старьёвщик что-то взвешивает на ладони и прячет в рукав, не глядя. # action # voice: assets/voice/narr_dozh_1.mp3
+Я Дож. Вижу — не покупатель. С покупателями я вежливей. # voice: assets/voice/dozh_19.mp3
 ~ learn_name("npc_dozh")
 ~ set_flag("met_dozh")
 -> Начало_hub

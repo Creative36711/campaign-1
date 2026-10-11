@@ -18,7 +18,7 @@ VAR r = 0
 
 === Начало ===
 { get_flag("met_ira"): -> Снова }
-Ира стирает мазут с ладоней ветошью и смотрит на тебя исподлобья. # action # voice: assets/voice/narr_ira_1.mp3
+Девушка у пульта стирает мазут с ладоней ветошью и смотрит на тебя исподлобья. # action # voice: assets/voice/narr_ira_1.mp3
 Ты насчёт помпы? Я Ира Ярова, помощница мастера. Всё уже рассказала старшине — он велел не мешать. # voice: assets/voice/ira_1.mp3 # emotion: afraid
 ~ learn_name("npc_ira")
 ~ set_flag("met_ira")

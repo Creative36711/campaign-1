@@ -16,8 +16,8 @@ EXTERNAL learn_name(a0)
 
 === Начало ===
 { get_flag("met_ayla"): -> Снова }
-Айла промокает бинт и не смотрит на твои руки. # action # sfx: sfx_water # voice: assets/voice/narr_ayla_1.mp3
-Сядь. У тебя ссадина на костяшках и вид человека, который не спал двое суток. # voice: assets/voice/ayla_1.mp3
+Женщина промокает бинт и не смотрит на твои руки. # action # sfx: sfx_water # voice: assets/voice/narr_ayla_1.mp3
+Я Айла. Сядь. У тебя ссадина на костяшках и вид человека, который не спал двое суток. # voice: assets/voice/ayla_14.mp3
 Двое суток без сна — это полдела. За трое начинают мерещиться вещи, которые потом вносят в протокол. # voice: assets/voice/ayla_8.mp3
 ~ learn_name("npc_ayla")
 ~ set_flag("met_ayla")
