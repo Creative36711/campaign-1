@@ -947,6 +947,116 @@
           }
         },
         {
+          "text": "Стась бежал к затвору, чтобы восьмой не утонул. Не дай этому пропасть.",
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "ira_pack"
+            },
+            {
+              "type": "flag",
+              "flag": "resh_pump_asked",
+              "not": true
+            }
+          ],
+          "once": true,
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "resh_pump_asked"
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "end",
+          "check": {
+            "skill": "persuade",
+            "difficulty": 35,
+            "success": {
+              "sections": [
+                {
+                  "steps": [
+                    {
+                      "kind": "line",
+                      "line": {
+                        "text": "Сорок лет я выбирал между ярусом и жилой. Теперь выбирай ты. Только я смотреть не буду.",
+                        "voice": "assets/voice/resh_24.mp3",
+                        "emotion": "sad"
+                      }
+                    },
+                    {
+                      "kind": "effect",
+                      "effect": {
+                        "type": "set_flag",
+                        "flag": "resh_allows_pump"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "goto": "end"
+            },
+            "fail": {
+              "sections": [
+                {
+                  "steps": [
+                    {
+                      "kind": "line",
+                      "line": {
+                        "text": "Нет. Хочешь пустить её — пускай без меня. Я к жиле: кто-то должен быть рядом, когда она начнёт остывать.",
+                        "voice": "assets/voice/resh_25.mp3",
+                        "emotion": "angry"
+                      }
+                    },
+                    {
+                      "kind": "effect",
+                      "effect": {
+                        "type": "change_disposition",
+                        "target": "npc_resh",
+                        "delta": -15
+                      }
+                    },
+                    {
+                      "kind": "effect",
+                      "effect": {
+                        "type": "set_flag",
+                        "flag": "resh_quarrel"
+                      }
+                    },
+                    {
+                      "kind": "effect",
+                      "effect": {
+                        "type": "leave_party",
+                        "npc": "npc_resh"
+                      }
+                    },
+                    {
+                      "kind": "effect",
+                      "effect": {
+                        "type": "clear_flag",
+                        "flag": "resh_joined"
+                      }
+                    },
+                    {
+                      "kind": "effect",
+                      "effect": {
+                        "type": "fire_rule",
+                        "rule": "rule_resh_quarrel"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "goto": "end"
+            }
+          }
+        },
+        {
           "text": "Ладно. Не сейчас.",
           "sections": [
             {

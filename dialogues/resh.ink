@@ -141,6 +141,10 @@ VAR r = 0
     ~ set_flag("resh_pump_asked")
     ~ r = skill_check("persuade", 50)
     {r: -> У_помпы_да | -> У_помпы_нет}
+* { get_flag("ira_pack") and not (get_flag("resh_pump_asked")) } [Стась бежал к затвору, чтобы восьмой не утонул. Не дай этому пропасть.]
+    ~ set_flag("resh_pump_asked")
+    ~ r = skill_check("persuade", 35)
+    {r: -> У_помпы_да | -> У_помпы_нет}
 + [Ладно. Не сейчас.]
     -> DONE
 
