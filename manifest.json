@@ -231,7 +231,11 @@
     "rule_banter_resh_gate.json",
     "rule_banter_resh_dryrow.json",
     "rule_ira_returns_card.json",
-    "rule_resh_returns_card.json"
+    "rule_resh_returns_card.json",
+    "rule_final_fight_party.json",
+    "rule_final_rematch_party.json",
+    "rule_final_rig_party.json",
+    "rule_final_rig_tip_party.json"
   ],
   "arenas": [
     "arena_gate.json",
