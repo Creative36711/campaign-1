@@ -95,5 +95,5 @@
   "combat_figure": "assets/img/npc/fig_vex.png",
   "figure_mode": "topdown",
   "unknown_label": "Смотритель у пульта",
-  "facing_offset": 0
+  "facing_offset": 180
 }

@@ -63,5 +63,5 @@
     "down": "assets/img/npc/fig_resh_down.png",
     "dead": "assets/img/npc/fig_resh_down.png"
   },
-  "facing_offset": 0
+  "facing_offset": 180
 }

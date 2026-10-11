@@ -64,5 +64,5 @@
     "down": "assets/img/npc/fig_watchman_dead.png",
     "dead": "assets/img/npc/fig_watchman_dead.png"
   },
-  "facing_offset": 0
+  "facing_offset": 180
 }

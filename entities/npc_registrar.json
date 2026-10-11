@@ -35,5 +35,5 @@
   "combat_figure": "assets/img/npc/fig_registrar.png",
   "figure_mode": "topdown",
   "breathe": false,
-  "facing_offset": 0
+  "facing_offset": 180
 }

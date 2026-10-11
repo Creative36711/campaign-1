@@ -43,5 +43,5 @@
   "unknown_label": "Человек у жаровни",
   "combat_figure": "assets/img/npc/fig_zhuk.png",
   "figure_mode": "topdown",
-  "facing_offset": 0
+  "facing_offset": 180
 }

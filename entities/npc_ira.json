@@ -72,5 +72,5 @@
     "need_warmth"
   ],
   "companion_carry": true,
-  "facing_offset": 0
+  "facing_offset": 180
 }

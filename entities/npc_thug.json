@@ -76,5 +76,5 @@
     "down": "assets/img/npc/fig_thug_down.png",
     "dead": "assets/img/npc/fig_thug_down.png"
   },
-  "facing_offset": 0
+  "facing_offset": 180
 }
