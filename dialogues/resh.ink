@@ -28,7 +28,13 @@ VAR r = 0
 
 === Снова ===
 { in_party("npc_resh"): -> В_пути }
+{ get_flag("resh_quarrel"): -> Обида }
 Реш поворачивает голову на звук шагов: он уже знает, кто пришёл. # action # voice: assets/voice/narr_resh_rep.mp3
+-> Начало_hub
+
+=== Обида ===
+Реш не оборачивается. Ладонь лежит на жиле, как на плече больного. # action # voice: assets/voice/narr_resh_6.mp3
+Говори, раз пришёл. Только про помпу — не со мной. # emotion: sad # voice: assets/voice/resh_30.mp3
 -> Начало_hub
 
 === В_пути ===
@@ -94,7 +100,13 @@ VAR r = 0
     ~ set_flag("core_taken")
     ~ fire_rule("rule_resh_core_given")
     -> Начало_hub
-+ { get_flag("resh_recruited") and not (in_party("npc_resh")) and not (get_flag("resh_quarrel")) } [Пойдём со мной снова.]
++ { get_flag("resh_recruited") and not (in_party("npc_resh")) and not (get_flag("resh_quarrel")) and get_flag("resh_allows_pump") } [Пойдём со мной снова.]
+    Он встаёт тяжело, опираясь о стену ладонью. # action # sfx: snd_stone # voice: assets/voice/narr_resh_2.mp3
+    Пойдём. Про муфту я своё сказал — дальше твоя рука. # emotion: calm # voice: assets/voice/resh_29.mp3
+    ~ join_party("npc_resh")
+    ~ set_flag("resh_joined")
+    -> DONE
++ { get_flag("resh_recruited") and not (in_party("npc_resh")) and not (get_flag("resh_quarrel")) and not (get_flag("resh_allows_pump")) } [Пойдём со мной снова.]
     Он встаёт тяжело, опираясь о стену ладонью. # action # sfx: snd_stone # voice: assets/voice/narr_resh_2.mp3
     Хорошо. Но если я увижу, что ты вставишь сердцевину в привод — я лягу на муфту. # voice: assets/voice/resh_8.mp3
     ~ join_party("npc_resh")
@@ -168,4 +180,20 @@ VAR r = 0
 
 === Б_журнал ===
 Восемнадцать сорок, вниз. Обратно не записан. Выходит, по бумагам я всё ещё там. # emotion: thoughtful # voice: assets/voice/resh_27.mp3
+-> DONE
+
+=== П_смерть_иры ===
+Девочка шла за фонарём, а не за мной. Надо было оставить её у пульта. # emotion: sad # voice: assets/voice/resh_28.mp3
+-> DONE
+
+=== Б_ряд ===
+В Сухом ряду мне должны за насос. Не напоминай им, что я живой. # emotion: thoughtful # voice: assets/voice/resh_32.mp3
+-> DONE
+
+=== Б_каморка ===
+Моя каморка. Сорок лет одна кружка и один табурет — гостей тут не ждали. # emotion: calm # voice: assets/voice/resh_31.mp3
+-> DONE
+
+=== Б_галерея ===
+Вода стоит на ладонь выше, чем позавчера. Каркас пьёт медленно, но не останавливается. # emotion: thoughtful # voice: assets/voice/resh_33.mp3
 -> DONE

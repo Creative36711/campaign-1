@@ -242,7 +242,13 @@
     "rule_ira_unflag.json",
     "rule_resh_unflag.json",
     "rule_ira_fallen.json",
-    "rule_resh_fallen.json"
+    "rule_resh_fallen.json",
+    "rule_ira_on_resh_quarrel.json",
+    "rule_ira_on_resh_yield.json",
+    "rule_ira_mourns_resh.json",
+    "rule_resh_mourns_ira.json",
+    "rule_banter_resh_room.json",
+    "rule_banter_resh_gallery.json"
   ],
   "arenas": [
     "arena_gate.json",

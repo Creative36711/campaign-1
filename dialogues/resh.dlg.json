@@ -38,6 +38,11 @@
               "type": "in_party",
               "not": true,
               "npc": "npc_resh"
+            },
+            {
+              "type": "flag",
+              "flag": "resh_quarrel",
+              "not": true
             }
           ],
           "steps": [
@@ -47,6 +52,41 @@
                 "text": "Реш поворачивает голову на звук шагов: он уже знает, кто пришёл.",
                 "action": true,
                 "voice": "assets/voice/narr_resh_rep.mp3"
+              }
+            }
+          ]
+        },
+        {
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "met_resh"
+            },
+            {
+              "type": "in_party",
+              "not": true,
+              "npc": "npc_resh"
+            },
+            {
+              "type": "flag",
+              "flag": "resh_quarrel"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Реш не оборачивается. Ладонь лежит на жиле, как на плече больного.",
+                "voice": "assets/voice/narr_resh_6.mp3",
+                "action": true
+              }
+            },
+            {
+              "kind": "line",
+              "line": {
+                "text": "Говори, раз пришёл. Только про помпу — не со мной.",
+                "voice": "assets/voice/resh_30.mp3",
+                "emotion": "sad"
               }
             }
           ]
@@ -665,6 +705,67 @@
                 {
                   "kind": "line",
                   "line": {
+                    "text": "Пойдём. Про муфту я своё сказал — дальше твоя рука.",
+                    "voice": "assets/voice/resh_29.mp3",
+                    "emotion": "calm"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "join_party",
+                    "npc": "npc_resh"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "resh_joined"
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "end",
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "resh_recruited"
+            },
+            {
+              "type": "in_party",
+              "npc": "npc_resh",
+              "not": true
+            },
+            {
+              "type": "flag",
+              "flag": "resh_quarrel",
+              "not": true
+            },
+            {
+              "type": "flag",
+              "flag": "resh_allows_pump"
+            }
+          ]
+        },
+        {
+          "text": "Пойдём со мной снова.",
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Он встаёт тяжело, опираясь о стену ладонью.",
+                    "action": true,
+                    "sfx": "snd_stone",
+                    "voice": "assets/voice/narr_resh_2.mp3"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
                     "text": "Хорошо. Но если я увижу, что ты вставишь сердцевину в привод — я лягу на муфту.",
                     "voice": "assets/voice/resh_8.mp3"
                   }
@@ -700,6 +801,11 @@
             {
               "type": "flag",
               "flag": "resh_quarrel",
+              "not": true
+            },
+            {
+              "type": "flag",
+              "flag": "resh_allows_pump",
               "not": true
             }
           ]
@@ -1099,6 +1205,86 @@
               "line": {
                 "text": "Восемнадцать сорок, вниз. Обратно не записан. Выходит, по бумагам я всё ещё там.",
                 "voice": "assets/voice/resh_27.mp3",
+                "emotion": "thoughtful"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "goto": "end"
+    },
+    {
+      "id": "П_смерть_иры",
+      "label": "Ира погибла",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Девочка шла за фонарём, а не за мной. Надо было оставить её у пульта.",
+                "voice": "assets/voice/resh_28.mp3",
+                "emotion": "sad"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "goto": "end"
+    },
+    {
+      "id": "Б_ряд",
+      "label": "В пути: Сухой ряд",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "В Сухом ряду мне должны за насос. Не напоминай им, что я живой.",
+                "voice": "assets/voice/resh_32.mp3",
+                "emotion": "thoughtful"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "goto": "end"
+    },
+    {
+      "id": "Б_каморка",
+      "label": "В пути: каморка",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Моя каморка. Сорок лет одна кружка и один табурет — гостей тут не ждали.",
+                "voice": "assets/voice/resh_31.mp3",
+                "emotion": "calm"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "goto": "end"
+    },
+    {
+      "id": "Б_галерея",
+      "label": "В пути: галерея",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Вода стоит на ладонь выше, чем позавчера. Каркас пьёт медленно, но не останавливается.",
+                "voice": "assets/voice/resh_33.mp3",
                 "emotion": "thoughtful"
               }
             }

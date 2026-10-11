@@ -1,0 +1,27 @@
+{
+  "id": "rule_ira_on_resh_quarrel",
+  "label": "Ира: Реш ушёл после ссоры",
+  "once": true,
+  "trigger": "always",
+  "conditions": [
+    {
+      "type": "flag_set",
+      "flag": "resh_quarrel"
+    },
+    {
+      "type": "in_party",
+      "entity": "npc_ira"
+    }
+  ],
+  "effects": [
+    {
+      "type": "show_message",
+      "text": "Ира смотрит вслед, пока свет его ладони на стене не гаснет за поворотом."
+    },
+    {
+      "type": "start_dialogue",
+      "entity": "npc_ira",
+      "dialogue_knot": "П_ссора"
+    }
+  ]
+}

@@ -1511,6 +1511,66 @@
       ],
       "choices": [],
       "goto": "end"
+    },
+    {
+      "id": "П_ссора",
+      "label": "После ссоры с Решем",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Он не вернётся. Сорок лет он выбирал жилу — и сегодня выбрал снова.",
+                "voice": "assets/voice/ira_43.mp3",
+                "emotion": "sad"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "goto": "end"
+    },
+    {
+      "id": "П_смерть_реша",
+      "label": "Реш погиб",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Он учил меня слушать помпу. Говорил: если замолчит — ищи, кто её заткнул. Теперь замолчал он.",
+                "voice": "assets/voice/ira_44.mp3",
+                "emotion": "sad"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "goto": "end"
+    },
+    {
+      "id": "П_уступил",
+      "label": "Реш уступил у помпы",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Спасибо, мастер. Я запомню, что ты отошёл сам.",
+                "voice": "assets/voice/ira_45.mp3",
+                "emotion": "calm"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "goto": "end"
     }
   ]
 }
