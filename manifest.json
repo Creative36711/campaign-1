@@ -217,7 +217,10 @@
     "rule_comp_resh_hunger.json",
     "rule_comp_resh_thirst.json",
     "rule_comp_resh_rest.json",
-    "rule_comp_resh_ok.json"
+    "rule_comp_resh_ok.json",
+    "rule_glazier_card.json",
+    "rule_camp_ambush_card.json",
+    "rule_resh_joins_card.json"
   ],
   "arenas": [
     "arena_gate.json",

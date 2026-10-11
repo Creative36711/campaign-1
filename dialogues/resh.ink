@@ -67,6 +67,7 @@ VAR r = 0
     ~ change_companion_need("npc_resh", "need_hunger", -72)
     ~ change_companion_need("npc_resh", "need_thirst", -50)
     ~ change_companion_need("npc_resh", "need_rest", -45)
+    ~ fire_rule("rule_resh_joins_card")
     -> Начало_hub
 + { has_item("item_filter") } [Дыхатель держит только две банки?]
     Первая банка садится ещё в штольне, вторая — у самого забоя. Кто спускается в третий раз со старой маской, тот дышит уже собой. # emotion: thoughtful # voice: assets/voice/resh_15.mp3

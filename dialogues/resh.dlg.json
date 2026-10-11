@@ -423,6 +423,13 @@
                     "need": "need_rest",
                     "delta": -45
                   }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "fire_rule",
+                    "rule": "rule_resh_joins_card"
+                  }
                 }
               ]
             }
