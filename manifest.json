@@ -189,7 +189,8 @@
     "rule_coal_delivered.json",
     "rule_camp_ambush_ward.json",
     "rule_camp_ambush_deep.json",
-    "rule_water_rises_pc.json"
+    "rule_water_rises_pc.json",
+    "rule_valve_quest_start.json"
   ],
   "arenas": [
     "arena_gate.json",
