@@ -30,7 +30,7 @@ VAR r = 0
 -> Начало_hub
 
 === В_пути ===
-Ира идёт рядом, держа фонарь пониже, и ждёт, что ты скажешь. # action
+Ира идёт рядом, держа фонарь пониже, и ждёт, что ты скажешь. # action # voice: assets/voice/narr_ira_14.mp3
 -> Начало_hub
 
 === Начало_hub ===
@@ -97,7 +97,7 @@ VAR r = 0
     -> Начало_hub
 * { has_item("item_valve") and not (get_flag("ira_valve")) and not (get_flag("sluice_ready")) } [Показать клапан из шахты.]
     ~ set_flag("ira_valve")
-    Она проводит пальцем по выбитой семёрке. # action # sfx: snd_tag
+    Она проводит пальцем по выбитой семёрке. # action # sfx: snd_tag # voice: assets/voice/narr_ira_15.mp3
     Седьмой номер — с нашего затвора. Резьба целая: его не сорвало водой, его вывернули ключом. Неси на восьмой, к затвору, пока там ещё есть что закрывать. # emotion: thoughtful # voice: assets/voice/ira_31.mp3
     ~ change_disposition("npc_ira", 3)
     ~ fire_rule("rule_ira_valve")
