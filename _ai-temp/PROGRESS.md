@@ -409,3 +409,15 @@ TODO: озвучить cutscene_final_closed (3 слайда, голос рас�
 **Изображения (3):** pc_vex_paid (переделан без надписей), pc_ira_key, pc_resh_core.
 **TTS (10):** narr_{ayla,dozh,ira,kast,kell,resh,vein,vex,zhuk}_rep (voice-03), resh_18 (voice-04).
 TODO: озвучить ремарки «В_пути» у Иры и Реша, «Снова» у регистратора, катсцену cutscene_final_closed; проверить в движке: start_dialogue из enter_scene-правил у спутников, отрисовку facing_offset; Ирины опции «Показать рукавицу/клапан», «Я нашёл его жетон» — тоже называют предмет (разговорные, не present_item) — решить с пользователем.
+
+
+## Итерация 24 (11.10) — система «Напарники» + кинематографичность (TASK.md)
+**Чемодан:** обновлён `__chronicle_ai__` (раздел «Отряд»: companion_needs, companion_carry, companion_need_le/ge, change_companion_need, transfer_to_companion, leave_party).
+**Напарники:** npc_ira и npc_resh — companion_needs (голод, жажда, отдых, тепло), companion_carry. Реш при найме −72 голода, −50 жажды, −45 отдыха (три дня у стены — бурчит сразу, надо кормить «Применить предмет»); Ира −20/−35. Правила rule_comp_{ira,resh}_{hunger,thirst,rest} (порог ≤30, одна фраза, портрет «измотан» — новая эмоция tired), rule_comp_*_ok (все ≥55 → сброс флагов и облика).
+**Доп. 1 (таймер к началу):** узлы «Молчание» у zhuk, dozh, kast, vein, ira: в ink `-> DONE`, в dlg goto `end`.
+**Доп. 2 (спутник говорит иначе):** Ира ветвится по in_party («Пойдём со мной снова», «Как ты держишься?», «Возвращайся к пульту»); если Ира в отряде при находке тела — сцена У_тела (rule_party_ira_body → открытка pc_ira_body, ira_35–38), разговор «сообщить о брате» ей больше не предлагается. Реш: уход/возврат; Векс и Каст учитывают Реша за спиной героя.
+**Кино:** camera у 20 слайдов катсцен и 80 открыток; живые фоны (кадры по маске свечения, numpy): жаровня Сухого ряда день/ночь, жила в забое, швы затвора шлюза. Новые открытки: pc_ira_body, pc_glazier_beaten, pc_camp_ambush, pc_resh_joins, pc_air_back; pc_patrol_beaten — и после стычки у ворот.
+**Баги/логика:** гнилая вода — текст про испарину (защищает маска, а не сапоги); схрон — «ящик распорется» противоречил взлому; item_dead_guard ставит guard_found_now; фигурка Реша без сознания (combat_figure_states down/dead), Ира без сознания — переделана (лежит).
+**Изображения (10):** fig_resh_down, fig_ira_down, pc_ira_body, item_row_bench, pc_glazier_beaten, pc_camp_ambush, pc_resh_joins, ira_tired, resh_tired, pc_air_back.
+**TTS (10):** ira_32–38, narr_ira_12–13, vex_23.
+TODO: Векс без unknown_label, но рассказчик называет его по имени в первой ремарке (narr_vex_1) — при переозвучке рассказчика: «Смотритель у пульта…» + unknown_label; narr_ira_1 без имени; Реш «Как ты держишься?»/уход и вариант Каст с Решем — озвучить; проверить в движке fire_rule внутри on_victory и смену портрета через set_entity_state у члена отряда.
