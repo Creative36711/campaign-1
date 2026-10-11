@@ -421,3 +421,12 @@ TODO: озвучить ремарки «В_пути» у Иры и Реша, «�
 **Изображения (10):** fig_resh_down, fig_ira_down, pc_ira_body, item_row_bench, pc_glazier_beaten, pc_camp_ambush, pc_resh_joins, ira_tired, resh_tired, pc_air_back.
 **TTS (10):** ira_32–38, narr_ira_12–13, vex_23.
 TODO: Векс без unknown_label, но рассказчик называет его по имени в первой ремарке (narr_vex_1) — при переозвучке рассказчика: «Смотритель у пульта…» + unknown_label; narr_ira_1 без имени; Реш «Как ты держишься?»/уход и вариант Каст с Решем — озвучить; проверить в движке fire_rule внутри on_victory и смену портрета через set_entity_state у члена отряда.
+
+
+## Итерация 25 (11.10, вечер) — фигурки на арене развёрнуты не туда
+**Патч из main:** обновлён `__chronicle_ai__` (новый раздел гайда «Как генерировать боевые фигурки с первого раза + ремонт»); мастерские правки slots в scene_archive и scene_office применены.
+**Диагноз по гайду (ремонт №2):** 14 фигурок — высокий ракурс спереди (читаются лица, бейджи, бороды), а не вид сверху; offset их не спасает → `figure_mode: "side"`, facing_offset убран: player_hero, ayla, dozh, ira, kast, kell, registrar, resh, rotling, thug, vein, vex, watchman, zhuk; у трёх HeroPortraitOption — combat_figure_mode side, combat_facing_offset убран.
+**Честный вид сверху (ремонт №1):** ashhound (морда вниз) и glazier (со спины, голова вниз) — topdown + facing_offset 180 оставлены.
+**Состояния (ремонт №3 без перегенерации):** fig_kell_down, fig_thug_down повёрнуты на −90°, fig_rotling_dead на +90° — в режиме side тело лежит горизонтально. fig_ira_down, fig_resh_down (лежат на боку) и fig_watchman_dead (фас) подходят как есть.
+Контрольные листы: _ai-temp/gen/figs_now.jpg, rot_chk.jpg.
+TODO: проверить в тестовом бою: свои и враги стоят лицом друг к другу; если пёс/стекольщик целятся мимо — сменить им offset.
