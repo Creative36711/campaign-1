@@ -12,12 +12,18 @@ EXTERNAL unlock_codex(a0)
 VAR r = 0
 
 === Начало ===
+{ get_flag("glazier_robbed") or get_flag("glazier_beaten"): -> Ушёл }
 { get_flag("glazier_met"): -> Снова }
 Из бокового штрека выходит человек с заплечным коробом, обмотанным мешковиной. Сквозь мешковину сочится бирюзовый свет. # action # sfx: snd_cloth # voice: assets/voice/narr_glazier_1.mp3
 Тихо, дознаватель. Ты меня не видел, я тебя не видел. Внизу так договариваются. # emotion: thoughtful # voice: assets/voice/glazier_1.mp3
 ~ set_flag("glazier_met")
 ~ set_flag("glazier_trades")
 -> Начало_hub
+
+=== Ушёл ===
+Короб с бирюзовым светом снова выныривает из темноты штрека. Человек узнаёт тебя раньше, чем ты его. # action # voice: assets/voice/narr_glazier_2.mp3
+Зря ты так, дознаватель. Внизу Надзора нет. # emotion: angry # voice: assets/voice/glazier_7.mp3
+-> DONE
 
 === Снова ===
 Короб с бирюзовым светом снова выныривает из темноты штрека. Человек узнаёт тебя раньше, чем ты его. # action # voice: assets/voice/narr_glazier_2.mp3

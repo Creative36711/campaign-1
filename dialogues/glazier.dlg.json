@@ -10,6 +10,60 @@
           "conds": [
             {
               "type": "flag",
+              "flag": "glazier_robbed"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Короб с бирюзовым светом снова выныривает из темноты штрека. Человек узнаёт тебя раньше, чем ты его.",
+                "voice": "assets/voice/narr_glazier_2.mp3",
+                "action": true
+              }
+            },
+            {
+              "kind": "line",
+              "line": {
+                "text": "Зря ты так, дознаватель. Внизу Надзора нет.",
+                "voice": "assets/voice/glazier_7.mp3",
+                "emotion": "angry"
+              }
+            }
+          ],
+          "goto": "end"
+        },
+        {
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "glazier_beaten"
+            }
+          ],
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Короб с бирюзовым светом снова выныривает из темноты штрека. Человек узнаёт тебя раньше, чем ты его.",
+                "voice": "assets/voice/narr_glazier_2.mp3",
+                "action": true
+              }
+            },
+            {
+              "kind": "line",
+              "line": {
+                "text": "Зря ты так, дознаватель. Внизу Надзора нет.",
+                "voice": "assets/voice/glazier_7.mp3",
+                "emotion": "angry"
+              }
+            }
+          ],
+          "goto": "end"
+        },
+        {
+          "conds": [
+            {
+              "type": "flag",
               "flag": "glazier_met"
             }
           ],
