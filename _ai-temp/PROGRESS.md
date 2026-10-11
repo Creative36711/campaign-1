@@ -465,3 +465,11 @@ TODO: тестовый бой — ВСЕ бойцы лицом к цели; ес
 **Портрет героя:** states wounded / tired / status_rot у трёх обликов (9 изображений).
 **Изображения (10):** hero_{,f_,vet_}{wounded,tired,rot}, pc_kast_resh_face. **TTS (10):** см. VOICES.
 TODO: тестовый бой с фигурками (ход 27); статусы удушья/озноба на портрете героя — по желанию; у Каст и Иры один voice-07.
+
+## Итерация 29 (12.10)
+- Фигурки: все topdown + facing_offset 180 (по тесту пользователя), герой ×3 через combat_facing_offset. Новые fig_resh_down / fig_ira_down (вид сверху).
+- Реш у помпы: опция запуска раздвоена (Реш в отряде без resh_allows_pump → диалог «У_помпы»). persuade 50, одна попытка (resh_pump_asked). Провал → leave_party, resh_quarrel, −15, rule_resh_quarrel (открытка pc_resh_leaves), «Пойдём со мной снова» закрыта.
+- Бантер-правила (Ира ×4, Реш ×2): show_message — ремарка, затем start_dialogue на узлы Б_* (озвучены ira_39–42, resh_26–27).
+- Портреты героя status_choke / status_cold ×3 облика.
+- Открытка pc_kell_squad перед боем Келл+2 громилы (fight_party, rig_party, rig_tip_party; в rematch не ставил — once:false).
+- Аудит наград interact_options: все once:true.

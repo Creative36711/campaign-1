@@ -150,6 +150,7 @@ VAR r = 0
 ~ change_disposition("npc_resh", -15)
 ~ set_flag("resh_quarrel")
 ~ leave_party("npc_resh")
+~ fire_rule("rule_resh_quarrel")
 -> DONE
 
 === Б_помпа ===

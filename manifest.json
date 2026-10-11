@@ -237,7 +237,8 @@
     "rule_final_rig_party.json",
     "rule_final_rig_tip_party.json",
     "rule_kast_resh_party.json",
-    "rule_office_kell_name.json"
+    "rule_office_kell_name.json",
+    "rule_resh_quarrel.json"
   ],
   "arenas": [
     "arena_gate.json",
