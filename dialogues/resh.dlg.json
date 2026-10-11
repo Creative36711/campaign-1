@@ -592,6 +592,13 @@
                     "type": "set_flag",
                     "flag": "core_taken"
                   }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "fire_rule",
+                    "rule": "rule_resh_core_given"
+                  }
                 }
               ]
             }

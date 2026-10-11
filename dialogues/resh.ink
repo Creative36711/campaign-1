@@ -84,6 +84,7 @@ VAR r = 0
     ~ add_item("item_core", 1)
     ~ add_item("item_key_cache", 1)
     ~ set_flag("core_taken")
+    ~ fire_rule("rule_resh_core_given")
     -> Начало_hub
 + [Мне пора.]
     -> DONE

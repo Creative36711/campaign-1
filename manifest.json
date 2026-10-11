@@ -205,7 +205,8 @@
     "rule_party_resh_recipe.json",
     "rule_party_resh_core.json",
     "rule_party_resh_ira.json",
-    "rule_party_ira_key.json"
+    "rule_party_ira_key.json",
+    "rule_resh_core_given.json"
   ],
   "arenas": [
     "arena_gate.json",
