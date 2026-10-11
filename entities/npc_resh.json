@@ -58,5 +58,9 @@
     "need_rest",
     "need_warmth"
   ],
-  "companion_carry": true
+  "companion_carry": true,
+  "combat_figure_states": {
+    "down": "assets/img/npc/fig_resh_down.png",
+    "dead": "assets/img/npc/fig_resh_down.png"
+  }
 }
