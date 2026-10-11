@@ -80,6 +80,7 @@ VAR r = 0
     Она проводит пальцем по выбитой семёрке. # action # sfx: snd_tag
     Седьмой номер — с нашего затвора. Резьба целая: его не сорвало водой, его вывернули ключом. Неси на восьмой, к затвору, пока там ещё есть что закрывать. # emotion: thoughtful # voice: assets/voice/ira_31.mp3
     ~ change_disposition("npc_ira", 3)
+    ~ fire_rule("rule_ira_valve")
     -> Начало_hub
 + [Мне пора.]
     -> DONE
