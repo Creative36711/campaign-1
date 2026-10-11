@@ -396,6 +396,33 @@
                     "type": "set_flag",
                     "flag": "resh_joined"
                   }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "change_companion_need",
+                    "npc": "npc_resh",
+                    "need": "need_hunger",
+                    "delta": -72
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "change_companion_need",
+                    "npc": "npc_resh",
+                    "need": "need_thirst",
+                    "delta": -50
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "change_companion_need",
+                    "npc": "npc_resh",
+                    "need": "need_rest",
+                    "delta": -45
+                  }
                 }
               ]
             }
@@ -607,7 +634,69 @@
           "once": true
         },
         {
+          "text": "Пойдём со мной снова.",
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Он встаёт тяжело, опираясь о стену ладонью.",
+                    "action": true,
+                    "sfx": "snd_stone",
+                    "voice": "assets/voice/narr_resh_2.mp3"
+                  }
+                },
+                {
+                  "kind": "line",
+                  "line": {
+                    "text": "Хорошо. Но если я увижу, что ты вставишь сердцевину в привод — я лягу на муфту.",
+                    "voice": "assets/voice/resh_8.mp3"
+                  }
+                },
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "join_party",
+                    "npc": "npc_resh"
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "end",
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "resh_joined"
+            },
+            {
+              "type": "in_party",
+              "npc": "npc_resh",
+              "not": true
+            }
+          ]
+        },
+        {
           "text": "Мне пора.",
+          "sections": [],
+          "goto": "end",
+          "conds": [
+            {
+              "type": "in_party",
+              "npc": "npc_resh",
+              "not": true
+            }
+          ]
+        },
+        {
+          "text": "Идём дальше.",
+          "conds": [
+            {
+              "type": "in_party",
+              "npc": "npc_resh"
+            }
+          ],
           "sections": [],
           "goto": "end"
         }

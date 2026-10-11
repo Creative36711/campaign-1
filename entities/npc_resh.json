@@ -51,5 +51,12 @@
   },
   "combat_figure": "assets/img/npc/fig_resh.png",
   "figure_mode": "topdown",
-  "facing_offset": 180
+  "facing_offset": 180,
+  "companion_needs": [
+    "need_hunger",
+    "need_thirst",
+    "need_rest",
+    "need_warmth"
+  ],
+  "companion_carry": true
 }

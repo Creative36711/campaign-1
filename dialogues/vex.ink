@@ -1,3 +1,4 @@
+EXTERNAL in_party(a0)
 EXTERNAL change_disposition(a0, a1)
 EXTERNAL fire_rule(a0)
 EXTERNAL get_flag(a0)
@@ -23,10 +24,16 @@ VAR r = 0
 -> Начало_hub
 
 === Начало_hub ===
-+ [Что с седьмой помпой?]
++ { not (in_party("npc_resh")) } [Что с седьмой помпой?]
     Стоит. Третий день стоит. Механики приходили, слушали, уходили, а вода всё прибывает. # voice: assets/voice/vex_5.mp3
     Он крутит маховик на четверть оборота — тот идёт свободно, как в пустоте. # action # sfx: sfx_gear # voice: assets/voice/narr_vex_2.mp3
 Мастер твой Реш спустился в шахту в восемнадцать сорок. Я его сам записал. Обратно — не записал. # voice: assets/voice/vex_3.mp3
+    ~ unlock_codex("codex_pumps")
+    -> Начало_hub
++ { in_party("npc_resh") } [Что с седьмой помпой?]
+    Стоит. Третий день стоит. Механики приходили, слушали, уходили, а вода всё прибывает. # voice: assets/voice/vex_5.mp3
+    Он крутит маховик на четверть оборота — тот идёт свободно, как в пустоте. # action # sfx: sfx_gear # voice: assets/voice/narr_vex_2.mp3
+А вот и сам мастер. Я тебя записал вниз в восемнадцать сорок, Эрдан. Обратно так и не записал. Сейчас запишу. # emotion: thoughtful # voice: assets/voice/vex_23.mp3
     ~ unlock_codex("codex_pumps")
     -> Начало_hub
 * { not (get_flag("vex_asked13")) } [Кто проходил через шлюз в ночь тринадцатого?]

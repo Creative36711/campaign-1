@@ -29,7 +29,13 @@
       "image": "assets/img/pc_vex_paid.jpg",
       "text": "Двенадцать марок за честную рейку. Векс пересчитывает дважды.",
       "preset": "шёпот",
-      "seconds": 4
+      "seconds": 4,
+      "camera": {
+        "zoom": 1.08,
+        "pan_x": 0,
+        "pan_y": 0,
+        "duration": 5
+      }
     }
   ]
 }

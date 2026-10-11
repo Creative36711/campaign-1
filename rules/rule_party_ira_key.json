@@ -40,7 +40,13 @@
       "image": "assets/img/pc_ira_key.jpg",
       "text": "Запасной ключ мастера — теперь у тебя.",
       "preset": "шёпот",
-      "seconds": 4
+      "seconds": 4,
+      "camera": {
+        "zoom": 1.08,
+        "pan_x": 0,
+        "pan_y": 0,
+        "duration": 5
+      }
     }
   ]
 }

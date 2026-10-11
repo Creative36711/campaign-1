@@ -362,6 +362,11 @@
               "type": "flag",
               "flag": "kast_resh",
               "not": true
+            },
+            {
+              "type": "in_party",
+              "npc": "npc_resh",
+              "not": true
             }
           ],
           "sections": [
@@ -663,7 +668,7 @@
         }
       ],
       "choices": [],
-      "goto": "Начало"
+      "goto": "end"
     },
     {
       "id": "Записка",

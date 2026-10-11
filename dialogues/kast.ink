@@ -1,3 +1,4 @@
+EXTERNAL in_party(a0)
 EXTERNAL npc_known(a0)
 EXTERNAL change_disposition(a0, a1)
 EXTERNAL fire_rule(a0)
@@ -58,7 +59,7 @@ EXTERNAL set_flag(a0)
     ~ change_disposition("npc_kast", 10)
     ~ fire_rule("rule_kast_hand")
     -> Начало_hub
-* { get_flag("resh_found") and not (get_flag("kast_resh")) } [Мастер Реш жив.]
+* { get_flag("resh_found") and not (get_flag("kast_resh")) and not (in_party("npc_resh")) } [Мастер Реш жив.]
     ~ set_flag("kast_resh")
     Жив. Это хуже для всех, кроме него. Живой мастер — это свидетель, а свидетелей в моём отделе не любят. # emotion: thoughtful # voice: assets/voice/kast_20.mp3
     Приведи его, если сможешь. Если нет — больше никому не говори, что он жив. # emotion: calm # voice: assets/voice/kast_21.mp3
@@ -105,7 +106,7 @@ EXTERNAL set_flag(a0)
 Молчишь? Я запишу: «показаний не дал, улики не предъявил». Продолжай в том же духе. # sfx: snd_paper # voice: assets/voice/kast_14.mp3
 ~ set_flag("kast_alerted")
 ~ fire_rule("rule_lockdown")
--> Начало_hub
+-> DONE
 
 === Записка ===
 Каст читает, не беря бумагу в руки: только глазами по строчке, туда и обратно. # action # voice: assets/voice/narr_kast_6.mp3

@@ -1,3 +1,4 @@
+EXTERNAL change_companion_need(a0, a1, a2)
 EXTERNAL fire_rule(a0)
 EXTERNAL in_party(a0)
 EXTERNAL add_item(a0, a1)
@@ -63,6 +64,9 @@ VAR r = 0
     Хорошо. Но если я увижу, что ты вставишь сердцевину в привод — я лягу на муфту. # voice: assets/voice/resh_8.mp3
     ~ join_party("npc_resh")
     ~ set_flag("resh_joined")
+    ~ change_companion_need("npc_resh", "need_hunger", -72)
+    ~ change_companion_need("npc_resh", "need_thirst", -50)
+    ~ change_companion_need("npc_resh", "need_rest", -45)
     -> Начало_hub
 + { has_item("item_filter") } [Дыхатель держит только две банки?]
     Первая банка садится ещё в штольне, вторая — у самого забоя. Кто спускается в третий раз со старой маской, тот дышит уже собой. # emotion: thoughtful # voice: assets/voice/resh_15.mp3
@@ -86,7 +90,14 @@ VAR r = 0
     ~ set_flag("core_taken")
     ~ fire_rule("rule_resh_core_given")
     -> Начало_hub
-+ [Мне пора.]
++ { get_flag("resh_joined") and not (in_party("npc_resh")) } [Пойдём со мной снова.]
+    Он встаёт тяжело, опираясь о стену ладонью. # action # sfx: snd_stone # voice: assets/voice/narr_resh_2.mp3
+    Хорошо. Но если я увижу, что ты вставишь сердцевину в привод — я лягу на муфту. # voice: assets/voice/resh_8.mp3
+    ~ join_party("npc_resh")
+    -> DONE
++ { not (in_party("npc_resh")) } [Мне пора.]
+    -> DONE
++ { in_party("npc_resh") } [Идём дальше.]
     -> DONE
 - -> Начало_hub
 

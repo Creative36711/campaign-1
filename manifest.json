@@ -206,7 +206,18 @@
     "rule_party_resh_core.json",
     "rule_party_resh_ira.json",
     "rule_party_ira_key.json",
-    "rule_resh_core_given.json"
+    "rule_resh_core_given.json",
+    "rule_party_ira_body.json",
+    "rule_guard_found_clear.json",
+    "rule_ira_body_card.json",
+    "rule_comp_ira_hunger.json",
+    "rule_comp_ira_thirst.json",
+    "rule_comp_ira_rest.json",
+    "rule_comp_ira_ok.json",
+    "rule_comp_resh_hunger.json",
+    "rule_comp_resh_thirst.json",
+    "rule_comp_resh_rest.json",
+    "rule_comp_resh_ok.json"
   ],
   "arenas": [
     "arena_gate.json",

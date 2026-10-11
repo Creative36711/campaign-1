@@ -77,7 +77,7 @@ EXTERNAL unlock_codex(a0)
 === Молчание ===
 Дож спокойно ждёт: он умеет торговать и молча. # action # voice: assets/voice/narr_dozh_2.mp3
 Молчишь? И правильно. Кто говорит, тот уже купил. # voice: assets/voice/dozh_7.mp3
--> Начало_hub
+-> DONE
 
 === Оценка ===
 Дож вертит вещь двумя пальцами, прищурившись. # action # sfx: snd_latch # voice: assets/voice/narr_dozh_3.mp3

@@ -64,5 +64,12 @@
     "down": "assets/img/npc/fig_ira_down.png",
     "dead": "assets/img/npc/fig_ira_down.png"
   },
-  "facing_offset": 180
+  "facing_offset": 180,
+  "companion_needs": [
+    "need_hunger",
+    "need_thirst",
+    "need_rest",
+    "need_warmth"
+  ],
+  "companion_carry": true
 }
