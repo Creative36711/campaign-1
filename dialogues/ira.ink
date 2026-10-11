@@ -14,9 +14,15 @@ EXTERNAL learn_name(a0)
 VAR r = 0
 
 === Начало ===
+{ get_flag("met_ira"): -> Снова }
 Ира стирает мазут с ладоней ветошью и смотрит на тебя исподлобья. # action # voice: assets/voice/narr_ira_1.mp3
 Ты насчёт помпы? Я Ира Ярова, помощница мастера. Всё уже рассказала старшине — он велел не мешать. # voice: assets/voice/ira_1.mp3 # emotion: afraid
 ~ learn_name("npc_ira")
+~ set_flag("met_ira")
+-> Начало_hub
+
+=== Снова ===
+Ира поднимает глаза от пульта и ждёт, что ты скажешь. # action # voice: assets/voice/narr_ira_rep.mp3
 -> Начало_hub
 
 === Начало_hub ===
@@ -28,7 +34,8 @@ VAR r = 0
     ~ change_disposition("npc_ira", 6)
     ~ fire_rule("rule_ira_story")
     -> Начало_hub
-* { not (has_item("item_key_resh")) and not (get_flag("resh_room_open")) } [Где ключ от каморки мастера?]
+* { not (has_item("item_key_resh")) and not (get_flag("resh_room_open")) and not (get_flag("ira_key_asked")) } [Где ключ от каморки мастера?]
+    ~ set_flag("ira_key_asked")
     ~ r = skill_check("persuade", 50)
     {r: -> Начало_hub_ok1 | -> Начало_hub_no1}
 * { get_flag("clue_guard") and not (get_flag("ira_told_brother")) } [Твой брат — Стась Яров?]

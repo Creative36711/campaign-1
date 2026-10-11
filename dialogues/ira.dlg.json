@@ -7,7 +7,23 @@
       "label": "Начало разговора",
       "sections": [
         {
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "met_ira"
+            }
+          ],
           "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Ира поднимает глаза от пульта и ждёт, что ты скажешь.",
+                "action": true,
+                "voice": "assets/voice/narr_ira_rep.mp3"
+              }
+            }
+          ],
+          "else_steps": [
             {
               "kind": "line",
               "line": {
@@ -30,6 +46,13 @@
                 "type": "learn_name",
                 "entity": "npc_ira",
                 "silent": true
+              }
+            },
+            {
+              "kind": "effect",
+              "effect": {
+                "type": "set_flag",
+                "flag": "met_ira"
               }
             }
           ]
@@ -101,7 +124,19 @@
         },
         {
           "text": "Где ключ от каморки мастера?",
-          "sections": [],
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "ira_key_asked"
+                  }
+                }
+              ]
+            }
+          ],
           "goto": "stay",
           "check": {
             "skill": "persuade",
@@ -173,6 +208,11 @@
             {
               "type": "flag",
               "flag": "resh_room_open",
+              "not": true
+            },
+            {
+              "type": "flag",
+              "flag": "ira_key_asked",
               "not": true
             }
           ]

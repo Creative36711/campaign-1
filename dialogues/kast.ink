@@ -10,8 +10,14 @@ EXTERNAL set_entity_state(a0, a1)
 EXTERNAL set_flag(a0)
 
 === Начало ===
+{ get_flag("met_kast"): -> Снова }
 Каст не поднимает головы от бумаг. # action # voice: assets/voice/narr_kast_1.mp3
 Дело сто тридцать семь. У тебя семьдесят два часа, дознаватель. Говори коротко. # voice: assets/voice/kast_1.mp3
+~ set_flag("met_kast")
+-> Начало_hub
+
+=== Снова ===
+Каст отрывается от бумаг ровно на один взгляд. # action # voice: assets/voice/narr_kast_rep.mp3
 -> Начало_hub
 
 === Начало_hub ===
@@ -29,7 +35,7 @@ EXTERNAL set_flag(a0)
     Она наконец поднимает глаза. Улыбка есть, тепла нет. # action # voice: assets/voice/narr_kast_2.mp3
     Покажи. # voice: assets/voice/kast_12.mp3
     -> Гроссбух
-+ { has_item("item_note") and not (get_flag("kast_note")) } [Протянуть Каст записку мастера.]
++ { not (get_flag("kast_note")) } [Предъявить улику.]
     ~ present_item("Записка", "Записка_мимо", "item_note")
     -> DONE
 + { not (get_flag("resh_found")) and not (npc_known("npc_resh")) } [Где мастер Реш?]
@@ -99,7 +105,7 @@ EXTERNAL set_flag(a0)
 Молчишь? Я запишу: «показаний не дал, улики не предъявил». Продолжай в том же духе. # sfx: snd_paper # voice: assets/voice/kast_14.mp3
 ~ set_flag("kast_alerted")
 ~ fire_rule("rule_lockdown")
--> Начало
+-> Начало_hub
 
 === Записка ===
 Каст читает, не беря бумагу в руки: только глазами по строчке, туда и обратно. # action # voice: assets/voice/narr_kast_6.mp3

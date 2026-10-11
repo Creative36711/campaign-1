@@ -14,11 +14,17 @@ EXTERNAL learn_name(a0)
 VAR r = 0
 
 === Начало ===
+{ get_flag("met_resh"): -> Снова }
 Реш сидит спиной к стене и смотрит не на тебя — в стену. # action # voice: assets/voice/narr_resh_1.mp3
 Ты пришёл меня арестовать или послушать? Арестовывать удобнее: для этого не надо понимать. # voice: assets/voice/resh_1.mp3
 Семёрку не чинили, потому что ей не давали ходу. Это разные вещи, и разница между ними стоит семьдесят два часа. # voice: assets/voice/resh_12.mp3
 Я не прятался. Я ждал, пока кто-нибудь спустится и задаст правильный вопрос. # voice: assets/voice/resh_13.mp3
 ~ learn_name("npc_resh")
+~ set_flag("met_resh")
+-> Начало_hub
+
+=== Снова ===
+Реш поворачивает голову на звук шагов: он уже знает, кто пришёл. # action # voice: assets/voice/narr_resh_rep.mp3
 -> Начало_hub
 
 === Начало_hub ===
@@ -33,7 +39,8 @@ VAR r = 0
     Стража. Я видел пломбу на их рукавицах: тринадцать-К. У нас на ярусе пломбы только у тех, кто закрывает. # emotion: angry # voice: assets/voice/resh_6.mp3
     Муфту резали ключом на пятьдесят два, в перчатках: на срезе ни одной мозоли. Сорок лет смотрю, как режут, — по металлу видно, чья рука держала ключ. # emotion: thoughtful # voice: assets/voice/resh_14.mp3
     -> Начало_hub
-* { not (has_item("item_core")) and not (has_item("item_key_cache")) } [Отдай сердцевину.]
+* { not (has_item("item_core")) and not (has_item("item_key_cache")) and not (get_flag("resh_core_asked")) and not (get_flag("sluice_ready")) } [Отдай сердцевину.]
+    ~ set_flag("resh_core_asked")
     ~ r = skill_check("persuade", 55)
     {r: -> Начало_hub_ok1 | -> Начало_hub_no1}
 + [Что такое жила?]
@@ -66,6 +73,12 @@ VAR r = 0
     ~ change_disposition("npc_resh", 5)
     ~ set_flag("resh_trusts")
     ~ fire_rule("rule_resh_ira")
+    -> Начало_hub
+* { get_flag("sluice_ready") and not (has_item("item_core")) and not (has_item("item_key_cache")) and not (get_flag("core_taken")) } [Затвор держит. Теперь отдай сердцевину.]
+    Слышал, как он сел, — по трубам слышно. Ладно. Бери сердцевину и ключ от схрона. Только не торопи воду: она помнит, кто её торопил. # emotion: thoughtful # voice: assets/voice/resh_18.mp3
+    ~ add_item("item_core", 1)
+    ~ add_item("item_key_cache", 1)
+    ~ set_flag("core_taken")
     -> Начало_hub
 + [Мне пора.]
     -> DONE

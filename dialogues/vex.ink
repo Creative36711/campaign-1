@@ -10,10 +10,16 @@ EXTERNAL unlock_codex(a0)
 VAR r = 0
 
 === Начало ===
+{ get_flag("met_vex"): -> Снова }
 Векс поднимает глаза от пульта и долго смотрит на твой жетон. # action # sfx: sfx_click # voice: assets/voice/narr_vex_1.mp3
 Приписной дознаватель? Проходи в контору за дверью, там печка топится. Здесь у затвора только сквозняк и чужие. # voice: assets/voice/vex_1.mp3
 Я своим журналом отвечаю за каждого, кто прошёл. # voice: assets/voice/vex_2.mp3
 Журнал врёт редко. Чаще его просто не дописывают до конца смены. # voice: assets/voice/vex_10.mp3
+~ set_flag("met_vex")
+-> Начало_hub
+
+=== Снова ===
+Векс кивает от пульта, не прерывая записи в журнале. # action # voice: assets/voice/narr_vex_rep.mp3
 -> Начало_hub
 
 === Начало_hub ===
