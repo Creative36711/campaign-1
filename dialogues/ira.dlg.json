@@ -1417,6 +1417,86 @@
       ],
       "goto": "end",
       "choices": []
+    },
+    {
+      "id": "Б_галерея",
+      "label": "В пути: галерея",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Стась водил меня сюда смотреть, как светится вода. Говорил: не трогай, оно запоминает руки.",
+                "voice": "assets/voice/ira_39.mp3",
+                "emotion": "sad"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "goto": "end"
+    },
+    {
+      "id": "Б_ряд",
+      "label": "В пути: Сухой ряд",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "В Сухом ряду все друг другу должны, поэтому никто никого не выдаёт. Держи руки на виду.",
+                "voice": "assets/voice/ira_40.mp3",
+                "emotion": "thoughtful"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "goto": "end"
+    },
+    {
+      "id": "Б_штольня",
+      "label": "В пути: штольня",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Дальше Стась не ходил. Говорил, в штольне воздух чужой.",
+                "voice": "assets/voice/ira_41.mp3",
+                "emotion": "afraid"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "goto": "end"
+    },
+    {
+      "id": "Б_забой",
+      "label": "В пути: забой",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Так вот куда мастер уходил по ночам. Говорил — к больному.",
+                "voice": "assets/voice/ira_42.mp3",
+                "emotion": "thoughtful"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "goto": "end"
     }
   ]
 }

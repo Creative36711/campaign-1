@@ -233,3 +233,19 @@ VAR r = 0
 === У_тела_конец ===
 ~ fire_rule("rule_ira_body_card")
 -> DONE
+
+=== Б_галерея ===
+Стась водил меня сюда смотреть, как светится вода. Говорил: не трогай, оно запоминает руки. # emotion: sad # voice: assets/voice/ira_39.mp3
+-> DONE
+
+=== Б_ряд ===
+В Сухом ряду все друг другу должны, поэтому никто никого не выдаёт. Держи руки на виду. # emotion: thoughtful # voice: assets/voice/ira_40.mp3
+-> DONE
+
+=== Б_штольня ===
+Дальше Стась не ходил. Говорил, в штольне воздух чужой. # emotion: afraid # voice: assets/voice/ira_41.mp3
+-> DONE
+
+=== Б_забой ===
+Так вот куда мастер уходил по ночам. Говорил — к больному. # emotion: thoughtful # voice: assets/voice/ira_42.mp3
+-> DONE

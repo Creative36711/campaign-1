@@ -682,6 +682,11 @@
               "type": "in_party",
               "npc": "npc_resh",
               "not": true
+            },
+            {
+              "type": "flag",
+              "flag": "resh_quarrel",
+              "not": true
             }
           ]
         },
@@ -787,6 +792,176 @@
           "goto": "end"
         }
       ]
+    },
+    {
+      "id": "У_помпы",
+      "label": "У помпы: Реш против запуска",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Реш встаёт между тобой и приводом и кладёт ладонь на срезанную муфту.",
+                "voice": "assets/voice/narr_resh_5.mp3",
+                "action": true
+              }
+            },
+            {
+              "kind": "line",
+              "line": {
+                "text": "Стой. Я говорил: вставишь сердцевину — лягу на муфту. Затвор держит, да. Но жила под нами живая, и ты её сейчас выпьешь.",
+                "voice": "assets/voice/resh_23.mp3",
+                "emotion": "angry"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [
+        {
+          "text": "Восьмой ярус утонет без помпы. Отойди, мастер.",
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "resh_pump_asked",
+              "not": true
+            }
+          ],
+          "once": true,
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "set_flag",
+                    "flag": "resh_pump_asked"
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "end",
+          "check": {
+            "skill": "persuade",
+            "difficulty": 50,
+            "success": {
+              "sections": [
+                {
+                  "steps": [
+                    {
+                      "kind": "line",
+                      "line": {
+                        "text": "Сорок лет я выбирал между ярусом и жилой. Теперь выбирай ты. Только я смотреть не буду.",
+                        "voice": "assets/voice/resh_24.mp3",
+                        "emotion": "sad"
+                      }
+                    },
+                    {
+                      "kind": "effect",
+                      "effect": {
+                        "type": "set_flag",
+                        "flag": "resh_allows_pump"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "goto": "end"
+            },
+            "fail": {
+              "sections": [
+                {
+                  "steps": [
+                    {
+                      "kind": "line",
+                      "line": {
+                        "text": "Нет. Хочешь пустить её — пускай без меня. Я к жиле: кто-то должен быть рядом, когда она начнёт остывать.",
+                        "voice": "assets/voice/resh_25.mp3",
+                        "emotion": "angry"
+                      }
+                    },
+                    {
+                      "kind": "effect",
+                      "effect": {
+                        "type": "change_disposition",
+                        "target": "npc_resh",
+                        "delta": -15
+                      }
+                    },
+                    {
+                      "kind": "effect",
+                      "effect": {
+                        "type": "set_flag",
+                        "flag": "resh_quarrel"
+                      }
+                    },
+                    {
+                      "kind": "effect",
+                      "effect": {
+                        "type": "leave_party",
+                        "npc": "npc_resh"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "goto": "end"
+            }
+          }
+        },
+        {
+          "text": "Ладно. Не сейчас.",
+          "sections": [
+            {
+              "steps": []
+            }
+          ],
+          "goto": "end"
+        }
+      ],
+      "goto": "end"
+    },
+    {
+      "id": "Б_помпа",
+      "label": "В пути: помпа",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Сорок лет я слушал её вот так. Теперь она молчит, и это громче всего, что я слышал.",
+                "voice": "assets/voice/resh_26.mp3",
+                "emotion": "sad"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "goto": "end"
+    },
+    {
+      "id": "Б_журнал",
+      "label": "В пути: журнал шлюза",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Восемнадцать сорок, вниз. Обратно не записан. Выходит, по бумагам я всё ещё там.",
+                "voice": "assets/voice/resh_27.mp3",
+                "emotion": "thoughtful"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "goto": "end"
     }
   ]
 }

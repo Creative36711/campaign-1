@@ -92,7 +92,7 @@ VAR r = 0
     ~ set_flag("core_taken")
     ~ fire_rule("rule_resh_core_given")
     -> Начало_hub
-+ { get_flag("resh_joined") and not (in_party("npc_resh")) } [Пойдём со мной снова.]
++ { get_flag("resh_joined") and not (in_party("npc_resh")) and not (get_flag("resh_quarrel")) } [Пойдём со мной снова.]
     Он встаёт тяжело, опираясь о стену ладонью. # action # sfx: snd_stone # voice: assets/voice/narr_resh_2.mp3
     Хорошо. Но если я увижу, что ты вставишь сердцевину в привод — я лягу на муфту. # voice: assets/voice/resh_8.mp3
     ~ join_party("npc_resh")
@@ -129,3 +129,33 @@ VAR r = 0
 Нет. Ты её вставишь, и восьмой ярус утонет за ночь. Я сорок лет слушал, как дышит город. # voice: assets/voice/resh_5.mp3
 ~ change_disposition("npc_resh", -5)
 -> Начало_hub
+
+=== У_помпы ===
+Реш встаёт между тобой и приводом и кладёт ладонь на срезанную муфту. # action # voice: assets/voice/narr_resh_5.mp3
+Стой. Я говорил: вставишь сердцевину — лягу на муфту. Затвор держит, да. Но жила под нами живая, и ты её сейчас выпьешь. # emotion: angry # voice: assets/voice/resh_23.mp3
+* { not (get_flag("resh_pump_asked")) } [Восьмой ярус утонет без помпы. Отойди, мастер.]
+    ~ set_flag("resh_pump_asked")
+    ~ r = skill_check("persuade", 50)
+    {r: -> У_помпы_да | -> У_помпы_нет}
++ [Ладно. Не сейчас.]
+    -> DONE
+
+=== У_помпы_да ===
+Сорок лет я выбирал между ярусом и жилой. Теперь выбирай ты. Только я смотреть не буду. # emotion: sad # voice: assets/voice/resh_24.mp3
+~ set_flag("resh_allows_pump")
+-> DONE
+
+=== У_помпы_нет ===
+Нет. Хочешь пустить её — пускай без меня. Я к жиле: кто-то должен быть рядом, когда она начнёт остывать. # emotion: angry # voice: assets/voice/resh_25.mp3
+~ change_disposition("npc_resh", -15)
+~ set_flag("resh_quarrel")
+~ leave_party("npc_resh")
+-> DONE
+
+=== Б_помпа ===
+Сорок лет я слушал её вот так. Теперь она молчит, и это громче всего, что я слышал. # emotion: sad # voice: assets/voice/resh_26.mp3
+-> DONE
+
+=== Б_журнал ===
+Восемнадцать сорок, вниз. Обратно не записан. Выходит, по бумагам я всё ещё там. # emotion: thoughtful # voice: assets/voice/resh_27.mp3
+-> DONE
