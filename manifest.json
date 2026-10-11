@@ -235,7 +235,8 @@
     "rule_final_fight_party.json",
     "rule_final_rematch_party.json",
     "rule_final_rig_party.json",
-    "rule_final_rig_tip_party.json"
+    "rule_final_rig_tip_party.json",
+    "rule_kast_resh_party.json"
   ],
   "arenas": [
     "arena_gate.json",

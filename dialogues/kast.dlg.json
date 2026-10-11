@@ -460,7 +460,7 @@
                   "kind": "effect",
                   "effect": {
                     "type": "fire_rule",
-                    "rule": "rule_kast_resh"
+                    "rule": "rule_kast_resh_party"
                   }
                 }
               ]
