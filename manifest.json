@@ -252,7 +252,10 @@
     "rule_resh_glove.json",
     "rule_vex_token.json",
     "rule_watchman_fight.json",
-    "rule_watchman_again.json"
+    "rule_watchman_again.json",
+    "rule_air_shelter_on.json",
+    "rule_air_shelter_off.json",
+    "rule_air_shelter_hint.json"
   ],
   "arenas": [
     "arena_gate.json",
