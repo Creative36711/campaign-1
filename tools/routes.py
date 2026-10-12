@@ -73,3 +73,44 @@ ROUTES = {
         ('go', 'scene_dry_row'), ('buy', 'npc_dozh', 'item_oil', 1), ('craft', 'recipe_charge'),
         ('go', 'scene_sluice'), ('use', 'item_sluice_mech', 'Заложить заряд у пустого затвора')]),
 }
+
+# ---- дыхатель для каждого старта на каждой сложности (концовки нет: важно, что все шаги проходят)
+NEED = {'prof_inspector': (0, 0), 'prof_wright': (0, 2), 'prof_scavenger': (2, 0)}  # (сукно, лом) со старта
+for prof, (cl0, sc0) in NEED.items():
+    for diff in ('diff_inspector', 'diff_watchman', 'diff_deep'):
+        base = [('go', 'scene_gate_hall'), ('go', 'scene_pump_hall'), ('use', 'item_pump_engine', 'Снять с привода ключ')]
+        # удачный обыск: ящик (сукно, лом, уголь) + нанос (лом, сукно) → крафт на скамье Сухого ряда
+        ROUTES[f'filter_scav_{prof[5:]}_{diff[5:]}'] = R(prof, diff, None, base + [
+            ('go', 'scene_gate_hall'), ('use', 'item_crate', 'Обыскать ящик'),
+            ('go', 'scene_flood_gallery'), ('use', 'item_debris', 'Разгрести нанос'),
+            ('go', 'scene_dry_row'), ('craft', 'recipe_filter')])
+        # оба обыска провалены: недостающее сукно и лом покупаются у Дожа
+        buy = []
+        if cl0 < 2: buy.append(('buy', 'npc_dozh', 'item_cloth', 2 - cl0))
+        if sc0 < 1: buy.append(('buy', 'npc_dozh', 'item_scrap', 1))
+        ROUTES[f'filter_buy_{prof[5:]}_{diff[5:]}'] = R(prof, diff, None, base + [
+            ('go', 'scene_gate_hall'), ('use', 'item_crate', 'Обыскать ящик', {'rolls': [False]}),
+            ('go', 'scene_flood_gallery'), ('use', 'item_debris', 'Разгрести нанос', {'rolls': [False]}),
+            ('go', 'scene_dry_row')] + buy + [('craft', 'recipe_filter')])
+        # готовый дыхатель с прилавка: по карману ли он со стартовыми марками
+        # (задумано: со стартовыми марками не по карману ни на одной сложности — ждём отказ по деньгам)
+        ROUTES[f'filter_shop_{prof[5:]}_{diff[5:]}'] = dict(R(prof, diff, None, [
+            ('go', 'scene_gate_hall'), ('go', 'scene_dry_row'), ('buy', 'npc_dozh', 'item_filter', 1)]),
+            expect_error='item_mark')
+
+# ---- полный отряд: Ира (расположение ≥ 25) и Реш, финал у затвора отрядом
+PARTY = CORE[:8] + [('use', 'item_dead_guard', 'Осмотреть тело'), ('use', 'item_dead_guard', 'Обыскать карманы')] + CORE[8:] + [
+    ('go', 'scene_flood_gallery'), ('use', 'item_pack', 'Открыть ранец'),
+    ('go', 'scene_pump_hall'),
+    ('talk', 'npc_ira', ['Расскажи, что случилось', 'Твой брат', 'Он не вышел со смены', 'Ранец из галереи',
+                         'Пойдём со мной.']),
+    ('go', 'scene_face'),
+    ('talk', 'npc_resh', ['Почему ты спустился вниз?', 'Научи собирать заряд.', 'Затвор держит. Теперь отдай сердцевину.',
+                          'Пойдём со мной.']),
+    ('go', 'scene_dry_row'), ('buy', 'npc_dozh', 'item_oil', 1),
+]
+ROUTES['silence_kell_party_wright'] = R('prof_wright', 'diff_deep', 'ending_silence_kell', PARTY + [
+    ('craft', 'recipe_charge'), ('go', 'scene_sluice'),
+    ('use', 'item_sluice_mech', 'Заложить заряд', {'rolls': [False], 'combat': 'victory'})])
+ROUTES['silence_stood_party_wright'] = R('prof_wright', 'diff_inspector', 'ending_silence_stood', PARTY + [
+    ('craft', 'recipe_charge'), ('go', 'scene_sluice'), ('use', 'item_sluice_mech', 'Заложить заряд', {'rolls': [True]})])

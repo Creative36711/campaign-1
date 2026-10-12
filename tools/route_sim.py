@@ -360,6 +360,8 @@ def run(name, route, verbose=False):
     except RouteError as e:
         err = f'шаг {i}: {s[:3]} — {e}'
     ok = err is None and sim.ending == route['expect']
+    if route.get('expect_error'):
+        ok = bool(err) and route['expect_error'] in err
     return sim, ok, err
 
 
