@@ -256,6 +256,11 @@
               "type": "flag",
               "flag": "sluice_ready",
               "not": true
+            },
+            {
+              "type": "flag",
+              "flag": "core_taken",
+              "not": true
             }
           ],
           "check": {

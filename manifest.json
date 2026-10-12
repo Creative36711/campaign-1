@@ -255,7 +255,8 @@
     "rule_watchman_again.json",
     "rule_air_shelter_on.json",
     "rule_air_shelter_off.json",
-    "rule_air_shelter_hint.json"
+    "rule_air_shelter_hint.json",
+    "rule_open_cache_core.json"
   ],
   "arenas": [
     "arena_gate.json",

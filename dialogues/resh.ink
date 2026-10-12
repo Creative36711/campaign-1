@@ -54,7 +54,7 @@ VAR r = 0
     Стража. Я видел пломбу на их рукавицах: тринадцать-К. У нас на ярусе пломбы только у тех, кто закрывает. # emotion: angry # voice: assets/voice/resh_6.mp3
     Муфту резали ключом на пятьдесят два, в перчатках: на срезе ни одной мозоли. Сорок лет смотрю, как режут, — по металлу видно, чья рука держала ключ. # emotion: thoughtful # voice: assets/voice/resh_14.mp3
     -> Начало_hub
-* { not (has_item("item_core")) and not (has_item("item_key_cache")) and not (get_flag("resh_core_asked")) and not (get_flag("sluice_ready")) } [Отдай сердцевину.]
+* { not (has_item("item_core")) and not (has_item("item_key_cache")) and not (get_flag("resh_core_asked")) and not (get_flag("sluice_ready")) and not (get_flag("core_taken")) } [Отдай сердцевину.]
     ~ set_flag("resh_core_asked")
     ~ r = skill_check("persuade", 55)
     {r: -> Начало_hub_ok1 | -> Начало_hub_no1}
