@@ -57,7 +57,7 @@ VAR r = 0
     ~ change_disposition("npc_vex", 6)
     ~ fire_rule("rule_vex_journal")
     -> Начало_hub
-+ { not (get_flag("vex_job")) } [Есть работа для дознавателя?]
++ { not (get_flag("vex_job")) and not (get_flag("coal_stolen")) } [Есть работа для дознавателя?]
     Есть. В галерее восьмого, на трубном узле, стоит мерная рейка. Запиши, где сейчас вода. Надзор шлёт сводки «уровень стабилен», а я своим глазам верю больше, чем их чернилам. Двенадцать марок за цифру. # voice: assets/voice/vex_15.mp3
     ~ set_flag("vex_job")
     -> Начало_hub
