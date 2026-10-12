@@ -1,3 +1,4 @@
+EXTERNAL present_item(a0, a1, a2)
 EXTERNAL clear_flag(a0)
 EXTERNAL leave_party(a0)
 EXTERNAL change_companion_need(a0, a1, a2)
@@ -112,6 +113,9 @@ VAR r = 0
     ~ join_party("npc_resh")
     ~ set_flag("resh_joined")
     -> DONE
++ { get_flag("clue_glove") and not (get_flag("resh_glove")) } [Показать находку с привода.]
+    ~ present_item("Рукавица", "Не_то", "item_glove")
+    -> DONE
 + { in_party("npc_resh") } [Как ты держишься?]
     { get_flag("resh_worn"): -> Самочувствие_плохо | -> Самочувствие_хорошо }
 + { in_party("npc_resh") } [Возвращайся к забою. Дальше я сам.]
@@ -196,4 +200,18 @@ VAR r = 0
 
 === Б_галерея ===
 Вода стоит на ладонь выше, чем позавчера. Каркас пьёт медленно, но не останавливается. # emotion: thoughtful # voice: assets/voice/resh_33.mp3
+-> DONE
+
+=== Рукавица ===
+Караульная, брезентовая. Мои кожаные — ты видел. Кто в такой лез в привод, тот привода не знал: брезент к муфте липнет. # emotion: thoughtful # voice: assets/voice/resh_34.mp3
+~ set_flag("resh_glove")
+~ fire_rule("rule_resh_glove")
+-> Начало_hub
+
+=== Не_то ===
+Это не моё и не помпы. Мне такое показывать без толку. # emotion: calm # voice: assets/voice/resh_35.mp3
+-> Начало_hub
+
+=== Б_затвор ===
+Швы держат, пока давит снизу. Сядет затвор, только если в колодке будет клапан. Без клапана хоть плечом дави. # emotion: thoughtful # voice: assets/voice/resh_36.mp3
 -> DONE

@@ -1,3 +1,4 @@
+EXTERNAL present_item(a0, a1, a2)
 EXTERNAL clear_flag(flag)
 EXTERNAL add_item(a0, a1)
 EXTERNAL change_disposition(a0, a1)
@@ -47,6 +48,9 @@ VAR r = 0
 + { not (get_flag("glazier_robbed")) and not (get_flag("glazier_beaten")) } [Короб на землю. Именем Надзора.]
     ~ r = skill_check("intimidate", 50)
     {r: -> Отдал | -> Драка}
++ [Показать ему вещь.]
+    ~ present_item("Вещь", "Вещь", "")
+    -> DONE
 + [Иди своей дорогой.]
     -> DONE
 
@@ -73,3 +77,7 @@ VAR r = 0
 ~ clear_flag("glazier_trades")
 ~ fire_rule("rule_glazier_fight")
 -> DONE
+
+=== Вещь ===
+Не покупаю. Стекло — да, а это неси в Сухой ряд. # emotion: calm # voice: assets/voice/glazier_8.mp3
+-> Начало_hub

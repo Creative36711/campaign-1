@@ -365,11 +365,51 @@
           }
         },
         {
+          "text": "Показать ему вещь.",
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "present_item",
+                    "ok": "Вещь",
+                    "fail": "Вещь",
+                    "required": ""
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "Вещь",
+          "conds": []
+        },
+        {
           "text": "Иди своей дорогой.",
           "sections": [],
           "goto": "end"
         }
       ]
+    },
+    {
+      "id": "Вещь",
+      "label": "Показал вещь",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Не покупаю. Стекло — да, а это неси в Сухой ряд.",
+                "voice": "assets/voice/glazier_8.mp3",
+                "emotion": "calm"
+              }
+            }
+          ]
+        }
+      ],
+      "goto": "Начало",
+      "choices": []
     }
   ]
 }

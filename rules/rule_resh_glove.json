@@ -1,0 +1,14 @@
+{
+  "id": "rule_resh_glove",
+  "label": "Реш о рукавице",
+  "once": true,
+  "manual": true,
+  "conditions": [],
+  "effects": [
+    {
+      "type": "journal_update",
+      "quest": "quest_pump",
+      "text_key": "j_resh_glove"
+    }
+  ]
+}

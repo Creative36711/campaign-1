@@ -1,3 +1,4 @@
+EXTERNAL present_item(a0, a1, a2)
 EXTERNAL clear_flag(a0)
 EXTERNAL set_description(a0, a1)
 EXTERNAL join_party(a0)
@@ -82,13 +83,9 @@ VAR r = 0
     Только возьму фонарь. И ключ от затвора — у помощницы мастера он свой. # voice: assets/voice/ira_9.mp3
     ~ fire_rule("rule_ira_joins")
     -> Начало_hub
-* { not (get_flag("ira_glove")) and has_item("item_glove") } [Показать рукавицу с привода.]
-    ~ set_flag("ira_glove")
-    Она берёт рукавицу за манжет двумя пальцами, как чужую вещь. # action # sfx: snd_cloth # voice: assets/voice/narr_ira_6.mp3
-    Реш носил кожаные и жаловался, что они жмут. А заплату ставили в Сухом ряду: у Айлы так штопают, когда нечем платить. # emotion: thoughtful # voice: assets/voice/ira_16.mp3
-    ~ change_disposition("npc_ira", 4)
-    ~ learn_name("npc_ayla")
-    -> Начало_hub
++ { get_flag("clue_glove") and not (get_flag("ira_glove")) } [Показать находку с привода.]
+    ~ present_item("Рукавица", "Не_то", "item_glove")
+    -> DONE
 * { get_flag("pack_tag") and not (get_flag("ira_pack")) } [Ранец из галереи. Бирка: «Смена 13-го. Ярус 8». Чей он?]
     ~ set_flag("ira_pack")
     Лямку узлом он вязал. Устав велит пряжкой, а Стась говорил: пряжка на бегу расстёгивается. Это его ранец. # emotion: sad # voice: assets/voice/ira_28.mp3
@@ -96,13 +93,9 @@ VAR r = 0
     ~ change_disposition("npc_ira", 4)
     ~ fire_rule("rule_ira_pack")
     -> Начало_hub
-* { has_item("item_valve") and not (get_flag("ira_valve")) and not (get_flag("sluice_ready")) } [Показать клапан из шахты.]
-    ~ set_flag("ira_valve")
-    Она проводит пальцем по выбитой семёрке. # action # sfx: snd_tag # voice: assets/voice/narr_ira_15.mp3
-    Седьмой номер — с нашего затвора. Резьба целая: его не сорвало водой, его вывернули ключом. Неси на восьмой, к затвору, пока там ещё есть что закрывать. # emotion: thoughtful # voice: assets/voice/ira_31.mp3
-    ~ change_disposition("npc_ira", 3)
-    ~ fire_rule("rule_ira_valve")
-    -> Начало_hub
++ { get_flag("valve_found") and not (get_flag("ira_valve")) and not (get_flag("sluice_ready")) } [Показать деталь из шахты.]
+    ~ present_item("Клапан", "Не_то", "item_valve")
+    -> DONE
 + { get_flag("ira_recruited") and not (in_party("npc_ira")) } [Пойдём со мной снова.]
     Опять вниз? Пойдём. Фонарь я так и не выпустила из рук. # emotion: calm # voice: assets/voice/ira_38.mp3
     ~ join_party("npc_ira")
@@ -264,3 +257,23 @@ VAR r = 0
 === П_уступил ===
 Спасибо, мастер. Я запомню, что ты отошёл сам. # emotion: calm # voice: assets/voice/ira_45.mp3
 -> DONE
+
+=== Рукавица ===
+~ set_flag("ira_glove")
+Она берёт рукавицу за манжет двумя пальцами, как чужую вещь. # action # sfx: snd_cloth # voice: assets/voice/narr_ira_6.mp3
+Реш носил кожаные и жаловался, что они жмут. А заплату ставили в Сухом ряду: у Айлы так штопают, когда нечем платить. # emotion: thoughtful # voice: assets/voice/ira_16.mp3
+~ change_disposition("npc_ira", 4)
+~ learn_name("npc_ayla")
+-> Начало_hub
+
+=== Клапан ===
+~ set_flag("ira_valve")
+Она проводит пальцем по выбитой семёрке. # action # sfx: snd_tag # voice: assets/voice/narr_ira_15.mp3
+Седьмой номер — с нашего затвора. Резьба целая: его не сорвало водой, его вывернули ключом. Неси на восьмой, к затвору, пока там ещё есть что закрывать. # emotion: thoughtful # voice: assets/voice/ira_31.mp3
+~ change_disposition("npc_ira", 3)
+~ fire_rule("rule_ira_valve")
+-> Начало_hub
+
+=== Не_то ===
+Не узнаю. Я помпу знаю, а не чужие карманы. # emotion: thoughtful # voice: assets/voice/ira_46.mp3
+-> Начало_hub

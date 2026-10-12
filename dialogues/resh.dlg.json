@@ -811,6 +811,36 @@
           ]
         },
         {
+          "text": "Показать находку с привода.",
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "present_item",
+                    "ok": "Рукавица",
+                    "fail": "Не_то",
+                    "required": "item_glove"
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "Рукавица",
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "clue_glove"
+            },
+            {
+              "type": "flag",
+              "flag": "resh_glove",
+              "not": true
+            }
+          ]
+        },
+        {
           "text": "Как ты держишься?",
           "conds": [
             {
@@ -1285,6 +1315,80 @@
               "line": {
                 "text": "Вода стоит на ладонь выше, чем позавчера. Каркас пьёт медленно, но не останавливается.",
                 "voice": "assets/voice/resh_33.mp3",
+                "emotion": "thoughtful"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "goto": "end"
+    },
+    {
+      "id": "Рукавица",
+      "label": "Рукавица с привода",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Караульная, брезентовая. Мои кожаные — ты видел. Кто в такой лез в привод, тот привода не знал: брезент к муфте липнет.",
+                "voice": "assets/voice/resh_34.mp3",
+                "emotion": "thoughtful"
+              }
+            },
+            {
+              "kind": "effect",
+              "effect": {
+                "type": "set_flag",
+                "flag": "resh_glove"
+              }
+            },
+            {
+              "kind": "effect",
+              "effect": {
+                "type": "fire_rule",
+                "rule": "rule_resh_glove"
+              }
+            }
+          ]
+        }
+      ],
+      "goto": "Начало",
+      "choices": []
+    },
+    {
+      "id": "Не_то",
+      "label": "Не та вещь",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Это не моё и не помпы. Мне такое показывать без толку.",
+                "voice": "assets/voice/resh_35.mp3",
+                "emotion": "calm"
+              }
+            }
+          ]
+        }
+      ],
+      "goto": "Начало",
+      "choices": []
+    },
+    {
+      "id": "Б_затвор",
+      "label": "В пути: затвор",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Швы держат, пока давит снизу. Сядет затвор, только если в колодке будет клапан. Без клапана хоть плечом дави.",
+                "voice": "assets/voice/resh_36.mp3",
                 "emotion": "thoughtful"
               }
             }

@@ -568,65 +568,34 @@
           ]
         },
         {
-          "text": "Показать рукавицу с привода.",
-          "conds": [
-            {
-              "type": "flag",
-              "flag": "ira_glove",
-              "not": true
-            },
-            {
-              "type": "has_item",
-              "item": "item_glove"
-            }
-          ],
+          "text": "Показать находку с привода.",
           "sections": [
             {
               "steps": [
                 {
                   "kind": "effect",
                   "effect": {
-                    "type": "set_flag",
-                    "flag": "ira_glove"
-                  }
-                },
-                {
-                  "kind": "line",
-                  "line": {
-                    "text": "Она берёт рукавицу за манжет двумя пальцами, как чужую вещь.",
-                    "action": true,
-                    "voice": "assets/voice/narr_ira_6.mp3"
-                  }
-                },
-                {
-                  "kind": "line",
-                  "line": {
-                    "text": "Реш носил кожаные и жаловался, что они жмут. А заплату ставили в Сухом ряду: у Айлы так штопают, когда нечем платить.",
-                    "voice": "assets/voice/ira_16.mp3",
-                    "emotion": "thoughtful",
-                    "sfx": "snd_cloth"
-                  }
-                },
-                {
-                  "kind": "effect",
-                  "effect": {
-                    "type": "change_disposition",
-                    "target": "npc_ira",
-                    "delta": 4
-                  }
-                },
-                {
-                  "kind": "effect",
-                  "effect": {
-                    "type": "learn_name",
-                    "entity": "npc_ayla"
+                    "type": "present_item",
+                    "ok": "Рукавица",
+                    "fail": "Не_то",
+                    "required": "item_glove"
                   }
                 }
               ]
             }
           ],
-          "goto": "stay",
-          "once": true
+          "goto": "Рукавица",
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "clue_glove"
+            },
+            {
+              "type": "flag",
+              "flag": "ira_glove",
+              "not": true
+            }
+          ]
         },
         {
           "text": "Ранец из галереи. Бирка: «Смена 13-го. Ярус 8». Чей он?",
@@ -689,11 +658,27 @@
           "once": true
         },
         {
-          "text": "Показать клапан из шахты.",
+          "text": "Показать деталь из шахты.",
+          "sections": [
+            {
+              "steps": [
+                {
+                  "kind": "effect",
+                  "effect": {
+                    "type": "present_item",
+                    "ok": "Клапан",
+                    "fail": "Не_то",
+                    "required": "item_valve"
+                  }
+                }
+              ]
+            }
+          ],
+          "goto": "Клапан",
           "conds": [
             {
-              "type": "has_item",
-              "item": "item_valve"
+              "type": "flag",
+              "flag": "valve_found"
             },
             {
               "type": "flag",
@@ -705,54 +690,7 @@
               "flag": "sluice_ready",
               "not": true
             }
-          ],
-          "sections": [
-            {
-              "steps": [
-                {
-                  "kind": "effect",
-                  "effect": {
-                    "type": "set_flag",
-                    "flag": "ira_valve"
-                  }
-                },
-                {
-                  "kind": "line",
-                  "line": {
-                    "text": "Она проводит пальцем по выбитой семёрке.",
-                    "action": true,
-                    "sfx": "snd_tag",
-                    "voice": "assets/voice/narr_ira_15.mp3"
-                  }
-                },
-                {
-                  "kind": "line",
-                  "line": {
-                    "text": "Седьмой номер — с нашего затвора. Резьба целая: его не сорвало водой, его вывернули ключом. Неси на восьмой, к затвору, пока там ещё есть что закрывать.",
-                    "voice": "assets/voice/ira_31.mp3",
-                    "emotion": "thoughtful"
-                  }
-                },
-                {
-                  "kind": "effect",
-                  "effect": {
-                    "type": "change_disposition",
-                    "target": "npc_ira",
-                    "delta": 3
-                  }
-                },
-                {
-                  "kind": "effect",
-                  "effect": {
-                    "type": "fire_rule",
-                    "rule": "rule_ira_valve"
-                  }
-                }
-              ]
-            }
-          ],
-          "goto": "stay",
-          "once": true
+          ]
         },
         {
           "text": "Пойдём со мной снова.",
@@ -1571,6 +1509,128 @@
       ],
       "choices": [],
       "goto": "end"
+    },
+    {
+      "id": "Рукавица",
+      "label": "Рукавица с привода",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "effect",
+              "effect": {
+                "type": "set_flag",
+                "flag": "ira_glove"
+              }
+            },
+            {
+              "kind": "line",
+              "line": {
+                "text": "Она берёт рукавицу за манжет двумя пальцами, как чужую вещь.",
+                "action": true,
+                "voice": "assets/voice/narr_ira_6.mp3"
+              }
+            },
+            {
+              "kind": "line",
+              "line": {
+                "text": "Реш носил кожаные и жаловался, что они жмут. А заплату ставили в Сухом ряду: у Айлы так штопают, когда нечем платить.",
+                "voice": "assets/voice/ira_16.mp3",
+                "emotion": "thoughtful",
+                "sfx": "snd_cloth"
+              }
+            },
+            {
+              "kind": "effect",
+              "effect": {
+                "type": "change_disposition",
+                "target": "npc_ira",
+                "delta": 4
+              }
+            },
+            {
+              "kind": "effect",
+              "effect": {
+                "type": "learn_name",
+                "entity": "npc_ayla"
+              }
+            }
+          ]
+        }
+      ],
+      "goto": "Начало",
+      "choices": []
+    },
+    {
+      "id": "Клапан",
+      "label": "Клапан из шахты",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "effect",
+              "effect": {
+                "type": "set_flag",
+                "flag": "ira_valve"
+              }
+            },
+            {
+              "kind": "line",
+              "line": {
+                "text": "Она проводит пальцем по выбитой семёрке.",
+                "action": true,
+                "sfx": "snd_tag",
+                "voice": "assets/voice/narr_ira_15.mp3"
+              }
+            },
+            {
+              "kind": "line",
+              "line": {
+                "text": "Седьмой номер — с нашего затвора. Резьба целая: его не сорвало водой, его вывернули ключом. Неси на восьмой, к затвору, пока там ещё есть что закрывать.",
+                "voice": "assets/voice/ira_31.mp3",
+                "emotion": "thoughtful"
+              }
+            },
+            {
+              "kind": "effect",
+              "effect": {
+                "type": "change_disposition",
+                "target": "npc_ira",
+                "delta": 3
+              }
+            },
+            {
+              "kind": "effect",
+              "effect": {
+                "type": "fire_rule",
+                "rule": "rule_ira_valve"
+              }
+            }
+          ]
+        }
+      ],
+      "goto": "Начало",
+      "choices": []
+    },
+    {
+      "id": "Не_то",
+      "label": "Не та вещь",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Не узнаю. Я помпу знаю, а не чужие карманы.",
+                "voice": "assets/voice/ira_46.mp3",
+                "emotion": "thoughtful"
+              }
+            }
+          ]
+        }
+      ],
+      "goto": "Начало",
+      "choices": []
     }
   ]
 }

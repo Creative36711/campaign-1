@@ -233,7 +233,14 @@
             }
           ],
           "goto": "stay",
-          "once": true
+          "once": true,
+          "conds": [
+            {
+              "type": "flag",
+              "flag": "dozh_appraised",
+              "not": true
+            }
+          ]
         },
         {
           "text": "Что берут с собой те, кто ходит ниже восьмого?",
@@ -457,6 +464,13 @@
                 "type": "change_disposition",
                 "delta": 2,
                 "target": "npc_dozh"
+              }
+            },
+            {
+              "kind": "effect",
+              "effect": {
+                "type": "set_flag",
+                "flag": "dozh_appraised"
               }
             }
           ]

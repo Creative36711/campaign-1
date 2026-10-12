@@ -248,7 +248,9 @@
     "rule_ira_mourns_resh.json",
     "rule_resh_mourns_ira.json",
     "rule_banter_resh_room.json",
-    "rule_banter_resh_gallery.json"
+    "rule_banter_resh_gallery.json",
+    "rule_resh_glove.json",
+    "rule_vex_token.json"
   ],
   "arenas": [
     "arena_gate.json",

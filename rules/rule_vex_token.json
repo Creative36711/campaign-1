@@ -1,0 +1,14 @@
+{
+  "id": "rule_vex_token",
+  "label": "Векс нашёл номер жетона в журнале",
+  "once": true,
+  "manual": true,
+  "conditions": [],
+  "effects": [
+    {
+      "type": "journal_update",
+      "quest": "quest_missing",
+      "text_key": "j_vex"
+    }
+  ]
+}
