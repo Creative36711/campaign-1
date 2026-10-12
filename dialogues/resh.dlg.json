@@ -373,6 +373,14 @@
                   }
                 },
                 {
+                  "kind": "line",
+                  "line": {
+                    "text": "Ключ на пятьдесят два и ровный стол: верстак у шлюза или скамья в Сухом ряду. На коленке не собирай.",
+                    "voice": "assets/voice/resh_37.mp3",
+                    "emotion": "thoughtful"
+                  }
+                },
+                {
                   "kind": "effect",
                   "effect": {
                     "type": "unlock_recipe",

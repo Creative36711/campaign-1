@@ -423,6 +423,40 @@
       "hint": "улика: приказ сжечь дело, тем же почерком"
     },
     {
+      "label": "Записать показания Векса о жетоне",
+      "hint": "смотритель сверил номер по журналу шлюза",
+      "conditions": [
+        {
+          "type": "flag_set",
+          "flag": "vex_token"
+        },
+        {
+          "type": "flag_not_set",
+          "flag": "case_filed_vex"
+        }
+      ],
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "case_filed_vex"
+        },
+        {
+          "type": "change_variable",
+          "var": "case_filed",
+          "delta": 1
+        },
+        {
+          "type": "journal_update",
+          "quest": "quest_pump",
+          "text_key": "j_vex_case"
+        },
+        {
+          "type": "grant_xp",
+          "points": 5
+        }
+      ]
+    },
+    {
       "label": "Сшить дело",
       "conditions": [
         {
