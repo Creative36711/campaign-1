@@ -457,6 +457,40 @@
       ]
     },
     {
+      "label": "Записать, кто вписал взвод обратно",
+      "hint": "показания смотрителя о строке в журнале шлюза",
+      "conditions": [
+        {
+          "type": "flag_set",
+          "flag": "vex_return_hand"
+        },
+        {
+          "type": "flag_not_set",
+          "flag": "case_filed_return"
+        }
+      ],
+      "effects": [
+        {
+          "type": "set_flag",
+          "flag": "case_filed_return"
+        },
+        {
+          "type": "change_variable",
+          "var": "case_filed",
+          "delta": 1
+        },
+        {
+          "type": "journal_update",
+          "quest": "quest_pump",
+          "text_key": "j_return_case"
+        },
+        {
+          "type": "grant_xp",
+          "points": 5
+        }
+      ]
+    },
+    {
       "label": "Сшить дело",
       "conditions": [
         {

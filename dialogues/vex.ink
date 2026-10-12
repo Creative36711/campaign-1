@@ -85,6 +85,11 @@ VAR r = 0
     Торг без разговоров. Люблю такие. # emotion: calm # voice: assets/voice/vex_7.mp3
     ~ open_trade("npc_vex")
     -> DONE
+* { get_flag("vex_journal") and not (get_flag("vex_return_hand")) } [Строка о возвращении написана не твоей рукой.]
+    ~ set_flag("vex_return_hand")
+    Не моя. В шесть утра журнал был у старшины: он сам вписал взвод обратно, конторскими чернилами, а мне велел поставить время. Я поставил. Время — единственное, что там правда. # emotion: thoughtful # voice: assets/voice/vex_26.mp3
+    ~ fire_rule("rule_vex_return_hand")
+    -> Начало_hub
 * { get_flag("kast_hand") and not (get_flag("vex_lifted")) } [Режим тишины сняли.]
     ~ set_flag("vex_lifted")
     Сняли. Вводят шёпотом и снимают шёпотом, а журнал всё помнит. Проходи, дознаватель: сегодня тебя записываю я, а не Келл. # emotion: calm # voice: assets/voice/vex_20.mp3
