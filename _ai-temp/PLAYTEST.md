@@ -38,7 +38,7 @@
 | silence_kell_inspector_deep | inspector / deep | ending_silence_kell | ✓ ending_silence_kell | 30 | 11 | соло | dodge 45 → успех; stealth 50 → успех; investigate 40 → успех; investigate 35 → успех; stealth 45 → успех; repair 55 → успех; persuade 50 → провал; бой [npc_kell+npc_thug] отряд ['hero'] → victory |
 | silence_rigged_wright | wright / watchman | ending_silence_rigged | ✓ ending_silence_rigged | 27 | 1 | соло | dodge 45 → успех; stealth 50 → успех; stealth 45 → успех; repair 55 → успех; repair 65 → успех |
 | death_at_sluice | inspector / inspector | ending_death | ✓ ending_death | 26 | 2 | соло | dodge 45 → успех; stealth 50 → успех; stealth 45 → успех; repair 55 → успех; persuade 50 → провал; бой [npc_kell+npc_thug] отряд ['hero'] → defeat |
-| flood_deadline | inspector / inspector | ending_flood | ✓ ending_flood | 80 | 15 | соло |  |
+| flood_deadline | inspector / inspector | ending_flood | ✓ ending_flood | 72 | 15 | соло |  |
 | silence_plain_investigator | inspector / watchman | ending_silence | ✓ ending_silence | 57 | 13 | соло | dodge 45 → успех; stealth 50 → успех; lockpick 45 → успех; lockpick 45 → успех; ink persuade 45 → успех; investigate 45 → успех; stealth 45 → успех; investigate 40 → успех; investigate 35 → успех; repair 55 → успех |
 | filter_scav_inspector_inspector | inspector / inspector | — (без концовки) | ✓ шаги пройдены | 10 | 15 | соло | investigate 40 → успех; stealth 50 → успех; investigate 35 → успех; repair 40 → успех |
 | filter_buy_inspector_inspector | inspector / inspector | — (без концовки) | ✓ шаги пройдены | 10 | 8 | соло | investigate 40 → провал; stealth 50 → успех; investigate 35 → провал; repair 40 → успех |
@@ -102,9 +102,12 @@
 
 1. **Ключ от схрона ничего не открывал.** Его выдают шкафчик и Реш, но у схрона не было опции «Отпереть ключом». Добавлена.
 2. **Сердцевина удваивалась.** Сценарий: Реш отдал сердцевину, затем герой взломал схрон, а в нём лежала вторая. Теперь сердцевина выдаётся только один раз (rule_open_cache_core), а Реш не отдаёт вторую после вскрытого схрона.
-3. **Девятый ярус мог открыться с первой улики.** Шесть мест вызывали `fire_rule rule_clue_check`, Вызовы убраны: правило автоматическое и срабатывает само. (Позже движок подтвердил, что условия вызванного правила проверяются, так что ошибки не было бы, но лишние вызовы не нужны.)
+3. **Девятый ярус мог открыться с первой улики.** Шесть мест вызывали `fire_rule rule_clue_check`. Вызовы убраны: правило автоматическое и срабатывает само. (Позже движок подтвердил, что условия вызванного правила проверяются, так что ошибки не было бы, но лишние вызовы не нужны.)
 4. **Вариант «Тишина» (без Келла) был недостижим.** Все пути ставили kell_down, kell_stood_down или charge_rigged. Теперь если Каст сняла режим (kast_hand), караул у затвора тоже снят.
 5. **Реш не говорил, где собирать заряд.** Добавлена озвученная реплика resh_37 про ключ, верстак и скамью.
+6. **Часы в прогоне шли с нуля, а не с 7:00** (найдено после обновления движка 12.10). Правила времени теперь на `elapsed_ge` (часы от старта), прогон стартует со `starting_tick`. Потоп приходит ровно на 72-м часу.
+7. **Повторные броски без цены:** взлом двери каморки Реша и трос лебёдки при неудаче теперь стоят час. «Сличить завиток» после неудачи блокируется флагом `case_hand_tired` до сна на койке или скамье.
+8. **Привал не давал сна:** `camping.restore {need_rest: 50}`, 4 часа. Официальный аудит: 0 ошибок, 0 предупреждений.
 
 ## 6. Что осталось проверить в живом движке
 
