@@ -485,3 +485,13 @@ TODO: тестовый бой с фигурками (ход 27); статусы 
 - Аудит: хинт ниши, встреча «пение жилы» (Айла), открытка у затвора (Стась).
 - Портреты героя: status_veinsong, status_hunger ×3.
 - Бэклог: реплика Реша у затвора (rule_banter_resh_sluice) — цитата в show_message без голоса; озвучить в следующем ходу.
+
+## Итерация 31 (ход 31, 12.10)
+- Д1 (показ предметов): отдельные опции под каждую находку через present_item, текст не называет предмет. Ayla/Ira(glove, valve)/Resh/Kell/Vex — ok/fail узлы; glazier/registrar — present "" (любой). Dozh: оценка один раз (dozh_appraised). Новые правила rule_vex_token (журнал quest_missing j_vex), rule_resh_glove (журнал quest_pump j_resh_glove), обе с открытками.
+- Banter Реша у затвора: цитата убрана из show_message, start_dialogue Б_затвор (resh_36).
+- Д2: rule_clue_check → fire_rule rule_reveal_deep, открытка без перечня улик; rule_deadline_flood → advance stage_flooded; таблица NPC в design_doc исправлена (расписаний нет), добавлен стекольщик.
+- reach_audit.py: учитывает торговлю/лут/старт/порчу/таймеры/известные рецепты/on_zero_effect/ambush_rule — 0 ложных.
+- Смотритель: watchman_alerted, rule_watchman_fight (manual), rule_watchman_again; бегство ≠ проход; провал маслёнки → скрытность 55; броня 2→1 (соло 51%, с Ирой 96%).
+- Печка: ярлык «Печка подождёт», «у Векса в шлюзовой камере».
+- Изображения (10): pc_kell_squad (форма), pc_resh_room (печь холодная), pc_resh_room_empty (первый вход), pc_vex_token (+ правка: крюк вместо правой руки), pc_resh_glove, scene_pump_room ×2 (печь холодная), pc_watchman_alert, pc_ira_resh_gone.
+- Бэклог: Векс «кто дописал строку о возвращении» (нужна озвучка vex) → мод к проверке у Каст/Келла; маслёнка после тревоги; две открытки подряд (clue_check + reveal_deep).
