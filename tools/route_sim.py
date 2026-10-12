@@ -368,7 +368,10 @@ def run(name, route, verbose=False):
 if __name__ == '__main__':
     sys.path.insert(0, os.path.join(ROOT, 'tools'))
     from routes import ROUTES
-    want = sys.argv[1:] or list(ROUTES)
+    args = [a for a in sys.argv[1:] if not a.startswith('--')]
+    want = args or list(ROUTES)
+    md = '--md' in sys.argv
+    rows = []
     verbose = os.environ.get('V')
     bad = 0
     for n in want:
@@ -380,4 +383,13 @@ if __name__ == '__main__':
             print('\n'.join('    ' + x for x in sim.log[-40 if not verbose else 0:]))
         if verbose: print('    риски:\n' + '\n'.join('      ' + x for x in sim.risks))
         bad += not ok
+        rows.append((n, ROUTES[n], sim, ok, err))
+    if md:
+        out = ['| Маршрут | Старт / сложность | Ждали | Итог | Час | Марок | Отряд | Броски |', '|---|---|---|---|---:|---:|---|---|']
+        for n, r, sim, ok, err in rows:
+            exp = r.get('expect') or ('отказ: ' + r['expect_error'] if r.get('expect_error') else '— (без концовки)')
+            res = ('✓ ' if ok else '✗ ') + (sim.ending or ('отказ по деньгам' if err and r.get('expect_error') else ('шаги пройдены' if not err else err)))
+            rolls = '; '.join(x.split(': ', 1)[-1] for x in sim.risks)
+            out.append(f"| {n} | {r['prof'][5:]} / {r['diff'][5:]} | {exp} | {res} | {sim.tick} | {sim.items.get('item_mark', 0)} | {', '.join(sim.party) or 'соло'} | {rolls} |")
+        open('/tmp/routes_table.md', 'w').write('\n'.join(out) + '\n')
     sys.exit(1 if bad else 0)

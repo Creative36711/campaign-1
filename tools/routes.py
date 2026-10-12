@@ -114,3 +114,22 @@ ROUTES['silence_kell_party_wright'] = R('prof_wright', 'diff_deep', 'ending_sile
     ('use', 'item_sluice_mech', 'Заложить заряд', {'rolls': [False], 'combat': 'victory'})])
 ROUTES['silence_stood_party_wright'] = R('prof_wright', 'diff_inspector', 'ending_silence_stood', PARTY + [
     ('craft', 'recipe_charge'), ('go', 'scene_sluice'), ('use', 'item_sluice_mech', 'Заложить заряд', {'rolls': [True]})])
+
+# ---- проваленные скрытные проходы: псы в галерее и смотритель в штольне — бой и победа
+FIGHTS = [(s if s != ('go', 'scene_flood_gallery') else ('go', 'scene_flood_gallery', {'rolls': [False], 'combat': 'victory'}))
+          for s in CORE]
+ROUTES['vein_fights_scavenger'] = R('prof_scavenger', 'diff_watchman', 'ending_vein', FIGHTS + [
+    ('go', 'scene_face', {'rolls': [False], 'combat': 'victory'}),
+    ('talk', 'npc_resh', ['Затвор держит. Теперь отдай сердцевину.']),
+    ('talk', 'npc_vein', ['Вложить сердцевину в стену.'])])
+# Реш в отряде у помпы: сначала спор, без согласия сердцевину не вставить
+RESH_PUMP = CORE + [('go', 'scene_face'),
+    ('talk', 'npc_resh', ['Почему ты спустился вниз?', 'Затвор держит. Теперь отдай сердцевину.', 'Пойдём со мной.']),
+    ('go', 'scene_pump_hall')]
+ROUTES['pump_resh_party_agrees'] = R('prof_wright', 'diff_inspector', 'ending_pump', RESH_PUMP + [
+    ('use', 'item_pump_engine', 'Вставить сердцевину и запустить помпу', {'dlg': [['Восьмой ярус утонет']], 'rolls': [True]}),
+    ('use', 'item_pump_engine', 'Вставить сердцевину и запустить помпу')])
+# спор проигран: Реш уходит к жиле, помпу можно пустить уже без него
+ROUTES['pump_resh_party_quarrel'] = R('prof_wright', 'diff_inspector', 'ending_pump', RESH_PUMP + [
+    ('use', 'item_pump_engine', 'Вставить сердцевину и запустить помпу', {'dlg': [['Восьмой ярус утонет']], 'rolls': [False]}),
+    ('use', 'item_pump_engine', 'Вставить сердцевину и запустить помпу')])
