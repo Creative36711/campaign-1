@@ -25,6 +25,7 @@ REC = {L(f)['id']: L(f) for f in glob.glob('recipes/*.json')}
 PROF = {p['id']: p for p in C['char_creation']['professions']}
 DIFF = {d['id']: d for d in C['difficulties']}
 PE = {p['id']: p for p in C.get('price_events', [])}
+W = {l['id']: l for r in L('world.json')['regions'] for l in r['locations']}
 
 
 class RouteError(Exception):
@@ -39,7 +40,8 @@ class Sim:
         self.disp = {k: e.get('base_disposition', 0) or 0 for k, e in ENT.items() if k.startswith('npc_')}
         self.fired, self.dead, self.price_events = set(), set(), set()
         self.tick, self.scene, self.ending = 0, None, None
-        self.log, self.risks, self.diff = [], [], DIFF[diff]
+        self.revealed = {k for k, l in W.items() if not l.get('hidden')}
+        self.log, self.risks, self.diff, self.warn = [], [], DIFF[diff], []
         self.outcomes = []  # очередь исходов бросков для текущего шага
         self.combat_result = 'victory'
         for it in PROF[prof]['items']:
@@ -80,7 +82,7 @@ class Sim:
         if t == 'player_enters_scene': return ctx.get('entered') == c.get('scene')
         if t == 'player_enters_location':
             return ctx.get('entered') and SCN[ctx['entered']]['location'] == c.get('location')
-        if t == 'tick_elapsed': return self.tick >= c.get('ticks', c.get('value', 0))
+        if t == 'tick_elapsed': return self.tick >= c.get('min_tick', 0)
         if t == 'quest_at_stage': return self.quests.get(c['quest']) == c['stage']
         if t == 'has_status': return c.get('status') in self.statuses
         if t == 'entity_dead': return c['entity'] in self.dead
@@ -115,7 +117,9 @@ class Sim:
             if not r: raise RouteError(f'fire_rule на правило вне manifest: {e["rule"]}')
             if r['id'] in self.fired and r.get('once'): return
             if not self.cond(r.get('conditions')):
-                self.log.append(f'  ! fire_rule {r["id"]}: условия правила ложны (движок может не выполнить)')
+                self.log.append(f'  ! fire_rule {r["id"]}: условия правила ложны')
+                self.warn.append(f'fire_rule {r["id"]} при ложных условиях ({where})')
+                if not os.environ.get('LAX'): return  # строгий режим: движок проверяет условия
             self.run_rule(r, 'fire_rule')
         elif t == 'skill_check_gate':
             ok = self.roll(f'{where}: {e["skill"]} {e["difficulty"]}')
@@ -147,6 +151,7 @@ class Sim:
         elif t == 'change_disposition': self.disp[e['target']] = self.disp.get(e['target'], 0) + e['delta']
         elif t == 'learn_name': self.known.add(e.get('npc') or e.get('entity'))
         elif t == 'unlock_recipe': self.recipes.add(e['recipe'])
+        elif t == 'reveal_location': self.revealed.add(e.get('location'))
         elif t == 'set_price_event': self.price_events.add(e['id'])
         elif t == 'clear_price_event': self.price_events.discard(e.get('id'))
         elif t in ('game_over_victory', 'game_over_death'):
@@ -180,6 +185,8 @@ class Sim:
             for r in RULES.values():
                 if self.ending: return
                 if r.get('trigger') == 'enter_scene': self.try_rule(r, {'entered': entered})
+        # стартовые и прочие always-правила с условием «вошёл в сцену» видят вход только в этом шаге
+        done = set()
         for _ in range(5):  # always-правила до устойчивого состояния
             fired = False
             for r in RULES.values():
@@ -187,7 +194,10 @@ class Sim:
                 if r.get('trigger', 'always') == 'always' and not r.get('manual'):
                     ctx = {'entered': entered} if entered else {}
                     # «always» без once срабатывают постоянно — берём только once:true, чтобы не зациклиться
-                    if r.get('once') and self.try_rule(r, ctx): fired = True
+                    if r.get('once'):
+                        if self.try_rule(r, ctx): fired = True
+                    elif r['id'] not in done and self.try_rule(r, ctx):
+                        done.add(r['id'])  # повторяемые — не больше раза за шаг
             if not fired: break
 
     # ---------- шаги
@@ -197,11 +207,49 @@ class Sim:
             if s.get('default_entity'): out.add(s['default_entity'])
         return out
 
-    def go(self, scene):
-        if scene not in SCN: raise RouteError(f'нет сцены {scene}')
+    def enter(self, scene, cost):
+        if cost: self.time(cost)
         self.scene = scene
         self.log.append(f'→ {scene} (тик {self.tick})')
         self.auto(entered=scene)
+
+    def go(self, scene):
+        if scene not in SCN: raise RouteError(f'нет сцены {scene}')
+        if self.scene is None: return self.enter(scene, 0)
+        if self.scene == scene: return
+        loc_to = SCN[scene]['location']
+        if SCN[self.scene]['location'] != loc_to:
+            # по карте: кратчайший путь по travel_connections
+            import heapq
+            start = SCN[self.scene]['location']; dist = {start: 0}; prev = {}; q = [(0, start)]
+            while q:
+                d, u = heapq.heappop(q)
+                for tc in W[u].get('travel_connections', []):
+                    v = tc['to']
+                    if v not in self.revealed: continue
+                    if d + tc['cost_ticks'] < dist.get(v, 1e9):
+                        dist[v] = d + tc['cost_ticks']; prev[v] = (u, tc['cost_ticks']); heapq.heappush(q, (dist[v], v))
+            if loc_to not in dist: raise RouteError(f'локация {loc_to} недоступна по карте (скрыта?)')
+            path = []; v = loc_to
+            while v != start: path.append((v, prev[v][1])); v = prev[v][0]
+            for v, cost in reversed(path):
+                if self.ending: return
+                self.enter(W[v]['arrival_scene'], cost)
+        # внутри локации — по навигации сцен
+        from collections import deque
+        q = deque([(self.scene, [])]); seen = {self.scene}
+        while q:
+            u, pth = q.popleft()
+            if u == scene: break
+            for n in SCN[u].get('navigation', []):
+                v = n.get('go_to_scene')
+                if v and v not in seen and (not n.get('condition') or self.cond(n['condition'])):
+                    seen.add(v); q.append((v, pth + [(v, n.get('cost_ticks', 0))]))
+        else:
+            raise RouteError(f'нет прохода из {self.scene} в {scene}')
+        for v, cost in pth:
+            if self.ending: return
+            self.enter(v, cost)
 
     def use(self, ent, label):
         e = ENT[ent]
