@@ -551,3 +551,9 @@ TODO: тестовый бой с фигурками (ход 27); статусы 
 - Новое: duration_actions act_unload + item_dozh_bales (slot_bales в scene_dry_row) + rule_unload_hurt.
 - ВНИМАНИЕ: campaign-audit.mjs в пакете не обновлён (нет duration_actions/start_duration_action) → ~320 ERROR только по этим двум файлам; jsonschema по новой campaign.schema.json — 0 ошибок.
 - Не сделано: гибкий привал (min/max_ticks, per_tick) — неизвестно, делится ли per_tick с напарниками; оставлен restore.
+
+## Итерация 39 (13.10, чемодан 21:07)
+- Новый campaign-audit.mjs: 0/0/3 (duration_actions распознаются).
+- camping: ticks 4, min 2, max 6, per_tick need_rest +12 (делится с отрядом по гайду), restore убран. Описание need_rest обновлено.
+- Аудио 10/10: narr_ira_5,9,10–15,rep, narr_kast_1. Осталось 13: narr_kast_7,8,9,rep; narr_resh_3,4,5,6,rep; narr_vex_3,4,5,rep.
+- Изображения 2/10: pc_unload_done, pc_unload_hurt (с опорой на pc_coal_delivery — Дож тот же). Открытки — через once-правила rule_unload_done_card / rule_unload_hurt_card.

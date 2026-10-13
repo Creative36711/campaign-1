@@ -259,7 +259,9 @@
     "rule_air_shelter_hint.json",
     "rule_open_cache_core.json",
     "rule_vex_return_hand.json",
-    "rule_unload_hurt.json"
+    "rule_unload_hurt.json",
+    "rule_unload_done_card.json",
+    "rule_unload_hurt_card.json"
   ],
   "arenas": [
     "arena_gate.json",

@@ -212,3 +212,7 @@ zhuk_20 (voice-05), kast_22, kast_23 (voice-07 — целевой голос К�
 - voice-15 поверх: narr_registrar_2, narr_registrar_3 (НОВЫЙ текст, ink+dlg обновлены), narr_glazier_1, narr_glazier_2, narr_ira_1, narr_kell_rep, narr_vein_rep, narr_zhuk_1, narr_zhuk_7, narr_zhuk_rep.
 - Осталось 23: narr_ira_5,9,10,11,12,13,14,15,rep; narr_kast_1,7,8,9,rep; narr_resh_3,4,5,6,rep; narr_vex_3,4,5,rep.
 - Регистратор: все registrar_1–10 роботизированы (tools/robot_voice.py, сухие — git 985b94f). Новые реплики Регистратора: генерировать voice-13 → `python3 tools/robot_voice.py сухой.mp3 assets/voice/registrar_N.mp3`.
+
+## Ход 39 (13.10)
+- voice-15 поверх: narr_ira_5, 9, 10, 11, 12, 13, 14, 15, rep; narr_kast_1.
+- Осталось 13: narr_kast_7, 8, 9, rep; narr_resh_3, 4, 5, 6, rep; narr_vex_3, 4, 5, rep — следующий ход закрывает очередь (10 + 3).

@@ -17,6 +17,11 @@
       "type": "play_sound",
       "sound": "snd_cloth",
       "volume": 0.8
+    },
+    {
+      "type": "fire_rule",
+      "rule": "rule_unload_hurt_card"
     }
-  ]
+  ],
+  "chapter": "ch_deep"
 }
