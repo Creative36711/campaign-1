@@ -542,3 +542,12 @@ TODO: тестовый бой с фигурками (ход 27); статусы 
 - Контент: +6 достижений (4 концовки, ach_registered, ach_brother), наследие meta_supplies (3 эха, после ach_deep).
 - Проверки: audit 0/0/3, dlg_sync 0, ink OK, reach OK, economy прогнан.
 - Следующий ход: иконки ach_registered, ach_brother, meta_filter, meta_notes, meta_supplies; 10 реплик рассказчика; звук для воя (нет реального файла — искать CC0 на GitHub).
+
+## Итерация 38 (13.10) — чемодан ИИ 13.10
+- Вопросы мастера: Дож (баг, `*`→`+`), Келл (задумано; опция жетона = «находка у затвора», после clue_guard), Регистратор — роботизация tools/robot_voice.py (сухие из git 985b94f).
+- dlg.json: goto после present_item → end во всех 12 опциях (иначе пересборка вела в успех при любом предмете).
+- Аудио 10/10: narr_registrar_2/3 (новый текст), glazier_1/2, ira_1, kell_rep, vein_rep, zhuk_1/7/rep. Осталось 23.
+- Изображения 6/10: ach_registered, ach_brother, meta_filter, meta_notes, meta_supplies, item_dozh_bales.jpg.
+- Новое: duration_actions act_unload + item_dozh_bales (slot_bales в scene_dry_row) + rule_unload_hurt.
+- ВНИМАНИЕ: campaign-audit.mjs в пакете не обновлён (нет duration_actions/start_duration_action) → ~320 ERROR только по этим двум файлам; jsonschema по новой campaign.schema.json — 0 ошибок.
+- Не сделано: гибкий привал (min/max_ticks, per_tick) — неизвестно, делится ли per_tick с напарниками; оставлен restore.
