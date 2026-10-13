@@ -216,3 +216,7 @@ zhuk_20 (voice-05), kast_22, kast_23 (voice-07 — целевой голос К�
 ## Ход 39 (13.10)
 - voice-15 поверх: narr_ira_5, 9, 10, 11, 12, 13, 14, 15, rep; narr_kast_1.
 - Осталось 13: narr_kast_7, 8, 9, rep; narr_resh_3, 4, 5, 6, rep; narr_vex_3, 4, 5, rep — следующий ход закрывает очередь (10 + 3).
+
+## Ход 40 (13.10)
+- voice-15 поверх: narr_kast_7, 8, 9, rep; narr_resh_3, 4, 5, 6, rep; narr_vex_3.
+- Осталось 3: narr_vex_4, narr_vex_5, narr_vex_rep — следующий ход закрывает переозвучку рассказчика.

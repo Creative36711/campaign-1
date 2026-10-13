@@ -557,3 +557,10 @@ TODO: тестовый бой с фигурками (ход 27); статусы 
 - camping: ticks 4, min 2, max 6, per_tick need_rest +12 (делится с отрядом по гайду), restore убран. Описание need_rest обновлено.
 - Аудио 10/10: narr_ira_5,9,10–15,rep, narr_kast_1. Осталось 13: narr_kast_7,8,9,rep; narr_resh_3,4,5,6,rep; narr_vex_3,4,5,rep.
 - Изображения 2/10: pc_unload_done, pc_unload_hurt (с опорой на pc_coal_delivery — Дож тот же). Открытки — через once-правила rule_unload_done_card / rule_unload_hurt_card.
+
+## Итерация 40 (13.10, чемодан 21:54)
+- Новое в движке: recipe.fail_time_ticks. Аудит дал 6 WARNING → выставлено fail_time_ticks = time_ticks (bandage/bolt/lamp/tonic 1, filter/charge 2). Аудит 0/0/3.
+- Скан interact_options: повторяемых проверок без цены провала нет.
+- route_sim 42/42 (нужен NODE_PATH=/tmp/inkc/node_modules; без inkjs 14 маршрутов «падают» ложно).
+- Аудио 10/10: narr_kast_7,8,9,rep; narr_resh_3,4,5,6,rep; narr_vex_3. Осталось 3: narr_vex_4, narr_vex_5, narr_vex_rep.
+- Изображения 0/10: нечего генерировать по делу.
