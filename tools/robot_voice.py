@@ -5,6 +5,7 @@
   2. гребенчатый фильтр 3,1 мс с обратной связью — жестяной резонанс корпуса;
   3. полоса 280–3800 Гц — голос из раструба;
   4. лёгкое «зерно»: удержание отсчёта ×2 и 11 бит;
+  4а. подмес 25 % сухого голоса (WET = 0.75);
   5. громкость подгоняется под исходную (по RMS), пики мягко ограничены (tanh) до −1 дБ.
 
 Сухие исходники НЕ хранятся в пакете: берутся из git (коммит DRY_REV — последняя
@@ -16,10 +17,11 @@
 """
 import sys, glob, os, subprocess, tempfile
 import numpy as np, miniaudio, lameenc
-from scipy.signal import butter, sosfilt, lfilter
+from scipy.signal import butter, sosfilt, sosfiltfilt, lfilter
 
 DRY_REV = "985b94f"          # сухие registrar_1..10 (голос voice-13), до роботизации
 SR = 24000
+WET = 0.75                   # доля обработки: 13.10 мастер попросил вернуть голос к исходному примерно на 25 %
 
 
 def decode(path):
@@ -35,10 +37,11 @@ def robot(x):
     b = np.zeros(D + 1); b[0] = 1.0
     a = np.zeros(D + 1); a[0] = 1.0; a[D] = -0.42
     y = lfilter(b, a, y)
-    y = sosfilt(butter(4, [280, 3800], btype="band", fs=SR, output="sos"), y)   # 3
+    y = sosfiltfilt(butter(4, [280, 3800], btype="band", fs=SR, output="sos"), y)   # 3 (нулевая фаза — чтобы сухую дорожку можно было подмешать без гребёнки)
     y = np.repeat(y[::2], 2)[: len(y)]                           # 4
     q = 2 ** 10
     y = np.round(y * q) / q
+    y = WET * y + (1 - WET) * x * (np.sqrt(np.mean(y ** 2)) / (np.sqrt(np.mean(x ** 2)) + 1e-9))   # подмес сухого голоса
     rms_x = np.sqrt(np.mean(x ** 2)) + 1e-9                       # 5
     rms_y = np.sqrt(np.mean(y ** 2)) + 1e-9
     y *= rms_x / rms_y
