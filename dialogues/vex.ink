@@ -37,6 +37,7 @@ VAR r = 0
     Стоит. Третий день стоит. Механики приходили, слушали, уходили, а вода всё прибывает. # voice: assets/voice/vex_5.mp3
     Он крутит маховик на четверть оборота — тот идёт свободно, как в пустоте. # action # sfx: sfx_gear # voice: assets/voice/narr_vex_2.mp3
 А вот и сам мастер. Я тебя записал вниз в восемнадцать сорок, Эрдан. Обратно так и не записал. Сейчас запишу. # emotion: thoughtful # voice: assets/voice/vex_23.mp3
+Запиши, Векс. Пусть хоть в одной книге на этом ярусе будет правда. # speaker: npc_resh # emotion: calm # voice: assets/voice/resh_38.mp3
     ~ unlock_codex("codex_pumps")
     -> Начало_hub
 * { not (get_flag("vex_asked13")) } [Кто проходил через шлюз в ночь тринадцатого?]
@@ -105,6 +106,11 @@ VAR r = 0
 === Начало_hub_ok1 ===
 Взвод Келла Ястреба. Двенадцать человек, все с клеймом стражи. Шли вниз, а запись делали наверх — так быстрее, сказал старшина. # voice: assets/voice/vex_4.mp3
 ~ change_disposition("npc_vex", 8)
+{ in_party("npc_ira"): -> Взвод_Ира }
+-> Начало_hub
+
+=== Взвод_Ира ===
+Двенадцать человек прошли мимо моего пульта. И ни один потом не постучал ко мне в дверь. # speaker: npc_ira # emotion: sad # voice: assets/voice/ira_49.mp3
 -> Начало_hub
 
 === Начало_hub_no1 ===

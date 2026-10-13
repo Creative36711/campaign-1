@@ -226,6 +226,25 @@
                       }
                     }
                   ]
+                },
+                {
+                  "conds": [
+                    {
+                      "type": "in_party",
+                      "npc": "npc_ira"
+                    }
+                  ],
+                  "steps": [
+                    {
+                      "kind": "line",
+                      "line": {
+                        "text": "Он не послушал, потому что за затвором были люди. Стась никогда не слушал приказов, когда за затвором оставались люди.",
+                        "speaker": "npc_ira",
+                        "emotion": "angry",
+                        "voice": "assets/voice/ira_48.mp3"
+                      }
+                    }
+                  ]
                 }
               ],
               "goto": "stay"

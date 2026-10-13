@@ -150,6 +150,15 @@
                   }
                 },
                 {
+                  "kind": "line",
+                  "line": {
+                    "text": "Запиши, Векс. Пусть хоть в одной книге на этом ярусе будет правда.",
+                    "speaker": "npc_resh",
+                    "emotion": "calm",
+                    "voice": "assets/voice/resh_38.mp3"
+                  }
+                },
+                {
                   "kind": "effect",
                   "effect": {
                     "type": "unlock_codex",
@@ -203,6 +212,25 @@
                         "type": "change_disposition",
                         "target": "npc_vex",
                         "delta": 8
+                      }
+                    }
+                  ]
+                },
+                {
+                  "conds": [
+                    {
+                      "type": "in_party",
+                      "npc": "npc_ira"
+                    }
+                  ],
+                  "steps": [
+                    {
+                      "kind": "line",
+                      "line": {
+                        "text": "Двенадцать человек прошли мимо моего пульта. И ни один потом не постучал ко мне в дверь.",
+                        "speaker": "npc_ira",
+                        "emotion": "sad",
+                        "voice": "assets/voice/ira_49.mp3"
                       }
                     }
                   ]

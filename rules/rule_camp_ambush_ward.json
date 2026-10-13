@@ -12,6 +12,13 @@
     {
       "type": "player_enters_location",
       "location": "loc_ward8"
+    },
+    {
+      "type": "not",
+      "condition": {
+        "type": "player_enters_scene",
+        "scene": "scene_dry_row"
+      }
     }
   ],
   "effects": [

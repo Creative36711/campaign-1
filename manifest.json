@@ -261,7 +261,10 @@
     "rule_vex_return_hand.json",
     "rule_unload_hurt.json",
     "rule_unload_done_card.json",
-    "rule_unload_hurt_card.json"
+    "rule_unload_hurt_card.json",
+    "rule_camp_ambush_row.json",
+    "rule_camp_thief_card.json",
+    "rule_camp_ambush_row_empty.json"
   ],
   "arenas": [
     "arena_gate.json",

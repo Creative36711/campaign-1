@@ -76,6 +76,11 @@ VAR r = 0
 ~ set_flag("kell_confessed")
 ~ change_disposition("npc_kell", -20)
 ~ change_disposition("faction_nadzor", -15)
+{ in_party("npc_ira"): -> Приказ_Ира }
+-> Начало_hub
+
+=== Приказ_Ира ===
+Он не послушал, потому что за затвором были люди. Стась никогда не слушал приказов, когда за затвором оставались люди. # speaker: npc_ira # emotion: angry # voice: assets/voice/ira_48.mp3
 -> Начало_hub
 
 === Начало_hub_no2 ===
