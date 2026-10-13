@@ -388,7 +388,8 @@
         }
       ],
       "apply_message": "Глухой вой на миг сбивает ритм движений.",
-      "expire_message": "Ты снова слышишь собственное дыхание."
+      "expire_message": "Ты снова слышишь собственное дыхание.",
+      "icon": "assets/img/status/status_howl.png"
     }
   ],
   "abilities": [
@@ -1998,6 +1999,11 @@
       "id": "case_hand_tired",
       "label": "Глаз замылился",
       "description": "Сличение почерков не удалось. Повторить можно после сна: койка в конторе у шлюза или скамья в Сухом ряду снимают флаг."
+    },
+    {
+      "id": "glazier_downed",
+      "label": "Стекольщик повержен",
+      "description": "Стекольщик проиграл бой: короб разбит, сам он больше не выходит к герою (встреча в штольне ничего не показывает)."
     }
   ],
   "emotions": [
@@ -3124,7 +3130,7 @@
       {
         "id": "echo",
         "label": "Отголосок",
-        "icon": "",
+        "icon": "assets/img/meta/echo.png",
         "description": "То, что остаётся от увиденной концовки. Тратится на наследие нового круга."
       }
     ],
@@ -3143,7 +3149,8 @@
           "currency": "echo",
           "amount": 1,
           "xp": 0
-        }
+        },
+        "icon": "assets/img/meta/ach_first_case.png"
       },
       {
         "id": "ach_all_clues",
@@ -3179,7 +3186,8 @@
           "currency": "echo",
           "amount": 2,
           "xp": 50
-        }
+        },
+        "icon": "assets/img/meta/ach_all_clues.png"
       },
       {
         "id": "ach_rot",
@@ -3195,7 +3203,8 @@
           "currency": "echo",
           "amount": 1,
           "xp": 25
-        }
+        },
+        "icon": "assets/img/meta/ach_rot.png"
       },
       {
         "id": "ach_deep",
@@ -3211,6 +3220,107 @@
           "currency": "echo",
           "amount": 1,
           "xp": 25
+        },
+        "icon": "assets/img/meta/ach_deep.png"
+      },
+      {
+        "id": "ach_end_pump",
+        "label": "Помпа пошла",
+        "description": "Запустить седьмую помпу.",
+        "conditions": [
+          {
+            "type": "flag_set",
+            "flag": "end_pump"
+          }
+        ],
+        "reward": {
+          "currency": "echo",
+          "amount": 1,
+          "xp": 0
+        },
+        "icon": "assets/img/meta/ach_end_pump.png"
+      },
+      {
+        "id": "ach_end_silence",
+        "label": "Тишина",
+        "description": "Закрыть затвор восьмого яруса.",
+        "conditions": [
+          {
+            "type": "flag_set",
+            "flag": "end_silence"
+          }
+        ],
+        "reward": {
+          "currency": "echo",
+          "amount": 1,
+          "xp": 0
+        },
+        "icon": "assets/img/meta/ach_end_silence.png"
+      },
+      {
+        "id": "ach_end_vein",
+        "label": "Жила проснулась",
+        "description": "Вернуть сердцевину в стену слепого забоя.",
+        "conditions": [
+          {
+            "type": "flag_set",
+            "flag": "end_vein"
+          }
+        ],
+        "reward": {
+          "currency": "echo",
+          "amount": 1,
+          "xp": 0
+        },
+        "icon": "assets/img/meta/ach_end_vein.png"
+      },
+      {
+        "id": "ach_end_closed",
+        "label": "Дело закрыто",
+        "description": "Отдать гроссбух инспектору Каст.",
+        "conditions": [
+          {
+            "type": "flag_set",
+            "flag": "end_closed"
+          }
+        ],
+        "reward": {
+          "currency": "echo",
+          "amount": 1,
+          "xp": 0
+        },
+        "icon": "assets/img/meta/ach_end_closed.png"
+      },
+      {
+        "id": "ach_registered",
+        "label": "Входящий номер",
+        "description": "Внести сшитое дело №137 в реестр: изъять его без следа уже нельзя.",
+        "conditions": [
+          {
+            "type": "flag_set",
+            "flag": "case_registered"
+          }
+        ],
+        "reward": {
+          "currency": "echo",
+          "amount": 1,
+          "xp": 0
+        }
+      },
+      {
+        "id": "ach_brother",
+        "label": "Не при исполнении",
+        "description": "Вернуть сестре жетон стража Ярова.",
+        "conditions": [
+          {
+            "type": "flag_set",
+            "flag": "body_returned"
+          }
+        ],
+        "reward": {
+          "currency": "echo",
+          "amount": 1,
+          "xp": 0
         }
       }
     ],
