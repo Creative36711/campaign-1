@@ -13,7 +13,7 @@ EXTERNAL unlock_codex(a0)
 VAR r = 0
 
 === Начало ===
-{ get_flag("glazier_downed"): -> DONE }
+{ get_flag("glazier_downed"): -> Повержен }
 { get_flag("glazier_robbed") or get_flag("glazier_beaten"): -> Ушёл }
 { get_flag("glazier_met"): -> Снова }
 Из бокового штрека выходит человек с заплечным коробом, обмотанным мешковиной. Сквозь мешковину сочится бирюзовый свет. # action # sfx: snd_cloth # voice: assets/voice/narr_glazier_1.mp3
@@ -82,3 +82,7 @@ VAR r = 0
 === Вещь ===
 Не покупаю. Стекло — да, а это неси в Сухой ряд. # emotion: calm # voice: assets/voice/glazier_8.mp3
 -> Начало_hub
+
+=== Повержен ===
+Из бокового штрека никто не выходит. На мостках, в мутной луже, ещё блестят осколки бирюзового стекла — всё, что осталось от короба. # action # voice: assets/voice/narr_glazier_3.mp3
+-> DONE

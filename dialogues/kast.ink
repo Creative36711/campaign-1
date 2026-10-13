@@ -68,7 +68,7 @@ EXTERNAL set_flag(a0)
 * { in_party("npc_resh") and not (get_flag("kast_resh")) } [Мастер Реш со мной.]
     ~ set_flag("kast_resh")
     Мастер Реш. Живой, в пыли и на своих ногах. Значит, в сводке соврали ещё в одном месте. # emotion: thoughtful # voice: assets/voice/kast_24.mp3
-    «Я живой, пока об этом не знают наверху. Теперь знаешь ты. Решай, инспектор». # action # voice: assets/voice/resh_22.mp3
+    Я живой, пока об этом не знают наверху. Теперь знаешь ты. Решай, инспектор. # speaker: npc_resh # voice: assets/voice/resh_22.mp3
     Тогда молчи до конца срока, мастер. И держись за спиной дознавателя: свидетели в моём отделе долго не живут. # emotion: calm # voice: assets/voice/kast_25.mp3
     ~ fire_rule("rule_kast_resh_party")
     -> Начало_hub

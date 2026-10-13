@@ -1,3 +1,4 @@
+EXTERNAL in_party(a0)
 EXTERNAL change_disposition(a0, a1)
 EXTERNAL get_flag(a0)
 EXTERNAL has_item(a0)
@@ -89,6 +90,12 @@ VAR r = 0
 ~ set_flag("kell_token")
 ~ change_disposition("npc_kell", 10)
 ~ fire_rule("rule_kell_token")
+{ in_party("npc_ira"): -> Жетон_Ира }
+-> Начало_hub
+
+=== Жетон_Ира ===
+Я здесь, старшина. Мог бы сказать мне это сам — три дня назад. # speaker: npc_ira # emotion: angry # voice: assets/voice/ira_47.mp3
+Келл впервые за весь разговор отводит глаза. # action # voice: assets/voice/narr_kell_6.mp3
 -> Начало_hub
 
 === Жетон_мимо ===

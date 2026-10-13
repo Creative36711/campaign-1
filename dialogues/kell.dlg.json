@@ -517,6 +517,16 @@
               }
             }
           ]
+        },
+        {
+          "conds": [
+            {
+              "type": "in_party",
+              "npc": "npc_ira"
+            }
+          ],
+          "steps": [],
+          "goto": "Жетон_Ира"
         }
       ],
       "label": "Жетон Ярова",
@@ -586,6 +596,35 @@
       ],
       "goto": "Начало",
       "choices": []
+    },
+    {
+      "id": "Жетон_Ира",
+      "label": "Ира рядом",
+      "sections": [
+        {
+          "steps": [
+            {
+              "kind": "line",
+              "line": {
+                "text": "Я здесь, старшина. Мог бы сказать мне это сам — три дня назад.",
+                "speaker": "npc_ira",
+                "emotion": "angry",
+                "voice": "assets/voice/ira_47.mp3"
+              }
+            },
+            {
+              "kind": "line",
+              "line": {
+                "text": "Келл впервые за весь разговор отводит глаза.",
+                "action": true,
+                "voice": "assets/voice/narr_kell_6.mp3"
+              }
+            }
+          ]
+        }
+      ],
+      "choices": [],
+      "goto": "Начало"
     }
   ]
 }
