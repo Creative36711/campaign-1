@@ -201,3 +201,9 @@ zhuk_20 (voice-05), kast_22, kast_23 (voice-07 — целевой голос К�
 - Рассказчик → voice-15 (старый голос). Регистратор → voice-13, переозвучен целиком (registrar_1–10).
 - Удалены 7 файлов *_v2 (рассказчик голосом voice-13 — больше не нужен).
 - tools/narr_voice_check.py: 71 реплика старым голосом, 43 — voice-03 (очередь).
+
+## Ход 37 (13.10)
+- voice-15 поверх: final_closed_1–3, final_silence_3, narr_ayla_1, narr_ayla_rep, narr_dozh_1, narr_dozh_4, narr_dozh_5, narr_dozh_rep.
+- Осталось 33: narr_glazier_1–2; narr_ira_1,5,9–15,rep; narr_kast_1,7,8,9,rep; narr_kell_rep; narr_registrar_2,3; narr_resh_3–6,rep; narr_vein_rep; narr_vex_3–5,rep; narr_zhuk_1,7,rep.
+- narr_registrar_3 озвучить С НОВЫМ ТЕКСТОМ (регистратор — автомат со стеклянными глазами, очков нет):
+  «Регистратор поворачивает стеклянные глаза к вещи и молча отодвигает её: в реестр такое не вносят.» — поменять в registrar.ink и registrar.dlg.json одновременно с аудио.
