@@ -39,5 +39,6 @@
     }
   ],
   "sound": "snd_charge",
-  "sound_volume": 0.8
+  "sound_volume": 0.8,
+  "fail_time_ticks": 2
 }

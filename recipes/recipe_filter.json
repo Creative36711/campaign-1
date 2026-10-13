@@ -28,5 +28,6 @@
   "workbench": true,
   "category": "gear",
   "sound": "sfx_gear",
-  "sound_volume": 0.7
+  "sound_volume": 0.7,
+  "fail_time_ticks": 2
 }

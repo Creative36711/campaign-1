@@ -24,5 +24,6 @@
   "workbench": true,
   "category": "misc",
   "sound": "sfx_anvil",
-  "sound_volume": 0.9
+  "sound_volume": 0.9,
+  "fail_time_ticks": 1
 }
