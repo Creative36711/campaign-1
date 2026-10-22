@@ -1,0 +1,46 @@
+{
+  "id": "rule_camp_ambush_row",
+  "label": "Ночная вылазка на привале в Сухом ряду: не гнилец, а вор",
+  "once": false,
+  "manual": false,
+  "conditions": [
+    {
+      "type": "flag_set",
+      "flag": "camp_ambush_pending"
+    },
+    {
+      "type": "player_enters_scene",
+      "scene": "scene_dry_row"
+    },
+    {
+      "type": "has_item",
+      "item": "item_mark",
+      "min_quantity": 3
+    }
+  ],
+  "effects": [
+    {
+      "type": "clear_flag",
+      "flag": "camp_ambush_pending"
+    },
+    {
+      "type": "remove_item",
+      "item": "item_mark",
+      "quantity": 3
+    },
+    {
+      "type": "play_sound",
+      "sound": "snd_cloth",
+      "volume": 0.8
+    },
+    {
+      "type": "show_message",
+      "text": "Сквозь сон — шорох у котомки. Когда ты открываешь глаза, между лотков мелькает чья-то спина. В Сухом ряду гнильцы к огню не выходят, зато руки здесь ловкие: из кошеля пропало три марки."
+    },
+    {
+      "type": "fire_rule",
+      "rule": "rule_camp_thief_card"
+    }
+  ],
+  "chapter": "ch_deep"
+}

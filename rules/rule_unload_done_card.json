@@ -1,0 +1,23 @@
+{
+  "id": "rule_unload_done_card",
+  "label": "Открытка: первая смена у Дожа отработана",
+  "once": true,
+  "manual": true,
+  "conditions": [],
+  "effects": [
+    {
+      "type": "postcard",
+      "image": "assets/img/pc_unload_done.jpg",
+      "text": "Шесть марок — за спину, которая ещё держит.",
+      "preset": "шёпот",
+      "seconds": 5,
+      "camera": {
+        "zoom": 1.06,
+        "pan_x": 0,
+        "pan_y": 0,
+        "duration": 6
+      }
+    }
+  ],
+  "chapter": "ch_deep"
+}
