@@ -69,13 +69,6 @@
                     "text": "Твоя задача: найти причину и назвать её так, чтобы город спал спокойно.",
                     "voice": "assets/voice/kast_8.mp3"
                   }
-                },
-                {
-                  "kind": "effect",
-                  "effect": {
-                    "type": "set_flag",
-                    "flag": "kast_brief"
-                  }
                 }
               ]
             }
@@ -581,13 +574,6 @@
                     "type": "remove_item",
                     "item": "item_ledger",
                     "qty": 1
-                  }
-                },
-                {
-                  "kind": "effect",
-                  "effect": {
-                    "type": "set_flag",
-                    "flag": "ledger_shown_kast"
                   }
                 },
                 {

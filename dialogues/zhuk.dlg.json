@@ -185,13 +185,6 @@
                 {
                   "kind": "effect",
                   "effect": {
-                    "type": "set_flag",
-                    "flag": "zhuk_dozh_price"
-                  }
-                },
-                {
-                  "kind": "effect",
-                  "effect": {
                     "type": "fire_rule",
                     "rule": "rule_zhuk_info"
                   }

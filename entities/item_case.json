@@ -36,10 +36,6 @@
           "ticks": 1
         },
         {
-          "type": "set_flag",
-          "flag": "case_written"
-        },
-        {
           "type": "journal_update",
           "quest": "quest_pump",
           "text_key": "j_hand"

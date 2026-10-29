@@ -16,10 +16,6 @@
       "difficulty": 50,
       "success_effects": [
         {
-          "type": "set_flag",
-          "flag": "hounds_past"
-        },
-        {
           "type": "grant_xp",
           "points": 10
         },
