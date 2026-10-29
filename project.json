@@ -1,0 +1,29 @@
+{
+  "format": 2,
+  "id": "b7305faa-8e10-4d26-96bb-f1b5ed5e493f",
+  "title": "Каркас: Дело о седьмой помпе",
+  "kind": "narrative",
+  "caps": [
+    "narrative",
+    "scenes",
+    "dialogue",
+    "map",
+    "inventory",
+    "needs",
+    "skills",
+    "relationships",
+    "trade",
+    "combat",
+    "quests",
+    "cutscenes",
+    "codex",
+    "crafting",
+    "time"
+  ],
+  "engine": {
+    "min": "0.8.0",
+    "tested": "0.8.0"
+  },
+  "entry": "world.json",
+  "manifest": "manifest.json"
+}
