@@ -131,10 +131,6 @@
               "intro": "У открытого шкафа стоит человек в кирзе, в руке — лист из твоей папки. Он не бежит: «Спал бы ты, дознаватель».",
               "on_victory": [
                 {
-                  "type": "set_flag",
-                  "flag": "office_thief_caught"
-                },
-                {
                   "type": "add_item",
                   "item": "item_burn_note",
                   "quantity": 1
@@ -168,10 +164,6 @@
                   "delta": -1
                 },
                 {
-                  "type": "set_flag",
-                  "flag": "office_page_lost"
-                },
-                {
                   "type": "show_message",
                   "text": "Утром папка лежит на месте, только тоньше на лист. В печке — свежий пепел, который не похож на уголь. Пока дело не сшито и не зарегистрировано, его можно растаскивать по листу."
                 }
@@ -196,10 +188,6 @@
               "type": "change_variable",
               "var": "case_filed",
               "delta": -1
-            },
-            {
-              "type": "set_flag",
-              "flag": "office_page_lost"
             },
             {
               "type": "show_message",
@@ -309,10 +297,6 @@
               "intro": "У открытого шкафа стоит человек в кирзе, в руке — лист из твоей папки. Он не бежит: «Спал бы ты, дознаватель».",
               "on_victory": [
                 {
-                  "type": "set_flag",
-                  "flag": "office_thief_caught"
-                },
-                {
                   "type": "add_item",
                   "item": "item_burn_note",
                   "quantity": 1
@@ -346,10 +330,6 @@
                   "delta": -1
                 },
                 {
-                  "type": "set_flag",
-                  "flag": "office_page_lost"
-                },
-                {
                   "type": "show_message",
                   "text": "Утром папка лежит на месте, только тоньше на лист. В печке — свежий пепел, который не похож на уголь. Пока дело не сшито и не зарегистрировано, его можно растаскивать по листу."
                 }
@@ -374,10 +354,6 @@
               "type": "change_variable",
               "var": "case_filed",
               "delta": -1
-            },
-            {
-              "type": "set_flag",
-              "flag": "office_page_lost"
             },
             {
               "type": "show_message",
@@ -487,10 +463,6 @@
               "intro": "У открытого шкафа стоит человек в кирзе, в руке — лист из твоей папки. Он не бежит: «Спал бы ты, дознаватель».",
               "on_victory": [
                 {
-                  "type": "set_flag",
-                  "flag": "office_thief_caught"
-                },
-                {
                   "type": "add_item",
                   "item": "item_burn_note",
                   "quantity": 1
@@ -524,10 +496,6 @@
                   "delta": -1
                 },
                 {
-                  "type": "set_flag",
-                  "flag": "office_page_lost"
-                },
-                {
                   "type": "show_message",
                   "text": "Утром табурет лежит на боку, а дверь приоткрыта. Папка на месте, но тоньше на лист; в печке — свежий пепел. Пока дело не сшито и не зарегистрировано, его можно растаскивать по листу."
                 }
@@ -552,10 +520,6 @@
               "type": "change_variable",
               "var": "case_filed",
               "delta": -1
-            },
-            {
-              "type": "set_flag",
-              "flag": "office_page_lost"
             },
             {
               "type": "show_message",

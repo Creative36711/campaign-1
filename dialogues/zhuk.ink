@@ -37,7 +37,6 @@ VAR r = 0
     Стража Келла, двенадцать человек, вниз. Мастер — наверх, потом снова вниз, с сердцевиной в сумке. А наряд в архиве подшит к делу тринадцать-К: без пломбы тебе его не дадут. # voice: assets/voice/zhuk_11.mp3
     ~ remove_item("item_mark", 35)
     ~ set_flag("zhuk_paid")
-    ~ set_flag("zhuk_dozh_price")
     ~ fire_rule("rule_zhuk_info")
     -> Начало_hub
 + { item_count("item_mark") >= 50 and not (get_flag("dozh_who")) and not (get_flag("zhuk_paid")) } [Пятьдесят марок. Вспоминай.]

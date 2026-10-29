@@ -25,7 +25,6 @@ EXTERNAL set_flag(a0)
 + [Что именно случилось с седьмой помпой?]
     Остановлена. Причина устанавливается. Мастер пропал, вероятно — утонул. # emotion: calm # voice: assets/voice/kast_5.mp3
     Твоя задача: найти причину и назвать её так, чтобы город спал спокойно. # voice: assets/voice/kast_8.mp3
-    ~ set_flag("kast_brief")
     -> Начало_hub
 + { get_flag("clue_roster") } [Кто приказал закрыть ярус?]
     Я. И не «закрыть», а «взять на учёт». Ты же видишь разницу, ты человек с образованием. # emotion: calm # voice: assets/voice/kast_11.mp3
@@ -92,7 +91,6 @@ EXTERNAL set_flag(a0)
 + [Отдать гроссбух и закрыть дело.]
     Вот и хорошо. Дело закрыто, виновный установлен, город спит. # emotion: calm # voice: assets/voice/kast_13.mp3
     ~ remove_item("item_ledger", 1)
-    ~ set_flag("ledger_shown_kast")
     ~ fire_rule("rule_end_closed")
     -> DONE
 + [Я его не отдам.]
